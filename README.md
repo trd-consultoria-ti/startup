@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/logo.jpeg" alt="Identidade Visual Oficial" width="220" />
+  <img src="assets/trd-logo.png" alt="Identidade Visual Oficial" width="220" />
 </p>
 
 # Kit Software House Brasil 🇧🇷
