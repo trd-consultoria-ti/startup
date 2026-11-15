@@ -1,5 +1,5 @@
 # MANUAL DE PLANEJAMENTO TRIBUTÁRIO, FINANCEIRO E FATOR R
-### Diretrizes Estratégicas de CFO para a Sociedade dos 4 Fundadores (Simples Nacional)
+### Diretrizes Estratégicas de CFO para a Empresa Unipessoal (Simples Nacional)
 
 Este manual estabelece as regras financeiras, tributárias e a política de distribuição de dividendos da nossa empresa no Brasil.
 
@@ -8,14 +8,14 @@ Este manual estabelece as regras financeiras, tributárias e a política de dist
 ## 1. A Estratégia Financeira em Duas Fases
 
 ### Fase 1: Zero Pró-Labore (Regime de Bootstrapping Inicial)
-Nos primeiros meses de vida da empresa, os 4 Sócios Fundadores **não farão retirada de Pró-Labore**.
+Nos primeiros meses de vida da empresa, o Sócio Proprietário **não fará retirada de Pró-Labore**.
 * **Objetivo:** Blindar o fluxo de caixa, reinvestir 100% da receita líquida na operação, custear despesas básicas (contador, ferramentas de IA e servidores) e formar rapidamente o colchão de liquidez (Fundo de Reserva).
 * **Distribuição de Lucros Inicial:** Eventuais distribuições ocorrerão de forma pontual como dividendos isentos de imposto de renda, após balancete trimestral contábil aprovado.
 
 ---
 
 ### Fase 2: Ativação do Pró-Labore & Engenharia do Fator R (Atingimento da Tração)
-No momento em que a empresa consolidar uma carteira recorrente (a partir de R$ 25.000 a R$ 30.000/mês), a diretoria ativará a sistemática do **Fator R** para remunerar formalmente os fundadores e garantir a menor alíquota tributária do país:
+No momento em que a empresa consolidar uma carteira recorrente (a partir de R$ 25.000 a R$ 30.000/mês), a diretoria ativará a sistemática do **Fator R** para remunerar formalmente o fundador e garantir a menor alíquota tributária do país:
 
 O desenvolvimento de software sob encomenda enquadra-se originariamente no **Anexo V da LC 123/2006 (alíquota de 15,50%)**. Com a ativação do Pró-Labore igual ou superior a **28% da receita bruta (`Folha / RBT12 >= 0,28`)**, a empresa migra para o **Anexo III (alíquota inicial de apenas 6,00%)**:
 
@@ -26,14 +26,14 @@ $$\text{Fator R} = \frac{\text{Folha de Salários com Pró-Labore (últimos 12 m
 | Item | Modelo Incorreto (Sem Fator R - Anexo V) | Nosso Modelo (Com Fator R - Anexo III) |
 | :--- | :---: | :---: |
 | **Faturamento Bruto Mensal** | R$ 50.000,00 | R$ 50.000,00 |
-| **Folha de Pró-Labore dos Sócios** | R$ 0,00 (apenas dividendos) | **R$ 14.100,00 (28,2%)** |
+| **Folha de Pró-Labore do Sócio** | R$ 0,00 (apenas dividendos) | **R$ 14.100,00 (28,2%)** |
 | **Alíquota do Simples Nacional (DAS)** | **15,50% (R$ 7.750,00)** | **6,00% (R$ 3.000,00)** |
 | **INSS Retido / Encargos do Pró-Labore** | R$ 0,00 | ~R$ 1.551,00 |
 | **IRPF Retido na Fonte (com deduções)** | R$ 0,00 | ~R$ 890,00 |
 | **Custo Total de Impostos & Encargos** | **R$ 7.750,00 / mês** | **R$ 5.441,00 / mês** |
 | **ECONOMIA REAL LÍQUIDA** | — | **R$ 2.309,00 / mês (R$ 27.700,00 / ano)** |
 
-> *Atenção do CFO:* O contador da empresa deve emitir mensalmente a folha de Pró-Labore dos sócios calibrada em exatamente 28,1% a 28,5% do faturamento acumulado, garantindo o direito líquido e certo à alíquota de 6%.
+> *Atenção do CFO:* O contador da empresa deve emitir mensalmente a folha de Pró-Labore do sócio calibrada em exatamente 28,1% a 28,5% do faturamento acumulado, garantindo o direito líquido e certo à alíquota de 6%.
 
 ---
 
@@ -44,10 +44,10 @@ Para manter a saúde financeira da empresa e impedir retiradas precipitadas, a d
 ```mermaid
 flowchart TD
     REC["RECEITA BRUTA MENSAL\n(Exemplo: R$ 50.000 / mês)"] --> DED["1. Deduções Obrigatórias\n• Guia do DAS Simples Nacional (6%): R$ 3.000\n• OPEX Fixo (Contador, AWS, LLMs, Ferramentas): ~R$ 3.000"]
-    DED --> PRO["2. Pró-Labore dos 4 Sócios (Fator R >= 28%)\n• R$ 14.100 bruto distribuído entre os sócios\n• Garante contribuição previdenciária e INSS"]
+    DED --> PRO["2. Pró-Labore do Sócio (Fator R >= 28%)\n• R$ 14.100 bruto ao sócio proprietário\n• Garante contribuição previdenciária e INSS"]
     PRO --> LIQ["LUCRO LÍQUIDO DISPONÍVEL"]
     LIQ --> RES["3. Fundo de Reserva (20% retido)\n• Permanece no caixa PJ da empresa\n• Meta: Colchão de 3 meses de OPEX"]
-    LIQ --> DIV["4. Dividendos Isentos (80% restantes)\n• Distribuídos aos 4 sócios fundadores\n• Apuração após balancete contábil trimestral"]
+    LIQ --> DIV["4. Dividendos Isentos (80% restantes)\n• Distribuídos ao sócio proprietário\n• Apuração após balancete contábil trimestral"]
 ```
 
 ---
@@ -59,7 +59,7 @@ flowchart TD
    * Resultado: Cobre todos os custos de software, contador e impostos com sobra de caixa.
 2. **Fase 2: Validação da Sociedade (Meses 3 a 5)**
    * Meta: **R$ 30.000 a R$ 50.000/mês** (5 a 8 contratos de sustentação).
-   * Resultado: Pró-labore ativo no Fator R a 6%, colchão de reserva formado e renda estável para os 4 fundadores.
+   * Resultado: Pró-labore ativo no Fator R a 6%, colchão de reserva formado e renda estável para o fundador.
 3. **Fase 3: Consolidação da Boutique Sênior (Meses 6 a 12)**
    * Meta: **R$ 100.000 a R$ 120.000/mês** (sustentação + 2 projetos sob medida com IA rodando em paralelo).
-   * Resultado: Retiradas de alto escalão para os 4 sócios seniores (> R$ 18.000 líquido para cada um).
+   * Resultado: Retiradas de alto escalão para o sócio proprietário, com reinvestimento em contratação e expansão do squad.

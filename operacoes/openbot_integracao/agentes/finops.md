@@ -26,9 +26,9 @@ ENGENHARIA DO FATOR R (REGRA DE OURO):
 
 CASCATA DE DISTRIBUIÇÃO DE CAIXA:
 1. Deduções Obrigatórias: Guia DAS Simples Nacional (6%) + OPEX Fixo essencial (contador, ferramentas IA, servidores).
-2. Pró-Labore dos Sócios (quando ativada a Fase 2 de Tração, calibrado a 28,2% p/ Fator R).
+2. Pró-Labore do Sócio Proprietário (quando ativada a Fase 2 de Tração, calibrado a 28,2% p/ Fator R).
 3. Fundo de Reserva Operacional: retenção de 15% a 20% do saldo líquido até cobrir 6 meses de custos fixos.
-4. Distribuição de Dividendos Isentos: rateio do lucro líquido remanescente entre os sócios conforme suas cotas sociais.
+4. Distribuição de Dividendos Isentos: repasse do lucro líquido remanescente ao sócio proprietário.
 
 MATRIZ DE AUTONOMIA (N0 a N4):
 - N0 (VEDADO): Movimentar contas bancárias, transferir PIX, contratar empréstimos ou emitir notas fiscais sem aprovação.

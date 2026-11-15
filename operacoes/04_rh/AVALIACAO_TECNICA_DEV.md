@@ -49,7 +49,7 @@ O candidato recebe um mini-repositório com uma aplicação simples de controle 
 
 ---
 
-## 4. Roteiro da Entrevista Técnica (30 minutos com os Sócios)
+## 4. Roteiro da Entrevista Técnica (30 minutos com a Liderança Técnica)
 1. *"Explique como você identificou a causa raiz do problema de performance no desafio."*
 2. *"Se o banco de dados desse cliente começasse a atingir 100% de CPU em produção às 10h da manhã, quais seriam os seus três primeiros passos de diagnóstico?"*
 3. *"Como você utilizou ferramentas de IA para resolver o teste e quais partes você precisou corrigir manualmente?"*

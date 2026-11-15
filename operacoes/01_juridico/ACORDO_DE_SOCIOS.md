@@ -1,30 +1,32 @@
 # ACORDO DE QUOTISTAS E PROTOCOLO DE GOVERNANÇA SOCIETÁRIA (ACORDO DE SÓCIOS)
 
+> **MODELO / TEMPLATE JURÍDICO:** Instrumento genérico de Acordo de Quotistas para sociedades limitadas de engenharia de software. A **TRD Consultoria e Serviços de TI LTDA** é atualmente uma sociedade **unipessoal** (sócio único) e, portanto, não possui acordo de sócios vigente. Este documento fica mantido como minuta pronta para o caso de admissão futura de sócios — basta substituir os campos entre colchetes `[...]` pelos dados reais das partes.
+
 Pelo presente instrumento particular de **Acordo de Quotistas**, vinculado ao Contrato Social da sociedade empresária limitada a ser constituída:
 
 **OS SÓCIOS FUNDADORES:**
-1. **THIAGO ROCHA DUARTE**, brasileiro, desenvolvedor e gestor de negócios, residente e domiciliado no Distrito Federal (LinkedIn: [thiago-duarte](https://www.linkedin.com/in/thiago-duarte-a6597721/));
-2. **DIEGO ALVES**, brasileiro, arquiteto de software e engenheiro de IA, residente e domiciliado no Distrito Federal (LinkedIn: [by-diegoalves](https://www.linkedin.com/in/by-diegoalves/));
-3. **MÁRCIO ANDRADE ALVES**, brasileiro, engenheiro de software e tech lead, residente e domiciliado no Distrito Federal (LinkedIn: [marcio-andrade](https://www.linkedin.com/in/m%C3%A1rcio-andrade-463590125/));
-4. **YURI ALVES**, brasileiro, engenheiro de software e especialista de tecnologia, residente e domiciliado no Distrito Federal (LinkedIn: [yurileader](https://www.linkedin.com/in/yurileader/));
+1. **[SÓCIO FUNDADOR 1 — NOME COMPLETO]**, brasileiro, [profissão], residente e domiciliado em [cidade/UF] (LinkedIn: [link]);
+2. **[SÓCIO FUNDADOR 2 — NOME COMPLETO]**, brasileiro, [profissão], residente e domiciliado em [cidade/UF] (LinkedIn: [link]);
+3. **[SÓCIO FUNDADOR 3 — NOME COMPLETO]**, brasileiro, [profissão], residente e domiciliado em [cidade/UF] (LinkedIn: [link]);
+4. **[SÓCIO FUNDADOR 4 — NOME COMPLETO]**, brasileiro, [profissão], residente e domiciliado em [cidade/UF] (LinkedIn: [link]);
 
 Todos em conjunto doravante denominados **SÓCIOS** ou **FUNDADORES**, resolvem estabelecer as seguintes cláusulas de governança, vesting, deliberações e regras financeiras:
 
 ---
 
 ### CLÁUSULA PRIMEIRA – DA DISTRIBUIÇÃO DAS QUOTAS E PARTICIPAÇÃO
-1.1. O capital social inicial da sociedade será subscrito na proporção inicial de **25% (vinte e cinco por cento)** para cada um dos 4 Sócios Fundadores.  
+1.1. O capital social inicial da sociedade será subscrito na proporção inicial de **[XX]%** para cada Sócio Fundador, conforme quadro societário anexo.  
 1.2. O presente Acordo é celebrado nos termos do Art. 118 da Lei nº 6.404/1976 (aplicável supletivamente às sociedades limitadas por força do Art. 1.053 do Código Civil), possuindo eficácia vinculante imediata e irretratável entre os Sócios e perante a própria Sociedade.
 
 ---
 
 ### CLÁUSULA SEGUNDA – DA ESTRUTURA HORIZONTAL DE ENGENHARIA, ADMINISTRAÇÃO E CASTING VOTE
-2.1. **Estrutura Horizontal e Igualdade Hierárquica:** Todos os 4 Sócios Fundadores atuam diretamente na área técnica de engenharia e desenvolvimento de software, posicionando-se rigorosamente no **mesmo nível de hierarquia corporativa**, com igualdade de voz e valor de voto na condução da Sociedade. A designação formal do sócio **THIAGO ROCHA DUARTE** como Sócio Administrador destina-se estritamente à representação legal perante órgãos públicos, cartórios, bancos e clientes.  
-2.2. **Deliberações Ordinárias e Voto de Desempate (Casting Vote do Diego):**
-* As decisões cotidianas de contratação, propostas comerciais, compras operacionais e rotinas técnicas de software até o limite de R$ 50.000,00 serão tomadas por maioria simples dos votos dos 4 sócios.
-* **Prevenção de Deadlock (Empate 2 a 2):** Em caso de empate absoluto de votos (2 a 2) em deliberações técnicas, operacionais ou estratégicas cotidianas, o sócio **DIEGO ALVES** **terá expressamente o Voto de Minerva (Casting Vote / Voto de Desempate)** para dirimir o impasse e definir o direcionamento da Sociedade.  
+2.1. **Estrutura Horizontal e Igualdade Hierárquica:** Todos os Sócios Fundadores atuam diretamente na área técnica de engenharia e desenvolvimento de software, posicionando-se rigorosamente no **mesmo nível de hierarquia corporativa**, com igualdade de voz e valor de voto na condução da Sociedade. A designação formal do sócio **[SÓCIO ADMINISTRADOR]** como Sócio Administrador destina-se estritamente à representação legal perante órgãos públicos, cartórios, bancos e clientes.  
+2.2. **Deliberações Ordinárias e Voto de Desempate (Casting Vote):**
+* As decisões cotidianas de contratação, propostas comerciais, compras operacionais e rotinas técnicas de software até o limite de R$ 50.000,00 serão tomadas por maioria simples dos votos dos sócios.
+* **Prevenção de Deadlock (Empate):** Em caso de empate absoluto de votos em deliberações técnicas, operacionais ou estratégicas cotidianas, o sócio **[SÓCIO DESEMPATE]** **terá expressamente o Voto de Minerva (Casting Vote / Voto de Desempate)** para dirimir o impasse e definir o direcionamento da Sociedade.  
 2.3. **Matérias de Quórum Qualificado (Mínimo de 75% dos votos):**
-* Exigirão a concordância de pelo menos 3 dos 4 sócios as seguintes decisões:
+* Exigirão a concordância de pelo menos 75% dos sócios as seguintes decisões:
   a) Entrada de novos sócios ou investidores;  
   b) Venda, fusão, cisão ou incorporação da empresa;  
   c) Alteração substancial do objeto social ou do regime tributário;  
@@ -72,20 +74,20 @@ Todos em conjunto doravante denominados **SÓCIOS** ou **FUNDADORES**, resolvem 
 ---
 
 ### CLÁUSULA OITAVA – DO FORO
-8.1. Fica eleito o **Foro de Brasília - DF** para dirimir quaisquer litígios oriundos deste Acordo de Sócios.
+8.1. Fica eleito o **Foro de [CIDADE/UF]** para dirimir quaisquer litígios oriundos deste Acordo de Sócios.
 
 E, por estarem plenamente acordados, firmam o presente instrumento em vias eletrônicas nos termos da Lei 14.063/2020.
 
-Brasília - DF, [Data].
+[Cidade/UF], [Data].
 
 _____________________________________________  
-**THIAGO ROCHA DUARTE**  
+**[SÓCIO FUNDADOR 1 — NOME COMPLETO]**  
 
 _____________________________________________  
-**DIEGO ALVES**  
+**[SÓCIO FUNDADOR 2 — NOME COMPLETO]**  
 
 _____________________________________________  
-**MÁRCIO ANDRADE ALVES**  
+**[SÓCIO FUNDADOR 3 — NOME COMPLETO]**  
 
 _____________________________________________  
-**YURI ALVES**  
+**[SÓCIO FUNDADOR 4 — NOME COMPLETO]**  

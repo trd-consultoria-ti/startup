@@ -10,13 +10,13 @@
 | **Data de Emissão** | 12 de Novembro de 2026 |
 | **Status Executivo** | **EM HOMOLOGAÇÃO SOCIETÁRIA (GitHub Pull Request #01)** |
 | **Sede / Foro Eleito** | Brasília - Distrito Federal (DF), Brasil |
-| **Formato Societário** | Sociedade Empresária Limitada (LTDA) |
+| **Formato Societário** | Sociedade Limitada Unipessoal (LTDA Unipessoal) |
 | **Regime Tributário** | Simples Nacional (Anexo III - 6,00% via Fator R >= 28,1%) |
-| **Quadro Societário** | Thiago Rocha Duarte (25%), Diego Alves (25%), Márcio Alves (25%), Yuri Alves (25%) |
-| **Repositório Central** | `git@github.com:empresa-empreender/kit-software-house-brasil.git` |
+| **Quadro Societário** | Thiago Rocha Duarte (100%) |
+| **Repositório Central** | `git@github.com:trd-consultoria-ti/startup.git` |
 
 > [!IMPORTANT]
-> **Documento Vinculante:** Este Plano Mestre consolida as deliberações de governança, infraestrutura, finanças e comercial acordadas entre os 4 Sócios Fundadores. Sua aprovação formal se dará mediante revisão e merge via Pull Request no repositório oficial, integrando-se e complementando o [Acordo de Sócios](operacoes/01_juridico/ACORDO_DE_SOCIOS.md) e o [Planejamento Tributário e Financeiro](operacoes/05_administracao/PLANEJAMENTO_TRIBUTARIO_E_FINANCEIRO.md).
+> **Documento Vinculante:** Este Plano Mestre consolida as deliberações de governança, infraestrutura, finanças e comercial definidas pelo Sócio Proprietário. Sua aprovação formal se dará mediante revisão e merge via Pull Request no repositório oficial, integrando-se e complementando o [Planejamento Tributário e Financeiro](operacoes/05_administracao/PLANEJAMENTO_TRIBUTARIO_E_FINANCEIRO.md). O repositório mantém também um [template de Acordo de Sócios](operacoes/01_juridico/ACORDO_DE_SOCIOS.md) para o caso de admissão futura de sócios.
 
 ---
 
@@ -27,7 +27,7 @@ Este Plano Mestre orquestra os 8 instrumentos executivos já desenhados no repos
 ```
 operacoes/
 ├── 01_juridico/
-│   ├── ACORDO_DE_SOCIOS.md             ──► Regras de Vesting (4 anos), Cliff (12 meses), Bad Leaver e Voto de Minerva
+│   ├── ACORDO_DE_SOCIOS.md             ──► Template: Vesting (4 anos), Cliff (12 meses), Bad Leaver e Voto de Minerva
 │   ├── CONTRATO_SUSTENTACAO_E_SLA.md   ──► Minuta jurídica B2B com Damage Cap (Código Civil, Marco Civil, LGPD)
 │   └── ACORDO_CONFIDENCIALIDADE_NDA.md ──► Termo de sigilo bilateral com proteção de IP e segredos industriais
 ├── 02_comercial_marketing/
@@ -71,80 +71,58 @@ flowchart LR
   * Resultado: O faturamento cobre integralmente todos os custos operacionais (OPEX mensal de ~R$ 1.500,00), impostos e contabilidade, assegurando sobrevivência sem queima de capital.
 * **Fase 2 – Tração & Fator R Otimizado (Meses 3 a 5):**
   * Meta: **R$ 30.000,00 a R$ 50.000,00 de MRR** (5 a 8 clientes recorrentes).
-  * Resultado: Pró-Labore formalizado para os 4 fundadores, garantia do Fator R no Anexo III (alíquota de 6%), formação da reserva de contingência e distribuição trimestral de lucros isentos.
+  * Resultado: Pró-Labore formalizado para o fundador, garantia do Fator R no Anexo III (alíquota de 6%), formação da reserva de contingência e distribuição trimestral de lucros isentos.
 * **Fase 3 – Consolidação e Escala de Alta Rentabilidade (Meses 6 a 12):**
   * Meta: **R$ 100.000,00 a R$ 120.000,00 de MRR** (sustentação contínua combinada com 2 squads de modernização com agentes autônomos de IA sob medida).
-  * Resultado: Retiradas de alto nível para os 4 sócios seniores (> R$ 18.000,00 líquidos mensais para cada fundador).
+  * Resultado: Retiradas de alto nível para o sócio proprietário, com reinvestimento programado em contratação e expansão do squad.
 
 ---
 
 ## 2. Quadro Societário e Matriz de Governança (RACI Executiva)
 
-### 2.1. Estrutura Horizontal de Engenharia e Distribuição de Quotas
-A sociedade adota um **modelo estritamente horizontal de engenharia**: todos os 4 Sócios Fundadores atuam diretamente no desenvolvimento de software e arquitetura no mesmo nível hierárquico corporativo, com igualdade de voz e peso de voto na condução da empresa:
+### 2.1. Estrutura Unipessoal e Distribuição de Quotas
+A sociedade é uma **LTDA Unipessoal**: um único sócio detém 100% do capital social e concentra a representação legal, a direção técnica e a gestão administrativa, com a execução operacional ampliada por um squad de agentes de IA (OpenBot):
 
-| Sócio Fundador | Atuação Técnica & Estratégica (Mesmo Nível Hierárquico) | Quota Inicial | Dedicação | Perfil Profissional | Foco Operacional |
+| Sócio Proprietário | Atuação Técnica & Estratégica | Quota | Dedicação | Perfil Profissional | Foco Operacional |
 | :--- | :--- | :---: | :---: | :---: | :--- |
-| **Thiago Rocha Duarte** | Sócio Engenheiro de Software (Operações & Gestão Administrativa) | 25,00% | Integral | [LinkedIn](https://www.linkedin.com/in/thiago-duarte-a6597721/) | Representação Legal, Finanças, Comercial, Jurídico e Alianças |
-| **Diego Alves** | Sócio Engenheiro de Software & Arquiteto Principal *(Casting Vote)* | 25,00% | Integral | [LinkedIn](https://www.linkedin.com/in/by-diegoalves/) | Arquitetura de Software, Modelos de IA, Voto de Minerva Técnico |
-| **Márcio Alves** | Sócio Engenheiro de Software & Tech Lead | 25,00% | Integral | [LinkedIn](https://www.linkedin.com/in/m%C3%A1rcio-andrade-463590125/) | Engenharia Backend/Frontend, Qualidade de Código, CI/CD, Review |
-| **Yuri Alves** | Sócio Engenheiro de Software & Solutions Ops | 25,00% | Integral | [LinkedIn](https://www.linkedin.com/in/yurileader/) | Onboarding Técnico, Integrações de APIs, Operações de SLA N2/N3 |
+| **Thiago Rocha Duarte** | Sócio Proprietário & Engenheiro de Software | 100,00% | Integral | [LinkedIn](https://www.linkedin.com/in/thiago-duarte-a6597721/) | Representação Legal, Arquitetura, Engenharia, Finanças, Comercial, Jurídico e SLA |
 
 ```mermaid
 flowchart TD
-    subgraph CoreTeam ["Quadro Societário Horizontal (25% cada - Mesmo Nível Hierárquico)"]
-        T["Thiago Rocha Duarte\n(Engenheiro de Software & Sócio Administrador)\n• Representação Legal & FinOps"]
-        D["Diego Alves\n(Engenheiro de Software & Arquiteto Principal)\n• Casting Vote / Voto de Minerva"]
-        M["Márcio Alves\n(Engenheiro de Software & Tech Lead)\n• Qualidade & CI/CD"]
-        Y["Yuri Alves\n(Engenheiro de Software & Solutions Ops)\n• Onboarding & SLA"]
+    subgraph CoreTeam ["Estrutura Unipessoal (100% - Sócio Proprietário)"]
+        T["Thiago Rocha Duarte\n(Sócio Proprietário & Engenheiro de Software)\n• Representação Legal, Arquitetura & FinOps"]
+        BOT["Squad OpenBot\n(6 Agentes Operativos N3/N4)\n• Comercial, Jurídico, SLA, FinOps, Marketing, RH"]
     end
 
-    subgraph Deliberacao ["Mecanismo de Deliberação e Prevenção de Deadlock"]
-        DEC["Pauta Ordinária do Dia a Dia (< R$ 50k)"] --> VOT{"Votação dos 4 Sócios\n(Maioria Simples)"}
-        VOT -->|"Maioria (3 a 1 ou 4 a 0)"| EXEC["Execução Imediata"]
-        VOT -->|"Empate 2 a 2 (Deadlock)"| MINERVA["Voto de Minerva de Diego Alves\n(Desempate Vinculante)"]
-        MINERVA --> EXEC
-        
-        DEC_ESP["Matéria de Alto Impacto\n(Novos Sócios, M&A, Empréstimo > R$ 30k)"] --> QUALIF{"Quórum Qualificado\n(Mínimo 75% = 3 Sócios)"}
-        QUALIF -->|"Aprovado (>= 3 votos)"| EXEC
-        QUALIF -->|"Reprovado (< 3 votos)"| REJ["Rejeição da Matéria"]
+    subgraph Deliberacao ["Mecanismo de Deliberação Unipessoal"]
+        DEC["Pauta Operacional do Dia a Dia"] --> VOT{"Decisão do Sócio Proprietário\n(com parecer dos agentes OpenBot)"}
+        VOT --> EXEC["Execução Imediata"]
+        DEC_ESP["Matéria de Alto Impacto\n(Novos Sócios, M&A, Empréstimo > R$ 30k)"] --> QUALIF{"Decisão Qualificada\n(atas/documentação formal)"}
+        QUALIF -->|"Aprovado"| EXEC
+        QUALIF -->|"Reprovado"| REJ["Rejeição da Matéria"]
     end
 ```
 
-### 2.2. Matriz de Responsabilidades Executivas (RACI)
-Para eliminar atritos operacionais e conferir clareza absoluta à rotina diária:
-* **R (Responsible):** Quem executa a atividade diretamente.
-* **A (Accountable):** Quem tem autoridade final e responde pelo resultado (apenas 1 por linha).
-* **C (Consulted):** Quem deve ser consultado antes da tomada de decisão.
-* **I (Informed):** Quem deve ser formalmente informado após a decisão/execução.
+### 2.2. Matriz de Responsabilidades Executivas
+Empresa unipessoal: todos os domínios respondem ao Sócio Proprietário, com execução distribuída ao squad de agentes OpenBot conforme a tag operacional:
 
-| Domínio de Gestão / Atividade Estratégica | Thiago | Diego | Márcio | Yuri |
-| :--- | :---: | :---: | :---: | :---: |
-| **Representação Institucional & Assinatura de Contratos** | **A / R** | C | I | I |
-| **Gestão Financeira, Contabilidade, Tributos & Fator R** | **A / R** | C | I | I |
-| **Prospecção Outbound, Qualificação e Vendas B2B** | **A / R** | C | I | R |
-| **Diretrizes de Arquitetura, Escolha de Stack & Soluções de IA** | C | **A / R** | C | C |
-| **Arbitragem Técnica e Voto de Desempate (Casting Vote)** | I | **A / R** | I | I |
-| **Padrões de Qualidade de Código, Code Review e PR Approvals** | I | C | **A / R** | R |
-| **Esteira de CI/CD, Automação de Deploys e Segurança de Repositórios** | I | C | **A / R** | R |
-| **Triagem Inicial de Chamados e Cumprimento de SLA (P1 a P4)** | R | C | R | **A / R** |
-| **Onboarding Técnico de Novos Clientes & Setup de Ambientes** | I | C | R | **A / R** |
-| **Infraestrutura Cloud, Monitoramento (Sentry/Kuma) & Observabilidade** | I | C | R | **A / R** |
+| Domínio de Gestão / Atividade Estratégica | Responsável | Apoio Operacional (OpenBot) |
+| :--- | :---: | :--- |
+| **Representação Institucional & Assinatura de Contratos** | Thiago | Operativo-Juridico (minutas) |
+| **Gestão Financeira, Contabilidade, Tributos & Fator R** | Thiago | Operativo-FinOps |
+| **Prospecção Outbound, Qualificação e Vendas B2B** | Thiago | Operativo-Comercial (SDR) |
+| **Diretrizes de Arquitetura, Escolha de Stack & Soluções de IA** | Thiago | Consultores de camada (Java/Angular/SQL/IA) |
+| **Padrões de Qualidade de Código, Code Review e PR Approvals** | Thiago | Especialista-QA + O Cético |
+| **Esteira de CI/CD, Automação de Deploys e Segurança de Repositórios** | Thiago | Consultor Git |
+| **Triagem Inicial de Chamados e Cumprimento de SLA (P1 a P4)** | Thiago | Operativo-SLA |
+| **Onboarding Técnico de Novos Clientes & Setup de Ambientes** | Thiago | Operativo-SLA |
+| **Infraestrutura Cloud, Monitoramento (Sentry/Kuma) & Observabilidade** | Thiago | Operativo-SLA |
+| **Avaliação e Contratação de Desenvolvedores** | Thiago | Operativo-TechScreen |
 
-### 2.3. Governança Deliberativa e Resolução de Conflitos
-Conforme estipulado no [Acordo de Sócios](operacoes/01_juridico/ACORDO_DE_SOCIOS.md):
-1. **Decisões Ordinárias do Dia a Dia (< R$ 50.000,00):** Aprovadas por maioria simples dos presentes.
-2. **Voto de Minerva (Casting Vote do Diego):** Em matérias técnicas, arquiteturais ou de priorização operacional que resultem em impasse de 2 a 2, o sócio **Diego Alves** detém o voto de desempate vinculante para preservar a agilidade da empresa.
-3. **Quórum Qualificado de 75% (3 dos 4 sócios):** Obrigatório para:
-   * Admissão de novos sócios ou captação de investimento externo;
-   * Fusão, cisão, incorporação ou venda de ativos estratégicos;
-   * Alteração do objeto social ou transição do regime tributário;
-   * Contratação de financiamentos ou empréstimos superiores a R$ 30.000,00.
-4. **Alinhamento de Vesting e Proteção da Empresa:**
-   * **Vesting de 4 Anos com Cliff de 12 Meses:** 0% de consolidação no primeiro ano; 25% liberados ao completar o 12º mês; 75% restantes liberados à razão linear de 1/36 por mês trabalhado nos 3 anos subsequentes.
-   * **Good Leaver:** Recompra das quotas vestidas em até 12 parcelas mensais pelo valor patrimonial contábil (IPCA).
-   * **Bad Leaver:** Perda imediata das quotas não vestidas e recompra das vestidas com **deságio punitivo de 50%** pagas em 24 meses.
-   * **Cláusula Shotgun (Texas Shootout):** Mecanismo de compra ou venda forçada de quotas em prazo de 30 dias para destravar conflitos societários insanáveis.
+### 2.3. Governança Deliberativa (Empresa Unipessoal)
+1. **Decisões Ordinárias e Extraordinárias:** Por se tratar de sociedade unipessoal, todas as deliberações — ordinárias ou de alto impacto — são tomadas pelo Sócio Proprietário e formalizadas em atas/decisões arquivadas no repositório institucional.
+2. **Admissão Futura de Sócios:** Caso a empresa venha a admitir sócios, aplicar-se-á o [template de Acordo de Sócios](operacoes/01_juridico/ACORDO_DE_SOCIOS.md) mantido neste repositório, com regras de Vesting (4 anos), Cliff (12 meses), Good/Bad Leaver, Voto de Minerva e Cláusula Shotgun já redigidas.
+3. **Proteção de Continuidade:** Processos, credenciais operacionais e governança documentados neste repositório mitigam o risco de conhecimento concentrado em uma única pessoa.
 
 ---
 
@@ -155,7 +133,7 @@ Esta etapa consolida o nascimento formal da pessoa jurídica no Distrito Federal
 ```mermaid
 flowchart TD
     S1["1. Contrato Social LTDA\n(JUCIS-DF)"] --> S2["2. Emissão do CNPJ\n(Receita Federal)"]
-    S2 --> S3["3. Certificados Digitais\n(e-CNPJ A1 + e-CPF 4 Sócios)"]
+    S2 --> S3["3. Certificados Digitais\n(e-CNPJ A1 + e-CPF do Sócio)"]
     S3 --> S4["4. Inscrição Municipal\n(SEFAZ-DF - CF/DF)"]
     S4 --> S5["5. Enquadramento no\nSimples Nacional (Fator R)"]
     S5 --> S6["6. Abertura Conta PJ Digital\n(Cora / Inter / Nubank PJ)"]
@@ -165,8 +143,8 @@ flowchart TD
 * **Natureza Jurídica:** Sociedade Empresária Limitada (Código 206-2).
 * **Órgão Registrador:** Junta Comercial, Industrial e Serviços do Distrito Federal (JUCIS-DF).
 * **Administração:** Thiago Rocha Duarte nomeado Administrador no corpo do contrato, com poderes expressos para transacionar, movimentar contas bancárias, assinar contratos e representar perante órgãos públicos.
-* **Capital Social Inicial:** R$ 10.000,00 (dez mil reais), dividido em 10.000 quotas no valor nominal de R$ 1,00 cada, totalmente subscritas na proporção de 2.500 quotas para cada um dos 4 sócios fundadores.
-* **Cláusula de Regência Supletiva:** Aplicação expressa da Lei das Sociedades por Ações (Lei nº 6.404/76) nos termos do Art. 1.053, parágrafo único do Código Civil, conferindo validade ao Acordo de Sócios arquivado na sede social.
+* **Capital Social Inicial:** R$ 10.000,00 (dez mil reais), dividido em 10.000 quotas no valor nominal de R$ 1,00 cada, totalmente subscritas pelo sócio único Thiago Rocha Duarte.
+* **Natureza Unipessoal:** Sociedade limitada constituída por uma única pessoa (Art. 1.052 do Código Civil), dispensando acordo de sócios; regras internas de governança documentadas neste repositório.
 
 ### 3.2. Quadro Estratégico de CNAEs (Classificação Nacional de Atividades Econômicas)
 A seleção cirúrgica de CNAEs permite cobrir todas as verticais da boutique de software e inteligência artificial, habilitando o uso do Simples Nacional:
@@ -181,7 +159,7 @@ A seleção cirúrgica de CNAEs permite cobrir todas as verticais da boutique de
 
 ### 3.3. Certificação Digital ICP-Brasil
 * **e-CNPJ A1 (Pessoa Jurídica):** Certificado em arquivo digital (software) ou nuvem, com validade de 1 ano. Ficará sob custódia operacional do Sócio Administrador e compartilhado com o escritório contábil credenciado para emissão de NFS-e, DCTFWeb, e-CAC e obrigações previdenciárias.
-* **e-CPF A1 (Pessoas Físicas):** Emissão de certificado digital padrão ICP-Brasil para os 4 sócios fundadores, garantindo agilidade na assinatura digital de aditivos contratuais, atas de assembleia e procurações eletrônicas sem necessidade de deslocamento a cartórios.
+* **e-CPF A1 (Pessoa Física):** Emissão de certificado digital padrão ICP-Brasil para o sócio proprietário, garantindo agilidade na assinatura digital de contratos, atas e procurações eletrônicas sem necessidade de deslocamento a cartórios.
 
 ### 3.4. Inscrição Municipal e Habilitação na NFS-e (SEFAZ-DF)
 * Obtenção do Cadastro Fiscal do Distrito Federal (CF/DF).
@@ -195,7 +173,7 @@ A seleção cirúrgica de CNAEs permite cobrir todas as verticais da boutique de
 ### 3.6. Abertura de Conta Bancária PJ Digital e Governança de Caixa
 * **Instituição Financeira Eleita:** Banco digital empresarial sem tarifas abusivas e com API para automação financeira (ex: Cora PJ, Banco Inter Empresas ou Nubank PJ).
 * **Instrumentos de Movimentação:** Cartões corporativos virtuais com limites pré-definidos para faturamento de despesas operacionais de software (GitHub, Google Workspace, APIs de IA).
-* **Controle de Acesso:** Usuário do Administrador com poderes de movimentação e pagamento; usuários de consulta e auditoria liberados para os demais sócios fundadores para assegurar transparência financeira irrestrita.
+* **Controle de Acesso:** Usuário do Administrador com poderes de movimentação e pagamento; acesso de consulta liberado ao escritório contábil credenciado para transparência fiscal e auditoria.
 
 ---
 
@@ -224,21 +202,18 @@ flowchart TD
 
 ### 4.1. Domínio Corporativo & Identidade Digital
 * Registro do domínio principal no `Registro.br` com proteção de privacidade DNS e redundância Cloudflare.
-* Implantação do **Google Workspace Business Starter** com caixas de correio institucionais dos fundadores:
-  * `thiago@[dominio].com.br` (CEO / Comercial / Institucional)
-  * `diego@[dominio].com.br` (CTO / Engenharia de IA)
-  * `marcio@[dominio].com.br` (Tech Lead / Core Dev)
-  * `yuri@[dominio].com.br` (Solutions / Suporte & Clientes)
+* Implantação do **Google Workspace Business Starter** com caixas de correio institucionais:
+  * `thiago@[dominio].com.br` (Direção / Comercial / Institucional)
   * `contato@[dominio].com.br` / `suporte@[dominio].com.br` (Caixas compartilhadas de atendimento)
 * Configuração estrita de registros de autenticação de e-mail: **SPF, DKIM e DMARC** para garantir entregabilidade em campanhas de prospecção fria e blindagem contra phishing.
-* Autenticação de Dois Fatores (2FA) mandatória para todos os sócios com chaves de segurança (TOTP / Google Authenticator).
+* Autenticação de Dois Fatores (2FA) mandatória em todas as contas com chaves de segurança (TOTP / Google Authenticator).
 
 ### 4.2. Governança de Código e GitHub Organization
 Criação da organização corporativa no GitHub com padrões corporativos de desenvolvimento:
 * **Branch Protection Rules Obrigatórias:**
   * Proteção estrita nas branches `main` e `develop`.
   * Proibição de pushes diretos (`Force Push` e deleção de branch desabilitados).
-  * Exigência de Pull Requests (PR) com aprovação técnica obrigatória de no mínimo **2 sócios engenheiros** (Diego, Márcio ou Yuri) antes de qualquer merge em produção.
+  * Exigência de Pull Requests (PR) com revisão obrigatória antes de qualquer merge em produção — pipeline de qualidade com revisão assistida pelos agentes OpenBot (Especialista-QA e O Cético) e aprovação final do proprietário.
   * *Status Checks* obrigatórios via GitHub Actions (execução de linter, testes unitários automatizados e verificação de vulnerabilidades no código).
 * **Templates Padronizados:**
   * `P1_CRITICAL_INCIDENT_TEMPLATE.md` (Abertura de chamados emergenciais)
@@ -248,7 +223,7 @@ Criação da organização corporativa no GitHub com padrões corporativos de de
 ### 4.3. Central de Suporte, SLA e Gestão de Incidentes
 Integração do fluxo de atendimento ao cliente com a [MATRIZ_SEVERIDADE_E_SLA.md](operacoes/05_administracao/MATRIZ_SEVERIDADE_E_SLA.md):
 * **Ferramenta de Ticketing:** Implantação do Jira Service Management ou Linear estruturado com 4 filas de severidade (P1 a P4).
-* **Canal Executivo de WhatsApp Corporativo:** Número centralizado da empresa com atendimento supervisionado por Thiago e Yuri para recepção imediata de demandas emergenciais de clientes.
+* **Canal Executivo de WhatsApp Corporativo:** Número centralizado da empresa com atendimento supervisionado por Thiago para recepção imediata de demandas emergenciais de clientes.
 * **Acordo de Nível de Serviço (SLA Contratual):**
 
 | Severidade | Definição | Primeira Resposta | Início da Atuação Técnica | Meta de Resolução / Workaround |
@@ -271,7 +246,7 @@ Para atuar antes que o cliente perceba a lentidão ou instabilidade:
 
 ### 4.6. Stack de Engenharia Assistida por Inteligência Artificial
 Para garantir a velocidade e precisão da boutique:
-* **IDE & Dev Tools:** Licenças corporativas do **Cursor Enterprise** para os 4 fundadores, configuradas com arquivos corporativos de contexto (`.cursorrules`).
+* **IDE & Dev Tools:** Licença corporativa do **Cursor Enterprise** para o fundador, configurada com arquivos corporativos de contexto (`.cursorrules`).
 * **Modelos de Linguagem de Fronteira:** Contas corporativas e chaves de API centralizadas na Anthropic (**Claude 3.5 Sonnet / Claude 3.5 Opus**), OpenAI (**GPT-4o**) e Google (**Gemini 1.5 Pro**).
 * **Prompts e Frameworks Proprietários:** Repositório interno com agentes especializados em:
   * Auditoria estática de código legado;
@@ -279,11 +254,11 @@ Para garantir a velocidade e precisão da boutique:
   * Criação automática de testes unitários de regressão para sistemas legados sem cobertura.
 
 ### 4.7. Orquestração Multi-Agente com OpenBot
-Para ampliar a capacidade de entrega dos 4 sócios fundadores, a empresa opera integrada à plataforma **OpenBot** ([operacoes/openbot_integracao/README.md](operacoes/openbot_integracao/README.md)), disponibilizando 6 robôs especialistas com divisão de responsabilidades:
+Para ampliar a capacidade de entrega do fundador, a empresa opera integrada à plataforma **OpenBot** ([operacoes/openbot_integracao/README.md](operacoes/openbot_integracao/README.md)), disponibilizando 6 robôs especialistas com divisão de responsabilidades:
 
 ```mermaid
 flowchart TD
-    USR["Comando / Demanda Operacional\n(Sócios Fundadores)"] --> TORRE["Pai de Todos / Torre OpenBot"]
+    USR["Comando / Demanda Operacional\n(Sócio Proprietário)"] --> TORRE["Pai de Todos / Torre OpenBot"]
     
     subgraph Robos ["Squad de Robôs Especialistas (N3/N4 Autônomos)"]
         TORRE -->|"[COMERCIAL]"| AG1["Operativo-Comercial\n(SDR & Propostas)"]
@@ -302,7 +277,7 @@ flowchart TD
     AG6 --> QA
     
     QA --> CET["O Cético\n(Stress Test de Riscos e Premissas)"]
-    CET --> N1["Canal Entregas / Alçada N1\n(Aprovação Final Exclusiva dos Sócios)"]
+    CET --> N1["Canal Entregas / Alçada N1\n(Aprovação Final Exclusiva do Fundador)"]
 ```
 
 ---
@@ -311,15 +286,12 @@ flowchart TD
 
 A disciplina de caixa nos primeiros 90 dias determina a longevidade da boutique. Esta fase estrutura o colchão de segurança e o controle orçamentário.
 
-### 5.1. Aporte de Capital Seed pelos Fundadores
+### 5.1. Aporte de Capital Seed pelo Fundador
 Para cobrir os custos de legalização e manter uma folga operacional até o recebimento das primeiras faturas:
 
-| Sócio Fundador | Percentual Societário | Aporte Financeiro Inicial | Forma de Pagamento |
+| Sócio Proprietário | Percentual Societário | Aporte Financeiro Inicial | Forma de Pagamento |
 | :--- | :---: | :---: | :--- |
-| **Thiago Rocha Duarte** | 25,00% | R$ 2.500,00 | Depósito via PIX na Conta PJ da Empresa |
-| **Diego Alves** | 25,00% | R$ 2.500,00 | Depósito via PIX na Conta PJ da Empresa |
-| **Márcio** | 25,00% | R$ 2.500,00 | Depósito via PIX na Conta PJ da Empresa |
-| **Yuri** | 25,00% | R$ 2.500,00 | Depósito via PIX na Conta PJ da Empresa |
+| **Thiago Rocha Duarte** | 100,00% | R$ 10.000,00 | Depósito via PIX na Conta PJ da Empresa |
 | **TOTAL DO CAPITAL DE GIRO INICIAL** | **100,00%** | **R$ 10.000,00** | **Disponível no D-10 para operação** |
 
 ### 5.2. Orçamento Operacional Mensal Projetado (OPEX Enxuto)
@@ -328,19 +300,19 @@ Estimativa de despesas fixas recorrentes para manter a infraestrutura nos primei
 | Centro de Custo / Serviço | Descrição Operacional | Provedor Estimado | Custo Mensal (R$) |
 | :--- | :--- | :--- | :---: |
 | **Assessoria Contábil PJ** | Gestão de folha, Fator R, apuração do DAS e balancetes | Contabilizei / Agilize / Contador DF | R$ 380,00 |
-| **Google Workspace Corporativo** | 4 licenças Business Starter (e-mail, Meet, Drive Seguro) | Google Cloud Brasil | R$ 144,00 |
-| **Tooling de IA (Cursor Enterprise)** | 4 licenças profissionais de desenvolvimento assistido | Cursor.sh | R$ 480,00 |
+| **Google Workspace Corporativo** | 1 licença Business Starter (e-mail, Meet, Drive Seguro) | Google Cloud Brasil | R$ 36,00 |
+| **Tooling de IA (Cursor Enterprise)** | 1 licença profissional de desenvolvimento assistido | Cursor.sh | R$ 120,00 |
 | **Infraestrutura Cloud & Monitoramento** | VPS para Uptime Kuma + Sentry básico + APIs de IA | Hetzner / AWS / Anthropic | R$ 280,00 |
 | **Assinatura Eletrônica & Automações** | ZapSign (plano 50 documentos) + domínio / DNS | ZapSign / Registro.br | R$ 90,00 |
 | **Taxas de Emissão & Manutenção Bancária** | Emissão de boletos, transferências PJ e certificados | Banco Digital PJ | R$ 40,00 |
-| **TOTAL DO OPEX FIXO MENSAL** | — | — | **R$ 1.414,00 / mês** |
+| **TOTAL DO OPEX FIXO MENSAL** | — | — | **R$ 946,00 / mês** |
 
 > [!TIP]
-> **Autossuficiência Imediata:** Com um OPEX fixo rigorosamente controlado em ~R$ 1.400/mês, o Capital Seed de R$ 10.000,00 confere mais de **7 meses de sobrevivência operacional bruta (*Runway*)** mesmo com receita zero. A conquista de um único cliente no Plano Essencial (R$ 3.800/mês) ou Profissional (R$ 5.500/mês) elimina qualquer risco de caixa desde o primeiro mês.
+> **Autossuficiência Imediata:** Com um OPEX fixo rigorosamente controlado em ~R$ 950/mês, o Capital Seed de R$ 10.000,00 confere mais de **10 meses de sobrevivência operacional bruta (*Runway*)** mesmo com receita zero. A conquista de um único cliente no Plano Essencial (R$ 3.800/mês) ou Profissional (R$ 5.500/mês) elimina qualquer risco de caixa desde o primeiro mês.
 
 ### 5.3. A Estratégia Financeira em Duas Fases & Cascata de Caixa
 
-Conforme ratificado na Cláusula 6.2 do [Acordo de Sócios](operacoes/01_juridico/ACORDO_DE_SOCIOS.md) e no [Planejamento Tributário e Financeiro](operacoes/05_administracao/PLANEJAMENTO_TRIBUTARIO_E_FINANCEIRO.md), a política de remuneração adota uma transição estruturada em dois momentos:
+Conforme definido no [Planejamento Tributário e Financeiro](operacoes/05_administracao/PLANEJAMENTO_TRIBUTARIO_E_FINANCEIRO.md), a política de remuneração adota uma transição estruturada em dois momentos:
 
 ```mermaid
 flowchart TD
@@ -357,21 +329,21 @@ flowchart TD
 
     subgraph Fase2 ["Fase 2: Ativação do Pró-Labore & Fator R (Tração - Meses 3 em diante)"]
         F2_A["Receita Bruta Recorrente (MRR)"] --> F2_B["Deduções Fixas: DAS Simples (6%) + OPEX"]
-        F2_B --> F2_C["Ativação do Pró-Labore dos 4 Sócios\n(Calibrado em 28,1% a 28,5% do RBT12)"]
+        F2_B --> F2_C["Ativação do Pró-Labore do Sócio\n(Calibrado em 28,1% a 28,5% do RBT12)"]
         F2_C --> F2_D["Enquadramento Líquido no Anexo III da LC 123/06\n(Economia tributária de 15,5% para 6,0%)"]
         F2_D --> F2_E{"Fundo de Reserva\n>= 3 meses OPEX?"}
         F2_E -->|"NÃO"| F2_F["Reter 20% do Lucro Líquido no Caixa"]
         F2_F --> F2_G["80% distribuídos como Dividendos Isentos"]
-        F2_E -->|"SIM"| F2_H["100% do Lucro Líquido distribuído\ncomo Dividendos Isentos aos Sócios"]
+        F2_E -->|"SIM"| F2_H["100% do Lucro Líquido distribuído\ncomo Dividendos Isentos ao Sócio"]
     end
 
     Fase1 --> Gatilho --> Fase2
 ```
 
-* **Fase 1 – Zero Pró-Labore (Bootstrapping Inicial):** Nos primeiros meses de vida da empresa, os 4 Sócios Fundadores não farão retirada mensal de Pró-Labore. Toda a receita líquida gerada será blindada no caixa PJ para cobrir os custos operacionais (contador, licenças de IA e servidores) e acelerar a formação da reserva de segurança.
+* **Fase 1 – Zero Pró-Labore (Bootstrapping Inicial):** Nos primeiros meses de vida da empresa, o fundador não fará retirada mensal de Pró-Labore. Toda a receita líquida gerada será blindada no caixa PJ para cobrir os custos operacionais (contador, licenças de IA e servidores) e acelerar a formação da reserva de segurança.
 * **Fase 2 – Ativação do Fator R (Tração Comercial):** A partir do momento em que a carteira recorrente atingir o patamar de estabilidade (R$ 25.000 a R$ 30.000/mês), a assessoria contábil emitirá os Pró-Labores fixados em **28,1% da Receita Bruta Acumulada (RBT12)**. Isso garante o direito incontestável ao enquadramento das atividades de software no **Anexo III (alíquota inicial de 6,00%)**, gerando economia líquida de mais de R$ 27.700,00 anuais em relação ao Anexo V.
 * **Regra de Retenção do Colchão de Segurança:** Todo mês, 20% do lucro líquido contábil apurado será compulsoriamente retido na conta PJ da empresa até que se atinja a meta mínima de **3 (três) meses de OPEX fixo (aproximadamente R$ 4.500,00 a R$ 6.000,00)**.
-* **Distribuição de Dividendos Isentos:** A distribuição aos 4 fundadores será formalizada em balancetes contábeis trimestrais com base no Art. 10 da Lei nº 9.249/1995, garantindo isenção total de IRPF sobre os lucros distribuídos.
+* **Distribuição de Dividendos Isentos:** A distribuição ao fundador será formalizada em balancetes contábeis trimestrais com base no Art. 10 da Lei nº 9.249/1995, garantindo isenção total de IRPF sobre os lucros distribuídos.
 
 ---
 
@@ -421,7 +393,7 @@ flowchart TD
 
 ### 6.3. Metas de Tração e Conversão dos Primeiros 30 Dias (D-Day a D+30)
 Para alcançar o primeiro cliente pagante com precisão estatística:
-* **Abordagens Qualificadas:** 100 decisores contatados (média de 5 contatos por dia útil distribuídos entre Thiago e Yuri).
+* **Abordagens Qualificadas:** 100 decisores contatados (média de 5 contatos por dia útil executados por Thiago com apoio do Operativo-Comercial).
 * **Taxa de Resposta Positiva (15%):** 15 reuniões de alinhamento executivo de 15 minutos agendadas no Google Meet.
 * **Diagnósticos Apresentados (33% de conversão):** 5 propostas comerciais de Discovery ou Sustentação emitidas.
 * **Fechamentos Efetivos (20% a 40% de conversão):** **1 a 2 contratos formalizados**, gerando faturamento imediato entre R$ 5.500,00 e R$ 11.000,00 de MRR.
@@ -434,19 +406,19 @@ Cronograma tático detalhado que atribui responsabilidade individual a cada etap
 
 | Semana | Período Tático | Marco / Atividade Crítica | Entregável Concreto | Owner Responsável |
 | :---: | :---: | :--- | :--- | :---: |
-| **S-08** | D-60 a D-54 | Redação final do Contrato Social e formalização do Acordo de Sócios | Minutas aprovadas pelos 4 sócios fundadores | **Thiago** |
-| **S-07** | D-53 a D-47 | Protocolo de abertura na JUCIS-DF e emissão de e-CNPJ e e-CPFs | CNPJ ativo e certificados digitais A1 emitidos | **Thiago** |
+| **S-08** | D-60 a D-54 | Redação final do Contrato Social (LTDA Unipessoal) | Minuta aprovada pelo sócio proprietário | **Thiago** |
+| **S-07** | D-53 a D-47 | Protocolo de abertura na JUCIS-DF e emissão de e-CNPJ e e-CPF | CNPJ ativo e certificados digitais A1 emitidos | **Thiago** |
 | **S-06** | D-46 a D-40 | Obtenção da Inscrição Municipal SEFAZ-DF e liberação de NFS-e | Cadastro Fiscal DF e portal da NFS-e liberado | **Thiago** |
 | **S-05** | D-39 a D-33 | Protocolo do Simples Nacional (Fator R) e abertura de Conta PJ | Conta digital aprovada e parametrização fiscal | **Thiago** |
-| **S-04** | D-32 a D-26 | Registro de Domínio, setup do Google Workspace e GitHub Org | E-mails corporativos ativos e branch protection ok | **Diego / Márcio** |
-| **S-03** | D-25 a D-19 | Setup de IDEs de IA (Cursor Enterprise), APIs de LLMs e CI/CD | Esteira de automação e templates de PR ativos | **Diego / Márcio** |
-| **S-02** | D-18 a D-12 | Setup de Observabilidade (Sentry/Kuma) e Central de Chamados | Central Linear/Jira com matriz P1-P4 operacional | **Yuri / Márcio** |
-| **S-01** | D-11 a D-05 | Configuração do ZapSign, modelos contratuais e aporte Seed (R$ 10k) | R$ 10.000 integralizados e assinador validado | **Thiago / Yuri** |
-| **S-00** | D-04 a D-00 | **GO-LIVE OPERACIONAL:** Simulação de incidentes e teste geral | Empresa 100% pronta para receber clientes | **Os 4 Sócios** |
-| **S+01** | D+01 a D+07 | Disparo do Funil Outbound: Abordagens 1 e 2 (LinkedIn & WhatsApp DF)| 25 contatos qualificados e primeiras reuniões | **Thiago / Yuri** |
-| **S+02** | D+08 a D+15 | Reuniões de diagnóstico e execução dos primeiros Discoveries | Relatórios técnicos emitidos para clientes | **Diego / Márcio** |
+| **S-04** | D-32 a D-26 | Registro de Domínio, setup do Google Workspace e GitHub Org | E-mails corporativos ativos e branch protection ok | **Thiago** |
+| **S-03** | D-25 a D-19 | Setup de IDEs de IA (Cursor Enterprise), APIs de LLMs e CI/CD | Esteira de automação e templates de PR ativos | **Thiago** |
+| **S-02** | D-18 a D-12 | Setup de Observabilidade (Sentry/Kuma) e Central de Chamados | Central Linear/Jira com matriz P1-P4 operacional | **Thiago** |
+| **S-01** | D-11 a D-05 | Configuração do ZapSign, modelos contratuais e aporte Seed (R$ 10k) | R$ 10.000 integralizados e assinador validado | **Thiago** |
+| **S-00** | D-04 a D-00 | **GO-LIVE OPERACIONAL:** Simulação de incidentes e teste geral | Empresa 100% pronta para receber clientes | **Thiago** |
+| **S+01** | D+01 a D+07 | Disparo do Funil Outbound: Abordagens 1 e 2 (LinkedIn & WhatsApp DF)| 25 contatos qualificados e primeiras reuniões | **Thiago** |
+| **S+02** | D+08 a D+15 | Reuniões de diagnóstico e execução dos primeiros Discoveries | Relatórios técnicos emitidos para clientes | **Thiago** |
 | **S+03** | D+16 a D+22 | Envio das primeiras Propostas Executivas de Sustentação | Propostas no ZapSign aguardando assinatura | **Thiago** |
-| **S+04** | D+23 a D+30 | **FECHAMENTO DO 1º CLIENTE:** Onboarding técnico e início do SLA | **1º Contrato Assinado (R$ 5.5k+) e Break-even** | **Os 4 Sócios** |
+| **S+04** | D+23 a D+30 | **FECHAMENTO DO 1º CLIENTE:** Onboarding técnico e início do SLA | **1º Contrato Assinado (R$ 5.5k+) e Break-even** | **Thiago** |
 
 ---
 
@@ -465,8 +437,8 @@ flowchart TD
     subgraph KTec ["3. KPIs Técnicos e SLA"]
         K3["• Tempo Médio de Primeira Resposta em P1 (<= 2h)\n• Taxa de Cumprimento de SLA Contratual (>= 98%)\n• MTTR (Tempo Médio de Reparo em Produção <= 4h)\n• Uptime Médio dos Ambientes Monitorados (>= 99,5%)"]
     end
-    subgraph KGov ["4. KPIs de Governança e Sociedade"]
-        K4["• Índice de Participação nas Reuniões de Board (100%)\n• Respeito irrestrito ao Voto de Minerva e Vesting\n• CSAT / Satisfação do Primeiro Cliente (>= 9,0/10)"]
+    subgraph KGov ["4. KPIs de Governança e Gestão"]
+        K4["• Revisão quinzenal de caixa, pipeline e backlog (100%)\n• Decisões de alto impacto formalizadas em ata\n• CSAT / Satisfação do Primeiro Cliente (>= 9,0/10)"]
     end
 ```
 
@@ -481,28 +453,25 @@ Nenhum plano executivo é completo sem o mapeamento prévio de gargalos operacio
 | **Atraso na tramitação da JUCIS-DF ou SEFAZ-DF** | Média | Médio | Protocolar documentação completa com auxílio de contador local experiente no DF. | Ativar prestação temporária de consultoria via recibo/contrato particular pré-aprovado com faturamento postergado. |
 | **Desenquadramento do Fator R (< 28,0%)** | Baixa | Alto | Parametrização contábil com margem preventiva (Pró-Labore em 28,3% do RBT12). | Contador realiza ajuste complementar extraordinário de Pró-Labore antes do fechamento da competência mensal. |
 | **Demora além de 30 dias para o 1º fechamento** | Média | Médio | Diversificação em 5 canais simultâneos (não depender apenas de 1 canal). | Intensificar a abordagem de emergência nas plataformas 99Freelas/Workana e oferecer Sprint Diagnóstico com 50% de desconto. |
-| **Incidente Crítico P1 em cliente durante o dia útil** | Baixa | Alto | Protocolo de triagem imediata com papéis pré-definidos na Matriz de SLA. | Thiago assume imediatamente o alinhamento com o cliente; Diego, Márcio e Yuri entram em sala de guerra técnica até a resolução. |
-| **Divergência técnica interna 2 a 2 entre os sócios** | Média | Médio | Princípio de liderança descentralizada e confiança profissional. | Acionamento automático da Cláusula 2.2 do Acordo de Sócios: **Voto de Minerva vinculante de Diego Alves**. |
+| **Incidente Crítico P1 em cliente durante o dia útil** | Baixa | Alto | Protocolo de triagem imediata com papéis pré-definidos na Matriz de SLA. | Thiago assume imediatamente o alinhamento com o cliente e lidera a sala de guerra técnica com apoio dos agentes OpenBot até a resolução. |
+| **Indisponibilidade do fundador (fator pessoa-chave)** | Média | Alto | Processos, credenciais e governança documentados neste repositório; agentes OpenBot mantêm rotinas operacionais. | Contingência via delegação documentada e continuidade operacional assistida pelo squad OpenBot. |
 
 ---
 
-## 10. Termo de Consentimento, Compromisso e Homologação dos Sócios Fundadores
+## 10. Termo de Consentimento, Compromisso e Homologação do Sócio Proprietário
 
-Os 4 Sócios Fundadores abaixo identificados declaram, para todos os efeitos de direito:
-1. Haver examinado, debatido e aprovado em sua totalidade as cláusulas, cronogramas, metas financeiras e matrizes de responsabilidade fixadas neste **PLANO MESTRE DE LANÇAMENTO EMPRESARIAL**;
-2. Comprometer-se a executar com dedicação profissional, lealdade e boa-fé os papéis definidos na Matriz RACI, respeitando integralmente as cláusulas de Vesting, Voto de Minerva, Fundo de Reserva e Fator R estipuladas no [Acordo de Sócios](operacoes/01_juridico/ACORDO_DE_SOCIOS.md);
-3. Homologar a aprovação definitiva deste documento através de suas assinaturas e aprovação formal do **Pull Request #01** no repositório institucional do GitHub.
+O Sócio Proprietário abaixo identificado declara, para todos os efeitos de direito:
+1. Haver examinado e aprovado em sua totalidade as cláusulas, cronogramas, metas financeiras e matrizes de responsabilidade fixadas neste **PLANO MESTRE DE LANÇAMENTO EMPRESARIAL**;
+2. Comprometer-se a executar com dedicação profissional, lealdade e boa-fé os papéis definidos na Matriz de Responsabilidades, respeitando integralmente as políticas de Fundo de Reserva e Fator R definidas neste plano;
+3. Homologar a aprovação definitiva deste documento através de sua assinatura e aprovação formal do **Pull Request #01** no repositório institucional do GitHub.
 
 ---
 
-### Quórum de Homologação Societária:
+### Homologação do Sócio Proprietário:
 
-| Sócio Fundador | Cargo Executivo | GitHub Handle | Data de Aprovação | Assinatura Digital / Status do PR |
+| Sócio Proprietário | Cargo Executivo | GitHub Handle | Data de Aprovação | Assinatura Digital / Status do PR |
 | :--- | :--- | :--- | :---: | :---: |
-| **THIAGO ROCHA DUARTE** | Sócio Administrador (CEO) | `@thiagoduarte` | [DD/MM/2026] | `[ ] APROVADO VIA GITHUB PR` |
-| **DIEGO ALVES** | CTO & Arquiteto Principal / IA | `@diegoalves` | [DD/MM/2026] | `[ ] APROVADO VIA GITHUB PR` |
-| **MÁRCIO ALVES** | Tech Lead & Core Engineer | `@marcio-tech` | [DD/MM/2026] | `[ ] APROVADO VIA GITHUB PR` |
-| **YURI ALVES** | Solutions Engineer & Tech Ops | `@yuri-solutions` | [DD/MM/2026] | `[ ] APROVADO VIA GITHUB PR` |
+| **THIAGO ROCHA DUARTE** | Sócio Proprietário & Diretor | `@thiagorduarte1107` | [DD/MM/2026] | `[ ] APROVADO VIA GITHUB PR` |
 
 ---
 

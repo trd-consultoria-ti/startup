@@ -19,8 +19,8 @@ Este documento define o procedimento padrão para abertura, triagem, resolução
 
 ```mermaid
 flowchart TD
-    IN["Chamado do Cliente\n(WhatsApp / E-mail / Portal)"] --> S1["1. Triagem e Registro do Chamado\n• Thiago ou Yuri confirma recebimento\n• Classificação de severidade (P1 a P4)"]
-    S1 --> S2["2. Contorno Imediato (Workaround)\n• Márcio e Diego identificam o gargalo\n• Restauração da operação básica se P1"]
+    IN["Chamado do Cliente\n(WhatsApp / E-mail / Portal)"] --> S1["1. Triagem e Registro do Chamado\n• Thiago confirma recebimento\n• Classificação de severidade (P1 a P4)"]
+    S1 --> S2["2. Contorno Imediato (Workaround)\n• Diagnóstico técnico identifica o gargalo\n• Restauração da operação básica se P1"]
     S2 --> S3["3. Resolução e Testes (AI-Native)\n• Correção com testes automatizados\n• Tripla supervisão sênior antes do deploy"]
     S3 --> S4["4. Fechamento e Apontamento\n• Notificação formal de encerramento\n• Débito das horas no banco mensal contratado"]
 ```
@@ -29,9 +29,11 @@ flowchart TD
 
 ## 3. Divisão de Papéis durante um Incidente Crítico (P1)
 
-* **Thiago:** Assume a **Comunicação com o Cliente**. Alinha expectativas, tranquiliza o diretor da empresa e fornece atualizações de status a cada 30 a 60 minutos até o restabelecimento do serviço.
-* **Diego:** Lidera o **Diagnóstico de Arquitetura e Causa Raiz** (inspeção de logs de servidor, locks de banco de dados SQL e estabilidade da nuvem).
-* **Márcio e Yuri:** Executam o **Patch de Código / Hotfix**, geram os testes de regressão e realizam o deploy seguro em produção.
+Empresa unipessoal com squad de agentes de IA (OpenBot): os papéis são desempenhados pelo fundador com apoio operacional dos agentes.
+
+* **Thiago (Sócio Proprietário):** Assume a **Comunicação com o Cliente** e a **direção técnica do incidente**. Alinha expectativas, tranquiliza o diretor da empresa e fornece atualizações de status a cada 30 a 60 minutos até o restabelecimento do serviço.
+* **Thiago + Consultores de camada (Java/Angular/SQL):** **Diagnóstico de Arquitetura e Causa Raiz** (inspeção de logs de servidor, locks de banco de dados SQL e estabilidade da nuvem).
+* **Thiago + Operativo-SLA:** **Patch de Código / Hotfix**, geração dos testes de regressão e deploy seguro em produção, com revisão do Especialista-QA antes da liberação.
 
 ---
 

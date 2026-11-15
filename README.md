@@ -12,7 +12,7 @@
 
 > [!IMPORTANT]
 > ### 🏛️ Documento Central de Lançamento
-> Acesse o [**PLANO_DE_LANCAMENTO_EMPRESARIAL.md**](PLANO_DE_LANCAMENTO_EMPRESARIAL.md) ou faça o download da versão formatada para Word: [**PLANO_DE_LANCAMENTO_EMPRESARIAL.docx**](PLANO_DE_LANCAMENTO_EMPRESARIAL.docx) — O Plano Mestre oficial de fundação, governança dos 4 sócios fundadores, engenharia tributária (Simples Nacional / Fator R a 6%), infraestrutura tecnológica e estratégia Go-to-Market de D-60 a D+30.
+> Acesse o [**PLANO_DE_LANCAMENTO_EMPRESARIAL.md**](PLANO_DE_LANCAMENTO_EMPRESARIAL.md) ou faça o download da versão formatada para Word: [**PLANO_DE_LANCAMENTO_EMPRESARIAL.docx**](PLANO_DE_LANCAMENTO_EMPRESARIAL.docx) — O Plano Mestre oficial de fundação e governança da **TRD Consultoria e Serviços de TI LTDA** (empresa unipessoal), engenharia tributária (Simples Nacional / Fator R a 6%), infraestrutura tecnológica e estratégia Go-to-Market de D-60 a D+30.
 
 ---
 
@@ -33,7 +33,7 @@ Este repositório fornece a esteira completa para operar uma empresa de desenvol
     ├── 01_juridico/
     │   ├── CONTRATO_SUSTENTACAO_E_SLA.md (.docx)   # Contrato com Damage Cap e limitação de responsabilidade
     │   ├── ACORDO_CONFIDENCIALIDADE_NDA.md (.docx) # NDA bilateral com conformidade LGPD
-    │   └── ACORDO_DE_SOCIOS.md (.docx)             # Acordo de sócios: Vesting de 4 anos, Cliff e Voto de Minerva do Diego
+    │   └── ACORDO_DE_SOCIOS.md (.docx)             # Template de acordo de sócios: Vesting de 4 anos, Cliff, Bad Leaver e Voto de Minerva
     ├── 02_comercial_marketing/
     │   ├── PROPOSTA_COMERCIAL_EXECUTIVA.md (.docx) # Proposta de alto valor (Piso R$ 3.800 a R$ 8.500/mês)
     │   └── SCRIPTS_PROSPECCAO_OUTBOUND.md          # 5 scripts de abordagem (WhatsApp, LinkedIn, Agências)
@@ -49,7 +49,7 @@ Este repositório fornece a esteira completa para operar uma empresa de desenvol
 ### 📥 Documentos Disponíveis em Word (.docx) para Download
 Para agilizar o fechamento comercial, assinaturas digitais (Gov.br / Clicksign / ZapSign) e reuniões societárias/contábeis, todos os documentos burocráticos e comerciais possuem versão editável `.docx`:
 - 🏛️ **Plano Mestre de Lançamento:** [`PLANO_DE_LANCAMENTO_EMPRESARIAL.docx`](PLANO_DE_LANCAMENTO_EMPRESARIAL.docx)
-- 🤝 **Acordo de Sócios (Vesting & Minerva):** [`ACORDO_DE_SOCIOS.docx`](operacoes/01_juridico/ACORDO_DE_SOCIOS.docx)
+- 🤝 **Acordo de Sócios — Template (Vesting & Minerva):** [`ACORDO_DE_SOCIOS.docx`](operacoes/01_juridico/ACORDO_DE_SOCIOS.docx)
 - 📜 **Contrato de Sustentação & SLA:** [`CONTRATO_SUSTENTACAO_E_SLA.docx`](operacoes/01_juridico/CONTRATO_SUSTENTACAO_E_SLA.docx)
 - 🔒 **Acordo de Confidencialidade (NDA):** [`ACORDO_CONFIDENCIALIDADE_NDA.docx`](operacoes/01_juridico/ACORDO_CONFIDENCIALIDADE_NDA.docx)
 - 💼 **Proposta Comercial Executiva:** [`PROPOSTA_COMERCIAL_EXECUTIVA.docx`](operacoes/02_comercial_marketing/PROPOSTA_COMERCIAL_EXECUTIVA.docx)
@@ -57,16 +57,13 @@ Para agilizar o fechamento comercial, assinaturas digitais (Gov.br / Clicksign /
 
 ---
 
-## 👥 Equipe Fundadora / Core Team (Estrutura Horizontal de Engenharia)
+## 👤 Fundador
 
-> **Modelo de Sociedade Horizontal:** Todos os fundadores atuam como **Sócios Engenheiros de Software no mesmo nível de hierarquia corporativa**, dedicados à engenharia, arquitetura e entrega técnica de alto escalão, contando com o sócio **Diego Alves** como detentor do *Casting Vote* (Voto de Minerva) em caso de empate deliberativo.
+> **Empresa Unipessoal:** A **TRD Consultoria e Serviços de TI LTDA** é uma sociedade limitada unipessoal fundada e operada por engenheiro de software sênior, com entrega técnica ampliada por squad de agentes de IA ([OpenBot](operacoes/openbot_integracao/README.md)).
 
-| Sócio Fundador | Atuação Técnica & Estratégica (Mesmo Nível Hierárquico) | LinkedIn | GitHub |
+| Fundador | Atuação Técnica & Estratégica | LinkedIn | GitHub |
 | :--- | :--- | :---: | :---: |
-| **Thiago Duarte** | Sócio Engenheiro de Software (Operações & Gestão Administrativa) | [![LinkedIn](https://img.shields.io/badge/LinkedIn-Thiago_Duarte-0A66C2?style=flat&logo=linkedin)](https://www.linkedin.com/in/thiago-duarte-a6597721/) | [![GitHub](https://img.shields.io/badge/GitHub-thiagorduarte1107-181717?style=flat&logo=github)](https://github.com/thiagorduarte1107) |
-| **Diego Alves** | Sócio Engenheiro de Software & Arquiteto Principal *(Casting Vote)* | [![LinkedIn](https://img.shields.io/badge/LinkedIn-Diego_Alves-0A66C2?style=flat&logo=linkedin)](https://www.linkedin.com/in/by-diegoalves/) | [![GitHub](https://img.shields.io/badge/GitHub-isdiegoalves-181717?style=flat&logo=github)](https://github.com/isdiegoalves) |
-| **Márcio Andrade Alves** | Sócio Engenheiro de Software & Tech Lead | [![LinkedIn](https://img.shields.io/badge/LinkedIn-Márcio_Alves-0A66C2?style=flat&logo=linkedin)](https://www.linkedin.com/in/m%C3%A1rcio-andrade-463590125/) | [![GitHub](https://img.shields.io/badge/GitHub-hellfyzor-181717?style=flat&logo=github)](https://github.com/hellfyzor) |
-| **Yuri Alves** | Sócio Engenheiro de Software & Solutions Ops | [![LinkedIn](https://img.shields.io/badge/LinkedIn-Yuri_Alves-0A66C2?style=flat&logo=linkedin)](https://www.linkedin.com/in/yurileader/) | [![GitHub](https://img.shields.io/badge/GitHub-yurileader-181717?style=flat&logo=github)](https://github.com/yurileader) |
+| **Thiago Rocha Duarte** | Sócio Proprietário & Engenheiro de Software (Operações, Arquitetura, Comercial e Gestão) | [![LinkedIn](https://img.shields.io/badge/LinkedIn-Thiago_Duarte-0A66C2?style=flat&logo=linkedin)](https://www.linkedin.com/in/thiago-duarte-a6597721/) | [![GitHub](https://img.shields.io/badge/GitHub-thiagorduarte1107-181717?style=flat&logo=github)](https://github.com/thiagorduarte1107) |
 
 ---
 

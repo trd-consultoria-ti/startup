@@ -43,7 +43,7 @@ flowchart TD
     AG_ESP --> QA
     
     QA --> CET["O Cético\n(Validação de premissas e riscos)"]
-    CET --> ENT["Canal Entregas\n(Artefato pronto para aprovação dos Sócios - N1)"]
+    CET --> ENT["Canal Entregas\n(Artefato pronto para aprovação do Fundador - N1)"]
 ```
 
 ---

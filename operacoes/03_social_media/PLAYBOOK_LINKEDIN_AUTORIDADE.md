@@ -1,6 +1,6 @@
 # PLAYBOOK DE AUTORIDADE NO LINKEDIN (DEV-TO-FOUNDER)
 
-Este guia orienta a estratégia de conteúdo no LinkedIn para os sócios. O objetivo não é "virar influenciador", mas sim gerar **confiança imediata para decisores (CEOs, Diretores e CTOs)** que pesquisam o perfil de vocês antes de fechar contratos de sustentação.
+Este guia orienta a estratégia de conteúdo no LinkedIn do fundador. O objetivo não é "virar influenciador", mas sim gerar **confiança imediata para decisores (CEOs, Diretores e CTOs)** que pesquisam o seu perfil antes de fechar contratos de sustentação.
 
 ---
 
@@ -81,15 +81,15 @@ Este guia orienta a estratégia de conteúdo no LinkedIn para os sócios. O obje
 
 ---
 
-## 4. O "Squad de Autoridade" nos 4 Perfis do LinkedIn
+## 4. A Estratégia Editorial do Perfil do Fundador
 
-Para maximizar o alcance da empresa sem parecer spam corporativo, os 4 sócios dividem os ângulos editoriais no LinkedIn:
+Empresa unipessoal: o perfil do fundador concentra toda a autoridade da marca. Para cobrir o funil completo sem dispersão, as 4 linhas editoriais giram em rodízio semanal no mesmo perfil:
 
-| Sócio Fundador | Perfil Oficial | Linha Editorial Estratégica (O que Postar) |
-| :--- | :---: | :--- |
-| **Thiago Duarte** | [thiago-duarte](https://www.linkedin.com/in/thiago-duarte-a6597721/) | **Foco em Negócios, Gestão e Risco:** Posts sobre o custo oculto de sistemas travando, governança de TI em PMEs, ROI de sustentação e como escolher fornecedores de software sérios no Brasil. |
-| **Diego Alves** | [by-diegoalves](https://www.linkedin.com/in/by-diegoalves/) | **Foco em Arquitetura Enterprise e IA:** Análises profundas de arquitetura (Java corporativo, AWS, Keycloak/SSO, observabilidade), integração de LLMs e agentes no mundo real sem hype. |
-| **Márcio Andrade Alves** | [marcio-andrade](https://www.linkedin.com/in/m%C3%A1rcio-andrade-463590125/) | **Foco em Engenharia e Qualidade de Código:** Boas práticas de desenvolvimento, refatoração de código legado, testes automatizados, CI/CD, Angular moderno e Spring Boot. |
-| **Yuri Alves** | [yurileader](https://www.linkedin.com/in/yurileader/) | **Foco em Solutions Engineering e Tech Ops:** Integrações de sistemas e APIs, resolução de incidentes críticos, automações operacionais e gestão de SLA sem atrito. |
+| Perfil Oficial | Linha Editorial (Rodízio Semanal) | O que Postar |
+| :--- | :--- | :--- |
+| [Thiago Duarte](https://www.linkedin.com/in/thiago-duarte-a6597721/) | **Semana 1 — Negócios, Gestão e Risco** | Custo oculto de sistemas travando, governança de TI em PMEs, ROI de sustentação e como escolher fornecedores de software sérios no Brasil. |
+| | **Semana 2 — Arquitetura Enterprise e IA** | Análises de arquitetura (Java corporativo, AWS, observabilidade), integração de LLMs e agentes no mundo real sem hype — incluindo a própria operação com squad OpenBot. |
+| | **Semana 3 — Engenharia e Qualidade de Código** | Boas práticas, refatoração de legado, testes automatizados, CI/CD, Angular moderno e Spring Boot. |
+| | **Semana 4 — Solutions Engineering e Tech Ops** | Integrações de sistemas e APIs, resolução de incidentes críticos, automações operacionais e gestão de SLA sem atrito. |
 
-> *A regra do Squad:* Quando um dos sócios publicar um post técnico ou comercial, os outros 3 comentam e interagem nas primeiras 2 horas, impulsionando o algoritmo do LinkedIn para alcançar mais diretores e decisores de tecnologia.
+> *A regra da consistência:* 1 post editorial por semana + interação diária de 15 minutos nos posts de decisores (CTOs, diretores) do público-alvo — comentário técnico de valor vale mais que alcance vazio.
