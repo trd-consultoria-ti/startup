@@ -35,10 +35,10 @@ Têm entre si, justo e contratado, o presente Contrato, mediante as seguintes cl
 ### CLÁUSULA SEGUNDA – DO BANCO DE HORAS E REGIME DE ATENDIMENTO
 2.1. A **CONTRATADA** disponibilizará mensalmente à **CONTRATANTE** o banco de horas técnicas especializadas correspondente ao plano formalizado no **Anexo I** deste instrumento:
 * **Plano Essencial:** 20 (vinte) horas técnicas mensais;
-* **Plano Profissional:** 35 (trinta e cinco) horas técnicas mensais;
+* **Plano Profissional:** 40 (quarenta) horas técnicas mensais;
 * **Plano Enterprise:** 60 (sessenta) horas técnicas mensais.  
 2.2. **Não Cumulatividade:** As horas contratadas e não utilizadas dentro do mês de vigência **não serão acumuladas** para os meses subsequentes, remunerando a reserva técnica e a disponibilidade contínua do time da **CONTRATADA**.  
-2.3. **Horas Excedentes:** Caso a **CONTRATANTE** necessite de volume superior ao banco de horas pactuado, as horas adicionais serão faturadas pelo valor previsto para o plano no Anexo I (R$ 160,00 a R$ 200,00 por hora técnica), mediante aprovação prévia e por escrito (inclusive por e-mail ou WhatsApp oficial) da **CONTRATANTE**.  
+2.3. **Horas Excedentes:** Caso a **CONTRATANTE** necessite de volume superior ao banco de horas pactuado, as horas adicionais serão faturadas pelo valor previsto para o plano no Anexo I (R$ 120,00 a R$ 140,00 por hora técnica), mediante aprovação prévia e por escrito (inclusive por e-mail ou WhatsApp oficial) da **CONTRATANTE**.  
 2.4. O atendimento regular será realizado em dias úteis, das **08:30 às 18:30 (horário de Brasília)**.
 
 ---
@@ -54,7 +54,7 @@ Têm entre si, justo e contratado, o presente Contrato, mediante as seguintes cl
 | **P4 - Baixa / Evolutiva** | Dúvidas, pequenos ajustes cosméticos ou melhorias de rotina. | **Até 48 a 72 horas úteis** | Agendada no backlog |
 
 3.2. **Prevalência do Anexo I:** Para todos os efeitos de governança e apuração de métricas contratuais, em caso de eventual dúvida de interpretação, **prevalecem integralmente os prazos, valores e limites estabelecidos na tabela do ANEXO I** deste Contrato para o plano expressamente selecionado.
-3.3. **Sobreaviso e Atendimento Fora do Horário Comercial:** Os chamados de emergência de Severidade P1 fora do horário comercial (noites ou fins de semana/feriados) deverão ser acionados via canal de sobreaviso formal, remunerados com o valor adicional de **R$ 280,00 (duzentos e oitenta reais) por hora técnica**.  
+3.3. **Sobreaviso e Atendimento Fora do Horário Comercial:** Os chamados de emergência de Severidade P1 fora do horário comercial (noites ou fins de semana/feriados) deverão ser acionados via canal de sobreaviso formal, remunerados com o valor adicional de **R$ 200,00 (duzentos reais) por hora técnica**.  
 3.3. **Penalidade Exclusiva por Descumprimento de SLA:** Eventual descumprimento injustificado dos prazos estipulados para chamados de Severidade P1 ou P2 conferirá à CONTRATANTE exclusivamente o direito a um desconto financeiro de 5% (cinco por cento) sobre a mensalidade vincenda do mês subsequente por ocorrência, limitado ao teto máximo de 10% (dez por cento) do valor mensal. O descumprimento pontual de SLA não ensejará rescisão automática nem constituirá fundamento para pleito de perdas e danos ou indenizações materiais.
 
 ---
@@ -124,9 +124,9 @@ Thiago Rocha Duarte (Sócio Administrador — [CPF Qualificado na Assinatura])
 
 | Plano Escolhido | Banco de Horas Mensal | SLA Resposta P1 | SLA Resposta P2 | Reuniões de Alinhamento | Valor da Hora Excedente | Investimento Fixo Mensal |
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| [ ] **Plano Essencial** | 20 horas / mês | Até 8h úteis | Até 6h úteis | Mensal | R$ 220,00 / hora | **R$ 3.800,00 / mês** |
-| [ ] **Plano Profissional** | 35 horas / mês | Até 4h úteis | Até 4h úteis | Quinzenal | R$ 200,00 / hora | **R$ 5.500,00 / mês** |
-| [ ] **Plano Enterprise** | 60 horas / mês | Até 2h úteis | Até 2h úteis | Semanal | R$ 180,00 / hora | **R$ 8.500,00 / mês** |
+| [ ] **Plano Essencial** | 20 horas / mês | Até 8h úteis | Até 6h úteis | Mensal | R$ 140,00 / hora | **R$ 2.200,00 / mês** |
+| [ ] **Plano Profissional** | 40 horas / mês | Até 4h úteis | Até 4h úteis | Quinzenal | R$ 130,00 / hora | **R$ 4.000,00 / mês** *(R$ 100/h)* |
+| [ ] **Plano Enterprise** | 60 horas / mês | Até 2h úteis | Até 2h úteis | Semanal | R$ 120,00 / hora | **R$ 6.000,00 / mês** *(R$ 100/h)* |
 
 *Plano selecionado formalmente pelas partes:* **[Marcar Plano Contratado]**  
 *Data de Início da Vigência:* **[DD/MM/AAAA]**  

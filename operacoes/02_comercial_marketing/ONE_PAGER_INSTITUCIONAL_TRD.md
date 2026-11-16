@@ -30,13 +30,13 @@ Liderada diretamente por seu sócio fundador, **Thiago Rocha Duarte** — engenh
 
 | Benefício / Plano | ESSENCIAL | PROFISSIONAL *(Mais Escolhido)* | ENTERPRISE |
 | :--- | :---: | :---: | :---: |
-| **Banco de Horas Mensal** | 20 horas / mês | **35 horas / mês** | 60 horas / mês |
+| **Banco de Horas Mensal** | 20 horas / mês | **40 horas / mês** | 60 horas / mês |
 | **Tempo de Resposta P1 (Crítico)** | Até 8 horas úteis | **Até 4 horas úteis** | **Até 2 horas úteis** |
 | **Manutenção Corretiva & Bugs** | Incluso | **Incluso** | Incluso |
 | **Otimização de Banco de Dados SQL** | Incluso | **Incluso** | Incluso |
 | **Monitoramento Externo 24/7** | Uptime Básico | **Alertas Avançados** | Observabilidade Total |
 | **Reunião de Alinhamento Técnico** | Mensal | **Quinzenal** | Semanal |
-| **INVESTIMENTO MENSAL** | **R$ 3.800,00 / mês** | **R$ 5.500,00 / mês** | **R$ 8.500,00 / mês** |
+| **INVESTIMENTO MENSAL** | **R$ 2.200,00 / mês** | **R$ 4.000,00 / mês** *(R$ 100/h)* | **R$ 6.000,00 / mês** *(R$ 100/h)* |
 
 ---
 

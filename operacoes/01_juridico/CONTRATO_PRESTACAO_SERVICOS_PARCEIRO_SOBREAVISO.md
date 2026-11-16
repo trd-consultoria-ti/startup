@@ -34,8 +34,8 @@ Ambas doravante denominadas conjuntamente como **PARTES**.
 
 ### CLÁUSULA TERCEIRA – DA REMUNERAÇÃO
 3.1. Pela execução dos serviços técnicos efetivamente prestados mediante acionamento aprovado, a **TRD CONSULTORIA** remunerará o **ENGENHEIRO PARCEIRO** pelo valor fechado de:
-* **R$ [100,00 a 120,00] (cento a cento e vinte reais) por hora técnica trabalhada** em horário comercial regular;
-* **R$ [150,00 a 180,00] por hora técnica trabalhada** em atendimentos emergenciais de sobreaviso noturno ou em fins de semana/feriados.  
+* **R$ [65,00 a 75,00] (cento a cento e vinte reais) por hora técnica trabalhada** em horário comercial regular;
+* **R$ [100,00 a 120,00] por hora técnica trabalhada** em atendimentos emergenciais de sobreaviso noturno ou em fins de semana/feriados.  
 3.2. As horas técnicas serão apuradas no último dia de cada mês civil mediante relatório de apontamento de chamados (*timesheet*), com pagamento efetuado até o dia 10 do mês subsequente, mediante emissão de Nota Fiscal de Serviços (NFS-e) pelo ENGENHEIRO PARCEIRO.
 
 ---

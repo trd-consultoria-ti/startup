@@ -26,14 +26,14 @@ Ideal para empresas que já possuem sistemas em produção e necessitam de garan
 
 | Item | PLANO ESSENCIAL | PLANO PROFISSIONAL *(Recomendado)* | PLANO ENTERPRISE |
 | :--- | :---: | :---: | :---: |
-| **Banco de Horas Mensal** | **20 horas / mês** | **35 horas / mês** | **60 horas / mês** |
+| **Banco de Horas Mensal** | **20 horas / mês** | **40 horas / mês** | **60 horas / mês** |
 | **SLA (Primeira Resposta P1)** | Até 8 horas úteis | **Até 4 horas úteis** | **Até 2 horas úteis** |
 | **Manutenção Corretiva & Bugs** | Sim | Sim | Sim |
 | **Otimização de Banco de Dados SQL** | Sim | Sim | Sim |
 | **Monitoramento Proativo & Alertas** | Básico | Avançado | Tempo Real 24/7 |
 | **Reunião de Alinhamento Técnico** | Mensal | Quinzenal | Semanal |
 | **Hora Adicional Excedente** | R$ 200,00 / hora | R$ 180,00 / hora | R$ 160,00 / hora |
-| **INVESTIMENTO MENSAL** | **R$ 3.800,00 / mês** | **R$ 5.500,00 / mês** | **R$ 8.500,00 / mês** |
+| **INVESTIMENTO MENSAL** | **R$ 2.200,00 / mês** | **R$ 4.000,00 / mês (Base R$ 100/h)** | **R$ 6.000,00 / mês (Base R$ 100/h)** |
 
 > *Nota: O banco de horas mensal destina-se a manutenções corretivas e evoluções contínuas. As horas não são cumulativas para o mês subsequente. Nossos contratos possuem cláusula padrão de Limitação de Responsabilidade Civil (Damage Cap) e SLA com bonificação em crédito financeiro, garantindo total segurança jurídica e previsibilidade para ambas as partes.*
 
@@ -43,7 +43,7 @@ Ideal para empresas que já possuem sistemas em produção e necessitam de garan
 Antes de assumir a sustentação de um sistema complexo, realizamos um diagnóstico completo de 3 a 5 dias úteis:
 * **Entregáveis:** Relatório técnico de vulnerabilidades, lentidão de queries SQL, mapas de acoplamento de código e plano de ação priorizado.
 * **Investimento:** **R$ 3.500,00 (pagamento único)**.
-* *Bônus Especial:* Ao contratar o Plano Profissional ou Enterprise de Manutenção por 6 meses, **50% do valor da auditoria (R$ 1.750,00) é abatido como crédito na primeira mensalidade**.
+* *Bônus Especial:* Ao contratar o Plano Profissional ou Enterprise de Manutenção por 6 meses, **50% do valor da auditoria (R$ 1.500,00) é abatido como crédito na primeira mensalidade**.
 
 ---
 
