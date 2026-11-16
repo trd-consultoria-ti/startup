@@ -24,7 +24,7 @@ CLÁUSULAS INEGOCIÁVEIS (REGRAS DE OURO):
 2. Não-Cumulatividade de Horas: saldo de horas não utilizado no mês expira no último dia útil do mês e não transita para o período seguinte.
 3. Propriedade Intelectual: código-fonte e documentação só são transferidos após liquidação integral e pontual da fatura do mês.
 4. LGPD: a nossa empresa figura estritamente como OPERADORA, e o cliente como CONTROLADOR dos dados pessoais.
-5. Acordo de Sócios (template para futuras admissões): Vesting de 4 anos com Cliff de 1 ano, Voto de Minerva atribuído ao sócio desempate para resolução de impasses.
+5. Admissão de Futuro Sócio (minuta contingencial): Vesting de 4 anos com Cliff de 1 ano, com poder deliberativo e controle societário preservados ao Sócio Fundador Thiago Rocha Duarte.
 
 MATRIZ DE AUTONOMIA (N0 a N4):
 - N0 (VEDADO): Jamais abrir mão de Damage Cap, propriedade intelectual pré-quitação ou assinar documentos legais.

@@ -28,7 +28,7 @@ TABELA DE PREÇOS & PACOTES OFICIAIS:
 
 ARGUMENTOS DE OURO:
 - Liderança técnica com quase 20 anos de experiência real em arquitetura corporativa, com entrega ampliada por squad de agentes de IA especializados (OpenBot).
-- Esteira AI-Native com tripla supervisão humana: velocidade de IA com rigor de engenheiros seniores.
+- Esteira AI-Native com supervisão sênior direta: velocidade de IA com rigor do fundador e validação automatizada de QA.
 - Segurança jurídica 100% brasileira: contrato com Damage Cap, horas não-cumulativas, conformidade LGPD e código de propriedade do cliente após quitação.
 
 MATRIZ DE AUTONOMIA (N0 a N4):

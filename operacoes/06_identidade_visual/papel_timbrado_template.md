@@ -18,7 +18,7 @@ Contato Institucional: contato@trdconsultoria.com.br
 ---
 
 ### 1. Escopo de Engenharia & Sustentação de Missão Crítica
-O presente instrumento formaliza o compromisso de prestação de serviços técnicos de alto escalão com governança, SLA garantido e esteira de desenvolvimento assistida por IA com tripla auditoria sênior humana.
+O presente instrumento formaliza o compromisso de prestação de serviços técnicos de alto escalão com governança, SLA garantido e esteira de desenvolvimento assistida por IA com auditoria técnica sênior do fundador.
 
 ### 2. Condições Comerciais e Faturamento
 * **Plano Contratado:** Plano Profissional (35 horas mensais)

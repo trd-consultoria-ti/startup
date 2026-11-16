@@ -137,7 +137,7 @@ C:\Users\Thiago Duarte\Desktop\logo TRD\
 │   └── favicon_32x32.svg            # Favicon para telas Retina
 ├── 02_imagens_alta_resolucao/
 │   ├── trd_logo_horizontal_master.jpg # Master oficial gerado pela IA (Nota 9.8)
-│   └── trd_logo_base_enviada.png      # Imagem histórica de referência enviada pelo sócio
+│   └── trd_logo_base_enviada.png      # Imagem histórica de referência enviada pelo fundador
 ├── 03_design_tokens_e_web/
 │   ├── tokens.json                  # Tokens de cores, fontes e grids em JSON
 │   ├── tokens.css                   # Variáveis CSS (:root) com suporte a Dark Mode

@@ -21,7 +21,7 @@ Scripts validados para abordagem direta via WhatsApp, LinkedIn e plataformas de 
 > Faz sentido batermos um papo rápido de 10 minutos na próxima quinta-feira para ver se podemos apoiar vocês nessa transição?
 > 
 > Um abraço,  
-> **Thiago Duarte** | Sócio & Head de Operações  
+> **Thiago Duarte** | Sócio Fundador & Engenheiro Chefe  
 > [Link do LinkedIn]
 
 ---
@@ -30,7 +30,7 @@ Scripts validados para abordagem direta via WhatsApp, LinkedIn e plataformas de 
 * **Alvo:** Gerente de Operações, Diretor Comercial ou Dono de distribuidoras, operadores logísticos ou indústrias no SIA, Ceilândia e Taguatinga.
 * **Canal:** WhatsApp direto ou ligação rápida.
 
-> Olá, [Nome do Gestor], bom dia! Aqui é o Thiago, sou engenheiro de software e sócio de uma consultoria técnica aqui de Brasília.
+> Olá, [Nome do Gestor], bom dia! Aqui é o Thiago, sou engenheiro de software e fundador da TRD Consultoria e Serviços de TI aqui de Brasília.
 > 
 > Conversando com gestores operacionais de distribuidoras aqui do DF, muitos comentam que a maior dor de cabeça é quando o sistema interno ou banco de dados começa a travar os pedidos dos representantes e atrasar as entregas dos caminhões.
 > 
@@ -58,7 +58,7 @@ Scripts validados para abordagem direta via WhatsApp, LinkedIn e plataformas de 
 > 
 > Atenciosamente,  
 > **Thiago Duarte**  
-> [Nome da Empresa de Consultoria e TI]  
+> TRD Consultoria e Serviços de TI LTDA  
 > Brasília - DF  
 
 ---
@@ -85,7 +85,7 @@ Scripts validados para abordagem direta via WhatsApp, LinkedIn e plataformas de 
 > Nós somos uma consultoria de desenvolvimento estruturada com CNPJ próprio e emissão de NFS-e, liderada por arquiteto sênior com 20 anos de experiência técnica em [Java / Angular / SQL].
 > 
 > **Diferenciais que garantem a segurança do seu projeto:**
-> 1. **Tripla Supervisão Técnica:** Não somos freelancers isolados; nosso time garante que o seu código tenha redundância e nunca fique desassistido.
+> 1. **Engenharia Sênior com Governança e IA:** Não atuo como freelancer avulso; entrego estrutura empresarial formalizada com CNPJ e NFS-e, onde a velocidade da inteligência artificial é combinada com quase 20 anos de experiência arquitetural própria.
 > 2. **Resolução Rápida com Metodologia AI-Augmented:** Identificamos a causa raiz do problema e implementamos a solução testada em até 48 horas.
 > 3. **Segurança Jurídica:** Emitimos Nota Fiscal de Serviços (NFS-e), assinamos Termo de Confidencialidade (NDA) e fornecemos garantia pós-entrega.
 > 

@@ -9,7 +9,7 @@ Este diretório contém a integração completa da nossa empresa com a plataform
 | Tag de Roteamento | Nome do Agente no OpenBot | Papel / Especialidade | Base de Conhecimento | Modelo Sugerido |
 | :---: | :--- | :--- | :--- | :---: |
 | `[COMERCIAL]` | `Operativo-Comercial` | SDR, Prospecção B2B Outbound, quebra de objeções e Propostas Comerciais Executivas (R$ 3.800 a R$ 8.500) | `operacoes/02_comercial_marketing/` | SWE-2 High / gemini-3.8-flash |
-| `[JURIDICO]` | `Operativo-Juridico` | Minutas contratuais de sustentação com Damage Cap, NDAs com conformidade LGPD e Acordo de Sócios | `operacoes/01_juridico/` | SWE-2 High / gemini-3.8-flash |
+| `[JURIDICO]` | `Operativo-Juridico` | Minutas contratuais de sustentação com Damage Cap, NDAs com conformidade LGPD e minuta de Vesting | `operacoes/01_juridico/` | SWE-2 High / gemini-3.8-flash |
 | `[SLA]` | `Operativo-SLA` | Triagem de incidentes (P1 a P4), cronometragem de SLA, bloqueio de horas excedentes e aditivos | `operacoes/05_administracao/MATRIZ_SEVERIDADE_E_SLA.md` | SWE-2 High / gemini-3.8-flash |
 | `[FINANCEIRO]` | `Operativo-FinOps` | CFO Operacional, monitoramento contínuo do Fator R (>=28% para 6% no Simples), cascata de fluxo e provisões | `operacoes/05_administracao/PLANEJAMENTO_TRIBUTARIO_E_FINANCEIRO.md` | SWE-2 High / gemini-3.8-flash |
 | `[MARKETING]` | `Operativo-Marketing` | Conteúdo de autoridade técnica B2B no LinkedIn (framework Dev-to-Founder) para atração de CTOs e decisores | `operacoes/03_social_media/PLAYBOOK_LINKEDIN_AUTORIDADE.md` | SWE-2 High / gemini-3.8-flash |
@@ -33,7 +33,7 @@ Para cada um dos 6 robôs no OpenBot (menu lateral → **Novo Agente**):
 
 ```mermaid
 flowchart TD
-    USR["Mensagem do Usuário / Sócio"] --> TORRE["Pai de todos / Torre de Controle"]
+    USR["Comando do Fundador (Thiago)"] --> TORRE["Pai de todos / Torre de Controle"]
     TORRE -->|"Tag [COMERCIAL]"| AG_COM["Operativo-Comercial\n(SDR & Propostas)"]
     TORRE -->|"Tag [JURIDICO]"| AG_JUR["Operativo-Juridico\n(Contratos, SLA, NDA)"]
     TORRE -->|"Tag [SLA] / [FINANCEIRO] / [MARKETING] / [RH]"| AG_ESP["Operativo Especialista\n(SLA, FinOps, Marketing, TechScreen)"]

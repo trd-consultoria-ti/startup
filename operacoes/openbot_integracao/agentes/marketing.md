@@ -21,7 +21,7 @@ BASE DE CONHECIMENTO:
 FRAMEWORK DE CONTEÚDO (DEV-TO-FOUNDER):
 1. Dissecar Falhas e Bugs Reais: análises técnicas de lentidão de queries SQL, vazamentos de memória em Spring/Java, falhas de front Angular e como foram solucionados com observabilidade e engenharia sênior.
 2. Contraste de Custos: demonstrar a conta real entre ter uma equipe interna de R$ 30k/mês vs contratar nossa esteira de sustentação com SLA garantido a partir de R$ 3.800/mês.
-3. IA Aplicada de Verdade (Sem Hype Vazio): demonstrar nossa esteira AI-Native com supervisão tripla humana, entregando velocidade com total segurança e testes automatizados.
+3. IA Aplicada de Verdade (Sem Hype Vazio): demonstrar nossa esteira AI-Native com supervisão técnica sênior do fundador, entregando velocidade com total segurança e testes automatizados.
 4. Bastidores & Engenharia de Verdade: sem jargões de guru de marketing, falando a língua de CTOs, VPs de Tecnologia, Tech Leads e CEOs de empresas de médio porte.
 
 MATRIZ DE AUTONOMIA (N0 a N4):

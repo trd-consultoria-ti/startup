@@ -11,11 +11,11 @@ Pelo presente instrumento particular, de um lado:
 E, de outro lado:
 
 **CONTRATADA:**
-* **Razão Social:** **[RAZÃO SOCIAL DA CONTRATADA - Em Processo de Constituição]**
-* **Nome Fantasia:** [NOME FANTASIA DA EMPRESA]
+* **Razão Social:** **TRD Consultoria e Serviços de TI LTDA**
+* **Nome Fantasia:** TRD Consultoria
 * **CNPJ:** **[00.000.000/0001-00 - Em Constituição]**
 * **Sede:** Brasília - DF
-* **Representada por:** [Nome do Sócio Administrador], doravante denominada simplesmente **CONTRATADA**;
+* **Representada por:** Thiago Rocha Duarte, brasileiro, engenheiro de software, na qualidade de Sócio Administrador, doravante denominada simplesmente **CONTRATADA**;
 
 Ambas doravante denominadas conjuntamente como **PARTES** e individualmente como **PARTE**.
 
@@ -101,6 +101,6 @@ _____________________________________________
 CNPJ: [00.000.000/0000-00]  
 
 _____________________________________________  
-**CONTRATADA:** [RAZÃO SOCIAL DA CONTRATADA]  
+**CONTRATADA:** TRD Consultoria e Serviços de TI LTDA  
 CNPJ: [00.000.000/0001-00]  
-[Nome do Sócio Administrador] (Administrador)  
+Thiago Rocha Duarte (Sócio Administrador)  

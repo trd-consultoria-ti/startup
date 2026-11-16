@@ -11,9 +11,10 @@ operacoes/
 ├── 01_juridico/
 │   ├── CONTRATO_SUSTENTACAO_E_SLA.md (.docx)   # Minuta jurídica com Damage Cap e SLA blindado
 │   ├── ACORDO_CONFIDENCIALIDADE_NDA.md (.docx) # Acordo de sigilo e proteção de código/dados
-│   └── ACORDO_DE_SOCIOS.md (.docx)             # Template de acordo de sócios (Vesting, Voto de Minerva, Deadlock)
+│   └── ACORDO_DE_SOCIOS.md (.docx)             # Minuta contingencial para admissão futura de sócio (Vesting de 4 anos)
 ├── 02_comercial_marketing/
 │   ├── PROPOSTA_COMERCIAL_EXECUTIVA.md (.docx) # Proposta oficial com pacotes de R$ 3,8k a R$ 8,5k
+│   ├── CASES_DE_SUCESSO_E_AUTORIDADE.md        # 3 estudos de caso estruturais (SQL, Legado Java e LGPD)
 │   └── SCRIPTS_PROSPECCAO_OUTBOUND.md          # Scripts de WhatsApp, LinkedIn e abordagem de agências
 ├── 03_social_media/
 │   └── PLAYBOOK_LINKEDIN_AUTORIDADE.md         # Estratégia editorial e templates de posts técnicos

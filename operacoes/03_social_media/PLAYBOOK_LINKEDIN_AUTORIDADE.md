@@ -20,7 +20,7 @@ Este guia orienta a estratégia de conteúdo no LinkedIn do fundador. O objetivo
 3. **Pilar 3: "IA Prática no Mundo Real" (Autoridade de Mercado)**  
    Mostrar como usar Inteligência Artificial e LLMs para resolver dores reais de empresas (leitura de documentos, triagem de chamados, suporte interno), separando o hype da engenharia sólida.
 4. **Pilar 4: "Arquitetura e Continuidade" (Redundância e Segurança)**  
-   Destacar o valor de ter processos estruturados, tripla supervisão e código testado.
+   Destacar o valor de ter processos estruturados, supervisão sênior direta e código testado.
 
 ---
 
@@ -71,7 +71,7 @@ Este guia orienta a estratégia de conteúdo no LinkedIn do fundador. O objetivo
 > 
 > Aqui na empresa, operamos no modelo AI-Native de verdade:
 > 1. A IA acelera em 4x a leitura de requisitos, o levantamento de cenários de teste e a eliminação de código repetitivo;
-> 2. Mas **absolutamente nenhuma linha vai para produção sem a revisão humana e supervisão técnica** do nosso time sênior.
+> 2. Mas **absolutamente nenhuma linha vai para produção sem a revisão humana e supervisão técnica** do fundador sênior.
 > 
 > A IA nos dá a velocidade de uma equipe de 10 pessoas. A experiência humana garante que o sistema do cliente não vai cair às 09h da manhã.
 > 

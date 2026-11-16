@@ -10,10 +10,10 @@ Pelo presente instrumento particular, as partes:
 E, de outro lado:
 
 **PARTE B:**
-* **Razão Social:** **[RAZÃO SOCIAL DA CONTRATADA - Em Processo de Constituição]**
+* **Razão Social:** **TRD Consultoria e Serviços de TI LTDA**
 * **CNPJ:** **[00.000.000/0001-00 - Em Constituição]**
 * **Sede:** Brasília - DF
-* **Representante:** [Nome do Representante Legal]
+* **Representante:** Thiago Rocha Duarte (Sócio Administrador)
 
 Resolvem celebrar o presente **ACORDO DE CONFIDENCIALIDADE (NDA)** com o objetivo de resguardar a troca de informações estratégicas e técnicas necessárias para viabilizar auditorias, projetos de desenvolvimento e sustentação de software, segundo as seguintes cláusulas:
 
@@ -32,7 +32,7 @@ Resolvem celebrar o presente **ACORDO DE CONFIDENCIALIDADE (NDA)** com o objetiv
 2.1. A parte receptora compromete-se a:
 * Tratar as Informações Confidenciais com o mais rigoroso nível de sigilo, utilizando ao menos o mesmo grau de zelo que emprega com suas próprias informações de igual importância;
 * Não divulgar, ceder, transferir, reproduzir ou disponibilizar qualquer Informação Confidencial a terceiros sem prévia autorização por escrito da parte reveladora;
-* Restringir o acesso às informações estritamente aos sócios, engenheiros e prestadores diretamente envolvidos na execução dos serviços técnicos, os quais deverão estar igualmente vinculados ao dever de sigilo.
+* Restringir o acesso às informações estritamente ao sócio proprietário, consultores e prestadores diretamente envolvidos na execução dos serviços técnicos, os quais deverão estar igualmente vinculados ao dever de sigilo.
 
 ---
 
@@ -63,5 +63,6 @@ _____________________________________________
 **PARTE A:** [NOME DA EMPRESA CLIENTE]  
 
 _____________________________________________  
-**PARTE B:** [RAZÃO SOCIAL DA CONTRATADA]  
+**PARTE B:** TRD Consultoria e Serviços de TI LTDA  
 CNPJ: [00.000.000/0001-00]  
+Thiago Rocha Duarte (Sócio Administrador)  

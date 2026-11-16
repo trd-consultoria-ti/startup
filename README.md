@@ -64,9 +64,10 @@ A identidade visual da TRD foi concebida sob o arquétipo da **Soberania, Rigor 
     ├── 01_juridico/
     │   ├── CONTRATO_SUSTENTACAO_E_SLA.md (.docx)   # Contrato B2B com Damage Cap e retenção de IP
     │   ├── ACORDO_CONFIDENCIALIDADE_NDA.md (.docx) # NDA bilateral com conformidade LGPD
-    │   └── ACORDO_DE_SOCIOS.md (.docx)             # Template societário: Vesting (4 anos), Cliff e Minerva
+    │   └── ACORDO_DE_SOCIOS.md (.docx)             # Minuta contingencial: Admissão futura com Vesting (4 anos)
     ├── 02_comercial_marketing/
     │   ├── PROPOSTA_COMERCIAL_EXECUTIVA.md (.docx) # Proposta de alto valor (Piso R$ 3.800 a R$ 8.500/mês)
+    │   ├── CASES_DE_SUCESSO_E_AUTORIDADE.md        # 3 estudos de caso estruturais (SQL, Legado Java e LGPD)
     │   └── SCRIPTS_PROSPECCAO_OUTBOUND.md          # 5 scripts de abordagem (LinkedIn, WhatsApp DF, Agências)
     ├── 03_social_media/
     │   └── PLAYBOOK_LINKEDIN_AUTORIDADE.md         # Framework Dev-to-Founder para atração B2B
@@ -92,7 +93,7 @@ A identidade visual da TRD foi concebida sob o arquétipo da **Soberania, Rigor 
 ### 📥 Documentos Executivos em Word (.docx) para Download
 Para agilizar fechamentos comerciais, assinaturas digitais (Gov.br / ZapSign / ClickSign) e reuniões societárias/contábeis, todos os instrumentos burocráticos possuem versão editável `.docx`:
 - 🏛️ **Plano Mestre de Lançamento:** [`PLANO_DE_LANCAMENTO_EMPRESARIAL.docx`](PLANO_DE_LANCAMENTO_EMPRESARIAL.docx)
-- 🤝 **Acordo de Sócios — Template (Vesting & Minerva):** [`ACORDO_DE_SOCIOS.docx`](operacoes/01_juridico/ACORDO_DE_SOCIOS.docx)
+- 🤝 **Acordo de Quotistas — Minuta para Futura Admissão (Vesting):** [`ACORDO_DE_SOCIOS.docx`](operacoes/01_juridico/ACORDO_DE_SOCIOS.docx)
 - 📜 **Contrato de Sustentação & SLA:** [`CONTRATO_SUSTENTACAO_E_SLA.docx`](operacoes/01_juridico/CONTRATO_SUSTENTACAO_E_SLA.docx)
 - 🔒 **Acordo de Confidencialidade (NDA):** [`ACORDO_CONFIDENCIALIDADE_NDA.docx`](operacoes/01_juridico/ACORDO_CONFIDENCIALIDADE_NDA.docx)
 - 💼 **Proposta Comercial Executiva:** [`PROPOSTA_COMERCIAL_EXECUTIVA.docx`](operacoes/02_comercial_marketing/PROPOSTA_COMERCIAL_EXECUTIVA.docx)

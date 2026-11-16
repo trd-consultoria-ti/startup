@@ -27,7 +27,7 @@ Este Plano Mestre orquestra os 8 instrumentos executivos já desenhados no repos
 ```
 operacoes/
 ├── 01_juridico/
-│   ├── ACORDO_DE_SOCIOS.md             ──► Template: Vesting (4 anos), Cliff (12 meses), Bad Leaver e Voto de Minerva
+│   ├── ACORDO_DE_SOCIOS.md             ──► Minuta contingencial: Admissão de Sócio com Vesting (4 anos) e Cliff (12 meses)
 │   ├── CONTRATO_SUSTENTACAO_E_SLA.md   ──► Minuta jurídica B2B com Damage Cap (Código Civil, Marco Civil, LGPD)
 │   └── ACORDO_CONFIDENCIALIDADE_NDA.md ──► Termo de sigilo bilateral com proteção de IP e segredos industriais
 ├── 02_comercial_marketing/
@@ -55,7 +55,7 @@ O mercado corporativo brasileiro atravessa uma crise silenciosa de sustentação
 ### 1.2. Nossa Proposta de Valor: Boutique Sênior AI-Augmented
 Posicionamo-nos como a **Boutique de Engenharia de Software e IA** de referência no Centro-Oeste e no Brasil:
 * **Liderança Técnica com 20 Anos de Bagagem:** Arquitetura corporativa resiliente, blindagem de dados, modernização de legados e integrações críticas.
-* **Esteira AI-Native com Tripla Supervisão Humana:** Agilidade de entrega exponencial viabilizada por agentes de IA e IDEs de nova geração (Cursor Enterprise, Claude 3.5 Sonnet, GPT-4o), porém com cada linha de código auditada e homologada por três engenheiros seniores.
+* **Esteira AI-Native com Supervisão Sênior Direta:** Agilidade de entrega exponencial viabilizada por agentes de IA e IDEs de nova geração (Cursor Enterprise, Claude 3.5 Sonnet, GPT-4o), com cada linha de código auditada e homologada diretamente pelo fundador sênior (Thiago Rocha Duarte) e validada por suíte de testes automatizados e agentes de QA.
 * **Segurança Jurídica & Previsibilidade Financeira:** Contratos formais com SLA garantido, limitação de responsabilidade civil (*Damage Cap*), emissão regular de NFS-e e total transferência da Propriedade Intelectual mediante quitação.
 
 ### 1.3. Tese Financeira e Metas de Crescimento em 3 Fases
@@ -121,7 +121,7 @@ Empresa unipessoal: todos os domínios respondem ao Sócio Proprietário, com ex
 
 ### 2.3. Governança Deliberativa (Empresa Unipessoal)
 1. **Decisões Ordinárias e Extraordinárias:** Por se tratar de sociedade unipessoal, todas as deliberações — ordinárias ou de alto impacto — são tomadas pelo Sócio Proprietário e formalizadas em atas/decisões arquivadas no repositório institucional.
-2. **Admissão Futura de Sócios:** Caso a empresa venha a admitir sócios, aplicar-se-á o [template de Acordo de Sócios](operacoes/01_juridico/ACORDO_DE_SOCIOS.md) mantido neste repositório, com regras de Vesting (4 anos), Cliff (12 meses), Good/Bad Leaver, Voto de Minerva e Cláusula Shotgun já redigidas.
+2. **Admissão Futura de Sócio:** Caso a empresa venha a admitir um sócio no futuro, aplicar-se-á a [minuta de Acordo de Quotistas](operacoes/01_juridico/ACORDO_DE_SOCIOS.md) mantida neste repositório, com regras de Vesting (4 anos), Cliff (12 meses), Good/Bad Leaver e governança com poder decisório preservado ao sócio fundador.
 3. **Proteção de Continuidade:** Processos, credenciais operacionais e governança documentados neste repositório mitigam o risco de conhecimento concentrado em uma única pessoa.
 
 ---
@@ -168,7 +168,7 @@ A seleção cirúrgica de CNAEs permite cobrir todas as verticais da boutique de
 
 ### 3.5. Adesão ao Simples Nacional e Parametrização do Fator R
 * Solicitação de enquadramento protocolada no portal do Simples Nacional no prazo improrrogável de até 30 dias contados do deferimento da última inscrição (municipal/estadual) e 180 dias da abertura do CNPJ.
-* **Regra de Ouro Tributária:** Parametrização junto à assessoria contábil para que o somatório dos Pró-Labores e encargos previdenciários dos sócios perfaça **mensalmente entre 28,1% e 28,5% da Receita Bruta Acumulada dos últimos 12 meses (RBT12)**, assegurando o recolhimento pelo **Anexo III (alíquota a partir de 6,00%)** e afastando a tributação punitiva do Anexo V (15,50%).
+* **Regra de Ouro Tributária:** Parametrização junto à assessoria contábil para que o Pró-Labore e os encargos previdenciários do sócio proprietário perfaçam **mensalmente entre 28,1% e 28,5% da Receita Bruta Acumulada dos últimos 12 meses (RBT12)**, assegurando o recolhimento pelo **Anexo III (alíquota a partir de 6,00%)** e afastando a tributação punitiva do Anexo V (15,50%).
 
 ### 3.6. Abertura de Conta Bancária PJ Digital e Governança de Caixa
 * **Instituição Financeira Eleita:** Banco digital empresarial sem tarifas abusivas e com API para automação financeira (ex: Cora PJ, Banco Inter Empresas ou Nubank PJ).
@@ -237,7 +237,7 @@ Integração do fluxo de atendimento ao cliente com a [MATRIZ_SEVERIDADE_E_SLA.m
 Para atuar antes que o cliente perceba a lentidão ou instabilidade:
 * **Monitoramento de Aplicação & Runtime:** Sentry corporativo integrado aos backends (Spring Boot, Node, Python) e frontends (Angular, React) dos clientes sob sustentação, capturando exceções e gargalos de performance em tempo real.
 * **Monitoramento de Uptime & Disponibilidade:** Uptime Kuma (hospedado em VPS segura) ou Better Stack verificando a cada 60 segundos o status code e tempo de resposta dos endpoints, certificados SSL e bancos de dados dos clientes.
-* **Webhooks de Alertas:** Disparo automatizado de alertas de queda de serviço diretamente para o canal privado de engenharia da equipe.
+* **Webhooks de Alertas:** Disparo automatizado de alertas de queda de serviço diretamente para o canal privado de engenharia do fundador.
 
 ### 4.5. Plataforma de Assinatura Digital de Contratos
 * Implantação de conta empresarial no **ZapSign** ou **ClickSign**.
@@ -318,7 +318,7 @@ Conforme definido no [Planejamento Tributário e Financeiro](operacoes/05_admini
 flowchart TD
     subgraph Fase1 ["Fase 1: Zero Pró-Labore (Bootstrapping Inicial - Meses 1 a 2)"]
         F1_A["Receita Bruta Inicial"] --> F1_B["Deduções Fixas: DAS Simples + OPEX (~R$ 1.400)"]
-        F1_B --> F1_C["Zero Pró-Labore aos Fundadores\n(100% de Reinvestimento no Caixa)"]
+        F1_B --> F1_C["Zero Pró-Labore ao Sócio Proprietário\n(100% de Reinvestimento no Caixa)"]
         F1_C --> F1_D["Formação Acelerada do Fundo de Reserva\n(Colchão de 3 meses de OPEX)"]
         F1_D --> F1_E["Distribuição Pontual de Dividendos Isentos\n(Apenas após Balancete Trimestral Aprovado)"]
     end
@@ -341,7 +341,7 @@ flowchart TD
 ```
 
 * **Fase 1 – Zero Pró-Labore (Bootstrapping Inicial):** Nos primeiros meses de vida da empresa, o fundador não fará retirada mensal de Pró-Labore. Toda a receita líquida gerada será blindada no caixa PJ para cobrir os custos operacionais (contador, licenças de IA e servidores) e acelerar a formação da reserva de segurança.
-* **Fase 2 – Ativação do Fator R (Tração Comercial):** A partir do momento em que a carteira recorrente atingir o patamar de estabilidade (R$ 25.000 a R$ 30.000/mês), a assessoria contábil emitirá os Pró-Labores fixados em **28,1% da Receita Bruta Acumulada (RBT12)**. Isso garante o direito incontestável ao enquadramento das atividades de software no **Anexo III (alíquota inicial de 6,00%)**, gerando economia líquida de mais de R$ 27.700,00 anuais em relação ao Anexo V.
+* **Fase 2 – Ativação do Fator R (Tração Comercial):** A partir do momento em que a carteira recorrente atingir o patamar de estabilidade (R$ 25.000 a R$ 30.000/mês), a assessoria contábil emitirá o Pró-Labore do fundador fixado em **28,1% da Receita Bruta Acumulada (RBT12)**. Isso garante o direito incontestável ao enquadramento das atividades de software no **Anexo III (alíquota inicial de 6,00%)**, gerando economia líquida de mais de R$ 27.700,00 anuais em relação ao Anexo V.
 * **Regra de Retenção do Colchão de Segurança:** Todo mês, 20% do lucro líquido contábil apurado será compulsoriamente retido na conta PJ da empresa até que se atinja a meta mínima de **3 (três) meses de OPEX fixo (aproximadamente R$ 4.500,00 a R$ 6.000,00)**.
 * **Distribuição de Dividendos Isentos:** A distribuição ao fundador será formalizada em balancetes contábeis trimestrais com base no Art. 10 da Lei nº 9.249/1995, garantindo isenção total de IRPF sobre os lucros distribuídos.
 

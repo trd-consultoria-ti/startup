@@ -21,7 +21,7 @@ Este documento define o procedimento padrão para abertura, triagem, resolução
 flowchart TD
     IN["Chamado do Cliente\n(WhatsApp / E-mail / Portal)"] --> S1["1. Triagem e Registro do Chamado\n• Thiago confirma recebimento\n• Classificação de severidade (P1 a P4)"]
     S1 --> S2["2. Contorno Imediato (Workaround)\n• Diagnóstico técnico identifica o gargalo\n• Restauração da operação básica se P1"]
-    S2 --> S3["3. Resolução e Testes (AI-Native)\n• Correção com testes automatizados\n• Tripla supervisão sênior antes do deploy"]
+    S2 --> S3["3. Resolução e Testes (AI-Native)\n• Correção com testes automatizados\n• Supervisão técnica do fundador sênior antes do deploy"]
     S3 --> S4["4. Fechamento e Apontamento\n• Notificação formal de encerramento\n• Débito das horas no banco mensal contratado"]
 ```
 
