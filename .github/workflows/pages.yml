@@ -30,7 +30,7 @@ jobs:
           mkdir -p _site
           cp -r site/* _site/
           sed -i 's|\.\./assets/|assets/|g' _site/*.html
-          cp -r assets _site/assets
+          cp -r assets/. _site/assets/
           touch _site/.nojekyll
 
       - name: Setup Pages

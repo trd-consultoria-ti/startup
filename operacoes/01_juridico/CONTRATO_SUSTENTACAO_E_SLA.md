@@ -55,7 +55,7 @@ Têm entre si, justo e contratado, o presente Contrato, mediante as seguintes cl
 
 3.2. **Prevalência do Anexo I:** Para todos os efeitos de governança e apuração de métricas contratuais, em caso de eventual dúvida de interpretação, **prevalecem integralmente os prazos, valores e limites estabelecidos na tabela do ANEXO I** deste Contrato para o plano expressamente selecionado.
 3.3. **Sobreaviso e Atendimento Fora do Horário Comercial:** Os chamados de emergência de Severidade P1 fora do horário comercial (noites ou fins de semana/feriados) deverão ser acionados via canal de sobreaviso formal, remunerados com o valor adicional de **R$ 200,00 (duzentos reais) por hora técnica**.  
-3.3. **Penalidade Exclusiva por Descumprimento de SLA:** Eventual descumprimento injustificado dos prazos estipulados para chamados de Severidade P1 ou P2 conferirá à CONTRATANTE exclusivamente o direito a um desconto financeiro de 5% (cinco por cento) sobre a mensalidade vincenda do mês subsequente por ocorrência, limitado ao teto máximo de 10% (dez por cento) do valor mensal. O descumprimento pontual de SLA não ensejará rescisão automática nem constituirá fundamento para pleito de perdas e danos ou indenizações materiais.
+3.4. **Penalidade Exclusiva por Descumprimento de SLA:** Eventual descumprimento injustificado dos prazos estipulados para chamados de Severidade P1 ou P2 conferirá à CONTRATANTE exclusivamente o direito a um desconto financeiro de 5% (cinco por cento) sobre a mensalidade vincenda do mês subsequente por ocorrência, limitado ao teto máximo de 10% (dez por cento) do valor mensal. O descumprimento pontual de SLA não ensejará rescisão automática nem constituirá fundamento para pleito de perdas e danos ou indenizações materiais.
 
 ---
 
