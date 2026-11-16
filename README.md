@@ -52,6 +52,8 @@ A identidade visual da TRD foi concebida sob o arquétipo da **Soberania, Rigor 
 ```
 .
 ├── PLANO_DE_LANCAMENTO_EMPRESARIAL.md (.docx)   # [DESTAQUE] Plano Mestre de Lançamento (D-60 a D+30)
+├── site/
+│   └── index.html                               # [NOVO] Landing Page Corporativa Oficial (Tailwind + Tokens TRD)
 ├── assets/
 │   ├── trd-lockup.png                           # Logo oficial horizontal master
 │   ├── trd-avatar.png                           # Avatar quadrado 512x512 para redes/perfil
@@ -64,9 +66,13 @@ A identidade visual da TRD foi concebida sob o arquétipo da **Soberania, Rigor 
     ├── 01_juridico/
     │   ├── CONTRATO_SUSTENTACAO_E_SLA.md (.docx)   # Contrato B2B com Damage Cap e retenção de IP
     │   ├── ACORDO_CONFIDENCIALIDADE_NDA.md (.docx) # NDA bilateral com conformidade LGPD
-    │   └── ACORDO_DE_SOCIOS.md (.docx)             # Minuta contingencial: Admissão futura com Vesting (4 anos)
+    │   ├── ACORDO_DE_SOCIOS.md (.docx)             # Minuta contingencial: Admissão futura com Vesting (4 anos)
+    │   ├── TERMO_PARCERIA_E_COMISSAO_INDICACAO.md  # Contrato de canal com agências (comissão recorrente de 10-15%)
+    │   └── CONTRATO_PRESTACAO_SERVICOS_PARCEIRO_SOBREAVISO.md # Contrato PJ de Engenheiro Backup de Sobreaviso
     ├── 02_comercial_marketing/
     │   ├── PROPOSTA_COMERCIAL_EXECUTIVA.md (.docx) # Proposta de alto valor (Piso R$ 3.800 a R$ 8.500/mês)
+    │   ├── ONE_PAGER_INSTITUCIONAL_TRD.md (.docx)  # Folheto executivo de 1 página para WhatsApp/LinkedIn
+    │   ├── CHECKLIST_DIAGNOSTICO_SAUDE_SISTEMA.md  # Lead magnet: Checklist de 15 pontos de risco para CTOs
     │   ├── CASES_DE_SUCESSO_E_AUTORIDADE.md        # 3 estudos de caso estruturais (SQL, Legado Java e LGPD)
     │   └── SCRIPTS_PROSPECCAO_OUTBOUND.md          # 5 scripts de abordagem (LinkedIn, WhatsApp DF, Agências)
     ├── 03_social_media/
@@ -75,6 +81,8 @@ A identidade visual da TRD foi concebida sob o arquétipo da **Soberania, Rigor 
     │   └── AVALIACAO_TECNICA_DEV.md                # Desafio de código real para suporte/devs (Java/Angular/SQL)
     ├── 05_administracao/
     │   ├── MATRIZ_SEVERIDADE_E_SLA.md              # Gestão de incidentes P1 a P4 e fluxo de suporte
+    │   ├── RUNBOOK_ONBOARDING_NOVO_CLIENTE.md      # Runbook de assunção de sistemas em 72h sem quebra de SLA
+    │   ├── PLANO_CONTINUIDADE_E_BACKUP_TECNICO.md  # Protocolo homem-chave, cofre Bitwarden e Disaster Recovery
     │   └── PLANEJAMENTO_TRIBUTARIO_E_FINANCEIRO.md (.docx) # Manual CFO: Simples Nacional a 6% via Fator R
     ├── 06_identidade_visual/
     │   ├── MANUAL_DE_IDENTIDADE_VISUAL_TRD.md      # Manual de Marca, Pantone, Rich Black e WCAG AAA
@@ -97,6 +105,7 @@ Para agilizar fechamentos comerciais, assinaturas digitais (Gov.br / ZapSign / C
 - 📜 **Contrato de Sustentação & SLA:** [`CONTRATO_SUSTENTACAO_E_SLA.docx`](operacoes/01_juridico/CONTRATO_SUSTENTACAO_E_SLA.docx)
 - 🔒 **Acordo de Confidencialidade (NDA):** [`ACORDO_CONFIDENCIALIDADE_NDA.docx`](operacoes/01_juridico/ACORDO_CONFIDENCIALIDADE_NDA.docx)
 - 💼 **Proposta Comercial Executiva:** [`PROPOSTA_COMERCIAL_EXECUTIVA.docx`](operacoes/02_comercial_marketing/PROPOSTA_COMERCIAL_EXECUTIVA.docx)
+- 📄 **One-Pager Institucional (Deck Executivo):** [`ONE_PAGER_INSTITUCIONAL_TRD.docx`](operacoes/02_comercial_marketing/ONE_PAGER_INSTITUCIONAL_TRD.docx)
 - 💰 **Planejamento Tributário & Financeiro:** [`PLANEJAMENTO_TRIBUTARIO_E_FINANCEIRO.docx`](operacoes/05_administracao/PLANEJAMENTO_TRIBUTARIO_E_FINANCEIRO.docx)
 
 ---

@@ -11,9 +11,13 @@ operacoes/
 ├── 01_juridico/
 │   ├── CONTRATO_SUSTENTACAO_E_SLA.md (.docx)   # Minuta jurídica com Damage Cap e SLA blindado
 │   ├── ACORDO_CONFIDENCIALIDADE_NDA.md (.docx) # Acordo de sigilo e proteção de código/dados
-│   └── ACORDO_DE_SOCIOS.md (.docx)             # Minuta contingencial para admissão futura de sócio (Vesting de 4 anos)
+│   ├── ACORDO_DE_SOCIOS.md (.docx)             # Minuta contingencial para admissão futura de sócio (Vesting de 4 anos)
+│   ├── TERMO_PARCERIA_E_COMISSAO_INDICACAO.md  # Contrato de canal de agências/white-label (comissão 10-15%)
+│   └── CONTRATO_PRESTACAO_SERVICOS_PARCEIRO_SOBREAVISO.md # Contrato PJ de engenheiro de sobreaviso (Backup Técnico)
 ├── 02_comercial_marketing/
 │   ├── PROPOSTA_COMERCIAL_EXECUTIVA.md (.docx) # Proposta oficial com pacotes de R$ 3,8k a R$ 8,5k
+│   ├── ONE_PAGER_INSTITUCIONAL_TRD.md (.docx)  # Folheto executivo de 1 página para envio no WhatsApp/LinkedIn
+│   ├── CHECKLIST_DIAGNOSTICO_SAUDE_SISTEMA.md  # Lead magnet técnico: 15 pontos de risco para diretores de TI
 │   ├── CASES_DE_SUCESSO_E_AUTORIDADE.md        # 3 estudos de caso estruturais (SQL, Legado Java e LGPD)
 │   └── SCRIPTS_PROSPECCAO_OUTBOUND.md          # Scripts de WhatsApp, LinkedIn e abordagem de agências
 ├── 03_social_media/
@@ -22,15 +26,17 @@ operacoes/
 │   └── AVALIACAO_TECNICA_DEV.md                # Desafio prático para estagiários/suporte (Java/Angular/SQL)
 ├── 05_administracao/
 │   ├── MATRIZ_SEVERIDADE_E_SLA.md              # Protocolo de atendimento P1/P2/P3 e gestão de chamados
+│   ├── RUNBOOK_ONBOARDING_NOVO_CLIENTE.md      # Protocolo padronizado de assunção de sistemas em 72 horas
+│   ├── PLANO_CONTINUIDADE_E_BACKUP_TECNICO.md  # Protocolo homem-chave, cofre Bitwarden e Disaster Recovery
 │   └── PLANEJAMENTO_TRIBUTARIO_E_FINANCEIRO.md (.docx) # Manual CFO: Simples Nacional a 6%, Fator R e Reservas
 ├── 06_identidade_visual/
 │   ├── MANUAL_DE_IDENTIDADE_VISUAL_TRD.md      # Manual de governança, Pantone, Rich Black e WCAG AAA
 │   ├── tokens.json / tokens.css                # Design tokens oficiais de cores e tipografia
 │   ├── LogoTRD.tsx                             # Componente oficial React / Next.js
 │   └── papel_timbrado_template.md              # Template de timbrado para propostas e laudos
-└── openbot_integracao/                 # Integração e Robôs Especialistas para o OpenBot
-    ├── README.md                       # Guia de implantação e fluxo de orquestração
-    └── agentes/                        # Perfis prontos: Comercial, Jurídico, SLA, FinOps, Marketing, RH
+└── openbot_integracao/                         # Integração e Robôs Especialistas para o OpenBot
+    ├── README.md                               # Guia de implantação e fluxo de orquestração
+    └── agentes/                                # Perfis prontos: Comercial, Jurídico, SLA, FinOps, Marketing, RH
 ```
 
 ---

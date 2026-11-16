@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TRD Consultoria e Serviços de TI — Sustentação de Sistemas & Engenharia AI-Native</title>
+  <meta name="description" content="Boutique de Engenharia de Software e Sustentação de Missão Crítica. Liderança técnica com quase 20 anos de experiência corporativa, SLA garantido e esteira AI-Native.">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="../assets/svg/favicon_32x32.svg">
+  
+  <!-- Inter Font & Tailwind CSS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              obsidian: '#080D1A',
+              slate: '#1E293B',
+              muted: '#64748B',
+              cyan: '#0EA5E9',
+              light: '#F8FAFC'
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    .glass-card {
+      background: rgba(30, 41, 59, 0.7);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .gradient-glow {
+      background: radial-gradient(circle at 50% -20%, rgba(14, 165, 233, 0.15), transparent 70%);
+    }
+  </style>
+</head>
+<body class="bg-brand-obsidian text-slate-100 font-sans antialiased selection:bg-brand-cyan selection:text-brand-obsidian">
+
+  <!-- TOP BAR / NAV -->
+  <header class="fixed top-0 left-0 w-full z-50 bg-brand-obsidian/80 backdrop-blur-md border-b border-slate-800">
+    <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+      
+      <!-- LOGO -->
+      <a href="#" class="flex items-center gap-3 group">
+        <svg class="w-10 h-10 transition-transform group-hover:scale-105" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <!-- Keystone Isométrica Oficial -->
+          <polygon points="50,14 86,34 50,54 14,34" fill="#0EA5E9"/>
+          <polygon points="14,39 47,57 47,93 14,75" fill="#38BDF8"/>
+          <polygon points="53,57 86,39 86,75 53,93" fill="#0284C7"/>
+        </svg>
+        <div class="flex flex-col">
+          <span class="text-xl font-extrabold tracking-tight text-white leading-tight">TRD</span>
+          <span class="text-[9px] font-semibold tracking-[0.25em] text-slate-400">CONSULTORIA &amp; SERVIÇOS DE TI</span>
+        </div>
+      </a>
+
+      <!-- MENU DESKTOP -->
+      <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
+        <a href="#solucoes" class="hover:text-brand-cyan transition-colors">Soluções</a>
+        <a href="#cases" class="hover:text-brand-cyan transition-colors">Cases Reais</a>
+        <a href="#planos" class="hover:text-brand-cyan transition-colors">Planos &amp; SLA</a>
+        <a href="#calculadora" class="hover:text-brand-cyan transition-colors">Economia</a>
+        <a href="#sobre" class="hover:text-brand-cyan transition-colors">Liderança</a>
+      </nav>
+
+      <!-- CTA BTN -->
+      <div class="flex items-center gap-4">
+        <a href="https://wa.me/5561999999999?text=Olá,%20gostaria%20de%20agendar%20um%20diagnóstico%20técnico%20com%20a%20TRD" target="_blank"
+           class="px-5 py-2.5 rounded-lg bg-brand-cyan text-brand-obsidian font-bold text-xs uppercase tracking-wider hover:bg-sky-400 transition-all shadow-lg shadow-sky-500/20">
+          Agendar Diagnóstico
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="relative pt-36 pb-24 md:pt-44 md:pb-36 overflow-hidden gradient-glow">
+    <div class="max-w-5xl mx-auto px-6 text-center">
+      
+      <!-- BADGE -->
+      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-sky-500/30 bg-sky-500/10 text-brand-cyan text-xs font-semibold mb-8 animate-pulse">
+        <span class="w-2 h-2 rounded-full bg-brand-cyan"></span>
+        Boutique de Engenharia &amp; Sustentação de Missão Crítica
+      </div>
+
+      <!-- HEADLINE -->
+      <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight text-white leading-tight mb-6">
+        Seus sistemas corporativos <br class="hidden sm:inline"/>
+        <span class="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-cyan-200">
+          estáveis, blindados e velozes.
+        </span>
+      </h1>
+
+      <!-- SUBHEADLINE -->
+      <p class="text-lg md:text-xl text-slate-300 max-w-3xl mx-auto font-normal leading-relaxed mb-10">
+        Elimine o risco do <strong class="text-white">"desenvolvedor que sumiu"</strong> e as lentidões de banco SQL. Entregamos sustentação contínua com quase <strong>20 anos de experiência sênior</strong>, SLA contratual rígido e esteira assistida por IA.
+      </p>
+
+      <!-- CTAS -->
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a href="#planos" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-brand-cyan text-brand-obsidian font-bold text-sm tracking-wide hover:bg-sky-400 transition-all shadow-xl shadow-sky-500/25">
+          Conhecer Planos a partir de R$ 3.800/mês
+        </a>
+        <a href="#cases" class="w-full sm:w-auto px-8 py-4 rounded-xl glass-card text-white font-semibold text-sm hover:border-slate-600 transition-all">
+          Ver Casos de Sucesso Reais
+        </a>
+      </div>
+
+      <!-- PROVA SOCIAL METRICS -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16 pt-12 border-t border-slate-800 text-left">
+        <div>
+          <div class="text-3xl font-extrabold text-white">~20 Anos</div>
+          <div class="text-xs text-slate-400 font-medium mt-1">Bagagem Técnica Sênior</div>
+        </div>
+        <div>
+          <div class="text-3xl font-extrabold text-white">Até 2h</div>
+          <div class="text-xs text-slate-400 font-medium mt-1">SLA Resposta P1 Crítico</div>
+        </div>
+        <div>
+          <div class="text-3xl font-extrabold text-white">100% IP</div>
+          <div class="text-xs text-slate-400 font-medium mt-1">Código de Titularidade do Cliente</div>
+        </div>
+        <div>
+          <div class="text-3xl font-extrabold text-white">Damage Cap</div>
+          <div class="text-xs text-slate-400 font-medium mt-1">Blindagem Civil Contratual</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- AS DORES QUE RESOLVEMOS -->
+  <section id="solucoes" class="py-24 bg-brand-slate/40 border-y border-slate-800">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <h2 class="text-xs font-bold uppercase tracking-[0.2em] text-brand-cyan mb-3">Diagnóstico Operacional</h2>
+        <p class="text-3xl font-extrabold text-white">Por que médias empresas nos contratam?</p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- CARD 1 -->
+        <div class="glass-card p-8 rounded-2xl relative">
+          <div class="w-12 h-12 rounded-xl bg-red-500/10 border border-red-500/20 flex items-center justify-center text-red-400 font-bold mb-6 text-xl">⚠️</div>
+          <h3 class="text-xl font-bold text-white mb-3">O Dev Anterior Desapareceu</h3>
+          <p class="text-slate-400 text-sm leading-relaxed">
+            A empresa depende de um sistema vital, mas quem o desenvolveu sumiu ou não dá suporte. Cada nova demanda vira um risco de quebrar o faturamento.
+          </p>
+        </div>
+
+        <!-- CARD 2 -->
+        <div class="glass-card p-8 rounded-2xl relative">
+          <div class="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-400 font-bold mb-6 text-xl">⏱️</div>
+          <h3 class="text-xl font-bold text-white mb-3">Banco SQL Travando Tudo</h3>
+          <p class="text-slate-400 text-sm leading-relaxed">
+            Relatórios que não terminam, lentidão no horário comercial e representantes de vendas sem conseguir sincronizar pedidos de clientes.
+          </p>
+        </div>
+
+        <!-- CARD 3 -->
+        <div class="glass-card p-8 rounded-2xl relative">
+          <div class="w-12 h-12 rounded-xl bg-sky-500/10 border border-sky-500/20 flex items-center justify-center text-sky-400 font-bold mb-6 text-xl">💸</div>
+          <h3 class="text-xl font-bold text-white mb-3">Equipe CLT Inviável</h3>
+          <p class="text-slate-400 text-sm leading-relaxed">
+            Manter 3 engenheiros seniores internos custa mais de R$ 35.000/mês em salários e encargos. Com a TRD, você tem sustentação sênior a partir de R$ 3.800/mês.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CASES REAIS DE SUCESSO -->
+  <section id="cases" class="py-24">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <h2 class="text-xs font-bold uppercase tracking-[0.2em] text-brand-cyan mb-3">Prova Social Estrutural</h2>
+        <p class="text-3xl font-extrabold text-white">Casos Reais de Engenharia Solucionados</p>
+        <p class="text-slate-400 text-sm mt-3">Desafios resolvidos sob liderança técnica do nosso fundador.</p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        
+        <!-- CASE 1 -->
+        <div class="glass-card p-8 rounded-2xl flex flex-col justify-between hover:border-sky-500/50 transition-all">
+          <div>
+            <span class="text-[10px] font-bold uppercase tracking-wider text-sky-400 bg-sky-500/10 px-3 py-1 rounded-full">Banco de Dados SQL</span>
+            <h3 class="text-lg font-bold text-white mt-4 mb-2">Resgate de Banco de 1.2M+ Registros</h3>
+            <p class="text-slate-400 text-xs leading-relaxed mb-6">
+              Distribuidora travava pedidos em horários de pico. Consultoria anterior recomendava triplicar gastos em nuvem.
+            </p>
+            <div class="space-y-2 border-t border-slate-800 pt-4 text-xs">
+              <div class="flex justify-between"><span class="text-slate-400">Latência de Queries:</span><span class="font-bold text-green-400">De 18s para 320ms (-82%)</span></div>
+              <div class="flex justify-between"><span class="text-slate-400">Uso de CPU:</span><span class="font-bold text-green-400">De 98% para 22% estável</span></div>
+              <div class="flex justify-between"><span class="text-slate-400">Economia Anual:</span><span class="font-bold text-sky-400">+ R$ 70.000/ano em cloud</span></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CASE 2 -->
+        <div class="glass-card p-8 rounded-2xl flex flex-col justify-between hover:border-sky-500/50 transition-all">
+          <div>
+            <span class="text-[10px] font-bold uppercase tracking-wider text-sky-400 bg-sky-500/10 px-3 py-1 rounded-full">Legado Java + Angular</span>
+            <h3 class="text-lg font-bold text-white mt-4 mb-2">Modernização de Legado Abandonado</h3>
+            <p class="text-slate-400 text-xs leading-relaxed mb-6">
+              Aplicação de gestão corporativa vital sem documentação e sem testes automatizados há 4 anos.
+            </p>
+            <div class="space-y-2 border-t border-slate-800 pt-4 text-xs">
+              <div class="flex justify-between"><span class="text-slate-400">Deploy em Produção:</span><span class="font-bold text-green-400">Zero Downtime garantido</span></div>
+              <div class="flex justify-between"><span class="text-slate-400">Resolução de Bugs (MTTR):</span><span class="font-bold text-green-400">De 48h para &lt; 3h</span></div>
+              <div class="flex justify-between"><span class="text-slate-400">Esteira CI/CD:</span><span class="font-bold text-sky-400">100% automatizada</span></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CASE 3 -->
+        <div class="glass-card p-8 rounded-2xl flex flex-col justify-between hover:border-sky-500/50 transition-all">
+          <div>
+            <span class="text-[10px] font-bold uppercase tracking-wider text-sky-400 bg-sky-500/10 px-3 py-1 rounded-full">Segurança &amp; LGPD</span>
+            <h3 class="text-lg font-bold text-white mt-4 mb-2">Blindagem de Portal &amp; Keycloak SSO</h3>
+            <p class="text-slate-400 text-xs leading-relaxed mb-6">
+              Entidade de classe com dados sensíveis e vulnerabilidades de autenticação em endpoints públicos.
+            </p>
+            <div class="space-y-2 border-t border-slate-800 pt-4 text-xs">
+              <div class="flex justify-between"><span class="text-slate-400">Conformidade LGPD:</span><span class="font-bold text-green-400">100% auditada e aprovada</span></div>
+              <div class="flex justify-between"><span class="text-slate-400">Ataques Bloqueados:</span><span class="font-bold text-green-400">+12.000 requisições/mês</span></div>
+              <div class="flex justify-between"><span class="text-slate-400">Autenticação:</span><span class="font-bold text-sky-400">Single Sign-On (SSO) + 2FA</span></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CALCULADORA DE ECONOMIA / ROI -->
+  <section id="calculadora" class="py-20 bg-brand-slate/30 border-y border-slate-800">
+    <div class="max-w-4xl mx-auto px-6 text-center">
+      <h2 class="text-xs font-bold uppercase tracking-[0.2em] text-brand-cyan mb-3">Retorno Sobre o Investimento</h2>
+      <p class="text-3xl font-extrabold text-white mb-6">Equipe Própria CLT vs. Boutique TRD</p>
+      
+      <div class="grid sm:grid-cols-2 gap-8 text-left mt-10">
+        <div class="glass-card p-8 rounded-2xl border-red-500/20 bg-red-950/10">
+          <span class="text-xs font-bold uppercase tracking-wider text-red-400">Modelo Tradicional (CLT)</span>
+          <div class="text-3xl font-extrabold text-white mt-4 mb-1">R$ 35.000<span class="text-sm font-normal text-slate-400">/mês</span></div>
+          <p class="text-xs text-slate-400 mb-6">3 Desenvolvedores seniores com encargos trabalhistas, férias, 13º, FGTS e equipamentos.</p>
+          <ul class="text-xs space-y-2 text-slate-300">
+            <li>❌ Passivo trabalhista latente</li>
+            <li>❌ Risco alto de rotatividade (*turnover*)</li>
+            <li>❌ Custo anual: <strong>R$ 420.000,00</strong></li>
+          </ul>
+        </div>
+
+        <div class="glass-card p-8 rounded-2xl border-sky-500/40 bg-sky-950/20 relative">
+          <div class="absolute -top-3 right-6 bg-brand-cyan text-brand-obsidian text-[10px] font-extrabold px-3 py-1 rounded-full uppercase tracking-wider">
+            Recomendado
+          </div>
+          <span class="text-xs font-bold uppercase tracking-wider text-sky-400">Boutique Sênior TRD</span>
+          <div class="text-3xl font-extrabold text-white mt-4 mb-1">R$ 5.500<span class="text-sm font-normal text-slate-400">/mês</span></div>
+          <p class="text-xs text-slate-400 mb-6">Plano Profissional completo com 35h técnicas, SLA P1 em até 4h e esteira assistida por IA.</p>
+          <ul class="text-xs space-y-2 text-slate-300">
+            <li>✅ Zero passivo trabalhista (PJ formal)</li>
+            <li>✅ Continuidade assegurada e SLA contratual</li>
+            <li>✅ Custo anual: <strong>R$ 66.000,00</strong></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="mt-8 p-4 rounded-xl bg-sky-500/10 border border-sky-500/20 text-sky-300 text-sm font-semibold">
+        💡 Economia direta de mais de <strong>R$ 354.000,00 por ano</strong> mantendo nível técnico de elite.
+      </div>
+    </div>
+  </section>
+
+  <!-- TABELA DE PLANOS -->
+  <section id="planos" class="py-24">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <h2 class="text-xs font-bold uppercase tracking-[0.2em] text-brand-cyan mb-3">Transparência Total</h2>
+        <p class="text-3xl font-extrabold text-white">Nossos Planos de Sustentação Mensal</p>
+      </div>
+
+      <!-- DISCOVERY EM DESTAQUE -->
+      <div class="mb-12 glass-card p-6 md:p-8 rounded-2xl border-sky-500/30 bg-gradient-to-r from-sky-950/20 to-brand-slate flex flex-col md:flex-row items-center justify-between gap-6">
+        <div class="text-left">
+          <div class="inline-block px-3 py-1 rounded-full bg-brand-cyan/20 text-brand-cyan text-[10px] font-bold uppercase tracking-wider mb-2">
+            Entrada de Baixo Risco
+          </div>
+          <h3 class="text-xl font-bold text-white">Sprint Diagnóstico de Arquitetura (Discovery de 5 Dias)</h3>
+          <p class="text-slate-300 text-xs max-w-2xl mt-1">
+            Varredura completa em seu banco SQL, código legado e riscos de parada. <strong>50% do valor é abatido como crédito</strong> na contratação da sustentação contínua.
+          </p>
+        </div>
+        <div class="text-right flex flex-col sm:flex-row md:flex-col items-end gap-2">
+          <div class="text-2xl font-extrabold text-white">R$ 3.500 <span class="text-xs font-normal text-slate-400">único</span></div>
+          <a href="https://wa.me/5561999999999?text=Olá,%20gostaria%20de%20contratar%20o%20Discovery%20de%205%20dias" target="_blank"
+             class="px-5 py-2.5 rounded-lg bg-white text-brand-obsidian font-bold text-xs uppercase tracking-wider hover:bg-slate-200 transition-all">
+            Solicitar Discovery
+          </a>
+        </div>
+      </div>
+
+      <!-- OS 3 PLANOS CORE -->
+      <div class="grid md:grid-cols-3 gap-8">
+        
+        <!-- ESSENCIAL -->
+        <div class="glass-card p-8 rounded-2xl flex flex-col justify-between">
+          <div>
+            <h3 class="text-lg font-bold text-white">Plano Essencial</h3>
+            <p class="text-xs text-slate-400 mt-1">Para sistemas estáveis que exigem retaguarda e correções pontuais.</p>
+            <div class="text-3xl font-extrabold text-white mt-6 mb-6">R$ 3.800 <span class="text-xs font-normal text-slate-400">/mês</span></div>
+            <ul class="text-xs space-y-3 text-slate-300 border-t border-slate-800 pt-6">
+              <li>• <strong>20 horas técnicas</strong> mensais</li>
+              <li>• SLA Resposta P1: <strong>Até 8 horas úteis</strong></li>
+              <li>• Manutenção corretiva de bugs</li>
+              <li>• Otimização de queries SQL</li>
+              <li>• Reunião mensal de alinhamento</li>
+              <li>• Hora extra: R$ 200/h</li>
+            </ul>
+          </div>
+          <a href="https://wa.me/5561999999999?text=Olá,%20tenho%20interesse%20no%20Plano%20Essencial" target="_blank"
+             class="mt-8 block text-center py-3 rounded-xl border border-slate-700 text-white font-semibold text-xs hover:border-slate-500 transition-all">
+            Contratar Essencial
+          </a>
+        </div>
+
+        <!-- PROFISSIONAL (DESTAQUE) -->
+        <div class="glass-card p-8 rounded-2xl flex flex-col justify-between border-sky-500/60 shadow-2xl shadow-sky-500/10 relative">
+          <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-brand-cyan text-brand-obsidian text-[10px] font-extrabold uppercase tracking-wider">
+            O Mais Escolhido
+          </div>
+          <div>
+            <h3 class="text-lg font-bold text-white">Plano Profissional</h3>
+            <p class="text-xs text-slate-400 mt-1">Para operações críticas que necessitam de evolução contínua e resposta ágil.</p>
+            <div class="text-3xl font-extrabold text-white mt-6 mb-6">R$ 5.500 <span class="text-xs font-normal text-slate-400">/mês</span></div>
+            <ul class="text-xs space-y-3 text-slate-300 border-t border-slate-800 pt-6">
+              <li>• <strong>35 horas técnicas</strong> mensais</li>
+              <li>• SLA Resposta P1: <strong>Até 4 horas úteis</strong></li>
+              <li>• Monitoramento proativo de estabilidade</li>
+              <li>• Correções prioritárias e novos campos</li>
+              <li>• Reuniões quinzenais de alinhamento</li>
+              <li>• Hora extra reduzida: R$ 180/h</li>
+            </ul>
+          </div>
+          <a href="https://wa.me/5561999999999?text=Olá,%20tenho%20interesse%20no%20Plano%20Profissional" target="_blank"
+             class="mt-8 block text-center py-3 rounded-xl bg-brand-cyan text-brand-obsidian font-bold text-xs uppercase tracking-wider hover:bg-sky-400 transition-all shadow-lg shadow-sky-500/25">
+            Contratar Profissional
+          </a>
+        </div>
+
+        <!-- ENTERPRISE -->
+        <div class="glass-card p-8 rounded-2xl flex flex-col justify-between">
+          <div>
+            <h3 class="text-lg font-bold text-white">Plano Enterprise</h3>
+            <p class="text-xs text-slate-400 mt-1">Para ecossistemas complexos com módulos sob medida e SLA de emergência.</p>
+            <div class="text-3xl font-extrabold text-white mt-6 mb-6">R$ 8.500 <span class="text-xs font-normal text-slate-400">/mês</span></div>
+            <ul class="text-xs space-y-3 text-slate-300 border-t border-slate-800 pt-6">
+              <li>• <strong>60 horas técnicas</strong> mensais</li>
+              <li>• SLA Resposta P1: <strong>Até 2 horas úteis</strong></li>
+              <li>• Observabilidade 24/7 com alertas em tempo real</li>
+              <li>• Deploys de módulos de IA e automações</li>
+              <li>• Reuniões semanais e canal exclusivo VIP</li>
+              <li>• Hora extra mais baixa: R$ 160/h</li>
+            </ul>
+          </div>
+          <a href="https://wa.me/5561999999999?text=Olá,%20tenho%20interesse%20no%20Plano%20Enterprise" target="_blank"
+             class="mt-8 block text-center py-3 rounded-xl border border-slate-700 text-white font-semibold text-xs hover:border-slate-500 transition-all">
+            Contratar Enterprise
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- LIDERANÇA TÉCNICA -->
+  <section id="sobre" class="py-24 bg-brand-slate/30 border-t border-slate-800">
+    <div class="max-w-4xl mx-auto px-6 text-center">
+      <h2 class="text-xs font-bold uppercase tracking-[0.2em] text-brand-cyan mb-3">Liderança &amp; Fundador</h2>
+      <p class="text-3xl font-extrabold text-white mb-6">Quem comanda a sua engenharia?</p>
+      
+      <div class="glass-card p-8 rounded-2xl text-left flex flex-col sm:flex-row items-center gap-8 mt-10">
+        <div class="w-28 h-28 rounded-full bg-brand-slate border-2 border-brand-cyan flex-shrink-0 flex items-center justify-center text-4xl shadow-xl shadow-sky-500/10">
+          👨‍💻
+        </div>
+        <div>
+          <h3 class="text-xl font-bold text-white">Thiago Rocha Duarte</h3>
+          <p class="text-xs text-brand-cyan font-semibold mb-3">Sócio Fundador &amp; Engenheiro de Software Sênior</p>
+          <p class="text-slate-300 text-xs leading-relaxed mb-4">
+            Com quase duas décadas de atuação corporativa, Thiago consolidou sua trajetória projetando arquiteturas de alta resiliência, otimizando bancos de dados de larga escala e liderando esteiras modernas com Java, Angular e soluções de Inteligência Artificial. Na TRD, a relação com o cliente é direta e técnica, sem intermediários.
+          </p>
+          <a href="https://www.linkedin.com/in/thiago-duarte-a6597721/" target="_blank" class="inline-flex items-center gap-2 text-xs text-sky-400 hover:text-sky-300 font-semibold">
+            Ver Perfil Verificado no LinkedIn &rarr;
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="py-12 border-t border-slate-800 text-slate-500 text-xs">
+    <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
+      <div class="flex items-center gap-3">
+        <span class="font-extrabold text-white">TRD</span>
+        <span>— TRD Consultoria e Serviços de TI LTDA</span>
+      </div>
+      <div>
+        Brasília - Distrito Federal, Brasil | CNPJ em Constituição
+      </div>
+      <div>
+        &copy; 2026 TRD Consultoria. Todos os direitos reservados.
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
