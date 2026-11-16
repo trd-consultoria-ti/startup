@@ -1,26 +1,24 @@
-﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="100%" height="100%">
-  <!-- TRD Consultoria de TI - Vers├úo Vertical / Stacked (Fundo Claro) -->
-  <g transform="translate(200, 70)">
-    <!-- S├¡mbolo Keystone Centralizado (H = 140) -->
-    <g id="keystone-symbol" transform="translate(-70, 0)">
-      <polygon points="70,7 133,43 70,79 7,43" fill="#080D1A"/>
-      <polygon points="7,52 63,84 63,138 7,106" fill="#080D1A"/>
-      <polygon points="77,84 133,52 133,106 77,138" fill="#080D1A"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 450 420" width="100%" height="100%">
+  <!-- TRD Consultoria e Serviços de TI - Versão Vertical / Stacked -->
+  <g transform="translate(225, 60)">
+    <g id="keystone-symbol" transform="translate(-77, 0)">
+      <polygon points="77,8 147,48 77,88 7,48" fill="#080D1A"/>
+      <polygon points="7,58 69,94 69,154 7,118" fill="#080D1A"/>
+      <polygon points="85,94 147,58 147,118 85,154" fill="#080D1A"/>
     </g>
   </g>
-  <!-- Tipografia Centralizada -->
   <g id="typography" text-anchor="middle">
-    <text x="200" y="275" 
+    <text x="225" y="285" 
           font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" 
-          font-size="76" 
+          font-size="82" 
           font-weight="900" 
-          letter-spacing="4" 
+          letter-spacing="5" 
           fill="#080D1A">TRD</text>
-    <text x="200" y="320" 
+    <text x="225" y="335" 
           font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" 
-          font-size="16" 
+          font-size="16.5" 
           font-weight="600" 
           letter-spacing="7" 
-          fill="#1E293B">CONSULTORIA DE TI</text>
+          fill="#080D1A">CONSULTORIA &amp; SERVIÇOS DE TI</text>
   </g>
 </svg>
