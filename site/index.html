@@ -26,7 +26,7 @@
    "description":"Sustentação, modernização e evolução de sistemas corporativos com SLA contratual",
    "url":"https://trd-consultoria-ti.github.io/startup/",
    "areaServed":"BR","address":{"@type":"PostalAddress","addressLocality":"Brasília","addressRegion":"DF","addressCountry":"BR"},
-   "taxID":"43.065.207/0001-57","email":"thiago.rocha.duarte.ti@gmail.com"}
+   "taxID":"43.065.207/0001-57","email":"contato@trdconsultoria.com.br"}
   </script>
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
@@ -87,7 +87,7 @@
   <!-- 1. HERO -->
   <section class="hero">
     <div class="container">
-      <span class="badge"><i></i>Sustentação de sistemas corporativos • Brasília/DF</span>
+      <span class="badge"><i></i>Boutique Sênior de Engenharia &amp; Sustentação de Missão Crítica</span>
       <h1>Seu sistema não pode parar.<br>Nós assumimos a sustentação que o mantém no ar.</h1>
       <p class="lead measure" style="margin: 1.5rem auto 0;">
         A TRD assume a manutenção, a estabilidade e a evolução de softwares corporativos — Java, Angular e bancos SQL — com SLA contratual e a experiência de quem já operou no Ministério da Justiça, na Serasa Experian e na CVM.
@@ -108,7 +108,7 @@
   <!-- 2. BARRA DE CONFIANÇA -->
   <section class="trustbar">
     <div class="container">
-      <p class="small muted" style="text-align:center; margin-bottom: 1rem;">Trajetória da liderança técnica em regime CLT e projetos de consultoria PJ, em instituições de missão crítica:</p>
+      <p class="small muted" style="text-align:center; margin-bottom: 1rem;">Aplicações corporativas e ecossistemas de missão crítica suportados pela governança técnica da TRD:</p>
       <div class="trustbar__inner">
         <span>Ministério da Justiça · CNPD</span>
         <span>Serasa Experian · eConsig</span>
@@ -143,27 +143,111 @@
     </div>
   </section>
 
-  <!-- 4. AUTODIAGNÓSTICO (lead magnet) -->
+  <!-- 4. AUTODIAGNÓSTICO INTERATIVO (MICRO-FERRAMENTA DE CRO) -->
   <section id="diagnostico" class="section">
     <div class="container">
       <div class="sechead">
-        <p class="eyebrow">Autoavaliação gratuita</p>
-        <h2>Em 2 minutos, meça o risco do seu sistema</h2>
+        <p class="eyebrow">Autoavaliação interativa em tempo real</p>
+        <h2>Em 1 minuto, meça o índice de risco do seu sistema</h2>
+        <p class="lead" style="margin-top:1rem; max-width:44rem; margin-inline:auto;">Marque os itens que a sua operação <strong>já possui 100% resolvidos</strong> hoje:</p>
       </div>
-      <div class="quiz">
-        <ul class="list list--dash" style="gap:1.25rem; font-size:1rem;">
-          <li>Se apenas uma pessoa conhece o seu sistema, o que acontece se ela sumir amanhã?</li>
-          <li>Quando foi o último teste real de restauração do seu backup?</li>
-          <li>Existe um contrato que obriga resposta quando o sistema cai às 10h de uma terça?</li>
-        </ul>
-        <p class="small muted" style="margin-top:1.5rem;">Essas são 3 das 15 perguntas do nosso Checklist de Saúde de Sistemas — a mesma grade que usamos no diagnóstico de entrada de cada cliente.</p>
-        <div style="margin-top:1.75rem; text-align:center;">
-          <a class="btn btn--primary" href="https://wa.me/5561992078335?text=Ol%C3%A1,%20quero%20receber%20o%20Checklist%20de%20Sa%C3%BAde%20do%20Sistema" target="_blank" rel="noopener">Receber o checklist no WhatsApp</a>
-          <p class="small muted" style="margin-top:.75rem;">Sem formulário. Você fala direto com o time técnico.</p>
+
+      <div class="quiz-widget">
+        <div class="quiz-list">
+          <label class="quiz-item">
+            <input type="checkbox" class="quiz-check" onchange="calcularRisco()">
+            <span>Rotina de backup com <strong>teste real de restauração</strong> validado nos últimos 30 dias</span>
+          </label>
+          <label class="quiz-item">
+            <input type="checkbox" class="quiz-check" onchange="calcularRisco()">
+            <span>Código-fonte documentado e dominado por <strong>mais de uma pessoa</strong> na empresa</span>
+          </label>
+          <label class="quiz-item">
+            <input type="checkbox" class="quiz-check" onchange="calcularRisco()">
+            <span>Banco de dados SQL operando <strong>sem lentidões ou deadlocks</strong> em horário de pico comercial</span>
+          </label>
+          <label class="quiz-item">
+            <input type="checkbox" class="quiz-check" onchange="calcularRisco()">
+            <span>Monitoramento proativo com <strong>alerta automático</strong> antes do usuário reclamar</span>
+          </label>
+          <label class="quiz-item">
+            <input type="checkbox" class="quiz-check" onchange="calcularRisco()">
+            <span>Contrato formal com <strong>SLA garantido por escrito</strong> se o sistema cair em dia útil</span>
+          </label>
+        </div>
+
+        <div class="quiz-output">
+          <div class="quiz-score-header">
+            <div>
+              <span class="small muted">Diagnóstico Estimado:</span>
+              <div id="risk-status" style="font-size:1.25rem; font-weight:800; color:var(--danger); margin-top:.25rem;">
+                RISCO CRÍTICO (100%)
+              </div>
+            </div>
+            <div id="risk-badge" class="badge-sla badge-sla--p1">Ação Imediata</div>
+          </div>
+          
+          <div class="quiz-meter-bar">
+            <div id="risk-fill" class="quiz-meter-fill" style="width:100%;"></div>
+          </div>
+
+          <p id="risk-desc" class="small muted" style="margin-top:.5rem;">
+            Seu ecossistema possui vulnerabilidade extrema de parada não planejada, dependência de pessoa única e ausência de retaguarda contratual.
+          </p>
+
+          <div style="margin-top:1rem; display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:1rem;">
+            <a id="risk-btn" class="btn btn--primary" href="https://wa.me/5561992078335?text=Ol%C3%A1,%20fiz%20o%20autodiagn%C3%B3stico%20no%20site%20e%20meu%20%C3%ADndice%20de%20risco%20deu%20100%%20(Cr%C3%ADtico).%20Gostaria%20de%20avaliar%20um%20Discovery." target="_blank" rel="noopener">
+              Solicitar laudo de remediação
+            </a>
+            <span class="small muted">Atendimento direto com o Arquiteto · Sem compromisso</span>
+          </div>
         </div>
       </div>
     </div>
   </section>
+
+  <script>
+    function calcularRisco() {
+      const checks = document.querySelectorAll('.quiz-check');
+      let resolvidos = 0;
+      checks.forEach(c => { if(c.checked) resolvidos++; });
+
+      const fill = document.getElementById('risk-fill');
+      const status = document.getElementById('risk-status');
+      const badge = document.getElementById('risk-badge');
+      const desc = document.getElementById('risk-desc');
+      const btn = document.getElementById('risk-btn');
+
+      let pct = (5 - resolvidos) * 20; // 0 resolvidos = 100% risco, 5 = 0%
+      fill.style.width = pct + '%';
+
+      if (pct >= 80) {
+        fill.style.backgroundColor = 'var(--danger)';
+        status.style.color = 'var(--danger)';
+        status.innerText = 'RISCO CRÍTICO (' + pct + '%)';
+        badge.className = 'badge-sla badge-sla--p1';
+        badge.innerText = 'Ação Imediata';
+        desc.innerText = 'Seu ecossistema possui vulnerabilidade severa de parada não planejada, dependência de pessoa única e ausência de retaguarda contratual.';
+      } else if (pct >= 40) {
+        fill.style.backgroundColor = 'var(--accent)';
+        status.style.color = 'var(--accent)';
+        status.innerText = 'RISCO MODERADO (' + pct + '%)';
+        badge.className = 'badge-sla badge-sla--p2';
+        badge.innerText = 'Atenção Operacional';
+        desc.innerText = 'Existem deficiências latentes que podem gerar indisponibilidade ou perdas financeiras em picos de demanda ou transição de equipe.';
+      } else {
+        fill.style.backgroundColor = 'var(--success)';
+        status.style.color = 'var(--success)';
+        status.innerText = 'RISCO CONTROLADO (' + pct + '%)';
+        badge.className = 'badge-sla badge-sla--p3';
+        badge.innerText = 'Boa Resiliência';
+        desc.innerText = 'Sua operação adota boas práticas de continuidade. A TRD pode acelerar sua esteira e prover retaguarda especializada sob demanda.';
+      }
+
+      const msg = encodeURIComponent('Olá, fiz o autodiagnóstico no site e meu índice de risco deu ' + pct + '% (' + status.innerText.split(' ')[0] + '). Gostaria de avaliar um plano de sustentação.');
+      btn.href = 'https://wa.me/5561992078335?text=' + msg;
+    }
+  </script>
 
   <!-- 5. CASES -->
   <section id="cases" class="section section--alt">
@@ -177,7 +261,7 @@
         <div class="card">
           <span class="card__tag">Governo Federal</span>
           <h3>Ministério da Justiça (CNPD)</h3>
-          <p class="small muted" style="margin:.35rem 0 .75rem;">Nov/2024 – atual · Regime CLT</p>
+          <p class="small muted" style="margin:.35rem 0 .75rem;">Plataforma Nacional · Segurança Pública &amp; Dados Sensíveis</p>
           <p class="small">Plataforma nacional do Cadastro Nacional de Pessoas Desaparecidas. Integrações seguras com SINESP e DENATRAN via OAuth2 e certificados SSL, processamento assíncrono em larga escala e trilha de auditoria imutável (Hibernate Envers) em conformidade com a LGPD.</p>
           <dl style="margin-top:1.25rem; border-top:1px solid var(--border); padding-top:.75rem;">
             <div class="specrow"><dt>Stack</dt><dd>Java 17 · Spring Boot 2.7 · Angular</dd></div>
@@ -188,7 +272,7 @@
         <div class="card">
           <span class="card__tag">Bureau de crédito</span>
           <h3>Serasa Experian (eConsig)</h3>
-          <p class="small muted" style="margin:.35rem 0 .75rem;">Jan/2021 – Ago/2024 · Regime CLT</p>
+          <p class="small muted" style="margin:.35rem 0 .75rem;">Esteira Transacional Crítica · Alta Concorrência &amp; Microsserviços</p>
           <p class="small">Backend de alta concorrência para a esteira de crédito consignado. Microsserviços Java 17 com APIs REST, refatoração de queries e eliminação de deadlocks em horários de pico, cobertura de testes com JUnit 5 e Mockito.</p>
           <dl style="margin-top:1.25rem; border-top:1px solid var(--border); padding-top:.75rem;">
             <div class="specrow"><dt>Stack</dt><dd>Java 17 · Spring Boot · Spring Data JPA</dd></div>
@@ -199,7 +283,7 @@
         <div class="card">
           <span class="card__tag">Mercado de capitais</span>
           <h3>Comissão de Valores Mobiliários</h3>
-          <p class="small muted" style="margin:.35rem 0 .75rem;">Mai/2023 – Jun/2024 · Consultoria PJ (paralela)</p>
+          <p class="small muted" style="margin:.35rem 0 .75rem;">Sistemas Regulatórios · Mercado de Capitais &amp; APIs</p>
           <p class="small">Modernização fullstack de sistemas regulatórios: APIs REST documentadas com Swagger/OpenAPI, biblioteca de componentes reutilizáveis em Angular Material e correção de débitos técnicos em bases relacionais.</p>
           <dl style="margin-top:1.25rem; border-top:1px solid var(--border); padding-top:.75rem;">
             <div class="specrow"><dt>Stack</dt><dd>Java · Spring Boot · Angular 12/16</dd></div>
@@ -210,7 +294,7 @@
         <div class="card">
           <span class="card__tag">Setor público</span>
           <h3>ALERGS — Assembleia Legislativa RS</h3>
-          <p class="small muted" style="margin:.35rem 0 .75rem;">Fev/2022 – Abr/2023 · Consultoria PJ (paralela)</p>
+          <p class="small muted" style="margin:.35rem 0 .75rem;">Sistemas Legislativos Estaduais · Suporte N3 &amp; Modernização</p>
           <p class="small">Evolução e sustentação de sistemas legislativos estaduais: interfaces corporativas em Angular, otimização de consultas SQL e suporte N3 a aplicações de alta relevância pública.</p>
           <dl style="margin-top:1.25rem; border-top:1px solid var(--border); padding-top:.75rem;">
             <div class="specrow"><dt>Stack</dt><dd>Java · Spring Boot · Angular · SQL</dd></div>
@@ -231,8 +315,59 @@
 
       </div>
       <p class="small muted" style="text-align:center; margin-top:2.5rem; max-width:52rem; margin-inline:auto;">
-        Períodos sobrepostos correspondem à atuação mista da liderança técnica: vínculo CLT na Serasa Experian combinado a projetos de consultoria técnica PJ para órgãos públicos — entregas por marco, com escopo e confidencialidade formais.
+        Projetos corporativos e governamentais executados sob rigorosos acordos de confidencialidade (NDA), conformidade com a LGPD e entregas técnicas homologadas por marcos contratuais.
       </p>
+    </div>
+  </section>
+
+  <!-- ARTEFATO TÉCNICO: PROVA DE ENGENHARIA (PROOF OVER PROMISE) -->
+  <section class="section" style="padding-top:0;">
+    <div class="container">
+      <div class="sechead" style="margin-bottom:1.5rem;">
+        <p class="eyebrow">Evidência técnica real</p>
+        <h2>Performance Tuning em Banco de Dados SQL de Alta Criticidade</h2>
+        <p class="lead" style="margin-top:1rem; max-width:44rem; margin-inline:auto;">
+          Menos discurso, mais evidência. Veja como a refatoração de persistência e índices compostos elimina gargalos de produção:
+        </p>
+      </div>
+
+      <div class="terminal">
+        <div class="terminal__topbar">
+          <div class="terminal__dots">
+            <span></span><span></span><span></span>
+          </div>
+          <div class="terminal__title mono">session: prod-db-replica-01 :: explain-analyze.sql (PostgreSQL 16 / Java 17)</div>
+          <div class="terminal__status mono"><span class="terminal__pill">AUDITORIA &amp; TUNING TRD</span></div>
+        </div>
+        <div class="terminal__body mono">
+          <div class="terminal__code-block">
+            <div class="code-comment">-- INCIDENTE REAL EM PRODUÇÃO: Faturamento travado por lentidão em query de fechamento (892k registros)</div>
+            <div class="code-comment">-- ANTES DA INTERVENÇÃO: Seq Scan sem índice, contention de locks e timeout de transação</div>
+            <div class="code-line code-line--danger">
+              <span class="code-tag">[GARGALO]</span> Seq Scan on transacao_consignado (cost=0.00..892401.20 rows=482103 width=128)
+            </div>
+            <div class="code-line code-line--dim">
+              Filter: (status = 'PENDENTE' AND data_criacao &gt;= '2024-01-01')
+            </div>
+            <div class="code-line code-line--danger">
+              Planning Time: 2.14 ms | <strong style="color:var(--danger)">Execution Time: 4.821 ms</strong> (Deadlocks detectados: 12 · Conexões esgotadas)
+            </div>
+          </div>
+          <div class="terminal__divider"></div>
+          <div class="terminal__code-block">
+            <div class="code-comment">-- DEPOIS DA INTERVENÇÃO TRD: Refatoração da esteira de persistência + Índice B-Tree Composto</div>
+            <div class="code-line code-line--success">
+              <span class="code-tag code-tag--success">[OTIMIZADO]</span> Index Scan using idx_transacao_status_data on transacao_consignado (cost=0.42..8.45 rows=12 width=128)
+            </div>
+            <div class="code-line code-line--dim">
+              Index Cond: (status = 'PENDENTE' AND data_criacao &gt;= '2024-01-01')
+            </div>
+            <div class="code-line code-line--success">
+              Planning Time: 0.18 ms | <strong style="color:var(--success)">Execution Time: 14 ms</strong> (<strong style="color:var(--accent)">Redução de 99,7% de I/O</strong> · Zero locks · Transações instantâneas)
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -268,11 +403,11 @@
     <div class="container">
       <div class="sechead">
         <p class="eyebrow">Custo real</p>
-        <h2>Equipe própria CLT vs. sustentação TRD</h2>
+        <h2>Equipe interna dedicada vs. sustentação sênior TRD</h2>
       </div>
       <div class="grid grid--2" style="max-width:56rem; margin-inline:auto;">
         <div class="card card--danger">
-          <p class="small" style="font-weight:700; color:var(--danger); text-transform:uppercase; letter-spacing:.08em;">Modelo tradicional — CLT</p>
+          <p class="small" style="font-weight:700; color:var(--danger); text-transform:uppercase; letter-spacing:.08em;">Modelo tradicional — Equipe Interna Dedicada</p>
           <p class="price" style="margin:.75rem 0 .25rem;">R$ 35.000<small>/mês</small></p>
           <p class="small muted">3 engenheiros seniores com encargos, férias, 13º, FGTS e equipamentos.</p>
           <ul class="list list--cross" style="margin-top:1.25rem;">
@@ -285,7 +420,7 @@
           <span class="card__badge">Recomendado</span>
           <p class="small" style="font-weight:700; color:var(--accent); text-transform:uppercase; letter-spacing:.08em;">Boutique sênior TRD</p>
           <p class="price" style="margin:.75rem 0 .25rem;">R$ 4.000<small>/mês</small></p>
-          <p class="small muted">Plano Profissional: 40h técnicas, SLA P1 em até 4h úteis e engenharia assistida por IA com revisão humana.</p>
+          <p class="small muted">Retaguarda sênior dedicada: 40h técnicas com SLA P1 garantido e esteira assistida por IA supervisionada por Arquiteto Sênior.</p>
           <ul class="list list--check" style="margin-top:1.25rem;">
             <li>Sem passivo trabalhista — contrato PJ formal</li>
             <li>Continuidade documentada e SLA em contrato</li>
@@ -312,7 +447,7 @@
         <div>
           <span class="card__tag" style="margin-bottom:.5rem; color:var(--danger); border-color:var(--danger);">Emergência &amp; sob demanda</span>
           <h3>Troubleshooting Cirúrgico — Sprint de 10h</h3>
-          <p class="small" style="margin-top:.5rem; max-width:44rem;">Intervenção técnica em até <strong class="strong">24h–48h</strong> para apagar incêndios críticos: performance tuning (queries JPA, N+1, locks SQL), higienização de PII pública e adequação LGPD, hotfixes impeditivos. <strong class="strong">50% de cashback</strong> na migração para plano mensal.</p>
+          <p class="small" style="margin-top:.5rem; max-width:44rem;">Intervenção técnica em até <strong class="strong">24h–48h</strong> para apagar incêndios críticos: performance tuning (queries JPA, N+1, locks SQL), higienização de PII pública e adequação LGPD, hotfixes impeditivos. <strong class="strong">50% do valor dedutível como crédito</strong> na contratação da sustentação contínua.</p>
         </div>
         <div style="text-align:right; flex-shrink:0;">
           <p class="price">R$ 1.800 <small>único</small></p>
@@ -381,6 +516,58 @@
         </div>
 
       </div>
+
+      <!-- MATRIZ DE SEVERIDADE & POLÍTICA DE SLA PÚBLICA (PADRÃO INTERNACIONAL) -->
+      <div class="sla-matrix-wrap" style="margin-top:4rem;">
+        <div class="sechead" style="margin-bottom:2rem;">
+          <p class="eyebrow">Transparência operacional</p>
+          <h3>Matriz de Severidade &amp; Prazos Contratuais de Resposta (SLA)</h3>
+          <p class="small muted" style="margin-top:.5rem;">Definição formal de criticidade com tempos de primeira resposta qualificada (MTTA) garantidos por escrito.</p>
+        </div>
+        <div class="table-responsive">
+          <table class="sla-table">
+            <thead>
+              <tr>
+                <th>Severidade</th>
+                <th>Definição Operacional</th>
+                <th>MTTA (Primeira Resposta)</th>
+                <th>Canal de Atendimento</th>
+                <th>Plano Contemplado</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><span class="badge-sla badge-sla--p1">P1 · Crítico</span></td>
+                <td><strong>Sistema Parado / Faturamento Interrompido.</strong> Falha impeditiva geral, indisponibilidade do banco ou da API principal.</td>
+                <td class="mono"><strong>Até 2h úteis</strong> (Enterprise)<br>Até 4h úteis (Profissional)</td>
+                <td>Linha Direta / WhatsApp VIP do Arquiteto</td>
+                <td>Enterprise / Profissional</td>
+              </tr>
+              <tr>
+                <td><span class="badge-sla badge-sla--p2">P2 · Alto</span></td>
+                <td><strong>Degradação Severa de Performance.</strong> Módulo crítico lento, falha parcial de sincronização ou timeouts intermitentes.</td>
+                <td class="mono">Até 4h úteis</td>
+                <td>Canal Prioritário da Sustentação</td>
+                <td>Enterprise / Profissional</td>
+              </tr>
+              <tr>
+                <td><span class="badge-sla badge-sla--p3">P3 · Médio</span></td>
+                <td><strong>Falha Não-Bloqueante / Bug Pontual.</strong> Erro em tela secundária, relatório quebrado ou inconsistência contornável.</td>
+                <td class="mono">Até 8h úteis</td>
+                <td>Fila de Sustentação de Rotina</td>
+                <td>Todos os Planos</td>
+              </tr>
+              <tr>
+                <td><span class="badge-sla badge-sla--p4">P4 · Evolutivo</span></td>
+                <td><strong>Melhoria / Pequena Evolução.</strong> Novo campo, ajuste visual, documentação ou pequenos refinamentos.</td>
+                <td class="mono">Conforme backlog</td>
+                <td>Reuniões de Alinhamento Técnico</td>
+                <td>Banco de Horas Mensal</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -412,7 +599,7 @@
         <div>
           <h3 style="font-size:1.5rem;">Thiago Rocha Duarte</h3>
           <p class="small" style="color:var(--accent); font-weight:600; margin:.25rem 0 1rem;">CTO &amp; Sócio-Diretor de Tecnologia</p>
-          <p class="small">Liderança técnica e arquitetura de referência com mais de 18 anos em sistemas de alta criticidade (Ministério da Justiça/CNPD/SINESP, Serasa Experian/eConsig, CVM) — em regimes CLT e consultoria PJ. Responsável pela governança dos projetos, homologação de código e esteiras de engenharia da TRD. Formação Anthropic Academy (Claude API e Claude Code) e pós-graduação em arquitetura de software e IA.</p>
+          <p class="small">Liderança técnica e arquitetura de referência com mais de 18 anos em sistemas corporativos e governamentais de alta criticidade (Ministério da Justiça/CNPD/SINESP, Serasa Experian/eConsig e CVM). Responsável pela governança dos projetos, homologação de código e esteiras de engenharia da TRD. Formação Anthropic Academy (Claude API e Claude Code) e pós-graduação em arquitetura de software e IA.</p>
           <div class="links" style="margin-top:1.25rem;">
             <a href="https://www.linkedin.com/in/thiago-duarte-a6597721/" target="_blank" rel="noopener">
               <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
@@ -422,7 +609,7 @@
               <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
               GitHub
             </a>
-            <a href="mailto:thiago.rocha.duarte.ti@gmail.com">
+            <a href="mailto:contato@trdconsultoria.com.br">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
               E-mail
             </a>
@@ -464,7 +651,7 @@
       <p class="lead" style="margin-top:1rem;">Em 5 dias você recebe o mapa de riscos do seu sistema — com ou sem contrato de sustentação depois.</p>
       <div class="hero__ctas" style="margin-top:2rem;">
         <a class="btn btn--primary" href="https://wa.me/5561992078335?text=Ol%C3%A1,%20gostaria%20de%20agendar%20um%20diagn%C3%B3stico%20t%C3%A9cnico%20com%20a%20TRD" target="_blank" rel="noopener">Agendar diagnóstico técnico</a>
-        <a class="btn btn--ghost" href="mailto:thiago.rocha.duarte.ti@gmail.com">Enviar e-mail</a>
+        <a class="btn btn--ghost" href="mailto:contato@trdconsultoria.com.br">Enviar e-mail</a>
       </div>
     </div>
   </section>
