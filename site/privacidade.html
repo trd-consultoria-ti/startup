@@ -7,6 +7,23 @@
   <meta name="description" content="Política de Privacidade e Proteção de Dados da TRD Consultoria em TI, amparada pela Lei Geral de Proteção de Dados (Lei 13.709/18).">
   <meta name="theme-color" content="#080D1A">
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <script>
+    (function() {
+      try {
+        var saved = localStorage.getItem('trd-theme');
+        var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        var theme = saved || (prefersDark ? 'dark' : 'light');
+        document.documentElement.setAttribute('data-theme', theme);
+        document.documentElement.style.colorScheme = theme;
+        var metaTheme = document.querySelector('meta[name="theme-color"]');
+        if (metaTheme) {
+          metaTheme.setAttribute('content', theme === 'dark' ? '#080D1A' : '#F8FAFC');
+        }
+      } catch (e) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      }
+    })();
+  </script>
   <link rel="manifest" href="manifest.webmanifest">
   <link rel="stylesheet" href="styles.css">
 </head>
@@ -23,7 +40,7 @@
               <path d="M100 115.5V0 M100 115.5L0 173.25 M100 115.5L200 173.25" stroke="#000" stroke-width="13" fill="none"/>
             </mask>
           </defs>
-          <g mask="url(#ks-priv)" fill="#F8FAFC">
+          <g mask="url(#ks-priv)" fill="var(--keystone-fill)">
             <polygon points="100,115.5 0,173.25 0,57.75 100,0"/>
             <polygon points="100,115.5 200,173.25 200,57.75 100,0"/>
             <polygon points="100,115.5 0,173.25 100,231 200,173.25"/>
@@ -31,7 +48,23 @@
         </svg>
         <span class="nav__word"><b>TRD</b><span>CONSULTORIA DE TI</span></span>
       </a>
-      <div>
+      <div class="nav__actions">
+        <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Alternar para modo claro" title="Alternar tema (Atalho: Alt + T)">
+          <svg class="theme-toggle__icon theme-toggle__icon--sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <svg class="theme-toggle__icon theme-toggle__icon--moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="display:none;">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
         <a class="btn btn--ghost btn--sm" href="index.html">&larr; Voltar ao início</a>
       </div>
     </div>
@@ -82,5 +115,45 @@
     </div>
   </footer>
 
+  <script>
+    (function initThemeManager() {
+      const toggleBtn = document.getElementById('theme-toggle');
+      const metaTheme = document.querySelector('meta[name="theme-color"]');
+
+      function applyTheme(theme, persist) {
+        document.documentElement.setAttribute('data-theme', theme);
+        document.documentElement.style.colorScheme = theme;
+        if (metaTheme) {
+          metaTheme.setAttribute('content', theme === 'dark' ? '#080D1A' : '#F8FAFC');
+        }
+        if (toggleBtn) {
+          const isDark = theme === 'dark';
+          toggleBtn.setAttribute('aria-label', isDark ? 'Alternar para modo claro' : 'Alternar para modo escuro');
+          toggleBtn.setAttribute('title', isDark ? 'Alternar para modo claro (Alt + T)' : 'Alternar para modo escuro (Alt + T)');
+        }
+        if (persist) {
+          try {
+            localStorage.setItem('trd-theme', theme);
+          } catch (e) {}
+        }
+      }
+
+      if (toggleBtn) {
+        toggleBtn.addEventListener('click', function() {
+          const current = document.documentElement.getAttribute('data-theme') || 'dark';
+          const next = current === 'dark' ? 'light' : 'dark';
+          applyTheme(next, true);
+        });
+      }
+
+      document.addEventListener('keydown', function(e) {
+        if (e.altKey && (e.key === 't' || e.key === 'T')) {
+          e.preventDefault();
+          const current = document.documentElement.getAttribute('data-theme') || 'dark';
+          applyTheme(current === 'dark' ? 'light' : 'dark', true);
+        }
+      });
+    })();
+  </script>
 </body>
 </html>

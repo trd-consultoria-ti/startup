@@ -16,6 +16,23 @@
   <meta property="og:image:alt" content="TRD Consultoria e Serviços de TI">
 
   <meta name="twitter:card" content="summary_large_image">
+    <script>
+    (function() {
+      try {
+        var saved = localStorage.getItem('trd-theme');
+        var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        var theme = saved || (prefersDark ? 'dark' : 'light');
+        document.documentElement.setAttribute('data-theme', theme);
+        document.documentElement.style.colorScheme = theme;
+        var metaTheme = document.querySelector('meta[name="theme-color"]');
+        if (metaTheme) {
+          metaTheme.setAttribute('content', theme === 'dark' ? '#080D1A' : '#F8FAFC');
+        }
+      } catch (e) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      }
+    })();
+  </script>
   <link rel="preload" href="fonts/inter-var-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="manifest" href="manifest.webmanifest">
   <meta property="og:image:width" content="1200">
@@ -51,7 +68,7 @@
               <path d="M100 115.5V0 M100 115.5L0 173.25 M100 115.5L200 173.25" stroke="#000" stroke-width="13" fill="none"/>
             </mask>
           </defs>
-          <g mask="url(#ks-nav)" fill="#F8FAFC">
+          <g mask="url(#ks-nav)" fill="var(--keystone-fill)">
             <polygon points="100,115.5 0,173.25 0,57.75 100,0"/>
             <polygon points="100,115.5 200,173.25 200,57.75 100,0"/>
             <polygon points="100,115.5 0,173.25 100,231 200,173.25"/>
@@ -71,21 +88,39 @@
         <a href="#contato">Contato</a>
       </nav>
 
-      <div>
-        <a class="btn btn--primary btn--sm" href="https://wa.me/5561992078335?text=Ol%C3%A1,%20gostaria%20de%20agendar%20um%20diagn%C3%B3stico%20t%C3%A9cnico%20com%20a%20TRD" target="_blank" rel="noopener">Agendar diagnóstico</a>
+      <div class="nav__actions">
+        <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Alternar para modo claro" title="Alternar tema (Atalho: Alt + T)">
+          <svg class="theme-toggle__icon theme-toggle__icon--sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <svg class="theme-toggle__icon theme-toggle__icon--moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="display:none;">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+        <a class="btn btn--primary btn--sm nav__cta" href="https://wa.me/5561992078335?text=Ol%C3%A1,%20gostaria%20de%20agendar%20um%20diagn%C3%B3stico%20t%C3%A9cnico%20com%20a%20TRD" target="_blank" rel="noopener">Agendar diagnóstico</a>
+        <button type="button" class="nav__burger" id="nav-toggle-btn" aria-expanded="false" aria-controls="nav-mobile" aria-label="Abrir menu de navegação">
+          <svg class="nav__icon-menu" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+          <svg class="nav__icon-close" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" style="display:none;"><path d="M18 6L6 18M6 6l12 12"/></svg>
+        </button>
       </div>
-
-      <input type="checkbox" id="nav-toggle" class="nav__toggle" aria-hidden="true">
-      <label for="nav-toggle" class="nav__burger" aria-label="Abrir menu">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
-      </label>
     </div>
-    <nav class="nav__mobile" aria-label="Menu móvel">
+    <nav id="nav-mobile" class="nav__mobile" aria-label="Menu móvel">
       <a href="#solucoes">Soluções</a>
       <a href="#cases">Experiência</a>
       <a href="#planos">Planos &amp; SLA</a>
       <a href="#sobre">Equipe &amp; Governança</a>
       <a href="#contato">Contato</a>
+      <div class="nav__mobile-actions">
+        <a class="btn btn--primary" href="https://wa.me/5561992078335?text=Ol%C3%A1,%20gostaria%20de%20agendar%20um%20diagn%C3%B3stico%20t%C3%A9cnico%20com%20a%20TRD" target="_blank" rel="noopener">Agendar diagnóstico técnico</a>
+      </div>
     </nav>
   </header>
 
@@ -297,7 +332,7 @@
         </p>
       </div>
 
-      <div class="terminal">
+      <div class="terminal" tabindex="0" role="region" aria-label="Auditoria e Tuning SQL">
         <div class="terminal__topbar">
           <div class="terminal__dots">
             <span></span><span></span><span></span>
@@ -490,7 +525,7 @@
           <h3>Matriz de Severidade &amp; Prazos Contratuais de Resposta (SLA)</h3>
           <p class="small muted" style="margin-top:.5rem;">Definição formal de criticidade com tempos de primeira resposta qualificada (MTTA) garantidos por escrito.</p>
         </div>
-        <div class="table-responsive">
+        <div class="table-responsive" tabindex="0" role="region" aria-label="Matriz de Severidade e Prazos Contratuais de SLA">
           <table class="sla-table">
             <thead>
               <tr>
@@ -645,7 +680,60 @@
   </footer>
 
   <script>
-    // --- 1. Menu Mobile Acessível (P0-1, P1-1, P1-2, P2-3) ---
+    // --- 1. Gerenciador de Tema (Dark / Light) com Persistência & Atalho Alt+T ---
+    (function initThemeManager() {
+      const toggleBtn = document.getElementById('theme-toggle');
+      const metaTheme = document.querySelector('meta[name="theme-color"]');
+
+      function applyTheme(theme, persist) {
+        document.documentElement.setAttribute('data-theme', theme);
+        document.documentElement.style.colorScheme = theme;
+        
+        if (metaTheme) {
+          metaTheme.setAttribute('content', theme === 'dark' ? '#080D1A' : '#F8FAFC');
+        }
+        
+        if (toggleBtn) {
+          const isDark = theme === 'dark';
+          toggleBtn.setAttribute('aria-label', isDark ? 'Alternar para modo claro' : 'Alternar para modo escuro');
+          toggleBtn.setAttribute('title', isDark ? 'Alternar para modo claro (Alt + T)' : 'Alternar para modo escuro (Alt + T)');
+        }
+
+        if (persist) {
+          try {
+            localStorage.setItem('trd-theme', theme);
+          } catch (e) {}
+        }
+      }
+
+      if (toggleBtn) {
+        toggleBtn.addEventListener('click', function() {
+          const current = document.documentElement.getAttribute('data-theme') || 'dark';
+          const next = current === 'dark' ? 'light' : 'dark';
+          applyTheme(next, true);
+        });
+      }
+
+      // Atalho de teclado Alt + T
+      document.addEventListener('keydown', function(e) {
+        if (e.altKey && (e.key === 't' || e.key === 'T')) {
+          e.preventDefault();
+          const current = document.documentElement.getAttribute('data-theme') || 'dark';
+          applyTheme(current === 'dark' ? 'light' : 'dark', true);
+        }
+      });
+
+      // Ouvir preferência do sistema se não houver preferência salva
+      try {
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function(e) {
+          if (!localStorage.getItem('trd-theme')) {
+            applyTheme(e.matches ? 'dark' : 'light', false);
+          }
+        });
+      } catch (err) {}
+    })();
+
+    // --- 2. Menu Mobile Acessível (Touch & Focus Trap) ---
     (function initMobileNav() {
       const btn = document.getElementById('nav-toggle-btn');
       const menu = document.getElementById('nav-mobile');
@@ -658,6 +746,7 @@
         btn.setAttribute('aria-expanded', String(open));
         btn.setAttribute('aria-label', open ? 'Fechar menu de navegação' : 'Abrir menu de navegação');
         menu.classList.toggle('is-open', open);
+        document.body.style.overflow = open ? 'hidden' : '';
         if (iconMenu && iconClose) {
           iconMenu.style.display = open ? 'none' : 'block';
           iconClose.style.display = open ? 'block' : 'none';
@@ -683,7 +772,7 @@
       });
     })();
 
-    // --- 2. Widget Autodiagnóstico Interativo (P1-4, P2-8, P2-12, P2-14) ---
+    // --- 3. Widget Autodiagnóstico Interativo (Acessível) ---
     function calcularRisco() {
       const checks = document.querySelectorAll('.quiz-check');
       let resolvidos = 0;
