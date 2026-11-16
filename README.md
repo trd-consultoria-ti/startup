@@ -41,9 +41,13 @@ Este repositório fornece a esteira completa para operar uma empresa de desenvol
     │   └── PLAYBOOK_LINKEDIN_AUTORIDADE.md         # Framework Dev-to-Founder para atração B2B
     ├── 04_rh/
     │   └── AVALIACAO_TECNICA_DEV.md                # Desafio de código real para suporte/devs (Java/Angular/SQL)
-    └── 05_administracao/
-        ├── MATRIZ_SEVERIDADE_E_SLA.md              # Gestão de incidentes P1 a P4 e fluxo de suporte
-        └── PLANEJAMENTO_TRIBUTARIO_E_FINANCEIRO.md (.docx) # Engenharia tributária do Fator R (Simples Nacional a 6%)
+    ├── 05_administracao/
+    │   ├── MATRIZ_SEVERIDADE_E_SLA.md              # Gestão de incidentes P1 a P4 e fluxo de suporte
+    │   └── PLANEJAMENTO_TRIBUTARIO_E_FINANCEIRO.md (.docx) # Engenharia tributária do Fator R (Simples Nacional a 6%)
+    └── 06_identidade_visual/
+        ├── MANUAL_DE_IDENTIDADE_VISUAL_TRD.md      # Manual de Marca, Pantone 532 C, Rich Black e WCAG AAA
+        ├── tokens.json / tokens.css                # Design tokens oficiais e variáveis CSS
+        └── LogoTRD.tsx                             # Componente oficial React / Next.js
 ```
 
 ### 📥 Documentos Disponíveis em Word (.docx) para Download

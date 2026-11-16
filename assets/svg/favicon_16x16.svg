@@ -1,0 +1,6 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16">
+  <!-- Favicon 16x16px calibrado com fendas expandidas anti-aliasing -->
+  <polygon points="8,1 15,5 8,9 1,5" fill="#080D1A"/>
+  <polygon points="1,6.5 7,10 7,15.5 1,12" fill="#080D1A"/>
+  <polygon points="9,10 15,6.5 15,12 9,15.5" fill="#080D1A"/>
+</svg>
