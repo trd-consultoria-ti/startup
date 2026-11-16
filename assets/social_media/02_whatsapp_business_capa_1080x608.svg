@@ -19,42 +19,39 @@
   
   <!-- Lockup Top Left -->
   <g transform="translate(70, 70) scale(0.7)">
-    
-    <defs>
-      <mask id="ks-wh-lock">
-        <polygon points="100,0 200,57.75 200,173.25 100,231 0,173.25 0,57.75" fill="#fff"/>
-        <path d="M100 115.5V0 M100 115.5L0 173.25 M100 115.5L200 173.25" stroke="#000" stroke-width="13" fill="none"/>
-      </mask>
-    </defs>
-    <g mask="url(#ks-wh-lock)" fill="#F8FAFC">
-      <polygon points="100,115.5 0,173.25 0,57.75 100,0"/>
-      <polygon points="100,115.5 200,173.25 200,57.75 100,0"/>
-      <polygon points="100,115.5 0,173.25 100,231 200,173.25"/>
+    <g fill="#F8FAFC">
+      
+  <!-- Top-Left Trapezoid -->
+  <polygon points="0.00,57.75 0.00,165.74 93.50,111.75 93.50,3.75"/>
+  <!-- Top-Right Trapezoid -->
+  <polygon points="200.00,57.75 106.50,3.75 106.50,111.75 200.00,165.74"/>
+  <!-- Bottom Losango (Rhombus) -->
+  <polygon points="100.00,231.00 193.51,177.00 100.00,123.01 6.49,177.00"/>
+
     </g>
-    
   </g>
   <g transform="translate(230, 95)">
-    <text x="0" y="45" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="52" font-weight="900" letter-spacing="3" fill="#F8FAFC">TRD</text>
-    <text x="2" y="78" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="15" font-weight="700" letter-spacing="7" fill="#F59E0B">CONSULTORIA &amp; SERVIÇOS DE TI</text>
+    <text x="0" y="45" font-family="Arial, 'Segoe UI', system-ui, -apple-system, sans-serif" font-size="52" font-weight="900" letter-spacing="3" fill="#F8FAFC">TRD</text>
+    <text x="2" y="78" font-family="Arial, 'Segoe UI', system-ui, -apple-system, sans-serif" font-size="15" font-weight="700" letter-spacing="7" fill="#F59E0B">CONSULTORIA &amp; SERVIÇOS DE TI</text>
   </g>
   
   <!-- Main Headlines -->
-  <text x="70" y="320" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="34" font-weight="800" fill="#F8FAFC">Sustentação de Sistemas &amp; Engenharia de Missão Crítica</text>
-  <text x="70" y="365" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="18" font-weight="400" fill="#94A3B8">Java, Python, Node, React, Next e Bancos SQL • SLA com Multa Contratual Reversa</text>
+  <text x="70" y="320" font-family="Arial, 'Segoe UI', system-ui, -apple-system, sans-serif" font-size="34" font-weight="800" fill="#F8FAFC">Sustentação de Sistemas &amp; Engenharia de Missão Crítica</text>
+  <text x="70" y="365" font-family="Arial, 'Segoe UI', system-ui, -apple-system, sans-serif" font-size="18" font-weight="400" fill="#94A3B8">Java, Python, Node, React, Next e Bancos SQL • SLA com Multa Contratual Reversa</text>
   
   <!-- Badges Strip -->
   <g transform="translate(70, 435)">
     <rect width="210" height="42" rx="6" fill="#0F172A" stroke="#1E293B" stroke-width="1"/>
     <circle cx="22" cy="21" r="5" fill="#F59E0B"/>
-    <text x="36" y="27" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#F8FAFC">SLA P1 EM ATÉ 2 HORAS</text>
+    <text x="36" y="27" font-family="Arial, 'Segoe UI', system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#F8FAFC">SLA P1 EM ATÉ 2 HORAS</text>
 
     <rect x="225" width="220" height="42" rx="6" fill="#0F172A" stroke="#1E293B" stroke-width="1"/>
-    <text x="245" y="26" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" font-weight="600" fill="#94A3B8">🏛️ Ministério da Justiça</text>
+    <text x="245" y="26" font-family="Arial, 'Segoe UI', system-ui, -apple-system, sans-serif" font-size="13" font-weight="600" fill="#94A3B8">🏛️ Ministério da Justiça</text>
 
     <rect x="460" width="190" height="42" rx="6" fill="#0F172A" stroke="#1E293B" stroke-width="1"/>
-    <text x="480" y="26" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" font-weight="600" fill="#94A3B8">💳 Serasa Experian</text>
+    <text x="480" y="26" font-family="Arial, 'Segoe UI', system-ui, -apple-system, sans-serif" font-size="13" font-weight="600" fill="#94A3B8">💳 Serasa Experian</text>
 
     <rect x="665" width="140" height="42" rx="6" fill="#0F172A" stroke="#1E293B" stroke-width="1"/>
-    <text x="685" y="26" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" font-weight="600" fill="#94A3B8">📊 CVM</text>
+    <text x="685" y="26" font-family="Arial, 'Segoe UI', system-ui, -apple-system, sans-serif" font-size="13" font-weight="600" fill="#94A3B8">📊 CVM</text>
   </g>
 </svg>

@@ -17,21 +17,18 @@
   <circle cx="540" cy="540" r="460" fill="none" stroke="rgba(255,255,255,0.04)" stroke-width="2"/>
   
   <g transform="translate(540, 440) scale(2.5) translate(-100, -115.5)">
-    
-    <defs>
-      <mask id="ks-ig-av">
-        <polygon points="100,0 200,57.75 200,173.25 100,231 0,173.25 0,57.75" fill="#fff"/>
-        <path d="M100 115.5V0 M100 115.5L0 173.25 M100 115.5L200 173.25" stroke="#000" stroke-width="13" fill="none"/>
-      </mask>
-    </defs>
-    <g mask="url(#ks-ig-av)" fill="#F8FAFC">
-      <polygon points="100,115.5 0,173.25 0,57.75 100,0"/>
-      <polygon points="100,115.5 200,173.25 200,57.75 100,0"/>
-      <polygon points="100,115.5 0,173.25 100,231 200,173.25"/>
+    <g fill="#F8FAFC">
+      
+  <!-- Top-Left Trapezoid -->
+  <polygon points="0.00,57.75 0.00,165.74 93.50,111.75 93.50,3.75"/>
+  <!-- Top-Right Trapezoid -->
+  <polygon points="200.00,57.75 106.50,3.75 106.50,111.75 200.00,165.74"/>
+  <!-- Bottom Losango (Rhombus) -->
+  <polygon points="100.00,231.00 193.51,177.00 100.00,123.01 6.49,177.00"/>
+
     </g>
-    
   </g>
   
-  <text x="540" y="810" text-anchor="middle" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="100" font-weight="900" letter-spacing="6" fill="#F8FAFC">TRD</text>
-  <text x="540" y="865" text-anchor="middle" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="21" font-weight="700" letter-spacing="10" fill="#F59E0B">CONSULTORIA DE TI</text>
+  <text x="540" y="810" text-anchor="middle" font-family="Arial, 'Segoe UI', system-ui, -apple-system, sans-serif" font-size="100" font-weight="900" letter-spacing="6" fill="#F8FAFC">TRD</text>
+  <text x="540" y="865" text-anchor="middle" font-family="Arial, 'Segoe UI', system-ui, -apple-system, sans-serif" font-size="21" font-weight="700" letter-spacing="10" fill="#F59E0B">CONSULTORIA DE TI</text>
 </svg>

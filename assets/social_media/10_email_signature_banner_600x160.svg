@@ -18,19 +18,16 @@
   
   <!-- Left Keystone -->
   <g transform="translate(30, 25) scale(0.48)">
-    
-    <defs>
-      <mask id="ks-sig">
-        <polygon points="100,0 200,57.75 200,173.25 100,231 0,173.25 0,57.75" fill="#fff"/>
-        <path d="M100 115.5V0 M100 115.5L0 173.25 M100 115.5L200 173.25" stroke="#000" stroke-width="13" fill="none"/>
-      </mask>
-    </defs>
-    <g mask="url(#ks-sig)" fill="#F8FAFC">
-      <polygon points="100,115.5 0,173.25 0,57.75 100,0"/>
-      <polygon points="100,115.5 200,173.25 200,57.75 100,0"/>
-      <polygon points="100,115.5 0,173.25 100,231 200,173.25"/>
+    <g fill="#F8FAFC">
+      
+  <!-- Top-Left Trapezoid -->
+  <polygon points="0.00,57.75 0.00,165.74 93.50,111.75 93.50,3.75"/>
+  <!-- Top-Right Trapezoid -->
+  <polygon points="200.00,57.75 106.50,3.75 106.50,111.75 200.00,165.74"/>
+  <!-- Bottom Losango (Rhombus) -->
+  <polygon points="100.00,231.00 193.51,177.00 100.00,123.01 6.49,177.00"/>
+
     </g>
-    
   </g>
   
   <!-- Divider -->
@@ -38,15 +35,15 @@
 
   <!-- Info -->
   <g transform="translate(165, 24)">
-    <text x="0" y="20" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="16" font-weight="800" fill="#F8FAFC">THIAGO ROCHA DUARTE</text>
-    <text x="0" y="38" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="600" fill="#F59E0B">Sócio-Diretor de Tecnologia &amp; Arquiteto de Software Sênior</text>
-    <text x="0" y="56" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="10.5" font-weight="400" fill="#94A3B8">TRD Consultoria e Serviços de TI LTDA • CNPJ 43.065.207/0001-57</text>
+    <text x="0" y="20" font-family="Arial, 'Segoe UI', system-ui, -apple-system, sans-serif" font-size="16" font-weight="800" fill="#F8FAFC">THIAGO ROCHA DUARTE</text>
+    <text x="0" y="38" font-family="Arial, 'Segoe UI', system-ui, -apple-system, sans-serif" font-size="11.5" font-weight="600" fill="#F59E0B">Sócio-Diretor de Tecnologia &amp; Arquiteto de Software Sênior</text>
+    <text x="0" y="56" font-family="Arial, 'Segoe UI', system-ui, -apple-system, sans-serif" font-size="10.5" font-weight="400" fill="#94A3B8">TRD Consultoria e Serviços de TI LTDA • CNPJ 43.065.207/0001-57</text>
     
     <line x1="0" y1="70" x2="410" y2="70" stroke="#1E293B" stroke-width="1"/>
     
-    <text x="0" y="90" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="10.5" font-weight="500" fill="#F8FAFC">🌐 trd-consultoria-ti.github.io/startup</text>
-    <text x="235" y="90" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="10.5" font-weight="500" fill="#94A3B8">📍 Brasília - DF, Brasil</text>
+    <text x="0" y="90" font-family="Arial, 'Segoe UI', system-ui, -apple-system, sans-serif" font-size="10.5" font-weight="500" fill="#F8FAFC">🌐 trd-consultoria-ti.github.io/startup</text>
+    <text x="235" y="90" font-family="Arial, 'Segoe UI', system-ui, -apple-system, sans-serif" font-size="10.5" font-weight="500" fill="#94A3B8">📍 Brasília - DF, Brasil</text>
     
-    <text x="0" y="112" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="10" font-weight="600" fill="#F59E0B">⚡ SLA Garantido com Multa Reversa • Sustentação Crítica &amp; IA</text>
+    <text x="0" y="112" font-family="Arial, 'Segoe UI', system-ui, -apple-system, sans-serif" font-size="10" font-weight="600" fill="#F59E0B">⚡ SLA Garantido com Multa Reversa • Sustentação Crítica &amp; IA</text>
   </g>
 </svg>
