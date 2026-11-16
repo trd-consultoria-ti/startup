@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 160" width="600" height="160">
+  <defs>
+    <linearGradient id="bg-sig" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#080D1A"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+    
+    <pattern id="pat-losango" width="48" height="48" patternUnits="userSpaceOnUse">
+      <path d="M24 0 L48 24 L24 48 L0 24 Z" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+      <circle cx="24" cy="0" r="1.5" fill="rgba(245,158,11,0.3)"/>
+      <circle cx="0" cy="24" r="1.5" fill="rgba(245,158,11,0.3)"/>
+    </pattern>
+
+  </defs>
+  <rect width="600" height="160" rx="8" fill="url(#bg-sig)"/>
+  <rect width="600" height="160" fill="url(#pat-losango)"/>
+  <rect x="0.5" y="0.5" width="599" height="159" rx="7.5" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+  
+  <!-- Left Keystone -->
+  <g transform="translate(30, 25) scale(0.48)">
+    <g fill="#F8FAFC">
+      
+  <!-- Top-Left Trapezoid -->
+  <polygon points="0.00,57.75 0.00,165.74 93.50,111.75 93.50,3.75"/>
+  <!-- Top-Right Trapezoid -->
+  <polygon points="200.00,57.75 106.50,3.75 106.50,111.75 200.00,165.74"/>
+  <!-- Bottom Losango (Rhombus) -->
+  <polygon points="100.00,231.00 193.51,177.00 100.00,123.01 6.49,177.00"/>
+
+    </g>
+  </g>
+  
+  <!-- Divider -->
+  <line x1="145" y1="20" x2="145" y2="140" stroke="#1E293B" stroke-width="1"/>
+
+  <!-- Info -->
+  <g transform="translate(165, 24)">
+    <text x="0" y="20" font-family="Arial, 'Segoe UI', system-ui, -apple-system, sans-serif" font-size="16" font-weight="800" fill="#F8FAFC">THIAGO ROCHA DUARTE</text>
+    <text x="0" y="38" font-family="Arial, 'Segoe UI', system-ui, -apple-system, sans-serif" font-size="11.5" font-weight="600" fill="#F59E0B">Sócio-Diretor de Tecnologia &amp; Arquiteto de Software Sênior</text>
+    <text x="0" y="56" font-family="Arial, 'Segoe UI', system-ui, -apple-system, sans-serif" font-size="10.5" font-weight="400" fill="#94A3B8">TRD Consultoria e Serviços de TI LTDA • CNPJ 43.065.207/0001-57</text>
+    
+    <line x1="0" y1="70" x2="410" y2="70" stroke="#1E293B" stroke-width="1"/>
+    
+    <g transform="translate(0, 81)"><g fill="none" stroke="#94A3B8" stroke-width="1.2"><circle cx="8" cy="8" r="7"/><ellipse cx="8" cy="8" rx="3.5" ry="7"/><line x1="1" y1="8" x2="15" y2="8"/></g></g>
+    <text x="22" y="93" font-family="Arial, 'Segoe UI', system-ui, -apple-system, sans-serif" font-size="10.5" font-weight="500" fill="#F8FAFC">trd-consultoria-ti.github.io/startup</text>
+    
+    <g transform="translate(235, 81)"><g fill="#94A3B8"><path d="M8 1 C5.2 1 3 3.2 3 6 C3 9.8 8 15 8 15 C8 15 13 9.8 13 6 C13 3.2 10.8 1 8 1 Z M8 8 C6.9 8 6 7.1 6 6 C6 4.9 6.9 4 8 4 C9.1 4 10 4.9 10 6 C10 7.1 9.1 8 8 8 Z"/></g></g>
+    <text x="255" y="93" font-family="Arial, 'Segoe UI', system-ui, -apple-system, sans-serif" font-size="10.5" font-weight="500" fill="#94A3B8">Brasília - DF, Brasil</text>
+    
+    <g transform="translate(0, 105)"><g fill="#F59E0B"><polygon points="9,1 3,9 8,9 7,15 13,7 8,7"/></g></g>
+    <text x="20" y="117" font-family="Arial, 'Segoe UI', system-ui, -apple-system, sans-serif" font-size="10" font-weight="600" fill="#F59E0B">SLA Garantido com Multa Reversa • Sustentação Crítica &amp; IA</text>
+  </g>
+</svg>
