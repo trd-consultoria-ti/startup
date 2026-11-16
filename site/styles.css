@@ -30,7 +30,7 @@
 [data-theme="dark"] {
   --bg: #080D1A;
   --surface: #0F172A;
-  --surface-alt: #131D33;
+  --surface-alt: rgba(19, 29, 51, 0.65);
   --border: #1E293B;
   --border-strong: #334155;
   --border-hairline: rgba(255, 255, 255, 0.08);
@@ -74,13 +74,21 @@
   --radius-card: 10px;
   --font: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  /* Padrão Geométrico Arquitetural (Dark Mode) */
+  --bg-grid-minor: rgba(255, 255, 255, 0.018);
+  --bg-grid-major: rgba(255, 255, 255, 0.045);
+  --bg-grid-dot: rgba(245, 158, 11, 0.28);
+  --bg-radial-hero: radial-gradient(ellipse 75% 55% at 50% 0%, rgba(245, 158, 11, 0.09) 0%, transparent 70%);
+  --nav-bg: rgba(8, 13, 26, 0.88);
+  --trustbar-bg: rgba(15, 23, 42, 0.6);
+  --footer-bg: rgba(8, 13, 26, 0.75);
   color-scheme: dark;
 }
 
 [data-theme="light"] {
   --bg: #F8FAFC;
   --surface: #FFFFFF;
-  --surface-alt: #F1F5F9;
+  --surface-alt: rgba(241, 245, 249, 0.75);
   --border: #E2E8F0;
   --border-strong: #CBD5E1;
   --border-hairline: rgba(15, 23, 42, 0.08);
@@ -120,6 +128,14 @@
   --quiz-item-hover: #F8FAFC;
   --shadow-chrome: 0 1px 3px rgba(15, 23, 42, 0.08);
   --shadow-card: 0 10px 25px -5px rgba(15, 23, 42, 0.06), 0 8px 10px -6px rgba(15, 23, 42, 0.04);
+  /* Padrão Geométrico Arquitetural (Light Mode) */
+  --bg-grid-minor: rgba(15, 23, 42, 0.018);
+  --bg-grid-major: rgba(15, 23, 42, 0.045);
+  --bg-grid-dot: rgba(180, 83, 9, 0.3);
+  --bg-radial-hero: radial-gradient(ellipse 75% 55% at 50% 0%, rgba(180, 83, 9, 0.06) 0%, transparent 70%);
+  --nav-bg: rgba(248, 250, 252, 0.88);
+  --trustbar-bg: rgba(255, 255, 255, 0.7);
+  --footer-bg: rgba(248, 250, 252, 0.75);
   color-scheme: light;
 }
 
@@ -134,7 +150,25 @@ html {
   *, *::before, *::after { animation: none !important; transition: none !important; }
 }
 body {
-  background: var(--bg);
+  background-color: var(--bg);
+  background-image:
+    radial-gradient(circle at 0 0, var(--bg-grid-dot) 1.5px, transparent 1.5px),
+    linear-gradient(to right, var(--bg-grid-major) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--bg-grid-major) 1px, transparent 1px),
+    linear-gradient(to right, var(--bg-grid-minor) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--bg-grid-minor) 1px, transparent 1px);
+  background-size:
+    96px 96px,
+    96px 96px,
+    96px 96px,
+    32px 32px,
+    32px 32px;
+  background-position:
+    center top,
+    center top,
+    center top,
+    center top,
+    center top;
   color: var(--text-2);
   font-family: var(--font);
   font-size: 1rem;
@@ -185,7 +219,11 @@ a:focus-visible, button:focus-visible, input:focus-visible, summary:focus-visibl
 @media (max-width: 768px) {
   .section { padding-block: 3.5rem; }
 }
-.section--alt { background: var(--surface-alt); }
+.section--alt {
+  background: var(--surface-alt);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
 .measure { max-width: 70ch; }
 
 /* ---------- Tipografia & Headings ---------- */
@@ -215,7 +253,9 @@ h3 { font-size: 1.25rem; }
   position: sticky;
   top: 0;
   z-index: 100;
-  background: var(--bg);
+  background: var(--nav-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--border);
   box-shadow: var(--shadow-chrome);
   transition: background-color .2s ease, border-color .2s ease;
@@ -317,7 +357,9 @@ h3 { font-size: 1.25rem; }
   gap: .25rem;
   padding: 1rem 1.5rem 1.5rem;
   border-top: 1px solid var(--border);
-  background: var(--bg);
+  background: var(--nav-bg);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
   font-size: .9375rem;
   font-weight: 500;
   max-height: calc(100vh - 5rem);
@@ -385,8 +427,13 @@ h3 { font-size: 1.25rem; }
 
 /* ---------- Hero ---------- */
 .hero {
+  position: relative;
   padding-block: 6rem 5rem;
   text-align: center;
+  background-image: var(--bg-radial-hero);
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: 100% 100%;
 }
 @media (max-width: 768px) {
   .hero { padding-block: 3.5rem 3rem; }
@@ -448,7 +495,9 @@ h3 { font-size: 1.25rem; }
 .trustbar {
   padding-block: 2.5rem;
   border-block: 1px solid var(--border);
-  background: var(--surface);
+  background: var(--trustbar-bg);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
 }
 .trustbar__inner {
   display: flex;
@@ -781,7 +830,9 @@ h3 { font-size: 1.25rem; }
   padding-block: 2.5rem;
   font-size: .8125rem;
   color: var(--text-3);
-  background: var(--bg);
+  background: var(--footer-bg);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
 }
 .footer__inner {
   display: flex;
