@@ -61,6 +61,20 @@ Para que qualquer incidente possa ser resolvido sem depender da máquina física
 
 ---
 
+
+---
+
+## 4. Política de Salvaguarda de Dados Técnicos e Código-Fonte (RPO & RTO)
+
+Além da continuidade humana e de credenciais, a TRD adota uma política rigorosa de salvaguarda para os repositórios de código e artefatos de infraestrutura geridos para os clientes:
+
+| Métrica | Objetivo Operacional | Implementação Prática |
+| :--- | :---: | :--- |
+| **RPO (Recovery Point Objective)** | **≤ 24 horas** | Todos os commits e branches de sustentação são espelhados diariamente em repositório remoto redundante. |
+| **RTO (Recovery Time Objective)** | **≤ 4 horas úteis** | Tempo máximo para restabelecer a esteira de build e deploy local a partir de backup versionado. |
+| **Regra 3-2-1 de Backup de Código** | **Ativa** | 3 cópias do repositório (Origem do cliente, Espelho TRD criptografado e Clone local do desenvolvedor), em 2 mídias distintas, com 1 cópia externa em nuvem isolada. |
+| **Testes de Restauração** | **Trimestral** | Simulação periódica de clonagem e compilação limpa a partir dos repositórios de salvaguarda. |
+
 ## 5. Como Apresentar Este Plano a Clientes Corporativos
 Ao apresentar este Plano de Continuidade durante reuniões de vendas e anexá-lo nas propostas comerciais, a objeção do *homem-chave* é transformada em uma grande demonstração de **profissionalismo e governança**:
 

@@ -3,10 +3,10 @@
 Pelo presente instrumento particular, de um lado:
 
 **CONTRATANTE:**
-* **Razão Social:** **TRD Consultoria e Serviços de TI LTDA**
-* **CNPJ:** **[00.000.000/0001-00 - Em Constituição]**
-* **Sede:** Brasília - DF
-* **Representada por:** Thiago Rocha Duarte, Sócio Administrador, doravante denominada simplesmente **TRD CONSULTORIA**;
+* **Razão Social:** **THIAGO ROCHA DUARTE - CONSULTORIA E SERVICOS DE TI LTDA** (TRD Consultoria)
+* **CNPJ:** **43.065.207/0001-57**
+* **Sede:** Brasília - DF, Brasil
+* **Representada por:** Thiago Rocha Duarte, Sócio Administrador (CPF: [Qualificado na Assinatura]), doravante denominada simplesmente **TRD CONSULTORIA**;
 
 E, de outro lado:
 
@@ -57,9 +57,9 @@ Ambas doravante denominadas conjuntamente como **PARTES**.
 Brasília - DF, [Dia] de [Mês] de [Ano].
 
 _____________________________________________  
-**CONTRATANTE:** TRD Consultoria e Serviços de TI LTDA  
-CNPJ: [00.000.000/0001-00]  
-Thiago Rocha Duarte (Sócio Administrador)  
+**CONTRATANTE:** THIAGO ROCHA DUARTE - CONSULTORIA E SERVICOS DE TI LTDA  
+CNPJ: 43.065.207/0001-57  
+Thiago Rocha Duarte (Sócio Administrador — [CPF Qualificado na Assinatura])  
 
 _____________________________________________  
 **CONTRATADO(A):** [NOME DO ENGENHEIRO PARCEIRO]  

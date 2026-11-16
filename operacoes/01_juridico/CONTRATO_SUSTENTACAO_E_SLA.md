@@ -11,11 +11,11 @@ Pelo presente instrumento particular, de um lado:
 E, de outro lado:
 
 **CONTRATADA:**
-* **Razão Social:** **TRD Consultoria e Serviços de TI LTDA**
-* **Nome Fantasia:** TRD Consultoria
-* **CNPJ:** **[00.000.000/0001-00 - Em Constituição]**
-* **Sede:** Brasília - DF
-* **Representada por:** Thiago Rocha Duarte, brasileiro, engenheiro de software, na qualidade de Sócio Administrador, doravante denominada simplesmente **CONTRATADA**;
+* **Razão Social:** **THIAGO ROCHA DUARTE - CONSULTORIA E SERVICOS DE TI LTDA**
+* **Nome Fantasia:** **TRD Consultoria e Serviços de TI**
+* **CNPJ:** **43.065.207/0001-57** (Início de Atividade: 10/08/2021)
+* **Sede:** Brasília - DF, Brasil
+* **Representada por:** Thiago Rocha Duarte, brasileiro, engenheiro de software, inscrito no CPF sob o nº [000.000.000-00 - Qualificado na Assinatura], na qualidade de Sócio Administrador, doravante denominada simplesmente **CONTRATADA**;
 
 Ambas doravante denominadas conjuntamente como **PARTES** e individualmente como **PARTE**.
 
@@ -44,16 +44,17 @@ Têm entre si, justo e contratado, o presente Contrato, mediante as seguintes cl
 ---
 
 ### CLÁUSULA TERCEIRA – DO ACORDO DE NÍVEL DE SERVIÇO (SLA)
-3.1. A **CONTRATADA** compromete-se a cumprir os seguintes tempos máximos de **Primeira Resposta** e **Início de Atuação**, contados a partir da abertura formal do chamado:
+3.1. A **CONTRATADA** compromete-se a cumprir os tempos máximos de **Primeira Resposta** e **Início de Atuação**, contados a partir da abertura formal do chamado, conforme a matriz de severidade abaixo vinculada estritamente às especificações do plano contratado no **ANEXO I**:
 
 | Severidade | Definição do Incidente | Tempo de Resposta (Horário Comercial) | Início de Atuação |
 | :--- | :--- | :---: | :---: |
-| **P1 - Crítica** | Sistema totalmente fora do ar, indisponibilidade de faturamento ou perda iminente de dados. | **Até 2h a 4h** *(conforme plano)* | Imediato |
-| **P2 - Alta** | Falha grave que prejudica operações essenciais, sem alternativa de contorno imediata. | **Até 4 horas** | Até 6 horas |
-| **P3 - Média** | Falha em funcionalidade parcial, lentidão pontual ou demanda com alternativa de contorno. | **Até 8 horas** | Até 24 horas |
-| **P4 - Baixa / Evolutiva** | Dúvidas, pequenos ajustes cosméticos ou melhorias de rotina. | **Até 12 horas** | Agendada no backlog |
+| **P1 - Crítica** | Sistema totalmente fora do ar, indisponibilidade de faturamento ou perda iminente de dados. | **Conforme ANEXO I** *(2h a 8h úteis)* | Imediato |
+| **P2 - Alta** | Falha grave que prejudica operações essenciais, sem alternativa de contorno imediata. | **Conforme ANEXO I** *(2h a 6h úteis)* | Até 6 horas úteis |
+| **P3 - Média** | Falha em funcionalidade parcial, lentidão pontual ou demanda com alternativa de contorno. | **Até 8 a 24 horas úteis** | Até 24 horas úteis |
+| **P4 - Baixa / Evolutiva** | Dúvidas, pequenos ajustes cosméticos ou melhorias de rotina. | **Até 48 a 72 horas úteis** | Agendada no backlog |
 
-3.2. **Sobreaviso e Atendimento Fora do Horário Comercial:** Os chamados de emergência de Severidade P1 fora do horário comercial (noites ou fins de semana/feriados) deverão ser acionados via canal de sobreaviso formal, remunerados com o valor adicional de **R$ 250,00 (duzentos e cinquenta reais) por hora técnica**.  
+3.2. **Prevalência do Anexo I:** Para todos os efeitos de governança e apuração de métricas contratuais, em caso de eventual dúvida de interpretação, **prevalecem integralmente os prazos, valores e limites estabelecidos na tabela do ANEXO I** deste Contrato para o plano expressamente selecionado.
+3.3. **Sobreaviso e Atendimento Fora do Horário Comercial:** Os chamados de emergência de Severidade P1 fora do horário comercial (noites ou fins de semana/feriados) deverão ser acionados via canal de sobreaviso formal, remunerados com o valor adicional de **R$ 280,00 (duzentos e oitenta reais) por hora técnica**.  
 3.3. **Penalidade Exclusiva por Descumprimento de SLA:** Eventual descumprimento injustificado dos prazos estipulados para chamados de Severidade P1 ou P2 conferirá à CONTRATANTE exclusivamente o direito a um desconto financeiro de 5% (cinco por cento) sobre a mensalidade vincenda do mês subsequente por ocorrência, limitado ao teto máximo de 10% (dez por cento) do valor mensal. O descumprimento pontual de SLA não ensejará rescisão automática nem constituirá fundamento para pleito de perdas e danos ou indenizações materiais.
 
 ---
@@ -113,9 +114,9 @@ _____________________________________________
 CNPJ: [00.000.000/0000-00]  
 
 _____________________________________________  
-**CONTRATADA:** TRD Consultoria e Serviços de TI LTDA  
-CNPJ: [00.000.000/0001-00]  
-Thiago Rocha Duarte (Sócio Administrador)  
+**CONTRATADA:** THIAGO ROCHA DUARTE - CONSULTORIA E SERVICOS DE TI LTDA  
+CNPJ: 43.065.207/0001-57  
+Thiago Rocha Duarte (Sócio Administrador — [CPF Qualificado na Assinatura])  
 
 ---
 
@@ -123,9 +124,9 @@ Thiago Rocha Duarte (Sócio Administrador)
 
 | Plano Escolhido | Banco de Horas Mensal | SLA Resposta P1 | SLA Resposta P2 | Reuniões de Alinhamento | Valor da Hora Excedente | Investimento Fixo Mensal |
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| [ ] **Plano Essencial** | 20 horas / mês | Até 8h úteis | Até 6h úteis | Mensal | R$ 200,00 / hora | **R$ 3.800,00 / mês** |
-| [ ] **Plano Profissional** | 35 horas / mês | Até 4h úteis | Até 4h úteis | Quinzenal | R$ 180,00 / hora | **R$ 5.500,00 / mês** |
-| [ ] **Plano Enterprise** | 60 horas / mês | Até 2h úteis | Até 2h úteis | Semanal | R$ 160,00 / hora | **R$ 8.500,00 / mês** |
+| [ ] **Plano Essencial** | 20 horas / mês | Até 8h úteis | Até 6h úteis | Mensal | R$ 220,00 / hora | **R$ 3.800,00 / mês** |
+| [ ] **Plano Profissional** | 35 horas / mês | Até 4h úteis | Até 4h úteis | Quinzenal | R$ 200,00 / hora | **R$ 5.500,00 / mês** |
+| [ ] **Plano Enterprise** | 60 horas / mês | Até 2h úteis | Até 2h úteis | Semanal | R$ 180,00 / hora | **R$ 8.500,00 / mês** |
 
 *Plano selecionado formalmente pelas partes:* **[Marcar Plano Contratado]**  
 *Data de Início da Vigência:* **[DD/MM/AAAA]**  

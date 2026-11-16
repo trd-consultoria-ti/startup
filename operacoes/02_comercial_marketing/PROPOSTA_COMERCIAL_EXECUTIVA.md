@@ -12,10 +12,10 @@
 Muitas empresas sofrem com sistemas legados instáveis, atrasos em novas funcionalidades ou desenvolvedores que abandonaram o código sem documentação. Contratar uma equipe interna sênior custa mais de R$ 30.000/mês e contratar freelancers avulsos gera risco de continuidade.
 
 Nossa consultoria entrega a solução definitiva:
-* **Engenharia Sênior:** Liderança técnica com quase **20 anos de experiência** em arquitetura corporativa, backend robusto (Java/Spring Boot), frontends modernos (Angular), bancos SQL e soluções com Inteligência Artificial.
+* **Engenharia Sênior Especializada:** Liderança técnica com histórico comprovado em projetos corporativos e governamentais de alta criticidade (Ministério da Justiça e Segurança Pública, Serasa Experian e Comissão de Valores Mobiliários), domínio avançado de Java 11/17/21, Spring Boot, Angular e soluções de Inteligência Artificial Generativa.
 * **Engenharia Sênior Direta:** O seu sistema é construído e sustentado diretamente por engenharia de software sênior — [Thiago Rocha Duarte](https://www.linkedin.com/in/thiago-duarte-a6597721/), sócio proprietário e engenheiro — ampliada por um squad de agentes de IA especializados (OpenBot), sem intermediários ou júniores desassistidos.
 * **Esteira AI-Native com Supervisão Humana:** Agilidade acelerada por agentes de IA, com cada linha de código auditada e homologada diretamente pelo fundador sênior antes do deploy.
-* **Segurança Jurídica & SLA Contratual:** Sociedade Limitada Unipessoal constituída no DF, emissão regular de NFS-e, contrato com teto indenizatório (Damage Cap), tempo de resposta garantido e código 100% de titularidade da sua empresa mediante quitação.
+* **Segurança Jurídica & SLA Contratual:** Sociedade Empresária Limitada formalizada (CNPJ: 43.065.207/0001-57), optante pelo Simples Nacional desde 2021 em Brasília/DF, emissão regular de NFS-e, contrato com teto indenizatório (Damage Cap), tempo de resposta garantido e código 100% de titularidade da sua empresa mediante quitação.
 
 ---
 
@@ -62,7 +62,8 @@ Para criação de novos sistemas, portais ou módulos com Inteligência Artifici
 
 Estamos à disposição para alinhar qualquer detalhe técnico.
 
-**TRD Consultoria e Serviços de TI LTDA** (Em Homologação Cadastral — JUCIS-DF)  
-Sede: Brasília - DF  
-Thiago Rocha Duarte — Sócio Fundador & Engenheiro Chefe  
-E-mail: contato@trdconsultoria.com.br (Canal Direto: thiago.rocha.duarte@gmail.com) | WhatsApp: (61) 98111-XXXX  
+**THIAGO ROCHA DUARTE - CONSULTORIA E SERVICOS DE TI LTDA** (TRD Consultoria)  
+CNPJ: 43.065.207/0001-57 | Fundação: 10/08/2021 (Ativa no Simples Nacional)  
+Sede: Brasília - DF, Brasil  
+Thiago Rocha Duarte — Sócio Administrador & Engenheiro Chefe (CPF: [Qualificado na Assinatura])  
+E-mail: thiago.rocha.duarte.ti@gmail.com | WhatsApp: +55 (61) 99207-8335  

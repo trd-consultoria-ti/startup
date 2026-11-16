@@ -6,7 +6,7 @@
 ## 🏛️ Quem Somos
 A **TRD Consultoria e Serviços de TI LTDA** é uma boutique brasileira especializada na **sustentação contínua, modernização de sistemas legados e desenvolvimento de arquiteturas assistidas por Inteligência Artificial (AI-Native)**. 
 
-Liderada diretamente por seu sócio fundador, **Thiago Rocha Duarte** — engenheiro de software sênior com quase **20 anos de experiência prática** em bancos de dados relacionais de alta volumetria, backends corporativos resilientes (Java/Spring Boot) e aplicações web modernas (Angular/TypeScript) —, a TRD atua como a guardiã técnica de médias empresas, distribuidoras, fintechs e entidades representativas que necessitam de estabilidade absoluta sem os custos astronômicos de grandes consultorias.
+Liderada diretamente por seu sócio fundador, **Thiago Rocha Duarte** — engenheiro de software fullstack e arquiteto de IA com trajetória comprovada em projetos de alta complexidade no **Ministério da Justiça e Segurança Pública (CNPD/SINESP/DENATRAN)**, na esteira de crédito da **Serasa eConsig** e na **Comissão de Valores Mobiliários (CVM)** —, a TRD atua como a guardiã técnica de empresas que necessitam de estabilidade absoluta, conformidade LGPD e soluções modernas de software sem os custos astronômicos de grandes consultorias.
 
 ---
 
@@ -41,8 +41,8 @@ Liderada diretamente por seu sócio fundador, **Thiago Rocha Duarte** — engenh
 ---
 
 ## 🛡️ Nossos Diferenciais & Blindagem Jurídica
-1. **Engenharia Sênior Direta:** Você fala e alinha estratégias diretamente com um engenheiro sênior com 20 anos de bagagem técnica, apoiado por esteira automatizada de IA e agentes especializados.
-2. **Segurança Jurídica Total:** Empresa formalizada com CNPJ em Brasília/DF, emissão regular de NFS-e, contrato com *Damage Cap* (limitação de responsabilidade civil) e adequação rigorosa à LGPD.
+1. **Engenharia Sênior Direta:** Você fala e alinha estratégias diretamente com quem desenvolve e sustenta sistemas críticos em Java, Spring Boot, Angular e IA Generativa (Anthropic Certified), sem intermediários.
+2. **Segurança Jurídica Total:** Empresa formalizada e ativa desde 2021 com CNPJ 43.065.207/0001-57 em Brasília/DF, emissão regular de NFS-e, contrato com *Damage Cap* (limitação de responsabilidade civil) e adequação rigorosa à LGPD.
 3. **Propriedade Intelectual Garantida:** Todo o código-fonte desenvolvido especificamente para o cliente é de sua titularidade integral após a quitação.
 
 ---
@@ -53,4 +53,5 @@ Agende uma sessão técnica de 15 minutos sem compromisso para avaliarmos o seu 
 * **Sócio Fundador & Engenheiro Chefe:** Thiago Rocha Duarte
 * **E-mail:** contato@trdconsultoria.com.br
 * **LinkedIn:** [linkedin.com/in/thiago-duarte-a6597721](https://www.linkedin.com/in/thiago-duarte-a6597721/)
-* **Sede:** Brasília - Distrito Federal | Atendimento em todo o Brasil
+* **Razão Social:** THIAGO ROCHA DUARTE - CONSULTORIA E SERVICOS DE TI LTDA (CNPJ: 43.065.207/0001-57)
+* **Sede:** Brasília - DF | Atendimento em todo o Brasil

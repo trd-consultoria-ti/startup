@@ -7,7 +7,10 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/trd-consultoria-ti/startup"><img src="https://img.shields.io/badge/Status-Em_Constitui%C3%A7%C3%A3o_(D--30)-080D1A?style=for-the-badge&logo=github&logoColor=white" alt="Status"></a>
+  <a href="https://trd-consultoria-ti.github.io/startup/"><img src="https://img.shields.io/badge/Website-Online-success?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Website"></a>
+  <a href="https://github.com/trd-consultoria-ti/startup"><img src="https://img.shields.io/badge/CNPJ-43.065.207%2F0001--57_(Ativa_desde_2021)-059669?style=for-the-badge&logo=probot&logoColor=white
+  <a href="https://www.anthropic.com"><img src="https://img.shields.io/badge/Anthropic-Certified_Developer-D97706?style=for-the-badge&logo=anthropic&logoColor=white" alt="Anthropic Certified"></a>
+  <a href="https://spring.io"><img src="https://img.shields.io/badge/Java_21_%2F_Spring_Boot-6DB33F?style=for-the-badge&logo=springboot&logoColor=white" alt="Java Spring"></a>" alt="Status"></a>
   <a href="operacoes/01_juridico/ACORDO_DE_SOCIOS.md"><img src="https://img.shields.io/badge/Governan%C3%A7a-LTDA_Unipessoal-0EA5E9?style=for-the-badge" alt="Governança"></a>
   <a href="operacoes/05_administracao/PLANEJAMENTO_TRIBUTARIO_E_FINANCEIRO.md"><img src="https://img.shields.io/badge/Regime-Simples_Nacional_(LC_123)-1D4ED8?style=for-the-badge" alt="Regime Tributário"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/Licen%C3%A7a-Dual_(Propriet%C3%A1ria_%2F_MIT)-1E293B?style=for-the-badge" alt="Licença"></a>
@@ -16,7 +19,9 @@
 # TRD Consultoria e Serviços de TI LTDA
 ### Framework Operacional, Jurídico, Comercial & Identidade Visual para Boutiques de Software de Missão Crítica
 
-> **O toolkit oficial de fundação, esteira operacional e governança da TRD Consultoria e Serviços de TI LTDA.**  
+> **O toolkit oficial de governança, esteira operacional e contratos da THIAGO ROCHA DUARTE - CONSULTORIA E SERVICOS DE TI LTDA (TRD Consultoria).**  
+> **CNPJ:** 43.065.207/0001-57 (Ativa desde 10/08/2021 — Simples Nacional) | **Sede:** Brasília/DF.  
+> 🌐 **Landing Page Oficial:** [https://trd-consultoria-ti.github.io/startup/](https://trd-consultoria-ti.github.io/startup/)  
 > 100% amparado na legislação brasileira: **Código Civil (Lei 10.406/02)**, **Lei do Software (Lei 9.609/98)**, **LGPD (Lei 13.709/18)**, **Marco Civil da Internet (Lei 12.965/14)** e **Assinatura Eletrônica (Lei 14.063/20)**.
 
 ---

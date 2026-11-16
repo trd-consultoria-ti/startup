@@ -37,15 +37,14 @@ O candidato recebe um mini-repositório com uma aplicação simples de controle 
 
 ---
 
-## 3. Matriz de Pontuação e Rubrica (Nota 1 a 5)
+## 3. Matriz de Pontuação e Rubrica Oficial (Escala de 0 a 100 Pontos)
 
-| Critério | Peso | O que buscamos |
+| Critério de Avaliação | Pontuação Máxima | O que buscamos evidenciar |
 | :--- | :---: | :--- |
-| **Clareza do Código e Boas Práticas** | 25% | Nomes significativos, métodos curtos, tratamento adequado de exceções. |
-| **Domínio de SQL e Modelagem** | 25% | Compreensão real de índices, chaves estrangeiras e eficiência de joins. |
-| **Segurança e Validação** | 20% | Validação de entradas (evitar SQL Injection, validações de DTO). |
-| **Comunicação e Raciocínio** | 20% | Clareza ao explicar a solução no README do teste ou na entrevista técnica. |
-| **Uso Consciente de IA** | 10% | Permitimos o uso de IA, desde que o candidato saiba explicar cada linha de código entregue. |
+| **Clareza do Código e Boas Práticas (Clean Code & SOLID)** | **25 pontos** | Nomes significativos, métodos curtos, tratamento adequado de exceções. |
+| **Domínio de SQL, Índices e Otimização de Consultas** | **25 pontos** | Compreensão real de índices, chaves estrangeiras e eficiência de joins. |
+| **Segurança, Validação de Dados e Tratamento de Exceções** | **25 pontos** | Validação de entradas (evitar SQL Injection, validações de DTO). |
+| **Comunicação Técnica, Defesa de Arquitetura e IA** | **25 pontos** | Clareza ao explicar a solução no README do teste ou na entrevista técnica. |
 
 ---
 
@@ -112,8 +111,13 @@ CROSS JOIN generate_series(1, 5) i;
 -- GABARITO DA CONSULTA OFENSORA (N+1 queries no Hibernate):
 -- SELECT p FROM Pedido p; -- Dispara 1000 selects adicionais em itens_pedido!
 
--- GABARITO DA REFATORAÇÃO CORRETA:
+-- GABARITO DA REFATORAÇÃO CORRETA (SPRING DATA JPA / HIBERNATE):
+-- Caso 1: Consulta sem paginação (Batch pontual):
 -- SELECT DISTINCT p FROM Pedido p LEFT JOIN FETCH p.itens WHERE p.status = :status;
+--
+-- Caso 2: Consulta COM paginação (Pageable / firstResult / maxResults):
+-- Para evitar o aviso crítico do Hibernate "HHH000104: firstResult/maxResults specified with collection fetch; applying in memory!":
+-- Abordagem Sênior: Realizar a busca paginada dos IDs ou raiz de Pedido e carregar os itens associados via @BatchSize(size = 25) ou @EntityGraph(attributePaths = {"itens"}), evitando paginação em memória e prevenindo sobrecarga de JVM.
 -- OU consulta nativa indexada:
 CREATE INDEX IF NOT EXISTS idx_pedidos_status_criado ON pedidos (status, criado_em DESC);
 ```

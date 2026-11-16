@@ -16,7 +16,7 @@ Scripts validados para abordagem direta via WhatsApp, LinkedIn e plataformas de 
 > 
 > Sei o quanto o processo seletivo de TI pode ser demorado no Brasil enquanto as demandas do backlog e a sustentação do sistema vão acumulando e sobrecarregando o time.
 > 
-> Nós somos uma consultoria boutique liderada por arquiteto sênior com quase 20 anos de experiência (Java, Angular, SQL e IA). Nós conseguimos assumir a sustentação e o avanço das suas demandas imediatamente via contrato PJ, dando tranquilidade para vocês fecharem a contratação definitiva no tempo certo.
+> Nós somos uma consultoria boutique liderada por arquiteto sênior com experiência comprovada em projetos de alta criticidade (Ministério da Justiça, Serasa e CVM) e certificação oficial Anthropic (Java, Angular e IA). Nós conseguimos assumir a sustentação e o avanço das suas demandas imediatamente via contrato PJ, dando tranquilidade para vocês fecharem a contratação definitiva no tempo certo.
 > 
 > Faz sentido batermos um papo rápido de 10 minutos na próxima quinta-feira para ver se podemos apoiar vocês nessa transição?
 > 
@@ -71,7 +71,7 @@ Scripts validados para abordagem direta via WhatsApp, LinkedIn e plataformas de 
 > 
 > Te mandando essa mensagem rápida porque sei que clientes de marketing frequentemente pedem desenvolvimento complexo: sistemas sob medida, integrações de APIs, dashboards em tempo real ou ferramentas com Inteligência Artificial. E sei que para uma agência manter desenvolvedores seniores internos é caro e fora do core business.
 > 
-> Nós atuamos como o **braço de engenharia de software "white-label"** para agências parceiras: vocês vendem a solução e nós construímos e sustentamos com liderança de 20 anos de experiência, repassando comissão de 10% a 15% recorrente para a sua agência.
+> Nós atuamos como o **braço de engenharia de software "white-label"** para agências parceiras: vocês vendem a solução e nós construímos e sustentamos com liderança técnica sênior comprovada em instituições como Ministério da Justiça e Serasa, repassando comissão de 10% a 15% recorrente para a sua agência.
 > 
 > Vale um alinhamento rápido de 10 minutos para você ter a gente no radar para quando pintar essa demanda?
 
@@ -82,10 +82,10 @@ Scripts validados para abordagem direta via WhatsApp, LinkedIn e plataformas de 
 
 > Olá, [Nome do Contratante]! Li atentamente o seu desafio com [mencionar exatamente o problema citado, ex: o erro de sincronização do banco de dados].
 > 
-> Sou fundador de uma consultoria técnica de engenharia de software (TRD), liderada por arquiteto sênior com quase 20 anos de experiência técnica corporativa em [Java / Angular / SQL].
+> Sou fundador de uma consultoria técnica de engenharia de software (TRD), liderada por arquiteto sênior com experiência sólida em sistemas corporativos críticos (Java 17/21, Spring Boot, Angular, IA Generativa).
 > 
 > **Diferenciais que garantem a segurança do seu projeto:**
-> 1. **Engenharia Sênior com Governança e IA:** Não atuo como freelancer amador; opero com contratos formais, emissão de NFS-e, termo de confidencialidade (NDA) e quase 20 anos de experiência arquitetural própria acelerada por esteira de IA.
+> 1. **Engenharia Sênior com Governança e IA:** Não atuo como freelancer amador; opero com contratos formais, emissão de NFS-e, termo de confidencialidade (NDA) e experiência corporativa sênior (Ministério da Justiça, Serasa, CVM), certificação Anthropic e esteira de IA.
 > 2. **Resolução Rápida com Metodologia AI-Augmented:** Identificamos a causa raiz do problema e implementamos a solução testada em até 48 horas.
 > 3. **Segurança Jurídica:** Emitimos Nota Fiscal de Serviços (NFS-e), assinamos Termo de Confidencialidade (NDA) e fornecemos garantia pós-entrega.
 > 

@@ -1,84 +1,101 @@
-# HISTÓRICO TÉCNICO PREGRESSO DO FUNDADOR & PROJETOS CORPORATIVOS RELEVANTES (2008–2026)
-### Portfólio de Engenharia Corporativa Conduzido sob Liderança Técnica de Thiago Rocha Duarte
+# HISTÓRICO TÉCNICO PREGRESSO DO FUNDADOR & PROJETOS CORPORATIVOS RELEVANTES
+### Portfólio de Engenharia Corporativa, Microsserviços e IA sob Liderança Técnica de Thiago Rocha Duarte
 
 > [!NOTE]
-> **PROVENIÊNCIA E POLÍTICA DE SIGILO EMPRESARIAL:**
-> A **TRD Consultoria e Serviços de TI LTDA** é uma sociedade em fase de homologação cadastral que institucionaliza e dá continuidade à prática profissional exercida por seu fundador, **Thiago Rocha Duarte**, ao longo de quase duas décadas de carreira em engenharia de software no Brasil.
+> **PROVENIÊNCIA, MODALIDADE OPERACIONAL E SIGILO EMPRESARIAL:**
+> A **TRD Consultoria** (razão social: **THIAGO ROCHA DUARTE - CONSULTORIA E SERVICOS DE TI LTDA**, CNPJ: **43.065.207/0001-57**, fundada em 10/08/2021) é a pessoa jurídica formalizada que institucionaliza e dá continuidade à prática profissional exercida por seu sócio fundador, **Thiago Rocha Duarte**.
 > 
-> Em respeito aos termos de sigilo bilateral (NDA) firmados com as empresas contratantes originais, os nomes corporativos são mantidos sob descrição setorial genérica. As métricas de volumetria, os diagnósticos de arquitetura e as soluções técnicas descritas abaixo refletem a atuação prática direta do fundador.
+> **Compatibilidade Operacional (Regime Misto CLT e PJ):** A trajetória corporativa do fundador contempla atuações em regime de contratação direta (CLT) combinadas com a prestação de serviços de consultoria técnica especializada (PJ), com total compatibilidade de horários, entregas por marcos contratuais e estrito cumprimento dos deveres de confidencialidade.
+> 
+> As métricas, arquiteturas e soluções técnicas descritas abaixo refletem a atuação prática direta do fundador em grandes instituições e corporações do setor público e privado, demonstrando solidez e experiência em ambientes de missão crítica.
 
 ---
 
-## 🏛️ PROJETO 1: Otimização de Performance e Indexação de Banco de Dados SQL de Alta Volumetria
+## 🏛️ PROJETO 1: Ministério da Justiça e Segurança Pública (MJSP)
+### Cadastro Nacional de Pessoas Desaparecidas (CNPD) — Integrações Governamentais e Processamento Assíncrono
 
-* **Setor de Atuação:** Distribuição Atacadista, Logística e Faturamento B2B (Centro-Oeste)
-* **Período:** 2018 – 2021
-* **Vínculo do Fundador:** Liderança Técnica / Arquiteto de Banco de Dados
-* **Stack Tecnológico:** PostgreSQL / Oracle SQL / Java Backend / Spring Data JPA
-* **Volumetria Transacional:** Base superior a 1.200.000 pedidos e mais de 10 milhões de itens de estoque movimentados.
+* **Cliente / Instituição:** Ministério da Justiça e Segurança Pública (Governo Federal)
+* **Período:** Nov/2024 – Atual
+* **Papel do Fundador:** Desenvolvedor Fullstack Sênior (Java / Angular)
+* **Stack Tecnológico:** Java 17, Spring Boot 2.7, Angular, TypeScript, Angular Material, Hibernate Envers, Liquibase, ShedLock, Azure DevOps, Docker, SonarQube, JaCoCo, Apache POI/PDFBox.
 
 ### O Desafio
-A empresa registrava paradas operacionais graves em horários de pico comercial (10h às 12h e 14h às 16h). O travamento do banco de dados impedia mais de 40 representantes comerciais externos de sincronizarem pedidos através de seus coletores móveis, provocando filas na expedição e atrasos nos carregamentos de caminhões. A consultoria de infraestrutura anterior recomendava triplicar o provisionamento de servidores de nuvem, gerando custo adicional recorrente estimado em mais de R$ 6.000,00/mês.
+Construir e sustentar a plataforma corporativa de alcance nacional destinada ao Cadastro Nacional de Pessoas Desaparecidas, conectando bases de dados sensíveis entre órgãos de segurança pública e disponibilizando consultas para a população e autoridades policiais sob rigorosos requisitos de segurança e LGPD.
 
-### Diagnóstico Técnico & Resolução
-1. **Auditoria de Locks e Análise de Planos de Execução:** Execução de rotinas detalhadas com `EXPLAIN ANALYZE`, identificando o disparo massivo do antipadrão *N+1 queries* em rotinas de cálculo de ICMS/ST e bloqueios de tabela (*table locks*) desnecessários em leitura.
-2. **Reengenharia de Índices e Particionamento:** Criação de índices parciais compostos e particionamento de tabelas históricas de log que consumiam buffer de memória RAM indevidamente.
-3. **Segregação de Carga Transacional:** Implementação de réplica de leitura (*Read Replica*) para desviar relatórios fiscais pesados da réplica primária de escrita (*Master*).
-
-### Métricas & Resultados Aferidos
-* 📉 **Redução de 98,2% no Tempo de Resposta:** Consultas críticas de faturamento que demoravam entre 14 e 18 segundos passaram a responder na faixa de **280ms a 320ms**.
-* 📉 **Carga de CPU:** O servidor de banco de dados, que operava com picos constantes de **98% de CPU**, estabilizou com média de consumo em **22%**.
-* 💰 **Economia Real:** Evitou o upgrade desnecessário de servidores de banco de dados, poupando mais de **R$ 70.000,00 anuais** para a operação.
-* 🚀 **Continuidade:** Zero registros de travamento de faturamento nos períodos fiscais subsequentes.
+### Diagnóstico Técnico & Implementações Chave
+1. **Integrações Críticas de Segurança:** Implementação de comunicação segura com os sistemas externos **SINESP** e **DENATRAN** utilizando APIs REST com autenticação OAuth2 e certificados digitais SSL.
+2. **Processamento Assíncrono de Alto Desempenho:** Arquitetura orientada a processamento assíncrono com `CompletableFuture` e `ExecutorService`, otimizando operações demoradas e chamadas externas sem degradar a experiência do usuário.
+3. **Rotinas Agendadas Distribuídas:** Desenvolvimento de rotinas em lote (*batch/scheduler*) coordenadas com **Spring Scheduler** e **ShedLock**, garantindo que tarefas distribuídas não colidam nem sejam executadas em duplicidade em ambientes com múltiplas réplicas/instâncias.
+4. **Auditoria Histórica Rígida (LGPD):** Implementação de auditoria imutável via **Hibernate Envers**, gravando rastreabilidade completa e histórico de qualquer modificação cadastral.
+5. **Painel Público Otimizado:** Interface pública em Angular com scroll infinito, paginação sob demanda e filtros avançados, além de componentes customizados e seguros para upload e validação de imagens e documentos.
+6. **Governança de Banco e CI/CD:** Versionamento e migração de esquemas com **Liquibase** e esteira de CI/CD automatizada com **Azure DevOps**, **SonarQube** e relatórios de cobertura de testes com **JaCoCo**.
 
 ---
 
-## ⚙️ PROJETO 2: Resgate, Modernização e Sustentação de Aplicação Corporativa Legada
+## 💳 PROJETO 2: Serasa Experian (eConsig)
+### Backend de Alta Concorrência para Operações de Crédito Consignado
 
-* **Setor de Atuação:** Cooperativa de Serviços Financeiros e Crédito
-* **Período:** 2021 – 2023
-* **Vínculo do Fundador:** Especialista em Engenharia de Software / Tech Lead
-* **Stack Tecnológico:** Java 11 / Spring Boot / Angular / REST APIs / Docker / PostgreSQL
-* **Cenário:** Sistema central de gestão operacional abandonado após rescisão contenciosa com a software house terceirizada anterior.
+* **Cliente / Instituição:** Serasa Experian
+* **Período:** Jan/2021 – Ago/2024 (3 anos e 8 meses)
+* **Papel do Fundador:** Desenvolvedor Backend Java
+* **Stack Tecnológico:** Java 17, Spring Boot, Spring Data JPA, Hibernate, APIs REST, Microsserviços, JUnit 5, Mockito, SOLID, Clean Code.
 
 ### O Desafio
-A empresa herdou um código corporativo de 4 anos de desenvolvimento contínuo sem testes automatizados, sem documentação de arquitetura e com dependências desatualizadas com falhas de segurança conhecidas (CVEs). A diretoria temia realizar qualquer alteração nas rotinas de conciliação financeira por receio de corrupção de saldos em produção.
+Sustentar e evoluir a plataforma corporativa do **eConsig**, responsável pelo processamento, validação e roteamento de operações de crédito consignado em larga escala, onde qualquer lentidão de banco ou inconsistência transacional impacta diretamente bancos parceiros, correspondentes e milhões de tomadores de crédito.
 
-### Diagnóstico Técnico & Resolução
-1. **Engenharia Reversa & Mapeamento de Regras:** Mapeamento integral dos fluxos de dados, serviços e endpoints através de geração automática de contratos OpenAPI (Swagger) e diagramação da arquitetura.
-2. **Esteira de Blindagem Automatizada (CI/CD):** Implementação de pipeline de integração contínua (GitHub Actions) com suíte de testes de regressão automatizados para validação de regras de negócio antes de qualquer deploy em produção.
-3. **Upgrade Modular e Seguro:** Atualização de dependências críticas de segurança e refatoração modular das rotinas mais instáveis, mantendo 100% de compatibilidade retroativa.
-
-### Métricas & Resultados Aferidos
-* 🛡️ **Zero Downtime em Produção:** Implementação de esteira de deploy sem interrupção de serviço (*zero downtime*).
-* ⏱️ **Redução do Tempo de Resolução de Bugs (MTTR):** O tempo médio de diagnóstico e correção de chamados caiu de **48 horas para menos de 3 horas**.
-* 📦 **Retomada de Novos Módulos:** O cliente pôde voltar a lançar novos recursos para seus usuários finais com total previsibilidade orçamentária e tranquilidade operacional.
+### Diagnóstico Técnico & Implementações Chave
+1. **Engenharia de Microsserviços Resiliente:** Desenvolvimento e manutenção de APIs REST e serviços de negócio em Java 17 / Spring Boot, com baixo acoplamento e estrita separação de domínios.
+2. **Otimização de Persistência e Locks:** Refatoração de repositórios e queries complexas no Spring Data JPA e Hibernate, eliminando gargalos de transação e evitando deadlocks em horários de pico financeiro.
+3. **Qualidade e Confiabilidade de Código:** Aplicação rigorosa de princípios SOLID e Clean Code, sustentada por testes unitários e de integração exaustivos com **JUnit 5** e **Mockito**.
+4. **Integração Corporativa:** Construção de interfaces seguras e contratos de API padronizados para interoperabilidade contínua com os ecossistemas parceiros da Serasa.
 
 ---
 
-## 🔒 PROJETO 3: Adequação Regulatória à LGPD, Blindagem de Autenticação e Gestão de Incidentes
+## 🧠 PROJETO 3: LLM Router (AI Gateway Corporativo)
+### Plataforma de Orquestração Inteligente de Modelos e Agentes de IA Generativa
 
-* **Setor de Atuação:** Entidade de Classe e Registro Profissional (Brasília/DF)
-* **Período:** 2023 – 2025
-* **Vínculo do Fundador:** Arquiteto de Software & Consultor de Segurança
-* **Stack Tecnológico:** TypeScript / Node.js / Keycloak (OAuth2 / OIDC) / PostgreSQL / Docker
-* **Cenário:** Portal de associados com dados sensíveis e transações financeiras vulnerável a acessos não autorizados.
+* **Origem:** Projeto Proprietário / Arquitetura Avançada de IA da TRD
+* **Período:** Maio/2025 – Jun/2026
+* **Papel do Fundador:** Arquiteto de Software e Engenheiro de IA Generativa
+* **Stack Tecnológico:** Java 21, Spring Boot 3, Spring AI, Spring WebFlux, Angular, Docker, Ollama, Claude API (Anthropic), Kimi API, JUnit 5, Mockito.
+* **Certificações Vinculadas:** *Anthropic — Building with the Claude API* & *Anthropic — Claude Code in Action*.
 
 ### O Desafio
-Auditoria preliminar identificou fragilidades em autenticação, exposição de dados cadastrais sensíveis em endpoints públicos e ausência de trilha de auditoria para atendimento às exigências legais da Lei Geral de Proteção de Dados (Lei nº 13.709/2018).
+Desenvolver uma camada intermediária (*AI Gateway*) que permita a sistemas corporativos consumirem múltiplos modelos de linguagem (locais via Ollama ou em nuvem via Anthropic Claude) sem ficarem reféns de um único fornecedor, controlando custos, latência e segurança de dados.
 
-### Diagnóstico Técnico & Resolução
-1. **Autenticação Centralizada Corporativa:** Migração de autenticação legada para Keycloak com suporte a Single Sign-On (SSO), tokens JWT criptografados e autenticação em dois fatores (2FA/MFA).
-2. **Isolamento de Camada e Criptografia em Repouso:** Implementação de criptografia a nível de coluna para dados pessoais sensíveis (CPF, dados bancários) e blindagem de conexões via TLS 1.3.
-3. **Trilha de Auditoria Imutável:** Configuração de logs de auditoria imutáveis registrando toda e qualquer tentativa de acesso ou alteração em dados de associados.
-
-### Métricas & Resultados Aferidos
-* 🔒 **Conformidade LGPD:** 100% dos relatórios de conformidade técnica emitidos e homologados pelo comitê jurídico da entidade (Arts. 37 a 48 da LGPD).
-* 🛑 **Zero Incidentes de Vazamento:** Bloqueio de mais de 12.000 requisições automatizadas maliciosas (bots) nos primeiros 30 dias de implementação do novo gateway de segurança.
-* 🤝 **Satisfação dos Associados:** Aumento de 40% na utilização do portal digital pelos associados em virtude da rapidez e confiabilidade do novo login institucional.
+### Diagnóstico Técnico & Implementações Chave
+1. **Strategy Engine Dinâmica:** Módulo inteligente em Java 21 responsável por avaliar cada prompt e selecionar dinamicamente o modelo ideal (custo vs. performance) com roteamento em milissegundos.
+2. **Agent Orchestrator & Pipelines:** Orquestração de agentes especializados em cadeia (*Execution Pipeline*), separando etapas de geração, validação sintática e refinamento de resposta.
+3. **Compatibilidade com Padrão OpenAI:** Normalização completa de requisições e respostas seguindo o padrão da indústria, permitindo que qualquer aplicação legada use o gateway sem reescrita.
+4. **Assistente Conversacional WhatsApp:** Integração ponta a ponta com mensageria instantânea para processamento automatizado de demandas de clientes através de modelos de IA.
+5. **Arquitetura Limpa:** Projeto construído sob Clean Architecture com os padrões *Strategy*, *Pipeline*, *Adapter* e *Factory*.
 
 ---
 
-### 💼 Como Estes Projetos Respaldam a Atuação da TRD:
-1. **Fundamentação Histórica:** Os métodos, esteiras de testes e protocolos de SLA adotados pela TRD não são teóricos; foram lapidados ao longo de 18 anos de resolução de problemas corporativos complexos.
-2. **Segurança Jurídica:** Apresentar a experiência pregressa de forma transparente e setorial demonstra maturidade e respeito estrito aos acordos de confidencialidade (NDA) anteriores.
+## 🏛️ PROJETO 4: Comissão de Valores Mobiliários (CVM) & ALERGS
+### Modernização Fullstack de Aplicações Regulatórias e Institucionais
+
+* **Instituições:** Comissão de Valores Mobiliários (CVM) / Assembleia Legislativa do RS (ALERGS)
+* **Períodos:** Maio/2023 – Jun/2024 (CVM) | Fev/2022 – Abr/2023 (ALERGS)
+* **Papel do Fundador:** Desenvolvedor Fullstack Java / Angular
+* **Stack Tecnológico:** Java, Spring Boot, Angular (8/12/16), TypeScript, RxJS, Angular Material, Swagger/OpenAPI, Bancos Relacionais, Git.
+
+### O Desafio
+Garantir a evolução, estabilidade e conformidade de portais e sistemas de regulação financeira e processos legislativos estaduais com código modular e documentado.
+
+### Diagnóstico Técnico & Implementações Chave
+1. **APIs REST Padronizadas:** Criação de APIs robustas com documentação viva via Swagger/OpenAPI, facilitando a auditoria e manutenção por equipes multidisciplinares.
+2. **Frontend Corporativo Reutilizável:** Criação de bibliotecas de componentes no Angular com Angular Material, formulários reativos (*Reactive Forms*) e estilização desacoplada em SCSS.
+3. **Resolução Ágil de Débitos Técnicos:** Correção de falhas legadas, otimização de consultas SQL e suporte N3 para sistemas de alta relevância pública.
+
+---
+
+### Resumo de Competências Verificáveis do Fundador
+
+| Pilar | Tecnologias Dominadas |
+|---|---|
+| **Linguagens & Backend** | Java (11, 17 e 21), Spring Boot (2.7 e 3.x), Spring AI, Spring WebFlux, JPA / Hibernate, APIs REST, Microsserviços. |
+| **Frontend & UI** | Angular (8, 12, 16), TypeScript, RxJS, Angular Material, Reactive Forms, SCSS, Tailwind CSS. |
+| **Inteligência Artificial** | Anthropic Claude API, Claude Code, Spring AI, AI Gateway / LLM Router, Ollama, Kimi API, Roteamento de Agentes. |
+| **Bancos de Dados & Governança** | PostgreSQL, Oracle SQL, Liquibase, Hibernate Envers (auditoria LGPD), ShedLock. |
+| **DevOps & Qualidade** | Docker, Kubernetes, Azure DevOps, Jenkins, CI/CD, SonarQube, JaCoCo, JUnit 5, Mockito. |

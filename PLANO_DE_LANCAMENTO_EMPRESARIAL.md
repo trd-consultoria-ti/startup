@@ -54,7 +54,7 @@ O mercado corporativo brasileiro atravessa uma crise silenciosa de sustentação
 
 ### 1.2. Nossa Proposta de Valor: Boutique Sênior AI-Augmented
 Posicionamo-nos como a **Boutique de Engenharia de Software e IA** de referência no Centro-Oeste e no Brasil:
-* **Liderança Técnica com 20 Anos de Bagagem:** Arquitetura corporativa resiliente, blindagem de dados, modernização de legados e integrações críticas.
+* **Liderança Técnica com Histórico em Missão Crítica:** Engenharia sênior comprovada em instituições como Ministério da Justiça (SINESP/DENATRAN), Serasa e CVM, certificação oficial Anthropic (Claude API), Java 11/17/21, Spring Boot, Angular e IA Generativa.
 * **Esteira AI-Native com Supervisão Sênior Direta:** Agilidade de entrega exponencial viabilizada por agentes de IA e IDEs de nova geração (Cursor Enterprise, Claude 3.5 Sonnet, GPT-4o), com cada linha de código auditada e homologada diretamente pelo fundador sênior (Thiago Rocha Duarte) e validada por suíte de testes automatizados e agentes de QA.
 * **Segurança Jurídica & Previsibilidade Financeira:** Contratos formais com SLA garantido, limitação de responsabilidade civil (*Damage Cap*), emissão regular de NFS-e e total transferência da Propriedade Intelectual mediante quitação.
 
@@ -126,9 +126,19 @@ Empresa unipessoal: todos os domínios respondem ao Sócio Proprietário, com ex
 
 ---
 
-## 3. Fase 1: Estruturação Jurídica, Societária e Burocrática (D-60 a D-30)
+## 3. Fase 1: Estrutura Jurídica, Societária e Cadastral Ativa (Fundada em 10/08/2021)
 
-Esta etapa consolida o nascimento formal da pessoa jurídica no Distrito Federal, com foco em segurança regulatória e eficiência tributária máxima.
+Esta etapa encontra-se **100% concluída e regularizada**. A sociedade empresária limitada já está devidamente constituída perante a Receita Federal do Brasil e órgãos de registro do Distrito Federal, com histórico ativo ininterrupto desde agosto de 2021:
+
+* **Razão Social:** `THIAGO ROCHA DUARTE - CONSULTORIA E SERVICOS DE TI LTDA`
+* **Nome Fantasia:** `TRD Consultoria e Serviços de TI`
+* **CNPJ:** `43.065.207/0001-57`
+* **Data de Fundação / Início de Atividade:** `10/08/2021` (Situação: **ATIVA**)
+* **Natureza Jurídica:** `206-2 - Sociedade Empresária Limitada` (Unipessoal)
+* **Sócio Administrador:** Thiago Rocha Duarte (CPF: [Qualificado no Contrato Social]) — 100% das quotas sociais
+* **Capital Social:** R$ 10.000,00
+* **Regime Tributário:** `Optante pelo Simples Nacional` desde 10/08/2021
+* **Endereço Oficial:** Brasília - DF, Brasil
 
 ```mermaid
 flowchart TD

@@ -1,9 +1,9 @@
 # [CABEÇALHO TIMBRADO OFICIAL]
 <!-- Inserir logo_horizontal_light.svg centralizado ou alinhado à esquerda -->
 
-**TRD CONSULTORIA E SERVIÇOS DE TI LTDA**  
-CNPJ: [00.000.000/0001-00] | CF/DF: [00.000.000-0]  
-Sede Operacional: Brasília - Distrito Federal, Brasil  
+**THIAGO ROCHA DUARTE - CONSULTORIA E SERVICOS DE TI LTDA** (TRD Consultoria)  
+CNPJ: 43.065.207/0001-57 | Fundação: 10/08/2021 | Simples Nacional  
+Sede Operacional: Brasília - DF, Brasil  
 Contato Institucional: contato@trdconsultoria.com.br  
 
 ---

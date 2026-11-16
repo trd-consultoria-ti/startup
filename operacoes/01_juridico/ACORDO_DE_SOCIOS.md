@@ -3,10 +3,10 @@
 > [!IMPORTANT]
 > **DOCUMENTO MODELO / CONTINGENCIAL:** A **TRD Consultoria e Serviços de TI LTDA** é uma sociedade limitada **unipessoal** fundada, gerida e 100% detida por **Thiago Rocha Duarte**. O projeto não possui outros sócios ou integrantes. O presente instrumento é mantido exclusivamente como minuta jurídica pré-aprovada para a hipótese de admissão futura de um novo sócio executivo, colaborador-chave ou investidor técnico.
 
-Pelo presente instrumento particular de **Acordo de Quotistas**, vinculado ao Contrato Social da sociedade empresária limitada **TRD Consultoria e Serviços de TI LTDA**:
+Pelo presente instrumento particular de **Acordo de Quotistas**, vinculado ao Contrato Social da sociedade empresária limitada **THIAGO ROCHA DUARTE - CONSULTORIA E SERVICOS DE TI LTDA** (CNPJ: 43.065.207/0001-57):
 
 **DE UM LADO, COMO SÓCIO FUNDADOR:**
-* **THIAGO ROCHA DUARTE**, brasileiro, solteiro, engenheiro de software, portador da cédula de identidade RG nº [0000000] e inscrito no CPF sob o nº [000.000.000-00], residente e domiciliado em Brasília - DF, doravante denominado simplesmente **SÓCIO FUNDADOR** (titular originário de 100% das quotas sociais);
+* **THIAGO ROCHA DUARTE**, brasileiro, solteiro, engenheiro de software, inscrito no CPF sob o nº [000.000.000-00 - Qualificado na Assinatura], residente e domiciliado em Brasília - DF, doravante denominado simplesmente **SÓCIO FUNDADOR** (titular originário de 100% das quotas sociais);
 
 **E, DE OUTRO LADO, COMO SÓCIO ADMITIDO:**
 * **[NOME COMPLETO DO SÓCIO ADMITIDO]**, [nacionalidade], [estado civil], [profissão], portador do RG nº [0000000] e CPF sob o nº [000.000.000-00], residente e domiciliado em [Endereço completo, Cidade - UF, CEP], doravante denominado simplesmente **SÓCIO ADMITIDO**;
