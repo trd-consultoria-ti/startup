@@ -124,9 +124,9 @@ Thiago Rocha Duarte (Sócio Administrador — [CPF Qualificado na Assinatura])
 
 | Plano Escolhido | Banco de Horas Mensal | SLA Resposta P1 | SLA Resposta P2 | Reuniões de Alinhamento | Valor da Hora Excedente | Investimento Fixo Mensal |
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| [ ] **Plano Essencial** | 20 horas / mês | Até 8h úteis | Até 6h úteis | Mensal | R$ 140,00 / hora | **R$ 2.200,00 / mês** |
-| [ ] **Plano Profissional** | 40 horas / mês | Até 4h úteis | Até 4h úteis | Quinzenal | R$ 130,00 / hora | **R$ 4.000,00 / mês** *(R$ 100/h)* |
-| [ ] **Plano Enterprise** | 60 horas / mês | Até 2h úteis | Até 2h úteis | Semanal | R$ 120,00 / hora | **R$ 6.000,00 / mês** *(R$ 100/h)* |
+| [ ] **Plano Essencial** | 20 horas / mês | Até 8h úteis | Até 6h úteis | Mensal | R$ 180,00 / hora | **R$ 3.200,00 / mês** |
+| [ ] **Plano Profissional** | 40 horas / mês | Até 4h úteis | Até 4h úteis | Quinzenal | R$ 160,00 / hora | **R$ 5.500,00 / mês** |
+| [ ] **Plano Enterprise** | 60 horas / mês | Até 2h úteis | Até 2h úteis | Semanal | R$ 150,00 / hora | **R$ 8.000,00 / mês** |
 
 *Plano selecionado formalmente pelas partes:* **[Marcar Plano Contratado]**  
 *Data de Início da Vigência:* **[DD/MM/AAAA]**  

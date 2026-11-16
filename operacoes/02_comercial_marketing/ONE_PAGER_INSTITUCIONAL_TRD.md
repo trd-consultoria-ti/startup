@@ -44,7 +44,7 @@ Com governança técnica liderada por seu CTO e Arquiteto Chefe, **Thiago Rocha 
 | **Otimização de Banco de Dados SQL** | Incluso | **Incluso** | Incluso |
 | **Monitoramento Externo 24/7** | Uptime Básico | **Alertas Avançados** | Observabilidade Total |
 | **Reunião de Alinhamento Técnico** | Mensal | **Quinzenal** | Semanal |
-| **INVESTIMENTO MENSAL** | **R$ 2.200,00 / mês** | **R$ 4.000,00 / mês** *(R$ 100/h)* | **R$ 6.000,00 / mês** *(R$ 100/h)* |
+| **INVESTIMENTO MENSAL** | **R$ 3.200,00 / mês** | **R$ 5.500,00 / mês** | **R$ 8.000,00 / mês** |
 
 ---
 

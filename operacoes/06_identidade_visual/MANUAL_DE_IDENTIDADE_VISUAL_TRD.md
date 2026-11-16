@@ -9,7 +9,7 @@
 ## 1. INTRODUÇÃO & TESE DE POSICIONAMENTO (VISÃO DO MARKETEIRO)
 
 ### 1.1. O Território da Marca: "A Confiabilidade do Aço, a Precisão do Algoritmo"
-A **TRD Consultoria e Serviços de TI LTDA** atua em um nicho de altíssima exigência: a sustentação de sistemas legados de missão crítica (Java, Spring, Angular, bancos SQL) e esteiras pragmáticas de Inteligência Artificial aplicada, com tickets médios entre **R$ 2.200,00 e R$ 6.000,00+/mês**.
+A **TRD Consultoria e Serviços de TI LTDA** atua em um nicho de altíssima exigência: a sustentação de sistemas legados de missão crítica (Java, Spring, Angular, bancos SQL) e esteiras pragmáticas de Inteligência Artificial aplicada, com tickets médios entre **R$ 3.200,00 e R$ 8.000,00+/mês**.
 
 Nosso interlocutor é o **CTO, VP de Tecnologia ou CFO** de médias empresas, distribuidoras, fintechs e conselhos de classe. Esse decisor busca **segurança institucional, blindagem jurídica e engenharia sênior comprovada**.
 

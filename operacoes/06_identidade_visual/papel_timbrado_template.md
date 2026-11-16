@@ -22,7 +22,7 @@ O presente instrumento formaliza o compromisso de prestação de serviços técn
 
 ### 2. Condições Comerciais e Faturamento
 * **Plano Contratado:** Plano Profissional (35 horas mensais)
-* **Investimento Recorrente:** R$ 4.000,00 / mês
+* **Investimento Recorrente:** R$ 5.500,00 / mês
 * **SLA de Resposta Crítica (P1):** Até 2 horas úteis
 
 ---

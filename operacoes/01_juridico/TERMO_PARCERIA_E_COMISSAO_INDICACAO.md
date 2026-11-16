@@ -28,7 +28,7 @@ Ambas doravante denominadas conjuntamente como **PARTES**.
 
 ### CLÁUSULA SEGUNDA – DA REMUNERAÇÃO E COMISSIONAMENTO
 2.1. Pela indicação bem-sucedida que resulte em contrato formalmente assinado e efetivamente pago pelo cliente indicado, a **TRD CONSULTORIA** pagará ao **PARCEIRO** uma comissão percentual nos seguintes termos:
-* **a) Contratos Recorrentes de Sustentação (MRR):** **10% (dez por cento)** sobre o valor líquido mensal da mensalidade recorrente (planos de R$ 2.200, R$ 4.000 ou R$ 6.000/mês), **paga mensalmente durante os primeiros 12 (doze) meses de vigência do contrato** do cliente indicado, enquanto adimplente.
+* **a) Contratos Recorrentes de Sustentação (MRR):** **10% (dez por cento)** sobre o valor líquido mensal da mensalidade recorrente (planos de R$ 3.200, R$ 5.500 ou R$ 8.000/mês), **paga mensalmente durante os primeiros 12 (doze) meses de vigência do contrato** do cliente indicado, enquanto adimplente.
 * **b) Serviços Pontuais e Auditorias (Discovery):** **15% (quinze por cento)** sobre o valor líquido do serviço de diagnóstico técnico (R$ 3.500,00) ou sprints de novos módulos contratados.  
 2.2. A comissão incidirá sobre o valor líquido faturado (após a dedução dos tributos incidentes sobre a NFS-e).  
 2.3. O pagamento da comissão será efetuado em até **5 (cinco) dias úteis** após a compensação efetiva do pagamento realizado pelo cliente final à TRD CONSULTORIA, mediante emissão de nota fiscal de intermediação/serviços pelo PARCEIRO ou recibo correspondente.

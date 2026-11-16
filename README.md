@@ -75,7 +75,7 @@ A identidade visual da TRD foi concebida sob o arquétipo da **Soberania, Rigor 
     │   ├── TERMO_PARCERIA_E_COMISSAO_INDICACAO.md  # Contrato de canal com agências (comissão recorrente de 10-15%)
     │   └── CONTRATO_PRESTACAO_SERVICOS_PARCEIRO_SOBREAVISO.md # Contrato PJ de Engenheiro Backup de Sobreaviso
     ├── 02_comercial_marketing/
-    │   ├── PROPOSTA_COMERCIAL_EXECUTIVA.md (.docx) # Proposta de alto valor (Piso R$ 2.200 a R$ 6.000/mês)
+    │   ├── PROPOSTA_COMERCIAL_EXECUTIVA.md (.docx) # Proposta de alto valor (Piso R$ 3.200 a R$ 8.000/mês)
     │   ├── ONE_PAGER_INSTITUCIONAL_TRD.md (.docx)  # Folheto executivo de 1 página para WhatsApp/LinkedIn
     │   ├── CHECKLIST_DIAGNOSTICO_SAUDE_SISTEMA.md  # Lead magnet: Checklist de 15 pontos de risco para CTOs
     │   ├── CASES_DE_SUCESSO_E_AUTORIDADE.md        # 3 estudos de caso estruturais (SQL, Legado Java e LGPD)

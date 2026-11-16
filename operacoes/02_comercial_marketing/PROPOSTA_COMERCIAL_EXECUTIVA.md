@@ -32,8 +32,8 @@ Ideal para empresas que já possuem sistemas em produção e necessitam de garan
 | **Otimização de Banco de Dados SQL** | Sim | Sim | Sim |
 | **Monitoramento Proativo & Alertas** | Básico | Avançado | Tempo Real 24/7 |
 | **Reunião de Alinhamento Técnico** | Mensal | Quinzenal | Semanal |
-| **Hora Adicional Excedente** | R$ 140,00 / hora | R$ 130,00 / hora | R$ 120,00 / hora |
-| **INVESTIMENTO MENSAL** | **R$ 2.200,00 / mês** | **R$ 4.000,00 / mês (Base R$ 100/h)** | **R$ 6.000,00 / mês (Base R$ 100/h)** |
+| **Hora Adicional Excedente** | R$ 180,00 / hora | R$ 160,00 / hora | R$ 150,00 / hora |
+| **INVESTIMENTO MENSAL** | **R$ 3.200,00 / mês** | **R$ 5.500,00 / mês** | **R$ 8.000,00 / mês** |
 
 > *Nota: O banco de horas mensal destina-se a manutenções corretivas e evoluções contínuas. As horas não são cumulativas para o mês subsequente. Nossos contratos possuem cláusula padrão de Limitação de Responsabilidade Civil (Damage Cap) e SLA com bonificação em crédito financeiro, garantindo total segurança jurídica e previsibilidade para ambas as partes.*
 
