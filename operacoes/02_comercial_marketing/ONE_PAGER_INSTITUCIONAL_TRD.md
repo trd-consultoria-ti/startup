@@ -6,7 +6,7 @@
 ## 🏛️ Quem Somos
 A **TRD Consultoria e Serviços de TI LTDA** é uma boutique brasileira especializada na **sustentação contínua, modernização de sistemas legados e desenvolvimento de arquiteturas assistidas por Inteligência Artificial (AI-Native)**. 
 
-Com governança técnica liderada por seu CTO e Arquiteto Chefe, **Thiago Rocha Duarte** — profissional com quase duas décadas de atuação corporativa em grandes ecossistemas (Ministério da Justiça, Serasa Experian e CVM) e certificação oficial Anthropic —, a TRD conta com um corpo técnico de engenheiros seniores e plantonistas especializados, atuando como o braço de engenharia de empresas que necessitam de estabilidade absoluta, segurança de dados e conformidade contínua sem os custos astronômicos de grandes consultorias.
+Com governança técnica sênior e um corpo de especialistas com quase duas décadas de atuação corporativa em grandes ecossistemas (Ministério da Justiça, Serasa Experian e CVM), a TRD conta com uma equipe multidisciplinar de engenheiros seniores e sustentação especializada, atuando como o braço de engenharia de empresas que necessitam de estabilidade absoluta, segurança de dados e conformidade contínua sem os custos astronômicos de grandes consultorias.
 
 ---
 
@@ -58,8 +58,8 @@ Com governança técnica liderada por seu CTO e Arquiteto Chefe, **Thiago Rocha 
 ## 📞 Contato & Próximos Passos
 Agende uma sessão técnica de 15 minutos sem compromisso para avaliarmos o seu sistema:
 
-* **Sócio Fundador & Engenheiro Chefe:** Thiago Rocha Duarte
+* **Diretoria Técnica & Atendimento:** Equipe de Engenharia TRD
 * **E-mail:** contato@trdconsultoria.com.br
-* **LinkedIn:** [linkedin.com/in/thiago-duarte-a6597721](https://www.linkedin.com/in/thiago-duarte-a6597721/)
+* **Canal Corporativo:** [trdconsultoria.com.br](https://trd-consultoria-ti.github.io/startup/)
 * **Razão Social:** THIAGO ROCHA DUARTE - CONSULTORIA E SERVICOS DE TI LTDA (CNPJ: 43.065.207/0001-57)
 * **Sede:** Brasília - DF | Atendimento em todo o Brasil

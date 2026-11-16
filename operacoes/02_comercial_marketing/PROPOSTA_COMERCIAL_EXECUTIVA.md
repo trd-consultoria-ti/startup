@@ -79,4 +79,4 @@ Estamos à disposição para alinhar qualquer detalhe técnico.
 CNPJ: 43.065.207/0001-57 | Fundação: 10/08/2021 (Ativa no Simples Nacional)  
 Sede: Brasília - DF, Brasil  
 Thiago Rocha Duarte — Sócio-Diretor Técnico (CTO) & Representante Legal  
-E-mail: thiago.rocha.duarte.ti@gmail.com | WhatsApp: +55 (61) 99207-8335  
+E-mail: contato@trdconsultoria.com.br | WhatsApp: +55 (61) 99207-8335  
