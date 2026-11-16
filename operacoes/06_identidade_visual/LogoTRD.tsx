@@ -77,7 +77,7 @@ export const LogoTRD: React.FC<LogoTRDProps> = ({
             letterSpacing="7"
             fill={subtitleColor}
           >
-            CONSULTORIA DE TI
+            CONSULTORIA & SERVIÇOS DE TI
           </text>
         </g>
       </svg>
@@ -87,7 +87,7 @@ export const LogoTRD: React.FC<LogoTRDProps> = ({
   // Padrão: Horizontal Lockup 1:1
   return (
     <svg
-      viewBox="0 0 650 160"
+      viewBox="0 0 880 220"
       width={size || 320}
       className={className}
       fill="none"
@@ -118,10 +118,10 @@ export const LogoTRD: React.FC<LogoTRDProps> = ({
             fontFamily="system-ui, -apple-system, sans-serif"
             fontSize="16.5"
             fontWeight="600"
-            letterSpacing="7.8"
+            letterSpacing="10.5"
             fill={subtitleColor}
           >
-            CONSULTORIA DE TI
+            CONSULTORIA & SERVIÇOS DE TI
           </text>
         </g>
       </g>

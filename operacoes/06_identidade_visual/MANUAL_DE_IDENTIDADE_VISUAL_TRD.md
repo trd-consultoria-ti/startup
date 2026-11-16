@@ -30,7 +30,7 @@ Nossa identidade visual expurga deliberadamente os modismos da internet:
   ┌─────────────┐                 ┌──────────────────────────────┐ ──┬──
   │             │                 │   T   R   D                  │   │ 60% Altura (Bold)
   │  KEYSTONE   │                 ├──────────────────────────────┤ ──┼── Respiro de 15%
-  │  ISOMÉTRICA │                 │   CONSULTORIA DE TI          │   │ 25% Altura (Flush T -> D)
+  │  ISOMÉTRICA │                 │   CONSULTORIA & SERVIÇOS DE TI          │   │ 25% Altura (Flush T -> D)
   └─────────────┘                 └──────────────────────────────┘ ──┴──
   |<─── H=100 ─>|                 |<────────── H=100 ───────────>|
 ```
@@ -46,7 +46,7 @@ Nossa identidade visual expurga deliberadamente os modismos da internet:
 ### 2.2. A Tipografia Oficial
 - **Família Primária:** *Neue Haas Grotesk* ou *Inter Display* (estilo Neo-Grotesque Suíço).
 - **Linha 1 (Sigla Mestre):** `TRD` em caixa alta, peso **Bold / Black (900)**, tracking +80.
-- **Linha 2 (Descritor Institucional):** `CONSULTORIA DE TI` em caixa alta, peso **Medium / Semi-bold (600)**, tracking expandido +140.
+- **Linha 2 (Descritor Institucional):** `CONSULTORIA & SERVIÇOS DE TI` em caixa alta, peso **Medium / Semi-bold (600)**, tracking expandido +140.
 - **Regra de Ouro do Flush-Grid:** O descritor começa exatamente na margem esquerda da perna do `T` e termina alinhado à curva externa do `D`. O conjunto forma um retângulo tipográfico maciço.
 
 ---
@@ -93,7 +93,7 @@ A identidade cromática da TRD Consultoria e Serviços de TI LTDA é fundamentad
 
 ### 4.2. Escalas de Aplicação e Favicons
 - **Favicon de Navegador (16x16px e 32x32px):** Utiliza-se **exclusivamente o arquivo `favicon_16x16.svg`**, cujas fendas em espaço negativo foram alargadas para 9% do diâmetro para renderizar 1.0px nítido em telas padrão sem efeito borrado de interpolação.
-- **Tamanho Mínimo Digital (Horizontal Lockup):** Largura mínima de **140px** em telas para garantir que o descritor "CONSULTORIA DE TI" permaneça perfeitamente legível.
+- **Tamanho Mínimo Digital (Horizontal Lockup):** Largura mínima de **140px** em telas para garantir que o descritor "CONSULTORIA & SERVIÇOS DE TI" permaneça perfeitamente legível.
 
 ---
 
