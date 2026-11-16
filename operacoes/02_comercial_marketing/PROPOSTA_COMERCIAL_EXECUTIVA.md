@@ -13,8 +13,8 @@ Muitas empresas sofrem com sistemas legados instáveis, atrasos em novas funcion
 
 Nossa consultoria entrega a solução definitiva:
 * **Engenharia Sênior Especializada:** Liderança técnica com histórico comprovado em projetos corporativos e governamentais de alta criticidade (Ministério da Justiça e Segurança Pública, Serasa Experian e Comissão de Valores Mobiliários), domínio avançado de Java 11/17/21, Spring Boot, Angular e soluções de Inteligência Artificial Generativa.
-* **Engenharia Sênior Direta:** O seu sistema é construído e sustentado diretamente por engenharia de software sênior — [Thiago Rocha Duarte](https://www.linkedin.com/in/thiago-duarte-a6597721/), sócio proprietário e engenheiro — ampliada por um squad de agentes de IA especializados (OpenBot), sem intermediários ou júniores desassistidos.
-* **Esteira AI-Native com Supervisão Humana:** Agilidade acelerada por agentes de IA, com cada linha de código auditada e homologada diretamente pelo fundador sênior antes do deploy.
+* **Corpo Técnico Especializado & Liderança Sênior:** A sua operação é sustentada por uma equipe sênior de engenharia de software sob a liderança direta de [Thiago Rocha Duarte](https://www.linkedin.com/in/thiago-duarte-a6597721/) (CTO & Arquiteto Chefe), profissional com ampla bagagem institucional em projetos governamentais e corporativos de alta criticidade (Ministério da Justiça, Serasa Experian e CVM). Nossa equipe multidisciplinar reúne especialistas seniores em Java 11/17/21, Spring Boot, Angular, bancos de dados SQL de grande porte e esteiras AI-Native.
+* **Governança de Código & Revisão Técnica Dupla:** Todas as manutenções e correções passam por processos formais de Code Review e testes automatizados de regressão homologados pela liderança técnica antes do deploy em produção, eliminando falhas operacionais.
 * **Segurança Jurídica & SLA Contratual:** Sociedade Empresária Limitada formalizada (CNPJ: 43.065.207/0001-57), optante pelo Simples Nacional desde 2021 em Brasília/DF, emissão regular de NFS-e, contrato com teto indenizatório (Damage Cap), tempo de resposta garantido e código 100% de titularidade da sua empresa mediante quitação.
 
 ---
@@ -78,5 +78,5 @@ Estamos à disposição para alinhar qualquer detalhe técnico.
 **THIAGO ROCHA DUARTE - CONSULTORIA E SERVICOS DE TI LTDA** (TRD Consultoria)  
 CNPJ: 43.065.207/0001-57 | Fundação: 10/08/2021 (Ativa no Simples Nacional)  
 Sede: Brasília - DF, Brasil  
-Thiago Rocha Duarte — Sócio Administrador & Engenheiro Chefe (CPF: [Qualificado na Assinatura])  
+Thiago Rocha Duarte — Sócio-Diretor Técnico (CTO) & Representante Legal  
 E-mail: thiago.rocha.duarte.ti@gmail.com | WhatsApp: +55 (61) 99207-8335  

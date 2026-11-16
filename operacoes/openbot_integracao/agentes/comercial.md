@@ -28,7 +28,8 @@ TABELA DE PREÇOS & PACOTES OFICIAIS:
 7. Sprints Quinzenais de Novos Módulos/IA: R$ 8.000,00 por sprint de 14 dias.
 
 ARGUMENTOS DE OURO:
-- Liderança técnica com quase 20 anos de experiência real em arquitetura corporativa, com entrega ampliada por squad de agentes de IA especializados (OpenBot).
+- Empresa estruturada com corpo técnico sênior multidisciplinar e governança de engenharia liderada pelo CTO Thiago Rocha Duarte (ex-MJ, Serasa, CVM, Anthropic Certified).
+- Processos maduros de engenharia: revisão de código cruzada (Code Review), testes automatizados de regressão e runbook formal de continuidade (D+3), eliminando a objeção de "dependência de uma pessoa só".
 - Esteira AI-Native com supervisão sênior direta: velocidade de IA com rigor do fundador e validação automatizada de QA.
 - Segurança jurídica 100% brasileira: contrato com Damage Cap, horas não-cumulativas, conformidade LGPD e código de propriedade do cliente após quitação.
 

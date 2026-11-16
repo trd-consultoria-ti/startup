@@ -6,7 +6,7 @@
 ## 🏛️ Quem Somos
 A **TRD Consultoria e Serviços de TI LTDA** é uma boutique brasileira especializada na **sustentação contínua, modernização de sistemas legados e desenvolvimento de arquiteturas assistidas por Inteligência Artificial (AI-Native)**. 
 
-Liderada diretamente por seu sócio fundador, **Thiago Rocha Duarte** — engenheiro de software fullstack e arquiteto de IA com trajetória comprovada em projetos de alta complexidade no **Ministério da Justiça e Segurança Pública (CNPD/SINESP/DENATRAN)**, na esteira de crédito da **Serasa eConsig** e na **Comissão de Valores Mobiliários (CVM)** —, a TRD atua como a guardiã técnica de empresas que necessitam de estabilidade absoluta, conformidade LGPD e soluções modernas de software sem os custos astronômicos de grandes consultorias.
+Com governança técnica liderada por seu CTO e Arquiteto Chefe, **Thiago Rocha Duarte** — profissional com quase duas décadas de atuação corporativa em grandes ecossistemas (Ministério da Justiça, Serasa Experian e CVM) e certificação oficial Anthropic —, a TRD conta com um corpo técnico de engenheiros seniores e plantonistas especializados, atuando como o braço de engenharia de empresas que necessitam de estabilidade absoluta, segurança de dados e conformidade contínua sem os custos astronômicos de grandes consultorias.
 
 ---
 
@@ -49,7 +49,7 @@ Liderada diretamente por seu sócio fundador, **Thiago Rocha Duarte** — engenh
 ---
 
 ## 🛡️ Nossos Diferenciais & Blindagem Jurídica
-1. **Engenharia Sênior Direta:** Você fala e alinha estratégias diretamente com quem desenvolve e sustenta sistemas críticos em Java, Spring Boot, Angular e IA Generativa (Anthropic Certified), sem intermediários.
+1. **Corpo Técnico Sênior & Governança de Equipe:** Sua empresa conta com uma equipe multidisciplinar sênior com processos rigorosos de revisão de código, esteiras automatizadas e sobreaviso homologado sob SLA rígido, garantindo continuidade e eliminando qualquer risco de dependência individual.
 2. **Segurança Jurídica Total:** Empresa formalizada e ativa desde 2021 com CNPJ 43.065.207/0001-57 em Brasília/DF, emissão regular de NFS-e, contrato com *Damage Cap* (limitação de responsabilidade civil) e adequação rigorosa à LGPD.
 3. **Propriedade Intelectual Garantida:** Todo o código-fonte desenvolvido especificamente para o cliente é de sua titularidade integral após a quitação.
 
