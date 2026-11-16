@@ -62,12 +62,12 @@ Posicionamo-nos como a **Boutique de Engenharia de Software e IA** de referênci
 
 ```mermaid
 flowchart LR
-    A["FASE 1: Break-even Operacional\n(Meses 1-2)\n1 Cliente Profissional\nR$ 5.500 / mês\nCobre 100% do OPEX"] --> B["FASE 2: Tração & Fator R\n(Meses 3-5)\n5 a 8 Clientes Recorrentes\nR$ 30k a R$ 50k MRR\nPró-Labore Ativo a 6%"]
+    A["FASE 1: Break-even Operacional\n(Meses 1-2)\n1 Cliente Profissional\nR$ 4.000 / mês\nCobre 100% do OPEX"] --> B["FASE 2: Tração & Fator R\n(Meses 3-5)\n5 a 8 Clientes Recorrentes\nR$ 30k a R$ 50k MRR\nPró-Labore Ativo a 6%"]
     B --> C["FASE 3: Consolidação Boutique\n(Meses 6-12)\n12+ Clientes + Projetos IA\nR$ 100k+ MRR\nDividendos Seniores Robustos"]
 ```
 
 * **Fase 1 – Break-even Operacional (Meses 1 a 2):**
-  * Meta: **1 Contrato Pagante no Plano Profissional (R$ 5.500,00/mês)** ou 1 Discovery Técnico (R$ 3.500,00) convertido.
+  * Meta: **1 Contrato Pagante no Plano Profissional (R$ 4.000,00/mês)** ou 1 Discovery Técnico (R$ 3.500,00) convertido.
   * Resultado: O faturamento cobre integralmente todos os custos operacionais (OPEX inicial de ~R$ 950,00/mês), impostos e contabilidade, assegurando sobrevivência e lucro desde o primeiro mês.
 * **Fase 2 – Tração & Fator R Otimizado (Meses 3 a 5):**
   * Meta: **R$ 30.000,00 a R$ 50.000,00 de MRR** (5 a 8 clientes recorrentes).
@@ -318,7 +318,7 @@ Estimativa de despesas fixas recorrentes para manter a infraestrutura nos primei
 | **TOTAL DO OPEX FIXO MENSAL** | — | — | **R$ 946,00 / mês** |
 
 > [!TIP]
-> **Autossuficiência Imediata:** Com um OPEX fixo rigorosamente controlado em ~R$ 950/mês, o Capital Seed de R$ 10.000,00 confere mais de **10 meses de sobrevivência operacional bruta (*Runway*)** mesmo com receita zero. A conquista de um único cliente no Plano Essencial (R$ 3.800/mês) ou Profissional (R$ 5.500/mês) elimina qualquer risco de caixa desde o primeiro mês.
+> **Autossuficiência Imediata:** Com um OPEX fixo rigorosamente controlado em ~R$ 950/mês, o Capital Seed de R$ 10.000,00 confere mais de **10 meses de sobrevivência operacional bruta (*Runway*)** mesmo com receita zero. A conquista de um único cliente no Plano Essencial (R$ 2.200/mês) ou Profissional (R$ 4.000/mês) elimina qualquer risco de caixa desde o primeiro mês.
 
 ### 5.3. A Estratégia Financeira em Duas Fases & Cascata de Caixa
 
@@ -375,9 +375,9 @@ Nossa estratégia de vendas evita a fricção de contratos longos logo na primei
    * **Valor:** **R$ 3.500,00 à vista (pagamento único)**.
    * **O Fechamento Irrecusável (*Cashback da Sustentação*):** Ao contratar o plano de manutenção semestral da nossa empresa, **50% do valor da auditoria (R$ 1.750,00) é abatido como crédito financeiro na primeira fatura**.
 2. **Oferta Core (Receita Recorrente - MRR): Contratos de Sustentação & Evolução com IA**
-   * **Plano Essencial (R$ 3.800,00/mês):** 20 horas mensais, primeira resposta em até 8h úteis, suporte corretivo e banco de dados.
-   * **Plano Profissional - O Mais Vendido (R$ 5.500,00/mês):** 35 horas mensais, primeira resposta em até 4h úteis, reuniões quinzenais, monitoramento avançado e evoluções contínuas.
-   * **Plano Enterprise (R$ 8.500,00/mês):** 60 horas mensais, primeira resposta em até 2h úteis, suporte prioritário, observabilidade 24/7 e deploys de módulos de IA.
+   * **Plano Essencial (R$ 2.200,00/mês):** 20 horas mensais, primeira resposta em até 8h úteis, suporte corretivo e banco de dados.
+   * **Plano Profissional - O Mais Vendido (R$ 4.000,00/mês):** 40 horas mensais, primeira resposta em até 4h úteis, reuniões quinzenais, monitoramento avançado e evoluções contínuas.
+   * **Plano Enterprise (R$ 6.000,00/mês):** 60 horas mensais, primeira resposta em até 2h úteis, suporte prioritário, observabilidade 24/7 e deploys de módulos de IA.
 
 ### 6.2. Ativação do Funil Outbound em 5 Verticais Concomitantes
 Utilizando integralmente o playbook validado em [SCRIPTS_PROSPECCAO_OUTBOUND.md](operacoes/02_comercial_marketing/SCRIPTS_PROSPECCAO_OUTBOUND.md):
@@ -395,7 +395,7 @@ flowchart TD
     subgraph Funil ["Metas de Conversão dos Primeiros 30 Dias"]
         F_TOPO["100 Decisores Abordados\n(5 contatos qualificados / dia útil)"] --> F_MEIO["15 Reuniões de Alinhamento Agendadas\n(15% taxa de resposta)"]
         F_MEIO --> F_PROP["5 Propostas Comerciais Emitidas\n(Discovery R$ 3.5k ou Retainer R$ 5.5k)"]
-        F_PROP --> F_FECH["1 a 2 Contratos Fechados no D+30\n(R$ 5.500 a R$ 11.000 MRR ➔ Break-even)"]
+        F_PROP --> F_FECH["1 a 2 Contratos Fechados no D+30\n(R$ 4.000 a R$ 8.000 MRR ➔ Break-even)"]
     end
 
     Canais --> F_TOPO
@@ -406,7 +406,7 @@ Para alcançar o primeiro cliente pagante com precisão estatística:
 * **Abordagens Qualificadas:** 100 decisores contatados (média de 5 contatos por dia útil executados por Thiago com apoio do Operativo-Comercial).
 * **Taxa de Resposta Positiva (15%):** 15 reuniões de alinhamento executivo de 15 minutos agendadas no Google Meet.
 * **Diagnósticos Apresentados (33% de conversão):** 5 propostas comerciais de Discovery ou Sustentação emitidas.
-* **Fechamentos Efetivos (20% a 40% de conversão):** **1 a 2 contratos formalizados**, gerando faturamento imediato entre R$ 5.500,00 e R$ 11.000,00 de MRR.
+* **Fechamentos Efetivos (20% a 40% de conversão):** **1 a 2 contratos formalizados**, gerando faturamento imediato entre R$ 4.000,00 e R$ 8.000,00 de MRR.
 
 ---
 

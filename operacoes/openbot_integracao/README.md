@@ -8,7 +8,7 @@ Este diretório contém a integração completa da TRD com a plataforma **OpenBo
 
 | Tag de Roteamento | Nome do Agente no OpenBot | Papel / Especialidade | Base de Conhecimento | Modelo Sugerido |
 | :---: | :--- | :--- | :--- | :---: |
-| `[COMERCIAL]` | `Operativo-Comercial` | SDR, Prospecção B2B Outbound, quebra de objeções e Propostas Comerciais Executivas (R$ 3.800 a R$ 8.500) | `operacoes/02_comercial_marketing/` | SWE-2 High / gemini-3.8-flash |
+| `[COMERCIAL]` | `Operativo-Comercial` | SDR, Prospecção B2B Outbound, quebra de objeções e Propostas Comerciais Executivas (R$ 2.200 a R$ 6.000) | `operacoes/02_comercial_marketing/` | SWE-2 High / gemini-3.8-flash |
 | `[JURIDICO]` | `Operativo-Juridico` | Minutas contratuais de sustentação com Damage Cap, NDAs com conformidade LGPD e minuta de Vesting | `operacoes/01_juridico/` | SWE-2 High / gemini-3.8-flash |
 | `[SLA]` | `Operativo-SLA` | Triagem de incidentes (P1 a P4), cronometragem de SLA, bloqueio de horas excedentes e aditivos | `operacoes/05_administracao/MATRIZ_SEVERIDADE_E_SLA.md` | SWE-2 High / gemini-3.8-flash |
 | `[FINANCEIRO]` | `Operativo-FinOps` | CFO Operacional, monitoramento contínuo do Fator R (>=28% para 6% no Simples), cascata de fluxo e provisões | `operacoes/05_administracao/PLANEJAMENTO_TRIBUTARIO_E_FINANCEIRO.md` | SWE-2 High / gemini-3.8-flash |

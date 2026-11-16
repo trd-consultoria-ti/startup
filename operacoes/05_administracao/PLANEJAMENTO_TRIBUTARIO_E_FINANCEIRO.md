@@ -24,7 +24,7 @@ $$\text{Alíquota Efetiva} = \frac{(\text{RBT12} \times \text{Alíquota Nominal}
 
 | Cenário de Negócio | Faturamento Mensal | RBT12 (Projetado) | Alíquota Anexo V (Sem Fator R) | Alíquota Efetiva Anexo III (Com Fator R) | Economia Mensal no DAS | Economia Anual no DAS |
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: |
-| **Cenário 1: Entrada / Break-even** | R$ 5.500,00 | R$ 66.000,00 | **15,50%** (R$ 852,50) | **6,00%** (R$ 330,00) | **R$ 522,50** | **R$ 6.270,00** |
+| **Cenário 1: Entrada / Break-even** | R$ 4.000,00 | R$ 48.000,00 | **15,50%** (R$ 620,00) | **6,00%** (R$ 240,00) | **R$ 380,00** | **R$ 4.560,00** |
 | **Cenário 2: Faixa 1 Limite** | R$ 15.000,00 | R$ 180.000,00 | **15,50%** (R$ 2.325,00) | **6,00%** (R$ 900,00) | **R$ 1.425,00** | **R$ 17.100,00** |
 | **Cenário 3: Tração Média (Faixa 2)** | R$ 30.000,00 | R$ 360.000,00 | **16,68%** (R$ 5.004,00) | **8,21%** (R$ 2.463,00) | **R$ 2.541,00** | **R$ 30.492,00** |
 | **Cenário 4: Consolidação (Faixa 3)**| R$ 50.000,00 | R$ 600.000,00 | **17,85%** (R$ 8.925,00) | **10,56%** (R$ 5.280,00) | **R$ 3.645,00** | **R$ 43.740,00** |
