@@ -15,7 +15,11 @@
   <meta property="og:image" content="https://trd-consultoria-ti.github.io/startup/assets/og-cover.png">
   <meta property="og:image:alt" content="TRD Consultoria e Serviços de TI">
 
-  <meta name="twitter:card" content="summary">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preload" href="fonts/inter-var-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="manifest" href="manifest.webmanifest">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
   <meta name="twitter:title" content="TRD Consultoria — Sustentação de Sistemas Corporativos com SLA">
   <meta name="twitter:description" content="Sustentação de sistemas em Java, Python, Node, React, Next.js, Angular e SQL com SLA contratual. Ministério da Justiça, Serasa, CVM."> 
   <meta name="twitter:image" content="https://trd-consultoria-ti.github.io/startup/assets/og-cover.png">
@@ -33,11 +37,12 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <a class="skip-link" href="#main">Pular para o conteúdo principal</a>
 
   <!-- NAV -->
   <header class="nav">
     <div class="container nav__inner">
-      <a href="#" class="nav__brand" aria-label="TRD Consultoria — início">
+      <a href="./" class="nav__brand" aria-label="TRD Consultoria — início">
         <!-- Keystone TRD — oficial. Canal 13/200 = 6,5%. Losango embaixo. -->
         <svg width="35" height="40" viewBox="0 0 200 231" role="img" aria-label="Símbolo TRD" xmlns="http://www.w3.org/2000/svg">
           <defs>
@@ -62,7 +67,7 @@
         <a href="#solucoes">Soluções</a>
         <a href="#cases">Experiência</a>
         <a href="#planos">Planos &amp; SLA</a>
-        <a href="#sobre">Liderança</a>
+        <a href="#sobre">Equipe &amp; Governança</a>
         <a href="#contato">Contato</a>
       </nav>
 
@@ -79,15 +84,17 @@
       <a href="#solucoes">Soluções</a>
       <a href="#cases">Experiência</a>
       <a href="#planos">Planos &amp; SLA</a>
-      <a href="#sobre">Liderança</a>
+      <a href="#sobre">Equipe &amp; Governança</a>
       <a href="#contato">Contato</a>
     </nav>
   </header>
 
+  <main id="main">
+
   <!-- 1. HERO -->
   <section class="hero">
     <div class="container">
-      <span class="badge"><i></i>Boutique Sênior de Engenharia &amp; Sustentação de Missão Crítica</span>
+      <span class="badge"><i aria-hidden="true"></i>Boutique Sênior de Engenharia &amp; Sustentação de Missão Crítica</span>
       <h1>Seu sistema não pode parar.<br>Nós assumimos a sustentação que o mantém no ar.</h1>
       <p class="lead measure" style="margin: 1.5rem auto 0;">
         A TRD assume a manutenção, a estabilidade e a evolução de softwares corporativos — Java, Python/Django, Node.js, React, Next.js, Angular e bancos SQL — com SLA contratual e a experiência de quem já operou no Ministério da Justiça, na Serasa Experian e na CVM.
@@ -155,32 +162,32 @@
       <div class="quiz-widget">
         <div class="quiz-list">
           <label class="quiz-item">
-            <input type="checkbox" class="quiz-check" onchange="calcularRisco()">
+            <input type="checkbox" class="quiz-check">
             <span>Rotina de backup com <strong>teste real de restauração</strong> validado nos últimos 30 dias</span>
           </label>
           <label class="quiz-item">
-            <input type="checkbox" class="quiz-check" onchange="calcularRisco()">
+            <input type="checkbox" class="quiz-check">
             <span>Código-fonte documentado e dominado por <strong>mais de uma pessoa</strong> na empresa</span>
           </label>
           <label class="quiz-item">
-            <input type="checkbox" class="quiz-check" onchange="calcularRisco()">
+            <input type="checkbox" class="quiz-check">
             <span>Banco de dados SQL operando <strong>sem lentidões ou deadlocks</strong> em horário de pico comercial</span>
           </label>
           <label class="quiz-item">
-            <input type="checkbox" class="quiz-check" onchange="calcularRisco()">
+            <input type="checkbox" class="quiz-check">
             <span>Monitoramento proativo com <strong>alerta automático</strong> antes do usuário reclamar</span>
           </label>
           <label class="quiz-item">
-            <input type="checkbox" class="quiz-check" onchange="calcularRisco()">
+            <input type="checkbox" class="quiz-check">
             <span>Contrato formal com <strong>SLA garantido por escrito</strong> se o sistema cair em dia útil</span>
           </label>
         </div>
 
-        <div class="quiz-output">
+        <div class="quiz-output" aria-live="polite" role="region" aria-label="Resultado da autoavaliação">
           <div class="quiz-score-header">
             <div>
               <span class="small muted">Diagnóstico Estimado:</span>
-              <div id="risk-status" style="font-size:1.25rem; font-weight:800; color:var(--danger); margin-top:.25rem;">
+              <div id="risk-status" role="status" style="font-size:1.25rem; font-weight:800; color:var(--danger); margin-top:.25rem;">
                 RISCO CRÍTICO (100%)
               </div>
             </div>
@@ -206,48 +213,7 @@
     </div>
   </section>
 
-  <script>
-    function calcularRisco() {
-      const checks = document.querySelectorAll('.quiz-check');
-      let resolvidos = 0;
-      checks.forEach(c => { if(c.checked) resolvidos++; });
 
-      const fill = document.getElementById('risk-fill');
-      const status = document.getElementById('risk-status');
-      const badge = document.getElementById('risk-badge');
-      const desc = document.getElementById('risk-desc');
-      const btn = document.getElementById('risk-btn');
-
-      let pct = (5 - resolvidos) * 20; // 0 resolvidos = 100% risco, 5 = 0%
-      fill.style.width = pct + '%';
-
-      if (pct >= 80) {
-        fill.style.backgroundColor = 'var(--danger)';
-        status.style.color = 'var(--danger)';
-        status.innerText = 'RISCO CRÍTICO (' + pct + '%)';
-        badge.className = 'badge-sla badge-sla--p1';
-        badge.innerText = 'Ação Imediata';
-        desc.innerText = 'Seu ecossistema possui vulnerabilidade severa de parada não planejada, dependência de pessoa única e ausência de retaguarda contratual.';
-      } else if (pct >= 40) {
-        fill.style.backgroundColor = 'var(--accent)';
-        status.style.color = 'var(--accent)';
-        status.innerText = 'RISCO MODERADO (' + pct + '%)';
-        badge.className = 'badge-sla badge-sla--p2';
-        badge.innerText = 'Atenção Operacional';
-        desc.innerText = 'Existem deficiências latentes que podem gerar indisponibilidade ou perdas financeiras em picos de demanda ou transição de equipe.';
-      } else {
-        fill.style.backgroundColor = 'var(--success)';
-        status.style.color = 'var(--success)';
-        status.innerText = 'RISCO CONTROLADO (' + pct + '%)';
-        badge.className = 'badge-sla badge-sla--p3';
-        badge.innerText = 'Boa Resiliência';
-        desc.innerText = 'Sua operação adota boas práticas de continuidade. A TRD pode acelerar sua esteira e prover retaguarda especializada sob demanda.';
-      }
-
-      const msg = encodeURIComponent('Olá, fiz o autodiagnóstico no site e meu índice de risco deu ' + pct + '% (' + status.innerText.split(' ')[0] + '). Gostaria de avaliar um plano de sustentação.');
-      btn.href = 'https://wa.me/5561992078335?text=' + msg;
-    }
-  </script>
 
   <!-- 5. CASES -->
   <section id="cases" class="section section--alt">
@@ -339,7 +305,7 @@
           <div class="terminal__title mono">session: prod-db-replica-01 :: explain-analyze.sql (PostgreSQL 16 / Java 17)</div>
           <div class="terminal__status mono"><span class="terminal__pill">AUDITORIA &amp; TUNING TRD</span></div>
         </div>
-        <div class="terminal__body mono">
+        <pre class="terminal__body mono"><code>
           <div class="terminal__code-block">
             <div class="code-comment">-- INCIDENTE REAL EM PRODUÇÃO: Faturamento travado por lentidão em query de fechamento (892k registros)</div>
             <div class="code-comment">-- ANTES DA INTERVENÇÃO: Seq Scan sem índice, contention de locks e timeout de transação</div>
@@ -366,7 +332,7 @@
               Planning Time: 0.18 ms | <strong style="color:var(--success)">Execution Time: 14 ms</strong> (<strong style="color:var(--accent)">Redução de 99,7% de I/O</strong> · Zero locks · Transações instantâneas)
             </div>
           </div>
-        </div>
+        </code></pre>
       </div>
     </div>
   </section>
@@ -528,27 +494,27 @@
           <table class="sla-table">
             <thead>
               <tr>
-                <th>Severidade</th>
-                <th>Definição Operacional</th>
-                <th>MTTA (Primeira Resposta)</th>
-                <th>Canal de Atendimento</th>
-                <th>Plano Contemplado</th>
+                <th scope="col">Severidade</th>
+                <th scope="col">Definição Operacional</th>
+                <th scope="col">MTTA (Primeira Resposta)</th>
+                <th scope="col">Canal de Atendimento</th>
+                <th scope="col">Plano Contemplado</th>
               </tr>
             </thead>
             <tbody>
               <tr>
                 <td><span class="badge-sla badge-sla--p1">P1 · Crítico</span></td>
                 <td><strong>Sistema Parado / Faturamento Interrompido.</strong> Falha impeditiva geral, indisponibilidade do banco ou da API principal.</td>
-                <td class="mono"><strong>Até 2h úteis</strong> (Enterprise)<br>Até 4h úteis (Profissional)</td>
+                <td class="mono"><strong>Até 2h úteis</strong> (Enterprise)<br>Até 4h úteis (Profissional)<br>Até 8h úteis (Essencial)</td>
                 <td>Linha Direta / Canal VIP da Equipe de Engenharia</td>
-                <td>Enterprise / Profissional</td>
+                <td>Todos os Planos</td>
               </tr>
               <tr>
                 <td><span class="badge-sla badge-sla--p2">P2 · Alto</span></td>
                 <td><strong>Degradação Severa de Performance.</strong> Módulo crítico lento, falha parcial de sincronização ou timeouts intermitentes.</td>
-                <td class="mono">Até 4h úteis</td>
+                <td class="mono"><strong>Até 2h úteis</strong> (Enterprise)<br>Até 4h úteis (Profissional)<br>Até 6h úteis (Essencial)</td>
                 <td>Canal Prioritário da Sustentação</td>
-                <td>Enterprise / Profissional</td>
+                <td>Todos os Planos</td>
               </tr>
               <tr>
                 <td><span class="badge-sla badge-sla--p3">P3 · Médio</span></td>
@@ -668,6 +634,8 @@
     </div>
   </section>
 
+  </main>
+
   <footer class="footer">
     <div class="container footer__inner">
       <div><strong style="color:var(--text);">TRD</strong> — TRD Consultoria e Serviços de TI LTDA</div>
@@ -676,5 +644,116 @@
     </div>
   </footer>
 
+  <script>
+    // --- 1. Menu Mobile Acessível (P0-1, P1-1, P1-2, P2-3) ---
+    (function initMobileNav() {
+      const btn = document.getElementById('nav-toggle-btn');
+      const menu = document.getElementById('nav-mobile');
+      if (!btn || !menu) return;
+
+      const iconMenu = btn.querySelector('.nav__icon-menu');
+      const iconClose = btn.querySelector('.nav__icon-close');
+
+      function setMenuState(open) {
+        btn.setAttribute('aria-expanded', String(open));
+        btn.setAttribute('aria-label', open ? 'Fechar menu de navegação' : 'Abrir menu de navegação');
+        menu.classList.toggle('is-open', open);
+        if (iconMenu && iconClose) {
+          iconMenu.style.display = open ? 'none' : 'block';
+          iconClose.style.display = open ? 'block' : 'none';
+        }
+      }
+
+      btn.addEventListener('click', function() {
+        const isOpen = btn.getAttribute('aria-expanded') === 'true';
+        setMenuState(!isOpen);
+      });
+
+      menu.querySelectorAll('a').forEach(function(link) {
+        link.addEventListener('click', function() {
+          setMenuState(false);
+        });
+      });
+
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && btn.getAttribute('aria-expanded') === 'true') {
+          setMenuState(false);
+          btn.focus();
+        }
+      });
+    })();
+
+    // --- 2. Widget Autodiagnóstico Interativo (P1-4, P2-8, P2-12, P2-14) ---
+    function calcularRisco() {
+      const checks = document.querySelectorAll('.quiz-check');
+      let resolvidos = 0;
+      checks.forEach(function(c) { if (c.checked) resolvidos++; });
+
+      const fill = document.getElementById('risk-fill');
+      const status = document.getElementById('risk-status');
+      const badge = document.getElementById('risk-badge');
+      const desc = document.getElementById('risk-desc');
+      const btn = document.getElementById('risk-btn');
+
+      const pct = (5 - resolvidos) * 20; // 0 = 100% risco, 5 = 0%
+      if (fill) fill.style.width = pct + '%';
+
+      let labelRisco = 'Crítico';
+      if (pct >= 80) {
+        labelRisco = 'Crítico';
+        if (fill) fill.style.backgroundColor = 'var(--danger)';
+        if (status) {
+          status.style.color = 'var(--danger)';
+          status.innerText = 'RISCO CRÍTICO (' + pct + '%)';
+        }
+        if (badge) {
+          badge.className = 'badge-sla badge-sla--p1';
+          badge.innerText = 'Ação Imediata';
+        }
+        if (desc) {
+          desc.innerText = 'Seu ecossistema possui vulnerabilidade severa de parada não planejada, dependência de pessoa única e ausência de retaguarda contratual.';
+        }
+      } else if (pct >= 40) {
+        labelRisco = 'Moderado';
+        if (fill) fill.style.backgroundColor = 'var(--accent)';
+        if (status) {
+          status.style.color = 'var(--accent)';
+          status.innerText = 'RISCO MODERADO (' + pct + '%)';
+        }
+        if (badge) {
+          badge.className = 'badge-sla badge-sla--p2';
+          badge.innerText = 'Atenção Operacional';
+        }
+        if (desc) {
+          desc.innerText = 'Existem deficiências latentes que podem gerar indisponibilidade ou perdas financeiras em picos de demanda ou transição de equipe.';
+        }
+      } else {
+        labelRisco = 'Controlado';
+        if (fill) fill.style.backgroundColor = 'var(--success)';
+        if (status) {
+          status.style.color = 'var(--success)';
+          status.innerText = 'RISCO CONTROLADO (' + pct + '%)';
+        }
+        if (badge) {
+          badge.className = 'badge-sla badge-sla--success';
+          badge.innerText = 'Boa Resiliência';
+        }
+        if (desc) {
+          desc.innerText = 'Sua operação adota boas práticas de continuidade. A TRD pode acelerar sua esteira e prover retaguarda especializada sob demanda.';
+        }
+      }
+
+      if (btn) {
+        const msg = encodeURIComponent('Olá, fiz o autodiagnóstico no site e meu índice de risco deu ' + pct + '% (' + labelRisco + '). Gostaria de avaliar um plano de sustentação.');
+        btn.href = 'https://wa.me/5561992078335?text=' + msg;
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+      document.querySelectorAll('.quiz-check').forEach(function(input) {
+        input.addEventListener('change', calcularRisco);
+      });
+    });
+  </script>
 </body>
 </html>
