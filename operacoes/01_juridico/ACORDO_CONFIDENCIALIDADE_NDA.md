@@ -32,7 +32,8 @@ Resolvem celebrar o presente **ACORDO DE CONFIDENCIALIDADE (NDA)** com o objetiv
 2.1. A parte receptora compromete-se a:
 * Tratar as Informações Confidenciais com o mais rigoroso nível de sigilo, utilizando ao menos o mesmo grau de zelo que emprega com suas próprias informações de igual importância;
 * Não divulgar, ceder, transferir, reproduzir ou disponibilizar qualquer Informação Confidencial a terceiros sem prévia autorização por escrito da parte reveladora;
-* Restringir o acesso às informações estritamente ao sócio proprietário, consultores e prestadores diretamente envolvidos na execução dos serviços técnicos, os quais deverão estar igualmente vinculados ao dever de sigilo.
+* Restringir o acesso às informações estritamente ao sócio proprietário, consultores e prestadores diretamente envolvidos na execução dos serviços técnicos, os quais deverão estar igualmente vinculados ao dever de sigilo;
+* A utilização de ferramentas corporativas de telemetria e esteiras de desenvolvimento assistidas por Inteligência Artificial (ex: Sentry, Anthropic, OpenAI) dar-se-á estritamente para compilação técnica, refatoração de código e auditoria, sendo vedada a submissão de dados pessoais identificáveis ou credenciais ativas de produção sem anonimização prévia.
 
 ---
 

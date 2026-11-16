@@ -15,7 +15,7 @@ Nossa consultoria entrega a solução definitiva:
 * **Engenharia Sênior:** Liderança técnica com quase **20 anos de experiência** em arquitetura corporativa, backend robusto (Java/Spring Boot), frontends modernos (Angular), bancos SQL e soluções com Inteligência Artificial.
 * **Engenharia Sênior Direta:** O seu sistema é construído e sustentado diretamente por engenharia de software sênior — [Thiago Rocha Duarte](https://www.linkedin.com/in/thiago-duarte-a6597721/), sócio proprietário e engenheiro — ampliada por um squad de agentes de IA especializados (OpenBot), sem intermediários ou júniores desassistidos.
 * **Esteira AI-Native com Supervisão Humana:** Agilidade acelerada por agentes de IA, com cada linha de código auditada e homologada diretamente pelo fundador sênior antes do deploy.
-* **Segurança e SLA Contratual:** Empresa formalizada com CNPJ, emissão de NFS-e, contrato com tempo de resposta garantido e código 100% de propriedade da sua empresa.
+* **Segurança Jurídica & SLA Contratual:** Sociedade Limitada Unipessoal constituída no DF, emissão regular de NFS-e, contrato com teto indenizatório (Damage Cap), tempo de resposta garantido e código 100% de titularidade da sua empresa mediante quitação.
 
 ---
 
@@ -62,7 +62,7 @@ Para criação de novos sistemas, portais ou módulos com Inteligência Artifici
 
 Estamos à disposição para alinhar qualquer detalhe técnico.
 
-**TRD Consultoria e Serviços de TI LTDA**  
-CNPJ: [00.000.000/0001-00] | Brasília - DF  
-Thiago Rocha Duarte — Sócio Proprietário & Engenheiro Chefe  
-E-mail: contato@trdconsultoria.com.br | WhatsApp: (61) [Seu Número]  
+**TRD Consultoria e Serviços de TI LTDA** (Em Homologação Cadastral — JUCIS-DF)  
+Sede: Brasília - DF  
+Thiago Rocha Duarte — Sócio Fundador & Engenheiro Chefe  
+E-mail: contato@trdconsultoria.com.br (Canal Direto: thiago.rocha.duarte@gmail.com) | WhatsApp: (61) 98111-XXXX  

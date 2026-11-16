@@ -82,10 +82,10 @@ Scripts validados para abordagem direta via WhatsApp, LinkedIn e plataformas de 
 
 > Olá, [Nome do Contratante]! Li atentamente o seu desafio com [mencionar exatamente o problema citado, ex: o erro de sincronização do banco de dados].
 > 
-> Nós somos uma consultoria de desenvolvimento estruturada com CNPJ próprio e emissão de NFS-e, liderada por arquiteto sênior com 20 anos de experiência técnica em [Java / Angular / SQL].
+> Sou fundador de uma consultoria técnica de engenharia de software (TRD), liderada por arquiteto sênior com quase 20 anos de experiência técnica corporativa em [Java / Angular / SQL].
 > 
 > **Diferenciais que garantem a segurança do seu projeto:**
-> 1. **Engenharia Sênior com Governança e IA:** Não atuo como freelancer avulso; entrego estrutura empresarial formalizada com CNPJ e NFS-e, onde a velocidade da inteligência artificial é combinada com quase 20 anos de experiência arquitetural própria.
+> 1. **Engenharia Sênior com Governança e IA:** Não atuo como freelancer amador; opero com contratos formais, emissão de NFS-e, termo de confidencialidade (NDA) e quase 20 anos de experiência arquitetural própria acelerada por esteira de IA.
 > 2. **Resolução Rápida com Metodologia AI-Augmented:** Identificamos a causa raiz do problema e implementamos a solução testada em até 48 horas.
 > 3. **Segurança Jurídica:** Emitimos Nota Fiscal de Serviços (NFS-e), assinamos Termo de Confidencialidade (NDA) e fornecemos garantia pós-entrega.
 > 

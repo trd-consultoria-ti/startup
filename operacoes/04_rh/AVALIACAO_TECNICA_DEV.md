@@ -53,3 +53,68 @@ O candidato recebe um mini-repositório com uma aplicação simples de controle 
 1. *"Explique como você identificou a causa raiz do problema de performance no desafio."*
 2. *"Se o banco de dados desse cliente começasse a atingir 100% de CPU em produção às 10h da manhã, quais seriam os seus três primeiros passos de diagnóstico?"*
 3. *"Como você utilizou ferramentas de IA para resolver o teste e quais partes você precisou corrigir manualmente?"*
+
+---
+
+## 5. Gabarito Técnico & Schema SQL Oficial de Teste (`seed.sql`)
+
+Para validação prática do candidato, o avaliador utiliza a seguinte estrutura relacional de referência:
+
+```sql
+-- DDL DE REFERÊNCIA: PEDIDOS E ITENS (CENÁRIO N+1)
+CREATE TABLE IF NOT EXISTS clientes (
+    id BIGSERIAL PRIMARY KEY,
+    nome VARCHAR(150) NOT NULL,
+    documento VARCHAR(20) UNIQUE NOT NULL,
+    criado_em TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE IF NOT EXISTS pedidos (
+    id BIGSERIAL PRIMARY KEY,
+    cliente_id BIGINT NOT NULL REFERENCES clientes(id),
+    status VARCHAR(30) NOT NULL,
+    total_centavos BIGINT NOT NULL,
+    versao BIGINT NOT NULL DEFAULT 0, -- Optimistic Locking
+    criado_em TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE IF NOT EXISTS itens_pedido (
+    id BIGSERIAL PRIMARY KEY,
+    pedido_id BIGINT NOT NULL REFERENCES pedidos(id) ON DELETE CASCADE,
+    produto_nome VARCHAR(120) NOT NULL,
+    quantidade INT NOT NULL,
+    preco_unitario_centavos BIGINT NOT NULL
+);
+
+-- SEED DE DADOS PARA REPRODUÇÃO DE CARGA
+INSERT INTO clientes (id, nome, documento) VALUES 
+(1, 'Distribuidora Central DF', '01.234.567/0001-89'),
+(2, 'Atacadista Planalto', '98.765.432/0001-10');
+
+INSERT INTO pedidos (id, cliente_id, status, total_centavos, versao)
+SELECT 
+    g, 
+    (g % 2) + 1, 
+    CASE WHEN g % 3 = 0 THEN 'PENDENTE' ELSE 'APROVADO' END,
+    (g * 1500),
+    0
+FROM generate_series(1, 1000) g;
+
+INSERT INTO itens_pedido (pedido_id, produto_nome, quantidade, preco_unitario_centavos)
+SELECT 
+    p.id, 
+    'SKU-' || (i % 50), 
+    (i % 10) + 1, 
+    1500
+FROM pedidos p
+CROSS JOIN generate_series(1, 5) i;
+
+-- GABARITO DA CONSULTA OFENSORA (N+1 queries no Hibernate):
+-- SELECT p FROM Pedido p; -- Dispara 1000 selects adicionais em itens_pedido!
+
+-- GABARITO DA REFATORAÇÃO CORRETA:
+-- SELECT DISTINCT p FROM Pedido p LEFT JOIN FETCH p.itens WHERE p.status = :status;
+-- OU consulta nativa indexada:
+CREATE INDEX IF NOT EXISTS idx_pedidos_status_criado ON pedidos (status, criado_em DESC);
+```
+

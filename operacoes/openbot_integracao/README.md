@@ -1,6 +1,6 @@
-# Integração OpenBot ↔ Empresa Empreender
+# Integração OpenBot ↔ TRD Consultoria e Serviços de TI LTDA
 
-Este diretório contém a integração completa da nossa empresa com a plataforma **OpenBot**, permitindo que a Torre de Controle (`Pai de todos`) orquestre tanto as demandas técnicas de desenvolvimento de software quanto as operações de negócio da empresa.
+Este diretório contém a integração completa da TRD com a plataforma **OpenBot**, permitindo que a Torre de Controle (`Pai de todos`) orquestre tanto as demandas técnicas de desenvolvimento de software quanto as operações de negócio da empresa.
 
 ---
 
@@ -22,9 +22,9 @@ Este diretório contém a integração completa da nossa empresa com a plataform
 Para cada um dos 6 robôs no OpenBot (menu lateral → **Novo Agente**):
 
 1. **Nome:** O nome da tabela acima (ex: `Operativo-Comercial`).
-2. **Modelo:** `SWE-2 High (Free)` (ou o modelo ativo de fallback).
+2. **Modelo:** `LLM Raciocínio Avançado` (Claude 3.5 Sonnet, GPT-4o ou Gemini Pro).
 3. **Descrição:** Abra o arquivo `.md` correspondente na pasta `agentes/` e copie todo o bloco de código para o campo de descrição.
-4. **Workspace:** Defina a pasta raiz do repositório da empresa (`E:\empresa empreender`).
+4. **Workspace:** Defina a pasta raiz do repositório oficial da TRD.
 5. **Context Pack:** Certifique-se de que o arquivo `C:\Users\Thiago Duarte\OpenBot\Shared\context-packs\empresa-empreender.md` está ativo (já configurado).
 
 ---

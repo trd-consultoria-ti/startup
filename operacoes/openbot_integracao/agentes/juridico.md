@@ -2,8 +2,8 @@
 
 **Nome sugerido:** `Operativo-Juridico`  
 **Título:** Guardião Legal & Compliance Contratual PJ  
-**Modelo:** SWE-2 High (Free) / Antigravity gemini-3.8-flash  
-**Workspace:** `E:\empresa empreender`
+**Modelo:** LLM Raciocínio Avançado (Claude 3.5 Sonnet / GPT-4o / Gemini Pro)  
+**Workspace:** Raiz do Repositório (Workspace)
 
 ---
 

@@ -68,10 +68,10 @@ flowchart LR
 
 * **Fase 1 – Break-even Operacional (Meses 1 a 2):**
   * Meta: **1 Contrato Pagante no Plano Profissional (R$ 5.500,00/mês)** ou 1 Discovery Técnico (R$ 3.500,00) convertido.
-  * Resultado: O faturamento cobre integralmente todos os custos operacionais (OPEX mensal de ~R$ 1.500,00), impostos e contabilidade, assegurando sobrevivência sem queima de capital.
+  * Resultado: O faturamento cobre integralmente todos os custos operacionais (OPEX inicial de ~R$ 950,00/mês), impostos e contabilidade, assegurando sobrevivência e lucro desde o primeiro mês.
 * **Fase 2 – Tração & Fator R Otimizado (Meses 3 a 5):**
   * Meta: **R$ 30.000,00 a R$ 50.000,00 de MRR** (5 a 8 clientes recorrentes).
-  * Resultado: Pró-Labore formalizado para o fundador, garantia do Fator R no Anexo III (alíquota de 6%), formação da reserva de contingência e distribuição trimestral de lucros isentos.
+  * Resultado: Pró-Labore formalizado para o fundador, garantia do Fator R no Anexo III (alíquota progressiva de 6% a 10,56% em vez de 15,5% a 17,85% do Anexo V, economizando até R$ 43.740,00/ano no DAS), formação da reserva de contingência e distribuição trimestral de lucros isentos.
 * **Fase 3 – Consolidação e Escala de Alta Rentabilidade (Meses 6 a 12):**
   * Meta: **R$ 100.000,00 a R$ 120.000,00 de MRR** (sustentação contínua combinada com 2 squads de modernização com agentes autônomos de IA sob medida).
   * Resultado: Retiradas de alto nível para o sócio proprietário, com reinvestimento programado em contratação e expansão do squad.
@@ -247,7 +247,7 @@ Para atuar antes que o cliente perceba a lentidão ou instabilidade:
 ### 4.6. Stack de Engenharia Assistida por Inteligência Artificial
 Para garantir a velocidade e precisão da boutique:
 * **IDE & Dev Tools:** Licença corporativa do **Cursor Enterprise** para o fundador, configurada com arquivos corporativos de contexto (`.cursorrules`).
-* **Modelos de Linguagem de Fronteira:** Contas corporativas e chaves de API centralizadas na Anthropic (**Claude 3.5 Sonnet / Claude 3.5 Opus**), OpenAI (**GPT-4o**) e Google (**Gemini 1.5 Pro**).
+* **Modelos de Linguagem de Fronteira:** Contas corporativas e chaves de API centralizadas na Anthropic (**Claude 3.5 Sonnet / Claude 3 Opus**), OpenAI (**GPT-4o**) e Google (**Gemini 1.5 Pro**).
 * **Prompts e Frameworks Proprietários:** Repositório interno com agentes especializados em:
   * Auditoria estática de código legado;
   * Otimização de consultas SQL lentas (*EXPLAIN ANALYZE*);
@@ -341,7 +341,7 @@ flowchart TD
 ```
 
 * **Fase 1 – Zero Pró-Labore (Bootstrapping Inicial):** Nos primeiros meses de vida da empresa, o fundador não fará retirada mensal de Pró-Labore. Toda a receita líquida gerada será blindada no caixa PJ para cobrir os custos operacionais (contador, licenças de IA e servidores) e acelerar a formação da reserva de segurança.
-* **Fase 2 – Ativação do Fator R (Tração Comercial):** A partir do momento em que a carteira recorrente atingir o patamar de estabilidade (R$ 25.000 a R$ 30.000/mês), a assessoria contábil emitirá o Pró-Labore do fundador fixado em **28,1% da Receita Bruta Acumulada (RBT12)**. Isso garante o direito incontestável ao enquadramento das atividades de software no **Anexo III (alíquota inicial de 6,00%)**, gerando economia líquida de mais de R$ 27.700,00 anuais em relação ao Anexo V.
+* **Fase 2 – Ativação do Fator R (Tração Comercial):** A partir do momento em que a carteira recorrente atingir o patamar de estabilidade (R$ 25.000 a R$ 30.000/mês), a assessoria contábil emitirá o Pró-Labore do fundador fixado em **28,1% a 28,5% da Receita Bruta Acumulada (RBT12)**. Isso garante o enquadramento das atividades no **Anexo III (alíquota efetiva progressiva a partir de 6,00%, chegando a 10,56% a R$ 50k/mês)**, gerando economia líquida de até R$ 43.740,00 anuais no DAS em relação ao Anexo V.
 * **Regra de Retenção do Colchão de Segurança:** Todo mês, 20% do lucro líquido contábil apurado será compulsoriamente retido na conta PJ da empresa até que se atinja a meta mínima de **3 (três) meses de OPEX fixo (aproximadamente R$ 4.500,00 a R$ 6.000,00)**.
 * **Distribuição de Dividendos Isentos:** A distribuição ao fundador será formalizada em balancetes contábeis trimestrais com base no Art. 10 da Lei nº 9.249/1995, garantindo isenção total de IRPF sobre os lucros distribuídos.
 

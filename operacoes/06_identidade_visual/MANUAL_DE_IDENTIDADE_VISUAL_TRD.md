@@ -80,14 +80,22 @@ A identidade cromática da TRD Consultoria e Serviços de TI LTDA é fundamentad
 - **Info / Telemetria IA (Neural Cyan):** `#0EA5E9` (Rotina autônoma de self-healing e diagnósticos).
 
 ### 3.5. Regras de Acessibilidade (WCAG 2.2 AAA & APCA)
-1. **Contraste no Dark Mode**: O texto em `#FFFFFF` sobre `#080D1A` alcança contraste de **19.77:1** (superior ao padrão AAA de 7:1; APCA Lc = 106.8).
-2. **Restrição em Fundo Claro**: O `#0EA5E9` é PROIBIDO para textos corridos sobre fundo branco (contraste 2.74:1). Em superfícies claras, utilize obrigatoriamente o **`cyan-700` (`#0369A1`)**, que atinge **4.85:1 (WCAG AA)**.
-3. **Daltonismo**: O sistema semântico nunca depende exclusivamente de cor. Ícones e rótulos textuais como `[P1 - CRITICAL]` são mandatórios em todos os alertas.
+1. **Contraste no Dark Mode**: 
+   * Texto `#FFFFFF` sobre `#080D1A`: contraste de **19.77:1** (supera amplamente o padrão AAA de 7:1; APCA Lc = 106.8).
+   * Destaques em `#0EA5E9` sobre `#080D1A`: contraste de **7.02:1** (aprovado em WCAG AA para texto normal e AAA para texto em destaque/ícones).
+2. **Restrição Mandatória em Fundo Claro**: 
+   * O `#0EA5E9` puro é **PROIBIDO** para tipografia sobre fundo branco (contraste insuficiente de 2.74:1). Em superfícies claras, utilize obrigatoriamente o **`cyan-800` (`#075985`)**, que atinge **7.14:1 (WCAG AAA)**.
+3. **Badges de Severidade (P1 a P4) Acessíveis**:
+   * Em superfícies claras, nunca use texto branco sobre o tom puro do alerta. Utilize a combinação de alto contraste:
+     - **P1 Crítico:** Texto Crimson `#991B1B` sobre fundo `#FEE2E2` (**7.15:1 — AAA**)
+     - **P2/P3 Alerta:** Texto Amber `#92400E` sobre fundo `#FEF3C7` (**7.38:1 — AAA**)
+     - **Sucesso:** Texto Emerald `#065F46` sobre fundo `#D1FAE5` (**7.42:1 — AAA**)
+4. **Daltonismo**: O sistema semântico nunca depende exclusivamente de cor. Ícones e rótulos textuais como `[P1 - CRÍTICO]` são mandatórios em todos os alertas.
 
 ## 4. DIRETRIZES DE UX, ACESSIBILIDADE & DIGITAL (VISÃO DO UX DESIGNER)
 
 ### 4.1. Conformidade de Acessibilidade (WCAG 2.2 Nível AAA)
-- **Contraste Obsidian Navy sobre Branco:** **19.2:1** (Supera amplamente o requisito AAA de 7.0:1).
+- **Contraste Obsidian Navy sobre Branco:** **19.77:1** (Supera amplamente o requisito AAA de 7.0:1).
 - **Contraste Platinum White sobre Obsidian Navy:** **18.5:1** (Aprovação total em interfaces Dark Mode).
 - **Acento Ciano sobre Obsidian Navy:** **8.4:1** (Legibilidade garantida para status indicators e badges).
 

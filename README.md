@@ -7,10 +7,10 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/trd-consultoria-ti/startup"><img src="https://img.shields.io/badge/Status-v1.0--PROD-080D1A?style=for-the-badge&logo=github&logoColor=white" alt="Status"></a>
-  <a href="operacoes/06_identidade_visual/MANUAL_DE_IDENTIDADE_VISUAL_TRD.md"><img src="https://img.shields.io/badge/Brand_Score-9.8%20%2F%2010-10B981?style=for-the-badge" alt="Brand Score"></a>
-  <a href="operacoes/05_administracao/PLANEJAMENTO_TRIBUTARIO_E_FINANCEIRO.md"><img src="https://img.shields.io/badge/Fator_R-6.0%25-1D4ED8?style=for-the-badge" alt="Fator R"></a>
-  <a href="LICENSE"><img src="https://img.shields.io/badge/Licen%C3%A7a-MIT-1E293B?style=for-the-badge" alt="Licença"></a>
+  <a href="https://github.com/trd-consultoria-ti/startup"><img src="https://img.shields.io/badge/Status-Em_Constitui%C3%A7%C3%A3o_(D--30)-080D1A?style=for-the-badge&logo=github&logoColor=white" alt="Status"></a>
+  <a href="operacoes/01_juridico/ACORDO_DE_SOCIOS.md"><img src="https://img.shields.io/badge/Governan%C3%A7a-LTDA_Unipessoal-0EA5E9?style=for-the-badge" alt="Governança"></a>
+  <a href="operacoes/05_administracao/PLANEJAMENTO_TRIBUTARIO_E_FINANCEIRO.md"><img src="https://img.shields.io/badge/Regime-Simples_Nacional_(LC_123)-1D4ED8?style=for-the-badge" alt="Regime Tributário"></a>
+  <a href="LICENSE"><img src="https://img.shields.io/badge/Licen%C3%A7a-Dual_(Propriet%C3%A1ria_%2F_MIT)-1E293B?style=for-the-badge" alt="Licença"></a>
 </p>
 
 # TRD Consultoria e Serviços de TI LTDA
@@ -27,7 +27,7 @@
 
 ---
 
-## 🎨 Identidade Visual & Design System Oficial (Nota 9.8 Homologada)
+## 🎨 Identidade Visual & Design System Oficial
 
 A identidade visual da TRD foi concebida sob o arquétipo da **Soberania, Rigor Matemático e Estabilidade**, aprovada por banca integrada (Marketing B2B, UX Design, Auditoria Crítica e Colorimetria Industrial):
 

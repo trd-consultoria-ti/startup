@@ -1,3 +1,28 @@
+# TERMOS DE LICENCIAMENTO & DIREITOS AUTORAIS
+### TRD Consultoria e Serviços de TI LTDA — Brasília/DF, Brasil
+
+O repositório e os seus ativos operam sob modelo de licenciamento dual (Dual Licensing):
+
+---
+
+## 1. Documentos Corporativos, Marca e Identidade Visual (DIREITOS RESERVADOS)
+
+**Copyright (c) 2026 TRD Consultoria e Serviços de TI LTDA. Todos os direitos reservados.**
+
+Os seguintes componentes são de titularidade e propriedade intelectual exclusiva da **TRD Consultoria e Serviços de TI LTDA**:
+* A marca comercial, o logotipo, o símbolo *Keystone Isométrica*, os vetores em `assets/` e o Manual de Identidade Visual (`operacoes/06_identidade_visual/`);
+* As minutas contratuais de prestação de serviços, termos de confidencialidade (NDA), protocolos de SLA e propostas comerciais (`operacoes/01_juridico/` e `operacoes/02_comercial_marketing/`);
+* O Plano Mestre de Lançamento e o Planejamento Tributário e Financeiro (`PLANO_DE_LANCAMENTO_EMPRESARIAL.md` e `operacoes/05_administracao/`).
+
+É expressamente proibida a cópia não autorizada, exploração comercial de marca alheia, distribuição ou utilização de instrumentos com o nome, razão social ou marcas figurativas da TRD Consultoria e Serviços de TI LTDA por terceiros sem autorização prévia e por escrito.
+
+---
+
+## 2. Código-Fonte e Componentes Técnicos Reutilizáveis (LICENÇA MIT)
+
+O código-fonte de componentes utilitários (como componentes React `LogoTRD.tsx`, tokens W3C, estilos Tailwind e scripts de automação em `scratch/` ou `site/`) é disponibilizado sob os termos da **Licença MIT**:
+
+```text
 MIT License
 
 Copyright (c) 2026 TRD Consultoria e Serviços de TI LTDA
@@ -19,3 +44,4 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+```
