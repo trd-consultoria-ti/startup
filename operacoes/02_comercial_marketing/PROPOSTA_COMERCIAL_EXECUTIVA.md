@@ -32,7 +32,7 @@ Ideal para empresas que já possuem sistemas em produção e necessitam de garan
 | **Otimização de Banco de Dados SQL** | Sim | Sim | Sim |
 | **Monitoramento Proativo & Alertas** | Básico | Avançado | Tempo Real 24/7 |
 | **Reunião de Alinhamento Técnico** | Mensal | Quinzenal | Semanal |
-| **Hora Adicional Excedente** | R$ 200,00 / hora | R$ 180,00 / hora | R$ 160,00 / hora |
+| **Hora Adicional Excedente** | R$ 140,00 / hora | R$ 130,00 / hora | R$ 120,00 / hora |
 | **INVESTIMENTO MENSAL** | **R$ 2.200,00 / mês** | **R$ 4.000,00 / mês (Base R$ 100/h)** | **R$ 6.000,00 / mês (Base R$ 100/h)** |
 
 > *Nota: O banco de horas mensal destina-se a manutenções corretivas e evoluções contínuas. As horas não são cumulativas para o mês subsequente. Nossos contratos possuem cláusula padrão de Limitação de Responsabilidade Civil (Damage Cap) e SLA com bonificação em crédito financeiro, garantindo total segurança jurídica e previsibilidade para ambas as partes.*
@@ -47,7 +47,20 @@ Antes de assumir a sustentação de um sistema complexo, realizamos um diagnóst
 
 ---
 
-### OPÇÃO C: Desenvolvimento Sob Medida / Novos Módulos (Sprints Quinzenais)
+### OPÇÃO C: Troubleshooting Cirúrgico & Intervenção Sob Demanda (Sprint 10h)
+Para empresas que necessitam de intervenção técnica imediata para sanar gargalos pontuais graves sem contratação mensal prévia:
+* **Casos Típicos de Atuação:**
+  - *Performance Tuning de Banco & JPA:* Eliminação de queries lentas, correção de N+1, deadlock SQL e vazamento de conexões.
+  - *Saneamento de PII & Adequação LGPD:* Higienização de dados pessoais expostos em logs/repositórios e adequação de políticas.
+  - *Governança & Riscos de Operação:* Ajuste de SLAs contratuais, contenção de custos e mitigação de vulnerabilidades.
+  - *Hotfix Crítico & Deploy:* Correção emergencial de falhas impeditivas em produção e destravamento de esteiras.
+* **Prazo de Atendimento:** Início imediato em até **24h a 48h**.
+* **Investimento:** **R$ 1.800,00 (pagamento único)** por sprint de 10 horas técnicas.
+* *Bônus Especial de Conversão:* Caso o cliente migre para um Plano de Sustentação Mensal (Profissional ou Enterprise) dentro de 30 dias, **50% do valor pago no Troubleshooting (R$ 900,00) é convertido em crédito na primeira mensalidade**.
+
+---
+
+### OPÇÃO D: Desenvolvimento Sob Medida / Novos Módulos (Sprints Quinzenais)
 Para criação de novos sistemas, portais ou módulos com Inteligência Artificial:
 * **Metodologia:** Ciclos de entrega quinzenais (Sprints) com código homologado a cada 14 dias.
 * **Investimento:** **R$ 8.000,00 por Sprint Quinzenal**.

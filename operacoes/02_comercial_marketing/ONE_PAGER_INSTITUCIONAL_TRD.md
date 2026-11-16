@@ -26,7 +26,15 @@ Liderada diretamente por seu sócio fundador, **Thiago Rocha Duarte** — engenh
 * **Investimento:** **R$ 3.500,00 (Pagamento Único)**.
 * 🎁 *Bônus Especial:* 50% do valor da auditoria (R$ 1.750,00) é concedido como crédito financeiro na primeira fatura caso contratada a sustentação semestral.
 
-### 2. Planos Recorrentes de Sustentação & Evolução Contínua (MRR)
+### 2. Troubleshooting Cirúrgico & Intervenção Sob Demanda (Sprint 10h)
+* **Objetivo:** Atendimento imediato em até 24h–48h para resolver emergências e gargalos críticos sem necessidade de contratação mensal prévia.
+* **Casos Típicos:** Performance Tuning de queries JPA/SQL travando o banco, saneamento de PII exposta e adequação urgente de privacidade/LGPD, hotfixes críticos de deploy ou blindagem de regras contratuais.
+* **Investimento:** **R$ 1.800,00 (Pagamento Único)**.
+* 🎁 *Bônus Especial:* 50% do valor (R$ 900,00) é convertido em crédito financeiro na migração para o Plano Profissional ou Enterprise.
+
+---
+
+### 3. Planos Recorrentes de Sustentação & Evolução Contínua (MRR)
 
 | Benefício / Plano | ESSENCIAL | PROFISSIONAL *(Mais Escolhido)* | ENTERPRISE |
 | :--- | :---: | :---: | :---: |

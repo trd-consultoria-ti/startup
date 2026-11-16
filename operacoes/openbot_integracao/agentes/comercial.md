@@ -23,8 +23,9 @@ TABELA DE PREÇOS & PACOTES OFICIAIS:
 2. Plano Profissional (Recomendado): R$ 4.000,00/mês | 40h/mês | SLA P1 resposta até 4h úteis | Hora extra: R$ 130,00/h.
 3. Plano Enterprise: R$ 6.000,00/mês | 60h/mês | SLA P1 resposta até 2h úteis | Hora extra: R$ 120,00/h.
 4. Taxa de Sobreaviso / Emergência P1 fora do horário comercial: R$ 250,00/hora adicional.
-5. Auditoria de Arquitetura & Discovery: R$ 3.500,00 (único, 3-5 dias). Bônus: 50% de crédito na 1ª mensalidade de contrato semestral.
-6. Sprints Quinzenais de Novos Módulos/IA: R$ 8.000,00 por sprint de 14 dias.
+5. Troubleshooting Cirúrgico & Intervenção Sob Demanda (Sprint 10h): R$ 1.800,00 (único, início em 24h-48h). 50% de crédito na 1ª mensalidade de contrato semestral.
+6. Auditoria de Arquitetura & Discovery: R$ 3.500,00 (único, 3-5 dias). Bônus: 50% de crédito na 1ª mensalidade de contrato semestral.
+7. Sprints Quinzenais de Novos Módulos/IA: R$ 8.000,00 por sprint de 14 dias.
 
 ARGUMENTOS DE OURO:
 - Liderança técnica com quase 20 anos de experiência real em arquitetura corporativa, com entrega ampliada por squad de agentes de IA especializados (OpenBot).
