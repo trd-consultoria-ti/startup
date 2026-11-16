@@ -22,6 +22,11 @@ operacoes/
 ├── 05_administracao/
 │   ├── MATRIZ_SEVERIDADE_E_SLA.md              # Protocolo de atendimento P1/P2/P3 e gestão de chamados
 │   └── PLANEJAMENTO_TRIBUTARIO_E_FINANCEIRO.md (.docx) # Manual CFO: Simples Nacional a 6%, Fator R e Reservas
+├── 06_identidade_visual/
+│   ├── MANUAL_DE_IDENTIDADE_VISUAL_TRD.md      # Manual de governança, Pantone, Rich Black e WCAG AAA
+│   ├── tokens.json / tokens.css                # Design tokens oficiais de cores e tipografia
+│   ├── LogoTRD.tsx                             # Componente oficial React / Next.js
+│   └── papel_timbrado_template.md              # Template de timbrado para propostas e laudos
 └── openbot_integracao/                 # Integração e Robôs Especialistas para o OpenBot
     ├── README.md                       # Guia de implantação e fluxo de orquestração
     └── agentes/                        # Perfis prontos: Comercial, Jurídico, SLA, FinOps, Marketing, RH

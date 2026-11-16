@@ -1,0 +1,91 @@
+/**
+ * TRD Consultoria e Serviços de TI LTDA
+ * Design System - Color Tokens v2.0.0
+ * Calibração Científica: WCAG 2.2 AAA & APCA Standard
+ */
+
+:root {
+  /* ==========================================================================
+     1. PALETA INSTITUCIONAL BASE (OBSIDIAN NAVY SHADES)
+     ========================================================================== */
+  --trd-color-obsidian-50:  #F0F4F8;
+  --trd-color-obsidian-100: #E2E8F0;
+  --trd-color-obsidian-200: #CBD5E1;
+  --trd-color-obsidian-300: #94A3B8;
+  --trd-color-obsidian-400: #64748B;
+  --trd-color-obsidian-500: #475569;
+  --trd-color-obsidian-600: #334155;
+  --trd-color-obsidian-700: #1E293B; /* Titanium Slate */
+  --trd-color-obsidian-800: #0F172A;
+  --trd-color-obsidian-900: #0B1120;
+  --trd-color-obsidian-950: #080D1A; /* Obsidian Navy (Primary Core) */
+
+  /* ==========================================================================
+     2. PALETA DE ACENTO TECNOLÓGICO (NEURAL CYAN SHADES)
+     ========================================================================== */
+  --trd-color-cyan-50:  #F0F9FF;
+  --trd-color-cyan-100: #E0F2FE;
+  --trd-color-cyan-200: #BAE6FD;
+  --trd-color-cyan-300: #7DD3FC;
+  --trd-color-cyan-400: #38BDF8;
+  --trd-color-cyan-500: #0EA5E9; /* Neural Cyan (Core Accent) */
+  --trd-color-cyan-600: #0284C7;
+  --trd-color-cyan-700: #0369A1; /* High Contrast Text for Light Surfaces */
+  --trd-color-cyan-800: #075985;
+  --trd-color-cyan-900: #0C4A6E;
+  --trd-color-cyan-950: #082F49;
+
+  /* ==========================================================================
+     3. SUPERFÍCIES DE SUPORTE
+     ========================================================================== */
+  --trd-color-white:    #FFFFFF;
+  --trd-color-platinum: #F8FAFC;
+
+  /* ==========================================================================
+     4. CORES SEMÂNTICAS OPERACIONAIS (NOC / SRE / SLAS)
+     ========================================================================== */
+  /* Sucesso: 99.99% SLA / Sistemas Estáveis */
+  --trd-semantic-success:               #10B981;
+  --trd-semantic-success-surface-dark:  #064E3B;
+  --trd-semantic-success-surface-light: #ECFDF5;
+  --trd-semantic-success-text-dark:     #34D399;
+
+  /* Atenção: Degradação de Desempenho / Incidente P3-P4 */
+  --trd-semantic-warning:               #F59E0B;
+  --trd-semantic-warning-surface-dark:  #78350F;
+  --trd-semantic-warning-surface-light: #FFFBEB;
+  --trd-semantic-warning-text-dark:     #FBBF24;
+
+  /* Crítico: Incidente P1 / Outage Total / PagerDuty */
+  --trd-semantic-critical:              #EF4444;
+  --trd-semantic-critical-surface-dark: #7F1D1D;
+  --trd-semantic-critical-surface-light:#FEF2F2;
+  --trd-semantic-critical-text-dark:    #F87171;
+
+  /* Informativo: Telemetria & IA */
+  --trd-semantic-info:                  #0EA5E9;
+  --trd-semantic-info-surface-dark:     #082F49;
+  --trd-semantic-info-surface-light:    #F0F9FF;
+  --trd-semantic-info-text-dark:        #7DD3FC;
+
+  /* ==========================================================================
+     5. TOKENS DE APLICAÇÃO CONTEXTUAL (LIGHT / DARK MODES)
+     ========================================================================== */
+  --trd-bg-primary:       var(--trd-color-white);
+  --trd-bg-secondary:     var(--trd-color-platinum);
+  --trd-text-primary:     var(--trd-color-obsidian-950);
+  --trd-text-secondary:   var(--trd-color-obsidian-700);
+  --trd-border:           var(--trd-color-obsidian-100);
+  --trd-accent:           var(--trd-color-cyan-700); /* Acessível em fundo claro */
+}
+
+/* Dark Mode Primário (Brand High-End Experience) */
+[data-theme="dark"], .theme-dark {
+  --trd-bg-primary:       var(--trd-color-obsidian-950);
+  --trd-bg-secondary:     var(--trd-color-obsidian-900);
+  --trd-bg-surface:       var(--trd-color-obsidian-800);
+  --trd-text-primary:     var(--trd-color-white);
+  --trd-text-secondary:   var(--trd-color-obsidian-300);
+  --trd-border:           rgba(255, 255, 255, 0.08);
+  --trd-accent:           var(--trd-color-cyan-500); /* AAA em fundo escuro */
+}

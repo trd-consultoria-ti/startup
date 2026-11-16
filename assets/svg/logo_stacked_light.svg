@@ -1,0 +1,26 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="100%" height="100%">
+  <!-- TRD Consultoria de TI - Vers├úo Vertical / Stacked (Fundo Claro) -->
+  <g transform="translate(200, 70)">
+    <!-- S├¡mbolo Keystone Centralizado (H = 140) -->
+    <g id="keystone-symbol" transform="translate(-70, 0)">
+      <polygon points="70,7 133,43 70,79 7,43" fill="#080D1A"/>
+      <polygon points="7,52 63,84 63,138 7,106" fill="#080D1A"/>
+      <polygon points="77,84 133,52 133,106 77,138" fill="#080D1A"/>
+    </g>
+  </g>
+  <!-- Tipografia Centralizada -->
+  <g id="typography" text-anchor="middle">
+    <text x="200" y="275" 
+          font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" 
+          font-size="76" 
+          font-weight="900" 
+          letter-spacing="4" 
+          fill="#080D1A">TRD</text>
+    <text x="200" y="320" 
+          font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" 
+          font-size="16" 
+          font-weight="600" 
+          letter-spacing="7" 
+          fill="#1E293B">CONSULTORIA DE TI</text>
+  </g>
+</svg>
