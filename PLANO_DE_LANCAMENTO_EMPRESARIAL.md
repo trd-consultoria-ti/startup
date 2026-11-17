@@ -250,9 +250,10 @@ Para atuar antes que o cliente perceba a lentidão ou instabilidade:
 * **Webhooks de Alertas:** Disparo automatizado de alertas de queda de serviço diretamente para o canal privado de engenharia do fundador.
 
 ### 4.5. Plataforma de Assinatura Digital de Contratos
-* Implantação de conta empresarial no **ZapSign** ou **ClickSign**.
-* Total conformidade com a **Lei Federal nº 14.063/2020** e o Art. 10 da Medida Provisória nº 2.200-2/2001.
-* Todas as contratações (NDA, Proposta Comercial e Contrato de Sustentação) exigirão coleta de IP, geolocalização, carimbo de tempo (*timestamp*) e confirmação de e-mail/WhatsApp dos signatários antes da liberação de acessos operacionais.
+* Padrão oficial corporativo adotado: **Assinador Eletrônico do Governo Federal (Gov.br / ITI)**, com respaldo complementar de plataformas em nuvem.
+* Total conformidade com a **Lei Federal nº 14.063/2020 (Art. 4º, II - Assinatura Eletrônica Avançada)**, **Decreto nº 10.543/2020** e o Art. 10 da Medida Provisória nº 2.200-2/2001.
+* Todas as contratações (NDA, Proposta Comercial, Contrato de Desenvolvimento Sob Medida e Contrato de Sustentação) utilizam assinatura digital avançada com carimbo de tempo oficial, hash criptográfico SHA-256 e validação pública pelo portal oficial `validar.iti.gov.br`.
+* Procedimento operacional padronizado detalhado em: [GUIA_ASSINATURA_DIGITAL_GOVBR.md](operacoes/01_juridico/GUIA_ASSINATURA_DIGITAL_GOVBR.md).
 
 ### 4.6. Stack de Engenharia Assistida por Inteligência Artificial
 Para garantir a velocidade e precisão da boutique:
