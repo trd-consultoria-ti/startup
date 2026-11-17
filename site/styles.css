@@ -37,14 +37,14 @@
   --border-hairline-accent: rgba(245, 158, 11, 0.25);
   --text: #F8FAFC;
   --text-2: #CBD5E1;
-  --text-3: #94A3B8;
+  --text-3: #9CA3AF;
   --accent: #F59E0B;
   --accent-text: #F59E0B;
   --accent-hover: #FBBF24;
   --on-accent: #080D1A;
   --keystone-fill: #F8FAFC;
   --success: #34D399;
-  --danger: #F87171;
+  --danger: #FCA5A5;
   --tag-bg: rgba(245, 158, 11, 0.12);
   --tag-border: rgba(245, 158, 11, 0.3);
   --callout-bg: rgba(245, 158, 11, 0.08);
@@ -99,8 +99,8 @@
   --accent-hover: #92400E;
   --on-accent: #FFFFFF;
   --keystone-fill: #080D1A;
-  --success: #059669;
-  --danger: #DC2626;
+  --success: #065F46;
+  --danger: #991B1B;
   --tag-bg: #FEF3C7;
   --tag-border: #FCD34D;
   --callout-bg: #FFFBEB;
@@ -208,10 +208,9 @@ a:focus-visible, button:focus-visible, input:focus-visible, summary:focus-visibl
 .measure { max-width: 70ch; }
 
 /* ---------- Tipografia & Headings ---------- */
-h1, h2, h3, h4 { color: var(--text); font-weight: 800; letter-spacing: -.02em; line-height: 1.15; }
+h1, h2, h3, h4 { color: var(--text); font-weight: 800; letter-spacing: -.02em; line-height: 1.15; word-break: break-word; }
 h1 {
   font-size: clamp(1.85rem, 5vw, 3.5rem);
-  word-break: break-word;
   hyphens: auto;
 }
 h2 { font-size: clamp(1.6rem, 3.5vw, 2.5rem); }
@@ -255,6 +254,7 @@ h3 { font-size: 1.25rem; }
   color: var(--text);
   text-decoration: none;
   flex-shrink: 0;
+  min-height: 44px;
 }
 .nav__brand:hover { color: var(--text); }
 .nav__word { display: flex; flex-direction: column; line-height: 1.1; }
@@ -268,7 +268,14 @@ h3 { font-size: 1.25rem; }
   font-size: .875rem;
   font-weight: 500;
 }
-.nav__links a { color: var(--text-2); text-decoration: none; }
+.nav__links a {
+  color: var(--text-2);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding-inline: .25rem;
+}
 .nav__links a:hover { color: var(--accent-text); }
 
 .nav__actions {
@@ -299,6 +306,10 @@ h3 { font-size: 1.25rem; }
 .theme-toggle:focus-visible {
   outline: 2px solid var(--accent);
   outline-offset: 2px;
+}
+
+.theme-toggle__icon {
+  display: block;
 }
 
 [data-theme="dark"] .theme-toggle__icon--moon { display: none !important; }
@@ -403,7 +414,7 @@ h3 { font-size: 1.25rem; }
 .btn--sm {
   padding: .55rem 1.1rem;
   font-size: .75rem;
-  min-height: 38px;
+  min-height: 44px;
 }
 
 /* ---------- Hero ---------- */
@@ -498,26 +509,45 @@ h3 { font-size: 1.25rem; }
 .grid { display: grid; gap: 1.5rem; }
 .grid--2 { grid-template-columns: 1fr; }
 .grid--3 { grid-template-columns: 1fr; }
+.grid--4 { grid-template-columns: 1fr; }
+@media (min-width: 640px) {
+  .grid--3 { grid-template-columns: repeat(2, 1fr); }
+  .grid--4 { grid-template-columns: repeat(2, 1fr); }
+}
 @media (min-width: 768px) {
   .grid--2 { grid-template-columns: repeat(2, 1fr); }
+}
+@media (min-width: 1024px) {
   .grid--3 { grid-template-columns: repeat(3, 1fr); }
+  .grid--4 { grid-template-columns: repeat(4, 1fr); }
 }
 
 .card {
+  display: flex;
+  flex-direction: column;
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--radius-card);
   padding: 2rem;
   box-shadow: var(--shadow-card);
-  transition: border-color .15s ease, background-color .2s ease;
+  transition: transform .15s ease, border-color .15s ease, box-shadow .15s ease, background-color .2s ease;
+}
+.card > .btn {
+  margin-top: auto;
 }
 @media (max-width: 480px) {
   .card { padding: 1.5rem; }
 }
-.card:hover { border-color: var(--border-strong); }
+.card:hover {
+  border-color: var(--border-strong);
+  transform: translateY(-2px);
+}
 .card--featured {
   border-color: var(--accent);
   position: relative;
+}
+.card--featured:hover {
+  border-color: var(--accent-hover);
 }
 .card--danger {
   border-color: var(--danger-border);
@@ -537,7 +567,11 @@ h3 { font-size: 1.25rem; }
   border-radius: 4px;
 }
 .card__tag {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  align-self: flex-start;
+  width: fit-content;
+  margin-bottom: .85rem;
   padding: .25rem .6rem;
   border-radius: 4px;
   font-size: .6875rem;
@@ -547,6 +581,7 @@ h3 { font-size: 1.25rem; }
   background: var(--tag-bg);
   color: var(--accent-text);
   border: 1px solid var(--tag-border);
+  line-height: 1.2;
 }
 
 /* Preço */
@@ -579,6 +614,51 @@ h3 { font-size: 1.25rem; }
   color: var(--text);
 }
 .strong { font-weight: 700; color: var(--text); }
+
+/* Fichas Técnicas dos Cases (.specrow) */
+.card dl,
+.card__specs {
+  margin-top: auto;
+  padding-top: .85rem;
+  border-top: 1px solid var(--border);
+}
+.specrow {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  font-size: .8125rem;
+  padding-block: .3rem;
+  gap: .25rem 1rem;
+}
+.specrow dt {
+  color: var(--text-3);
+  font-weight: 600;
+  font-size: .75rem;
+  text-transform: uppercase;
+  letter-spacing: .05em;
+  flex-shrink: 0;
+}
+.specrow dd {
+  color: var(--text);
+  font-family: var(--font-mono);
+  font-size: .78rem;
+  text-align: right;
+  margin-left: auto;
+  word-break: break-word;
+}
+@media (max-width: 480px) {
+  .specrow {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: .15rem;
+    padding-block: .35rem;
+  }
+  .specrow dd {
+    text-align: left;
+    margin-left: 0;
+  }
+}
 
 /* ---------- Artefato Técnico: Terminal SQL Tuning ---------- */
 .terminal {
@@ -642,13 +722,18 @@ h3 { font-size: 1.25rem; }
   color: #E2E8F0;
   -webkit-overflow-scrolling: touch;
 }
+.terminal__code-block {
+  display: flex;
+  flex-direction: column;
+}
 .terminal__divider {
+  display: block;
   height: 1px;
   background: rgba(255, 255, 255, 0.08);
   margin: 1.25rem 0;
 }
-.code-comment { color: #64748B; font-style: italic; }
-.code-line { margin-top: .25rem; }
+.code-comment { display: block; color: #64748B; font-style: italic; }
+.code-line { display: block; margin-top: .25rem; }
 .code-line--danger { color: #FCA5A5; }
 .code-line--success { color: #86EFAC; }
 .code-line--dim { color: #94A3B8; padding-left: 1rem; }
@@ -660,6 +745,9 @@ h3 { font-size: 1.25rem; }
 .code-tag--success { color: #10B981; }
 
 /* ---------- Matriz de Severidade & Tabela de SLA ---------- */
+.sla-matrix-wrap {
+  margin-top: 4rem;
+}
 .table-responsive {
   width: 100%;
   overflow-x: auto;

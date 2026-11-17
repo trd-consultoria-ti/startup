@@ -90,3 +90,44 @@ Scripts validados para abordagem direta via WhatsApp, LinkedIn e plataformas de 
 > 3. **Segurança Jurídica:** Emitimos Nota Fiscal de Serviços (NFS-e), assinamos Termo de Confidencialidade (NDA) e fornecemos garantia pós-entrega.
 > 
 > Estou disponível agora no chat para tirar qualquer dúvida e iniciar o diagnóstico do seu código imediatamente!
+
+
+---
+
+## 6. Abordagem no WhatsApp / LinkedIn: O Fim da "Morte por Planilhas" (Para Donos de PMEs)
+* **Alvo:** Sócios-fundadores, CEOs e Diretores de Operações de PMEs (serviços B2B, distribuidoras, construtoras, clínicas, logística).
+* **Canal:** WhatsApp direto ou mensagem no LinkedIn.
+
+> Olá, [Nome do Dono], tudo bem?
+> 
+> Aqui é o Thiago, sou engenheiro de software e fundador da TRD Consultoria aqui de Brasília.
+> 
+> Conversando com donos de empresas que estão crescendo, vejo que quase todos enfrentam a mesma dor: a operação começa a se perder em dezenas de planilhas desatualizadas e pedidos soltos no WhatsApp, ou então pagam mensalidades caras por usuário em sistemas prontos engessados que não atendem as regras do negócio.
+> 
+> Nós criamos **sistemas corporativos sob medida (CRM, Hub de Gestão de OS e Financeiro)** desenhados exatamente para o fluxo da sua empresa, entregues em 3 a 4 semanas, com código 100% seu (sem mensalidade por funcionário) e parcelamento em até 12x no cartão corporativo.
+> 
+> Estamos selecionando 3 empresas para o nosso programa de lançamento deste mês com condições especiais e acompanhamento sênior direto.
+> 
+> Você teria 15 minutos nesta semana para eu te mostrar como desenhamos esse sistema para o seu processo sem nenhum compromisso?
+> 
+> Um abraço,  
+> **Thiago Duarte** | TRD Consultoria e Serviços de TI LTDA  
+> WhatsApp: +55 (61) 99207-8335
+
+---
+
+## 7. Proposta para Pedidos de "Criação de Sistema / CRM Sob Medida" (Freelance / Redes)
+* **Alvo:** Clientes corporativos procurando desenvolvedores para criar CRM, painel administrativo, Mini-ERP ou portal web.
+* **Canal:** 99Freelas, Workana, LinkedIn ou grupos de empresários.
+
+> Olá, [Nome do Contratante]! Li atentamente os requisitos do seu projeto para a criação de [mencionar o sistema, ex: CRM / Hub de Gestão Operacional].
+> 
+> Sou engenheiro de software sênior e fundador da **TRD Consultoria e Serviços de TI LTDA** (CNPJ: 43.065.207/0001-57). Minha carreira inclui liderança técnica em sistemas de missão crítica em instituições como Ministério da Justiça, Serasa Experian e CVM.
+> 
+> **Por que construir o seu sistema com a TRD?**
+> 1. **Entrega Rápida em 3 a 4 Semanas:** Possuímos uma esteira de arquitetura e componentes prontos (login, permissões, layout responsivo, banco PostgreSQL), acelerando o desenvolvimento para focar direto na sua regra de negócio.
+> 2. **Código 100% Seu (Sem Lock-in):** Ao final do projeto, todo o código-fonte customizado é formalmente transferido para a sua empresa (Lei 9.609/98). Você não fica preso a licenças mensais por usuário.
+> 3. **Segurança Jurídica & Garantia:** Contrato formal PJ com teto indenizatório (*Damage Cap*), emissão de NFS-e, 30 dias de garantia técnica inclusa e possibilidade de pagamento facilitado em até 12x no cartão de crédito.
+> 4. **Retaguarda Contínua:** Após a entrega, você pode contar com nosso plano de sustentação contínua com SLA para manter o sistema atualizado e seguro.
+> 
+> Tenho disponibilidade hoje para uma conversa técnica rápida de 15 minutos para desenharmos a estrutura do seu MVP. Qual o melhor horário para você?

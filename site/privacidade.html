@@ -138,6 +138,10 @@
         }
       }
 
+      // Sincroniza estado inicial dos atributos do botão e meta tag
+      const currentTheme = document.documentElement.getAttribute('data-theme') || 'dark';
+      applyTheme(currentTheme, false);
+
       if (toggleBtn) {
         toggleBtn.addEventListener('click', function() {
           const current = document.documentElement.getAttribute('data-theme') || 'dark';

@@ -367,17 +367,27 @@ flowchart LR
     D --> C["Contrato de Sustentação & IA\n(MRR Recorrente:\nR$ 3.8k / R$ 5.5k / R$ 8.5k)"]
 ```
 
-### 6.1. O Catálogo de Ofertas de Entrada
-Nossa estratégia de vendas evita a fricção de contratos longos logo na primeira reunião, utilizando a abordagem de *Discovery Técnico*:
-1. **Oferta Front-End (O Pé na Porta): Sprint Diagnóstico de Arquitetura (Discovery de 5 Dias)**
-   * **Objetivo:** Assumir o sistema do cliente em caráter de auditoria rápida sem risco para ele.
-   * **Entregáveis:** Varredura em 5 dias de lentidão de banco de dados SQL, vulnerabilidades de segurança, análise de acoplamento de código e plano de ação priorizado.
-   * **Valor:** **R$ 3.500,00 à vista (pagamento único)**.
-   * **O Fechamento Irrecusável (*Cashback da Sustentação*):** Ao contratar o plano de manutenção semestral da nossa empresa, **50% do valor da auditoria (R$ 1.750,00) é abatido como crédito financeiro na primeira fatura**.
-2. **Oferta Core (Receita Recorrente - MRR): Contratos de Sustentação & Evolução com IA**
-   * **Plano Essencial (R$ 3.200,00/mês):** 20 horas mensais, primeira resposta em até 8h úteis, suporte corretivo e banco de dados.
-   * **Plano Profissional - O Mais Vendido (R$ 5.500,00/mês):** 40 horas mensais, primeira resposta em até 4h úteis, reuniões quinzenais, monitoramento avançado e evoluções contínuas.
-   * **Plano Enterprise (R$ 8.000,00/mês):** 60 horas mensais, primeira resposta em até 2h úteis, suporte prioritário, observabilidade 24/7 e deploys de módulos de IA.
+### 6.1. O Catálogo de Ofertas Oficiais
+
+Nossa estratégia comercial opera com duas grandes avenidas de monetização: **Criação de Novos Sistemas Sob Medida** (geração rápida de caixa à vista e no cartão) e **Receita Recorrente Previsível (MRR)** via sustentação contínua:
+
+1. **Avenida 1: Criação de Sistemas Sob Medida (CRM, Hub de Gestão & Portais Corporativos)**
+   * **Objetivo:** Atender PMEs que sofrem com o caos de planilhas e com as mensalidades abusivas por usuário de SaaS de prateleira, entregando sistemas modernos (React/Next.js + PostgreSQL) em tempo recorde (2 a 4 semanas) com o *TRD Core Boilerplate*.
+   * **Sistema Starter (CRM Enxuto / Painel Operacional):** **R$ 9.800,00 à vista** ou faturado 50/50 no boleto (ou em até 12x no cartão corporativo). Até 3 módulos essenciais e 30 dias de garantia inclusa.
+   * **Hub de Gestão Pro (OS, Financeiro, Estoque + WhatsApp):** **R$ 16.500,00 à vista** ou em até 12x no cartão. Plataforma completa com automação inteligente e 30 dias de garantia.
+   * **Propriedade Intelectual:** Código 100% de titularidade do cliente após quitação (Lei 9.609/98).
+   * **Pós-Entrega (Plano Continuidade TRD):** **R$ 1.800,00/mês** (10h mensais com SLA garantido) para garantir a retenção em MRR logo após os 30 dias de garantia.
+
+2. **Avenida 2: Oferta Front-End de Resgate (Mini-Discovery & Diagnóstico com Cashback)**
+   * **Mini-Discovery de Arquitetura (3 a 5 Dias):** R$ 950,00 a R$ 1.500,00 com **100% de cashback** dedutível caso o cliente contrate a criação do sistema com a TRD (sai a custo zero).
+   * **Sprint Diagnóstico de Sistemas Legados (5 Dias):** R$ 3.500,00 com 50% de cashback na contratação de planos semestrais de sustentação.
+   * **Troubleshooting Cirúrgico (Sprint 10h):** R$ 1.800,00 para apagar incêndios e destravar bancos de dados em até 24h a 48h.
+
+3. **Avenida 3: Sustentação & Evolução Contínua de Sistemas Existentes (MRR)**
+   * **Plano Continuidade TRD (Exclusivo Sistemas TRD):** R$ 1.800,00/mês (10h mensais com SLA P1 até 4h).
+   * **Plano Essencial:** R$ 3.200,00/mês (20 horas mensais, manutenção corretiva e queries SQL).
+   * **Plano Profissional - O Mais Vendido:** R$ 5.500,00/mês (40 horas mensais, monitoramento proativo com alertas e reuniões quinzenais).
+   * **Plano Enterprise:** R$ 8.000,00/mês (60 horas mensais, suporte prioritário 24/7 e deploys de módulos de IA).
 
 ### 6.2. Ativação do Funil Outbound em 5 Verticais Concomitantes
 Utilizando integralmente o playbook validado em [SCRIPTS_PROSPECCAO_OUTBOUND.md](operacoes/02_comercial_marketing/SCRIPTS_PROSPECCAO_OUTBOUND.md):

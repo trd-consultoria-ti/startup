@@ -69,14 +69,18 @@ A identidade visual da TRD foi concebida sob o arquétipo da **Soberania, Rigor 
 │   └── svg/                                     # Suíte completa com 10 arquivos vetoriais SVG
 └── operacoes/
     ├── 01_juridico/
-    │   ├── CONTRATO_SUSTENTACAO_E_SLA.md (.docx)   # Contrato B2B com Damage Cap e retenção de IP
+    │   ├── ACORDO_PARCERIA_COMERCIAL_E_REQUISITOS_FREELANCE.md (.pdf) # [NOVO] Acordo de Parceria & Comissionamento (Victoria / SDRs)
+    │   ├── CONTRATO_DESENVOLVIMENTO_SOFTWARE_SOB_MEDIDA.md (.pdf) # Contrato B2B de Criação de Sistemas (CRM, Hub de Gestão)
+    │   ├── CONTRATO_SUSTENTACAO_E_SLA.md (.docx / .pdf) # Contrato B2B com Damage Cap e retenção de IP
     │   ├── ACORDO_CONFIDENCIALIDADE_NDA.md (.docx) # NDA bilateral com conformidade LGPD
     │   ├── ACORDO_DE_SOCIOS.md (.docx)             # Minuta contingencial: Admissão futura com Vesting (4 anos)
     │   ├── TERMO_PARCERIA_E_COMISSAO_INDICACAO.md  # Contrato de canal com agências (comissão recorrente de 10-15%)
     │   └── CONTRATO_PRESTACAO_SERVICOS_PARCEIRO_SOBREAVISO.md # Contrato PJ de Engenheiro Backup de Sobreaviso
     ├── 02_comercial_marketing/
-    │   ├── PROPOSTA_COMERCIAL_EXECUTIVA.md (.docx) # Proposta de alto valor (Piso R$ 3.200 a R$ 8.000/mês)
-    │   ├── ONE_PAGER_INSTITUCIONAL_TRD.md (.docx)  # Folheto executivo de 1 página para WhatsApp/LinkedIn
+    │   ├── GUIA_COLABORADOR_CAPTURA_E_REQUISITOS_CLAUDE.md (.pdf) # [NOVO] Guia Operacional de Captura & Elicitação com Claude
+    │   ├── QUESTIONARIO_REQUISITOS_SISTEMAS_SOB_MEDIDA.md (.pdf) # Questionário Executivo de Requisitos Homologado
+    │   ├── PROPOSTA_COMERCIAL_EXECUTIVA.md (.docx / .pdf) # Proposta de alto valor (Sistemas sob medida e Sustentação)
+    │   ├── ONE_PAGER_INSTITUCIONAL_TRD.md (.docx / .pdf)  # Folheto executivo de 1 página para WhatsApp/LinkedIn
     │   ├── CHECKLIST_DIAGNOSTICO_SAUDE_SISTEMA.md  # Lead magnet: Checklist de 15 pontos de risco para CTOs
     │   ├── CASES_DE_SUCESSO_E_AUTORIDADE.md        # 3 estudos de caso estruturais (SQL, Legado Java e LGPD)
     │   └── SCRIPTS_PROSPECCAO_OUTBOUND.md          # 5 scripts de abordagem (LinkedIn, WhatsApp DF, Agências)
@@ -103,14 +107,18 @@ A identidade visual da TRD foi concebida sob o arquétipo da **Soberania, Rigor 
 
 ---
 
-### 📥 Documentos Executivos em Word (.docx) para Download
-Para agilizar fechamentos comerciais, assinaturas digitais (Gov.br / ZapSign / ClickSign) e reuniões societárias/contábeis, todos os instrumentos burocráticos possuem versão editável `.docx`:
+### 📥 Documentos Executivos em Word (.docx) e PDF Oficial (.pdf) para Download
+Para agilizar fechamentos comerciais, assinaturas digitais (Gov.br / ZapSign / ClickSign) e reuniões societárias/contábeis, todos os instrumentos burocráticos possuem versão editável `.docx` e versão diagramada em alta fidelidade `.pdf` (sem caminhos de arquivo, com cabeçalho timbrado e logotipo oficial):
 - 🏛️ **Plano Mestre de Lançamento:** [`PLANO_DE_LANCAMENTO_EMPRESARIAL.docx`](PLANO_DE_LANCAMENTO_EMPRESARIAL.docx)
-- 🤝 **Acordo de Quotistas — Minuta para Futura Admissão (Vesting):** [`ACORDO_DE_SOCIOS.docx`](operacoes/01_juridico/ACORDO_DE_SOCIOS.docx)
-- 📜 **Contrato de Sustentação & SLA:** [`CONTRATO_SUSTENTACAO_E_SLA.docx`](operacoes/01_juridico/CONTRATO_SUSTENTACAO_E_SLA.docx)
+- 🤝 **Acordo de Parceria Comercial & Requisitos (Victoria / SDRs):** [`ACORDO_PARCERIA_COMERCIAL_E_REQUISITOS_FREELANCE.pdf`](operacoes/01_juridico/ACORDO_PARCERIA_COMERCIAL_E_REQUISITOS_FREELANCE.pdf)
+- 💻 **Contrato de Desenvolvimento de Software Sob Medida:** [`CONTRATO_DESENVOLVIMENTO_SOFTWARE_SOB_MEDIDA.pdf`](operacoes/01_juridico/CONTRATO_DESENVOLVIMENTO_SOFTWARE_SOB_MEDIDA.pdf)
+- 📜 **Contrato de Sustentação & SLA:** [`CONTRATO_SUSTENTACAO_E_SLA.docx`](operacoes/01_juridico/CONTRATO_SUSTENTACAO_E_SLA.docx) · [`CONTRATO_SUSTENTACAO_E_SLA.pdf`](operacoes/01_juridico/CONTRATO_SUSTENTACAO_E_SLA.pdf)
 - 🔒 **Acordo de Confidencialidade (NDA):** [`ACORDO_CONFIDENCIALIDADE_NDA.docx`](operacoes/01_juridico/ACORDO_CONFIDENCIALIDADE_NDA.docx)
-- 💼 **Proposta Comercial Executiva:** [`PROPOSTA_COMERCIAL_EXECUTIVA.docx`](operacoes/02_comercial_marketing/PROPOSTA_COMERCIAL_EXECUTIVA.docx)
-- 📄 **One-Pager Institucional (Deck Executivo):** [`ONE_PAGER_INSTITUCIONAL_TRD.docx`](operacoes/02_comercial_marketing/ONE_PAGER_INSTITUCIONAL_TRD.docx)
+- 💼 **Proposta Comercial Executiva:** [`PROPOSTA_COMERCIAL_EXECUTIVA.docx`](operacoes/02_comercial_marketing/PROPOSTA_COMERCIAL_EXECUTIVA.docx) · [`PROPOSTA_COMERCIAL_EXECUTIVA.pdf`](operacoes/02_comercial_marketing/PROPOSTA_COMERCIAL_EXECUTIVA.pdf)
+- 📄 **One-Pager Institucional (Deck Executivo):** [`ONE_PAGER_INSTITUCIONAL_TRD.docx`](operacoes/02_comercial_marketing/ONE_PAGER_INSTITUCIONAL_TRD.docx) · [`ONE_PAGER_INSTITUCIONAL_TRD.pdf`](operacoes/02_comercial_marketing/ONE_PAGER_INSTITUCIONAL_TRD.pdf)
+- 📘 **Guia do Colaborador (Captura & Requisitos com Claude):** [`GUIA_COLABORADOR_CAPTURA_E_REQUISITOS_CLAUDE.pdf`](operacoes/02_comercial_marketing/GUIA_COLABORADOR_CAPTURA_E_REQUISITOS_CLAUDE.pdf)
+- 📋 **Questionário de Requisitos Homologado:** [`QUESTIONARIO_REQUISITOS_SISTEMAS_SOB_MEDIDA.pdf`](operacoes/02_comercial_marketing/QUESTIONARIO_REQUISITOS_SISTEMAS_SOB_MEDIDA.pdf)
+- 🤝 **Acordo de Quotistas — Minuta para Futura Admissão (Vesting):** [`ACORDO_DE_SOCIOS.docx`](operacoes/01_juridico/ACORDO_DE_SOCIOS.docx)
 - 💰 **Planejamento Tributário & Financeiro:** [`PLANEJAMENTO_TRIBUTARIO_E_FINANCEIRO.docx`](operacoes/05_administracao/PLANEJAMENTO_TRIBUTARIO_E_FINANCEIRO.docx)
 
 ---
