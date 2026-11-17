@@ -52,7 +52,7 @@ Softwares desenvolvidos exatamente para o fluxo da sua empresa, entregues em tem
 Agende uma sessão técnica de diagnóstico de 30 minutos sem compromisso:
 
 * **Diretoria Técnica & Atendimento:** Thiago Rocha Duarte
-* **E-mail:** contato@trdconsultoria.com.br | **WhatsApp:** +55 (61) 99207-8335
+* **E-mail:** contato@trdconsultoria.com.br | **WhatsApp:** +55 (61) 99952-6374
 * **Portal Oficial:** [trd-consultoria-ti.github.io/startup](https://trd-consultoria-ti.github.io/startup/)
 * **Razão Social:** THIAGO ROCHA DUARTE - CONSULTORIA E SERVICOS DE TI LTDA (CNPJ: 43.065.207/0001-57)
 * **Sede:** Brasília - DF | Atendimento para todo o Brasil

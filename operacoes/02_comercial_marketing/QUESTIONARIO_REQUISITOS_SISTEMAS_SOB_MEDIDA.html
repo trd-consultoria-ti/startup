@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>Questionário de Requisitos — TRD Consultoria</title>
+<style>
+@page {
+    size: A4;
+    margin: 18mm 16mm 18mm 16mm;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-size: 10pt;
+    line-height: 1.55;
+    color: #1e293b;
+    background: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+
+/* CABEÇALHO INSTITUCIONAL TIMBRADO */
+.trd-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #080d1a;
+    padding-bottom: 12px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.trd-header::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background: #0ea5e9;
+}
+
+.trd-header-left {
+    flex-shrink: 0;
+}
+
+.trd-header-right {
+    text-align: right;
+    font-size: 7.5pt;
+    color: #475569;
+    line-height: 1.4;
+}
+
+.trd-header-right strong {
+    font-size: 8.5pt;
+    color: #080d1a;
+    display: block;
+    margin-bottom: 2px;
+}
+
+/* CONTEÚDO PRINCIPAL */
+.trd-content h1 {
+    font-size: 16pt;
+    color: #080d1a;
+    letter-spacing: -0.02em;
+    margin-top: 10px;
+    margin-bottom: 14px;
+    line-height: 1.3;
+}
+
+.trd-content h2 {
+    font-size: 13pt;
+    color: #080d1a;
+    border-bottom: 1px solid #e2e8f0;
+    padding-bottom: 4px;
+    margin-top: 24px;
+    margin-bottom: 10px;
+    letter-spacing: -0.01em;
+}
+
+.trd-content h3 {
+    font-size: 11pt;
+    color: #0284c7;
+    margin-top: 18px;
+    margin-bottom: 8px;
+}
+
+.trd-content h4 {
+    font-size: 10pt;
+    color: #334155;
+    margin-top: 14px;
+    margin-bottom: 6px;
+}
+
+.trd-content p {
+    margin: 6px 0 10px 0;
+    text-align: justify;
+}
+
+.trd-content ul, .trd-content ol {
+    margin: 6px 0 12px 0;
+    padding-left: 22px;
+}
+
+.trd-content li {
+    margin-bottom: 4px;
+}
+
+.trd-content hr {
+    border: 0;
+    border-top: 1px solid #cbd5e1;
+    margin: 20px 0;
+}
+
+.trd-content blockquote {
+    border-left: 4px solid #0ea5e9;
+    background: #f8fafc;
+    padding: 8px 14px;
+    margin: 12px 0;
+    color: #334155;
+    font-style: italic;
+    border-radius: 0 4px 4px 0;
+}
+
+/* TABELAS CORPORATIVAS */
+.trd-content table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 14px 0;
+    font-size: 8.5pt;
+    page-break-inside: avoid;
+}
+
+.trd-content th {
+    background: #080d1a;
+    color: #ffffff;
+    font-weight: 600;
+    padding: 7px 10px;
+    text-align: left;
+    border: 1px solid #080d1a;
+    letter-spacing: 0.02em;
+}
+
+.trd-content td {
+    padding: 6px 10px;
+    border: 1px solid #e2e8f0;
+    color: #334155;
+}
+
+.trd-content tr:nth-child(even) td {
+    background: #f8fafc;
+}
+
+/* BLOCOS DE CÓDIGO E PRE */
+.trd-content pre {
+    background: #0f172a;
+    color: #f8fafc;
+    padding: 10px 14px;
+    border-radius: 6px;
+    font-size: 8pt;
+    line-height: 1.45;
+    overflow-x: auto;
+    page-break-inside: avoid;
+}
+
+.trd-content code {
+    font-family: ui-monospace, Consolas, Monaco, monospace;
+}
+
+.trd-content p code {
+    background: #f1f5f9;
+    color: #0f172a;
+    padding: 1px 4px;
+    border-radius: 3px;
+    font-size: 9pt;
+}
+
+/* EVITAR QUEBRAS INDEVIDAS */
+table, pre, blockquote, .card {
+    page-break-inside: avoid;
+}
+
+h1, h2, h3, h4 {
+    page-break-after: avoid;
+}
+
+/* RODAPÉ CORPORATIVO */
+.trd-footer {
+    margin-top: 30px;
+    border-top: 1px solid #e2e8f0;
+    padding-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 7pt;
+    color: #64748b;
+}
+</style>
+</head>
+<body>
+
+<header class="trd-header">
+    <div class="trd-header-left">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 220" style="max-width: 190px; height: auto;">
+  <!-- TRD Consultoria e Serviços de TI - Versão Oficial Fundo Claro -->
+  <g transform="translate(45, 25)">
+    <!-- Símbolo Cubo Isométrico Oficial -->
+    <g id="keystone-symbol">
+      <polygon points="85,8 162,52 85,96 8,52" fill="#080D1A"/>
+      <polygon points="8,63 76,102 76,168 8,129" fill="#080D1A"/>
+      <polygon points="94,102 162,63 162,129 94,168" fill="#080D1A"/>
+    </g>
+
+    <!-- Bloco Tipográfico Oficial -->
+    <g id="typography" transform="translate(220, 0)">
+      <!-- Linha 1: TRD -->
+      <text x="0" y="100" 
+            font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" 
+            font-size="105" 
+            font-weight="900" 
+            letter-spacing="5" 
+            fill="#080D1A">TRD</text>
+
+      <!-- Linha 2: CONSULTORIA & SERVIÇOS DE TI -->
+      <text x="2" y="152" 
+            font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" 
+            font-size="22" 
+            font-weight="600" 
+            letter-spacing="10.5" 
+            fill="#080D1A">CONSULTORIA &amp; SERVIÇOS DE TI</text>
+    </g>
+  </g>
+</svg>
+    </div>
+    <div class="trd-header-right">
+        <strong>THIAGO ROCHA DUARTE - CONSULTORIA E SERVICOS DE TI LTDA</strong>
+        CNPJ: 43.065.207/0001-57 · Simples Nacional · Ativa desde 10/08/2021<br>
+        Sede: Brasília - DF, Brasil · contato@trdconsultoria.com.br<br>
+        https://trd-consultoria-ti.github.io/startup/
+    </div>
+</header>
+
+<main class="trd-content">
+<h1>QUESTIONÁRIO EXECUTIVO DE REFINAMENTO DE REQUISITOS — HOMOLOGADO</h1>
+<h2>Nova Vertical: Criação de Sistemas Sob Medida &amp; Soluções Corporativas Customizadas</h2>
+<p><strong>TRD Consultoria e Serviços de TI LTDA</strong><br />
+<em>Documento Estratégico de Elicitação de Requisitos de Produto e Modelo de Negócio</em><br />
+<em>Aprovado por: Thiago Rocha Duarte (Sócio-Fundador &amp; Arquiteto Chefe)</em><br />
+<em>Data de Homologação: 17 de Novembro de 2026 | Versão: v1.0.0-PROD</em></p>
+<hr />
+<h3>🎯 Objetivo deste Instrumento</h3>
+<p>Consolidar a modelagem comercial, técnica, escopo e governança da nova vertical de negócio da <strong>TRD Consultoria</strong>: a <strong>Criação de Sistemas Corporativos Sob Medida</strong> (CRMs Proprietários, Hubs de Gestão / Mini-ERPs Operacionais, Backoffices e Portais Corporativos com Inteligência Artificial).</p>
+<hr />
+<h2>BLOCO 1: Perfil do Cliente &amp; Posicionamento de Mercado (ICP)</h2>
+<h4>1.1. Quem é o decisor e o perfil da empresa contratante prioritária?</h4>
+<ul>
+<li>[x] <strong>PMEs Operacionais e Negócios Enxutos:</strong> Pequenas e médias empresas (distribuidoras locais, prestadores de serviços B2B, comércio e operações regionais).</li>
+<li><strong>Decisor:</strong> O próprio <strong>Sócio-Fundador / Dono / CEO</strong>, garantindo ciclo rápido de vendas e negociação direta sem burocracia de comitês.</li>
+</ul>
+<h4>1.2. Qual a dor principal (gatilho de compra) que tira o cliente do status quo?</h4>
+<ul>
+<li>[x] <strong>O "Combo PME":</strong> </li>
+<li>Caos de planilhas Excel/Google Sheets desatualizadas;</li>
+<li>Pedidos e orçamentos perdidos em conversas soltas de WhatsApp;</li>
+<li>Frustração com SaaS de prateleira (engessados, complicados e com mensalidades abusivas por usuário);</li>
+<li>Trauma de freelancers amadores que abandonaram o código cheio de bugs.</li>
+</ul>
+<h4>1.3. Qual é o diferencial irrefutável de posicionamento da TRD neste serviço?</h4>
+<ul>
+<li>[x] <strong>O Tripé Estrutural TRD:</strong></li>
+<li><em>"Software de Missão Crítica liderado por Engenharia Sênior formalizada (CNPJ ativo desde 2021 em Brasília);"</em></li>
+<li><em>"Feito sob medida para a sua operação, sem cobrança abusiva de licença por funcionário;"</em></li>
+<li><em>"Propriedade Intelectual 100% sua + Garantia de 30 dias + Retaguarda contínua de suporte com SLA contratual."</em></li>
+</ul>
+<hr />
+<h2>BLOCO 2: Tipologia dos Sistemas &amp; Escopo Típico</h2>
+<h4>2.1. Quais tipologias de produto compõem a vitrine oficial?</h4>
+<ul>
+<li>[x] <strong>1. CRM Operacional B2B Customizado:</strong> Gestão de funil de vendas, cadastro de clientes/leads, emissão de orçamentos/pedidos rápidos e integração com WhatsApp.</li>
+<li>[x] <strong>2. Hub de Gestão Operacional / Mini-ERP:</strong> Controle de Ordens de Serviço (OS), fluxo financeiro integrado (contas a pagar/receber, conciliação Pix/boleto) e controle de estoque ou prestação de serviços.</li>
+<li>[x] <strong>3. Portais do Cliente / Extranets Corporativas:</strong> Área logada segura para clientes acompanharem pedidos, baixarem notas fiscais e solicitarem suporte.</li>
+<li>[x] <strong>4. Dashboards &amp; Painéis Executivos:</strong> Visualização de indicadores em tempo real para o dono acompanhar vendas e caixa no celular.</li>
+<li>[x] <strong>5. Sistemas Personalizados com IA Aplicada:</strong> Workflows automatizados, geração de relatórios com LLMs e leitura inteligente de documentos.</li>
+</ul>
+<h4>2.2. Qual a regra de delimitação do MVP (Versão 1.0)?</h4>
+<ul>
+<li>[x] <strong>Estratégia do MVP em 4 a 6 Semanas (Até 3 Módulos Core):</strong></li>
+<li>Módulo 1: Acessos, Permissões (RBAC) e Cadastros Base;</li>
+<li>Módulo 2: O Motor Operacional (Funil de Vendas / OS / Workflow principal);</li>
+<li>Módulo 3: Fechamento, Relatórios e Exportação.</li>
+<li><em>Regra de Ouro:</em> Quaisquer novas ideias durante o desenvolvimento são documentadas e direcionadas para a fase pós-Go-Live dentro da sustentação contínua.</li>
+</ul>
+<hr />
+<h2>BLOCO 3: Stack Tecnológica, Aceleração com IA &amp; Arquitetura</h2>
+<h4>3.1. Matriz de Tecnologias Oficial:</h4>
+<ul>
+<li><strong>Frontend Master:</strong> React / Next.js (TypeScript) + Tailwind CSS + shadcn/ui.</li>
+<li><strong>Banco de Dados:</strong> PostgreSQL (robusto, seguro, com suporte a JSONB e pgvector).</li>
+<li><strong>Backend Flexível por Demanda:</strong></li>
+<li><em>Projetos Corporativos e Regulados:</em> Java 21 + Spring Boot 3;</li>
+<li><em>Projetos de Alta Velocidade e IA:</em> Node.js / TypeScript ou Python (FastAPI).</li>
+</ul>
+<h4>3.2. TRD Core Boilerplate (Acelerador de Entrega):</h4>
+<ul>
+<li>[x] <strong>Sim, padrão obrigatório:</strong> Kit base modular com Autenticação segura, Níveis de Acesso (RBAC), Layout administrativo responsivo, auditoria de logs LGPD e exportações. Garante <strong>40% do projeto pronto no Dia 1</strong>.</li>
+</ul>
+<h4>3.3. Papel da Inteligência Artificial:</h4>
+<ul>
+<li>[x] <strong>Aceleração Interna + Módulos Nativos:</strong> Utilização de ferramentas de IA para aceleração do desenvolvimento de código e oferta opcional de módulos de IA aplicada no software do cliente.</li>
+</ul>
+<hr />
+<h2>BLOCO 4: Modelo Comercial, Precificação &amp; Condições de Pagamento</h2>
+<h4>4.1. Tabela de Preços de Lançamento (Penetração Agressiva de Mercado):</h4>
+<ul>
+<li><strong>1. Sistema Starter (CRM Enxuto ou Painel Operacional):</strong></li>
+<li><em>Investimento:</em> <strong>R$ 8.900,00 a R$ 9.800,00</strong> (Pagamento único).</li>
+<li><em>Prazo de Entrega:</em> 2 a 3 semanas.</li>
+<li><em>Condição:</em> 50% de entrada (R$ 4.900 na assinatura) + 50% na homologação do Go-Live.</li>
+<li><strong>2. Hub de Gestão Pro (OS, Financeiro, Estoque + WhatsApp):</strong></li>
+<li><em>Investimento:</em> <strong>R$ 16.500,00 a R$ 18.000,00</strong> (Pagamento único).</li>
+<li><em>Prazo de Entrega:</em> 4 semanas.</li>
+<li><em>Condição:</em> 50% de entrada (R$ 8.250 na assinatura) + 50% na homologação do Go-Live.</li>
+</ul>
+<h4>4.2. Formas de Pagamento Oficiais:</h4>
+<ul>
+<li>[x] <strong>À Vista via Pix / Transferência PJ</strong> (com condição especial à vista);</li>
+<li>[x] <strong>Boleto Bancário Faturado (50% de entrada + 50% no Go-Live)</strong>;</li>
+<li>[x] <strong>Cartão de Crédito em até 12x</strong> via link de pagamento seguro com operadora (Asaas / InfinitePay / Stripe / Mercado Pago).</li>
+</ul>
+<h4>4.3. Funil de Vendas &amp; Fechamento:</h4>
+<ul>
+<li>[x] <strong>Caminho Principal:</strong> Diagnóstico rápido de 30 minutos gratuito ➔ Proposta comercial direta na mesa em até 24 horas.</li>
+<li>[x] <strong>Estepe para Clientes Hesitantes:</strong> Mini-Discovery de Arquitetura por <strong>R$ 950,00 a R$ 1.500,00</strong> com <strong>100% de cashback</strong> dedutível na contratação da construção do sistema.</li>
+</ul>
+<hr />
+<h2>BLOCO 5: Garantia, Propriedade Intelectual &amp; Pós-Venda</h2>
+<h4>5.1. Garantia Técnica Pós-Go-Live:</h4>
+<ul>
+<li>[x] <strong>30 Dias de Garantia Técnica Inclusa:</strong> Correção sem ônus de qualquer bug ou inconsistência do escopo contratado.</li>
+</ul>
+<h4>5.2. Transição para Recorrência (MRR):</h4>
+<ul>
+<li>[x] <strong>Novo Plano "Continuidade TRD" (Exclusivo para Sistemas Criados pela TRD):</strong></li>
+<li><strong>R$ 1.800,00 / mês (10 horas técnicas mensais com SLA garantido)</strong>.</li>
+<li>Manutenção preventiva, evolução ágil e retaguarda de suporte sênior.</li>
+<li>[x] <strong>Âncora de Hora Avulsa:</strong> Clientes sem plano de continuidade pagam <strong>R$ 220,00/hora técnica avulsa</strong>, sem compromisso de SLA nem prioridade de fila.</li>
+<li>[x] <strong>Evolução Natural:</strong> Migração para o Plano Essencial (R$ 3.200/mês - 20h) ou Profissional (R$ 5.500/mês - 40h) conforme o negócio expandir.</li>
+</ul>
+<h4>5.3. Propriedade Intelectual (Lei 9.609/98):</h4>
+<ul>
+<li>[x] <strong>Código 100% do Cliente:</strong> Transferência integral do código-fonte e repositório condicionada à quitação final financeira.</li>
+<li>[x] <strong>Licença Perpétua dos Boilerplates TRD:</strong> O cliente tem posse perpétua dos componentes base utilizados no projeto, enquanto a TRD retém os direitos autorais para reutilização genérica.</li>
+</ul>
+<h4>5.4. Infraestrutura de Nuvem (Cloud Ops):</h4>
+<ul>
+<li>[x] <strong>Conta Direta do Cliente:</strong> O cliente contrata e mantém sua conta na nuvem (Supabase, Railway, DigitalOcean, AWS) no cartão próprio. A TRD faz o setup, deploy, segurança e CI/CD sem assumir custos de servidores de terceiros.</li>
+</ul>
+<hr />
+<p><em>Homologado por Thiago Rocha Duarte — Sócio-Fundador e Arquiteto Chefe da TRD Consultoria e Serviços de TI LTDA.</em></p>
+</main>
+
+<footer class="trd-footer">
+    <span>TRD Consultoria e Serviços de TI LTDA — Boutique de Engenharia de Software &amp; Missão Crítica</span>
+    <span>Brasília - DF · Brasil · Documento Oficial</span>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>One-Pager Institucional — TRD Consultoria</title>
+<style>
+@page {
+    size: A4;
+    margin: 18mm 16mm 18mm 16mm;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-size: 10pt;
+    line-height: 1.55;
+    color: #1e293b;
+    background: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+
+/* CABEÇALHO INSTITUCIONAL TIMBRADO */
+.trd-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #080d1a;
+    padding-bottom: 12px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.trd-header::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background: #0ea5e9;
+}
+
+.trd-header-left {
+    flex-shrink: 0;
+}
+
+.trd-header-right {
+    text-align: right;
+    font-size: 7.5pt;
+    color: #475569;
+    line-height: 1.4;
+}
+
+.trd-header-right strong {
+    font-size: 8.5pt;
+    color: #080d1a;
+    display: block;
+    margin-bottom: 2px;
+}
+
+/* CONTEÚDO PRINCIPAL */
+.trd-content h1 {
+    font-size: 16pt;
+    color: #080d1a;
+    letter-spacing: -0.02em;
+    margin-top: 10px;
+    margin-bottom: 14px;
+    line-height: 1.3;
+}
+
+.trd-content h2 {
+    font-size: 13pt;
+    color: #080d1a;
+    border-bottom: 1px solid #e2e8f0;
+    padding-bottom: 4px;
+    margin-top: 24px;
+    margin-bottom: 10px;
+    letter-spacing: -0.01em;
+}
+
+.trd-content h3 {
+    font-size: 11pt;
+    color: #0284c7;
+    margin-top: 18px;
+    margin-bottom: 8px;
+}
+
+.trd-content h4 {
+    font-size: 10pt;
+    color: #334155;
+    margin-top: 14px;
+    margin-bottom: 6px;
+}
+
+.trd-content p {
+    margin: 6px 0 10px 0;
+    text-align: justify;
+}
+
+.trd-content ul, .trd-content ol {
+    margin: 6px 0 12px 0;
+    padding-left: 22px;
+}
+
+.trd-content li {
+    margin-bottom: 4px;
+}
+
+.trd-content hr {
+    border: 0;
+    border-top: 1px solid #cbd5e1;
+    margin: 20px 0;
+}
+
+.trd-content blockquote {
+    border-left: 4px solid #0ea5e9;
+    background: #f8fafc;
+    padding: 8px 14px;
+    margin: 12px 0;
+    color: #334155;
+    font-style: italic;
+    border-radius: 0 4px 4px 0;
+}
+
+/* TABELAS CORPORATIVAS */
+.trd-content table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 14px 0;
+    font-size: 8.5pt;
+    page-break-inside: avoid;
+}
+
+.trd-content th {
+    background: #080d1a;
+    color: #ffffff;
+    font-weight: 600;
+    padding: 7px 10px;
+    text-align: left;
+    border: 1px solid #080d1a;
+    letter-spacing: 0.02em;
+}
+
+.trd-content td {
+    padding: 6px 10px;
+    border: 1px solid #e2e8f0;
+    color: #334155;
+}
+
+.trd-content tr:nth-child(even) td {
+    background: #f8fafc;
+}
+
+/* BLOCOS DE CÓDIGO E PRE */
+.trd-content pre {
+    background: #0f172a;
+    color: #f8fafc;
+    padding: 10px 14px;
+    border-radius: 6px;
+    font-size: 8pt;
+    line-height: 1.45;
+    overflow-x: auto;
+    page-break-inside: avoid;
+}
+
+.trd-content code {
+    font-family: ui-monospace, Consolas, Monaco, monospace;
+}
+
+.trd-content p code {
+    background: #f1f5f9;
+    color: #0f172a;
+    padding: 1px 4px;
+    border-radius: 3px;
+    font-size: 9pt;
+}
+
+/* EVITAR QUEBRAS INDEVIDAS */
+table, pre, blockquote, .card {
+    page-break-inside: avoid;
+}
+
+h1, h2, h3, h4 {
+    page-break-after: avoid;
+}
+
+/* RODAPÉ CORPORATIVO */
+.trd-footer {
+    margin-top: 30px;
+    border-top: 1px solid #e2e8f0;
+    padding-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 7pt;
+    color: #64748b;
+}
+</style>
+</head>
+<body>
+
+<header class="trd-header">
+    <div class="trd-header-left">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 220" style="max-width: 190px; height: auto;">
+  <!-- TRD Consultoria e Serviços de TI - Versão Oficial Fundo Claro -->
+  <g transform="translate(45, 25)">
+    <!-- Símbolo Cubo Isométrico Oficial -->
+    <g id="keystone-symbol">
+      <polygon points="85,8 162,52 85,96 8,52" fill="#080D1A"/>
+      <polygon points="8,63 76,102 76,168 8,129" fill="#080D1A"/>
+      <polygon points="94,102 162,63 162,129 94,168" fill="#080D1A"/>
+    </g>
+
+    <!-- Bloco Tipográfico Oficial -->
+    <g id="typography" transform="translate(220, 0)">
+      <!-- Linha 1: TRD -->
+      <text x="0" y="100" 
+            font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" 
+            font-size="105" 
+            font-weight="900" 
+            letter-spacing="5" 
+            fill="#080D1A">TRD</text>
+
+      <!-- Linha 2: CONSULTORIA & SERVIÇOS DE TI -->
+      <text x="2" y="152" 
+            font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" 
+            font-size="22" 
+            font-weight="600" 
+            letter-spacing="10.5" 
+            fill="#080D1A">CONSULTORIA &amp; SERVIÇOS DE TI</text>
+    </g>
+  </g>
+</svg>
+    </div>
+    <div class="trd-header-right">
+        <strong>THIAGO ROCHA DUARTE - CONSULTORIA E SERVICOS DE TI LTDA</strong>
+        CNPJ: 43.065.207/0001-57 · Simples Nacional · Ativa desde 10/08/2021<br>
+        Sede: Brasília - DF, Brasil · contato@trdconsultoria.com.br<br>
+        https://trd-consultoria-ti.github.io/startup/
+    </div>
+</header>
+
+<main class="trd-content">
+<h1>ONE-PAGER INSTITUCIONAL: TRD CONSULTORIA E SERVIÇOS DE TI LTDA</h1>
+<h3>Boutique de Engenharia de Software, Sistemas Sob Medida &amp; Sustentação de Missão Crítica</h3>
+<hr />
+<h2>🏛️ Quem Somos</h2>
+<p>A <strong>TRD Consultoria e Serviços de TI LTDA</strong> é uma boutique brasileira especializada na <strong>criação de sistemas corporativos sob medida (CRM, Hubs de Gestão Operacional, Portais)</strong> e na <strong>sustentação contínua de aplicações de missão crítica com SLA garantido</strong>.</p>
+<p>Com liderança técnica sênior e bagagem comprovada em grandes ecossistemas regulados (Ministério da Justiça, Serasa Experian e Comissão de Valores Mobiliários), a TRD atua como o braço de engenharia de empresas que necessitam de estabilidade absoluta, software feito sob medida e segurança jurídica sem os custos astronômicos de grandes consultorias.</p>
+<hr />
+<h2>⚠️ As Dores Reais que Solucionamos</h2>
+<ul>
+<li>🛑 <strong>Caos de Planilhas e WhatsApp:</strong> Vendas, orçamentos e operações fragmentadas em planilhas desatualizadas e mensagens soltas de WhatsApp, gerando retrabalho e perda de clientes.</li>
+<li>🛑 <strong>Frustração com SaaS Engessados:</strong> Ferramentas prontas (Salesforce, Pipedrive, Bling) que cobram mensalidades caras por usuário e não atendem a regra de negócio da sua empresa.</li>
+<li>🛑 <strong>O "Desenvolvedor que Sumiu":</strong> Sistemas legados vitais abandonados por freelancers ou ex-funcionários, sem documentação e com medo constante de paradas.</li>
+<li>🛑 <strong>Custo Proibitivo de Equipes Internas:</strong> Manter um time sênior interno custa mais de R$ 35.000/mês em salários e encargos trabalhistas.</li>
+</ul>
+<hr />
+<h2>💼 Nossos Modelos de Contratação</h2>
+<h3>1. Criação de Sistemas Sob Medida (CRM, Hub de Gestão &amp; Portais)</h3>
+<p>Softwares desenvolvidos exatamente para o fluxo da sua empresa, entregues em tempo recorde (2 a 4 semanas) e com <strong>código 100% de sua propriedade</strong>:<br />
+* <strong>Sistema Starter (CRM Enxuto ou Painel Operacional):</strong> <strong>R$ 9.800,00 à vista</strong> ou em até <strong>12x no Cartão de Crédito</strong> (ou 50% de sinal + 50% na entrega). Até 3 módulos, entrega em 2 a 3 semanas e 30 dias de garantia inclusa.<br />
+* <strong>Hub de Gestão Pro (OS, Financeiro, Estoque + WhatsApp):</strong> <strong>R$ 16.500,00 à vista</strong> ou em até <strong>12x no Cartão de Crédito</strong>. Plataforma operacional completa com automações inteligentes e 30 dias de garantia.</p>
+<h3>2. Plano Continuidade TRD (Exclusivo para Sistemas Criados pela TRD)</h3>
+<ul>
+<li><strong>Investimento:</strong> <strong>R$ 1.800,00 / mês</strong>.</li>
+<li><strong>Benefícios:</strong> 10 horas técnicas mensais com SLA garantido (resposta em até 4h para P1), suporte direto à sua equipe, monitoramento e pequenas evoluções contínuas.</li>
+</ul>
+<h3>3. Planos Recorrentes de Sustentação &amp; SLA (Para Softwares Existentes)</h3>
+<ul>
+<li><strong>Plano Essencial (R$ 3.200/mês):</strong> 20 horas mensais, manutenção de bugs e queries SQL, SLA P1 até 8h úteis.</li>
+<li><strong>Plano Profissional (R$ 5.500/mês — Mais Escolhido):</strong> 40 horas mensais, monitoramento proativo com alertas, reuniões quinzenais, SLA P1 até 4h úteis.</li>
+<li><strong>Plano Enterprise (R$ 8.000/mês):</strong> 60 horas mensais, observabilidade 24/7, deploys de IA e SLA P1 até 2h úteis.</li>
+</ul>
+<h3>4. Diagnósticos Rápidos de Entrada</h3>
+<ul>
+<li><strong>Mini-Discovery com 100% de Cashback (R$ 950 a R$ 1.500):</strong> Especificação técnica e prototipagem em 3 dias (100% do valor é abatido como desconto se contratar a criação do sistema).</li>
+<li><strong>Troubleshooting Cirúrgico (R$ 1.800):</strong> Resgate emergencial em 24h a 48h para apagar incêndios e destravar banco de dados ou esteiras travadas.</li>
+</ul>
+<hr />
+<h2>🛡️ Nossos Diferenciais &amp; Blindagem Jurídica</h2>
+<ol>
+<li><strong>Engenharia Sênior Dedicada:</strong> Atendimento e execução direta por arquiteto sênior de software, sem estagiários aprendendo no seu projeto.</li>
+<li><strong>Propriedade Intelectual Garantida (Lei 9.609/98):</strong> O código customizado é 100% da sua empresa após a quitação (sem lock-in).</li>
+<li><strong>Segurança Jurídica Total:</strong> Empresa formalizada e ativa desde 2021 (CNPJ: 43.065.207/0001-57) em Brasília/DF, emissão de NFS-e, contrato formal com <em>Damage Cap</em> (limitação de responsabilidade civil) e conformidade estrita com a LGPD.</li>
+<li><strong>Facilidade Financeira:</strong> Pagamento à vista no Pix, faturado 50/50 ou <strong>em até 12x no Cartão de Crédito Corporativo</strong>.</li>
+</ol>
+<hr />
+<h2>📞 Contato &amp; Próximos Passos</h2>
+<p>Agende uma sessão técnica de diagnóstico de 30 minutos sem compromisso:</p>
+<ul>
+<li><strong>Diretoria Técnica &amp; Atendimento:</strong> Thiago Rocha Duarte</li>
+<li><strong>E-mail:</strong> contato@trdconsultoria.com.br | <strong>WhatsApp:</strong> +55 (61) 99952-6374</li>
+<li><strong>Portal Oficial:</strong> <a href="https://trd-consultoria-ti.github.io/startup/">trd-consultoria-ti.github.io/startup</a></li>
+<li><strong>Razão Social:</strong> THIAGO ROCHA DUARTE - CONSULTORIA E SERVICOS DE TI LTDA (CNPJ: 43.065.207/0001-57)</li>
+<li><strong>Sede:</strong> Brasília - DF | Atendimento para todo o Brasil</li>
+</ul>
+</main>
+
+<footer class="trd-footer">
+    <span>TRD Consultoria e Serviços de TI LTDA — Boutique de Engenharia de Software &amp; Missão Crítica</span>
+    <span>Brasília - DF · Brasil · Documento Oficial</span>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>Acordo de Parceria Comercial e Requisitos — TRD</title>
+<style>
+@page {
+    size: A4;
+    margin: 18mm 16mm 18mm 16mm;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-size: 10pt;
+    line-height: 1.55;
+    color: #1e293b;
+    background: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+
+/* CABEÇALHO INSTITUCIONAL TIMBRADO */
+.trd-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #080d1a;
+    padding-bottom: 12px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.trd-header::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background: #0ea5e9;
+}
+
+.trd-header-left {
+    flex-shrink: 0;
+}
+
+.trd-header-right {
+    text-align: right;
+    font-size: 7.5pt;
+    color: #475569;
+    line-height: 1.4;
+}
+
+.trd-header-right strong {
+    font-size: 8.5pt;
+    color: #080d1a;
+    display: block;
+    margin-bottom: 2px;
+}
+
+/* CONTEÚDO PRINCIPAL */
+.trd-content h1 {
+    font-size: 16pt;
+    color: #080d1a;
+    letter-spacing: -0.02em;
+    margin-top: 10px;
+    margin-bottom: 14px;
+    line-height: 1.3;
+}
+
+.trd-content h2 {
+    font-size: 13pt;
+    color: #080d1a;
+    border-bottom: 1px solid #e2e8f0;
+    padding-bottom: 4px;
+    margin-top: 24px;
+    margin-bottom: 10px;
+    letter-spacing: -0.01em;
+}
+
+.trd-content h3 {
+    font-size: 11pt;
+    color: #0284c7;
+    margin-top: 18px;
+    margin-bottom: 8px;
+}
+
+.trd-content h4 {
+    font-size: 10pt;
+    color: #334155;
+    margin-top: 14px;
+    margin-bottom: 6px;
+}
+
+.trd-content p {
+    margin: 6px 0 10px 0;
+    text-align: justify;
+}
+
+.trd-content ul, .trd-content ol {
+    margin: 6px 0 12px 0;
+    padding-left: 22px;
+}
+
+.trd-content li {
+    margin-bottom: 4px;
+}
+
+.trd-content hr {
+    border: 0;
+    border-top: 1px solid #cbd5e1;
+    margin: 20px 0;
+}
+
+.trd-content blockquote {
+    border-left: 4px solid #0ea5e9;
+    background: #f8fafc;
+    padding: 8px 14px;
+    margin: 12px 0;
+    color: #334155;
+    font-style: italic;
+    border-radius: 0 4px 4px 0;
+}
+
+/* TABELAS CORPORATIVAS */
+.trd-content table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 14px 0;
+    font-size: 8.5pt;
+    page-break-inside: avoid;
+}
+
+.trd-content th {
+    background: #080d1a;
+    color: #ffffff;
+    font-weight: 600;
+    padding: 7px 10px;
+    text-align: left;
+    border: 1px solid #080d1a;
+    letter-spacing: 0.02em;
+}
+
+.trd-content td {
+    padding: 6px 10px;
+    border: 1px solid #e2e8f0;
+    color: #334155;
+}
+
+.trd-content tr:nth-child(even) td {
+    background: #f8fafc;
+}
+
+/* BLOCOS DE CÓDIGO E PRE */
+.trd-content pre {
+    background: #0f172a;
+    color: #f8fafc;
+    padding: 10px 14px;
+    border-radius: 6px;
+    font-size: 8pt;
+    line-height: 1.45;
+    overflow-x: auto;
+    page-break-inside: avoid;
+}
+
+.trd-content code {
+    font-family: ui-monospace, Consolas, Monaco, monospace;
+}
+
+.trd-content p code {
+    background: #f1f5f9;
+    color: #0f172a;
+    padding: 1px 4px;
+    border-radius: 3px;
+    font-size: 9pt;
+}
+
+/* EVITAR QUEBRAS INDEVIDAS */
+table, pre, blockquote, .card {
+    page-break-inside: avoid;
+}
+
+h1, h2, h3, h4 {
+    page-break-after: avoid;
+}
+
+/* RODAPÉ CORPORATIVO */
+.trd-footer {
+    margin-top: 30px;
+    border-top: 1px solid #e2e8f0;
+    padding-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 7pt;
+    color: #64748b;
+}
+</style>
+</head>
+<body>
+
+<header class="trd-header">
+    <div class="trd-header-left">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 220" style="max-width: 190px; height: auto;">
+  <!-- TRD Consultoria e Serviços de TI - Versão Oficial Fundo Claro -->
+  <g transform="translate(45, 25)">
+    <!-- Símbolo Cubo Isométrico Oficial -->
+    <g id="keystone-symbol">
+      <polygon points="85,8 162,52 85,96 8,52" fill="#080D1A"/>
+      <polygon points="8,63 76,102 76,168 8,129" fill="#080D1A"/>
+      <polygon points="94,102 162,63 162,129 94,168" fill="#080D1A"/>
+    </g>
+
+    <!-- Bloco Tipográfico Oficial -->
+    <g id="typography" transform="translate(220, 0)">
+      <!-- Linha 1: TRD -->
+      <text x="0" y="100" 
+            font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" 
+            font-size="105" 
+            font-weight="900" 
+            letter-spacing="5" 
+            fill="#080D1A">TRD</text>
+
+      <!-- Linha 2: CONSULTORIA & SERVIÇOS DE TI -->
+      <text x="2" y="152" 
+            font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" 
+            font-size="22" 
+            font-weight="600" 
+            letter-spacing="10.5" 
+            fill="#080D1A">CONSULTORIA &amp; SERVIÇOS DE TI</text>
+    </g>
+  </g>
+</svg>
+    </div>
+    <div class="trd-header-right">
+        <strong>THIAGO ROCHA DUARTE - CONSULTORIA E SERVICOS DE TI LTDA</strong>
+        CNPJ: 43.065.207/0001-57 · Simples Nacional · Ativa desde 10/08/2021<br>
+        Sede: Brasília - DF, Brasil · contato@trdconsultoria.com.br<br>
+        https://trd-consultoria-ti.github.io/startup/
+    </div>
+</header>
+
+<main class="trd-content">
+<h1>INSTRUMENTO PARTICULAR DE PARCERIA COMERCIAL, CAPTURA DE CLIENTES E ELICITAÇÃO DE REQUISITOS (PROGRAMA DE PARCEIROS TRD)</h1>
+<p>Pelo presente instrumento particular, de um lado:</p>
+<p><strong>PRESTADORA PRINCIPAL:</strong><br />
+* <strong>Razão Social:</strong> <strong>THIAGO ROCHA DUARTE - CONSULTORIA E SERVICOS DE TI LTDA</strong> (TRD Consultoria)<br />
+* <strong>Nome Fantasia:</strong> <strong>TRD Consultoria e Serviços de TI</strong><br />
+* <strong>CNPJ:</strong> <strong>43.065.207/0001-57</strong> (Ativa no Simples Nacional desde 10/08/2021)<br />
+* <strong>Sede:</strong> Brasília - DF, Brasil<br />
+* <strong>Representada por:</strong> Thiago Rocha Duarte, Sócio Administrador &amp; Arquiteto Chefe, doravante denominada simplesmente <strong>TRD CONSULTORIA</strong>;</p>
+<p>E, de outro lado:</p>
+<p><strong>PARCEIRA / COLABORADORA EVENTUAL:</strong><br />
+* <strong>Nome Completo:</strong> [NOME DA PARCEIRA / COLABORADORA - Ex: Victoria Gundin / Outros]<br />
+* <strong>Nacionalidade:</strong> [Nacionalidade] | <strong>Estado Civil:</strong> [Estado Civil] | <strong>Profissão:</strong> [Profissão]<br />
+* <strong>CPF / CNPJ:</strong> [000.000.000-00]<br />
+* <strong>Endereço:</strong> [Endereço completo, Cidade - UF, CEP]<br />
+* <strong>Chave PIX para Comissões:</strong> [Chave Pix / Dados Bancários], doravante denominada simplesmente <strong>PARCEIRA COMERCIAL</strong>;</p>
+<p>Ambas doravante denominadas conjuntamente como <strong>PARTES</strong> e individualmente como <strong>PARTE</strong>.</p>
+<p>Têm entre si, justo e contratado, o presente Acordo de Parceria Comercial e Comissionamento por Sucesso (<em>Success Fee</em>), que se regerá pelas seguintes cláusulas e condições:</p>
+<hr />
+<h3>CLÁUSULA PRIMEIRA – DO OBJETO DA PARCERIA</h3>
+<p>1.1. O presente instrumento tem por objeto formalizar a cooperação operacional e comercial entre as PARTES, pela qual a <strong>PARCEIRA COMERCIAL</strong> atuará na <strong>prospecção, qualificação, captura de potenciais clientes e elicitação inicial de requisitos de negócio</strong> para os serviços técnicos prestados pela <strong>TRD CONSULTORIA</strong>, especificamente:<br />
+* Criação de Sistemas Corporativos Sob Medida (CRM, Hub de Gestão Operacional / Mini-ERP, Portais Corporativos e Dashboards com Inteligência Artificial);<br />
+* Sustentação Contínua de Aplicações com SLA e Diagnósticos Técnicos (Mini-Discovery).</p>
+<p>1.2. A atuação da <strong>PARCEIRA COMERCIAL</strong> compreende:<br />
+* Realizar a prospecção ativa e abordagem de decisores em sua rede de contatos e canais digitais;<br />
+* Conduzir entrevistas iniciais de diagnóstico de necessidades com o cliente;<br />
+* Estruturar e redigir o <strong>Documento Preliminar de Requisitos (PRD)</strong> do sistema (utilizando ferramentas de IA como Anthropic Claude e os templates oficiais da TRD);<br />
+* Apresentar a oportunidade qualificada à <strong>TRD CONSULTORIA</strong> para validação de viabilidade técnica, arquitetura e emissão da proposta final.</p>
+<hr />
+<h3>CLÁUSULA SEGUNDA – DO MODELO DE COMISSIONAMENTO (BÔNUS)</h3>
+<p>2.1. Pela captura e documentação de requisitos que resultem em contrato de desenvolvimento formalmente assinado e efetivamente pago pelo cliente final, a <strong>TRD CONSULTORIA</strong> pagará à <strong>PARCEIRA COMERCIAL</strong> uma comissão sobre o êxito (<em>Success Fee</em>), calculada sobre o valor líquido faturado do projeto (deduzidos os tributos incidentes sobre a NFS-e), fixada em:<br />
+* <strong>a) Criação de Sistemas Sob Medida (Starter ou Pro):</strong> <strong>15% (quinze por cento)</strong> do valor global contratado pelo cliente final.<br />
+  * <em>Exemplo Sistema Starter (R$ 9.800,00 líquido):</em> Comissão de <strong>R$ 1.470,00</strong>;<br />
+  * <em>Exemplo Hub de Gestão Pro (R$ 16.500,00 líquido):</em> Comissão de <strong>R$ 2.475,00</strong>.<br />
+* <strong>b) Recorrência Mensal (Plano Continuidade TRD):</strong> Caso o cliente contratante do sistema adira ao Plano Continuidade TRD (R$ 1.800,00/mês) ou plano de sustentação subsequente, a <strong>PARCEIRA COMERCIAL</strong> fará jus a <strong>10% (dez por cento)</strong> sobre a mensalidade líquida durante os primeiros <strong>6 (seis) meses de vigência do contrato</strong>, enquanto o cliente permanecer adimplente (<strong>R$ 180,00/mês por cliente ativo</strong>). A partir do 7º mês, a remuneração de sustentação reverterá integralmente à TRD CONSULTORIA.<br />
+* <strong>c) Mini-Discovery Avulso:</strong> Caso o cliente contrate exclusivamente o serviço de Mini-Discovery (R$ 950 a R$ 1.500), a comissão será de <strong>15% (quinze por cento)</strong> sobre o valor pago.</p>
+<hr />
+<h3>CLÁUSULA TERCEIRA – DA REGRA DE PAGAMENTO (FLUXO CASADO &amp; SEGURANÇA DE CAIXA)</h3>
+<p>3.1. <strong>Condição Resolutiva de Compensação Financeira:</strong> A comissão devida à <strong>PARCEIRA COMERCIAL</strong> será paga estritamente na modalidade de <strong>fluxo casado</strong>, ou seja, condicionada à prévia e efetiva compensação dos valores na conta bancária PJ da <strong>TRD CONSULTORIA</strong>:<br />
+* Se o cliente pagar de forma faturada (50% de entrada na assinatura e 50% na homologação do Go-Live), a comissão da <strong>PARCEIRA COMERCIAL</strong> será paga proporcionalmente: 50% na entrada e 50% na liquidação final da fatura.<br />
+* Se o cliente optar por pagamento via Cartão de Crédito ou Pix à vista, o repasse da comissão ocorrerá em até <strong>3 (três) dias úteis</strong> após a liquidação e disponibilidade dos recursos na conta bancária da TRD.<br />
+3.2. A <strong>TRD CONSULTORIA</strong> não realizará adiantamentos de comissões por contratos não compensados ou pendentes de pagamento. Em caso de cancelamento contratual, estorno legítimo ou inadimplência do cliente final, nenhuma comissão será devida sobre as parcelas não pagas.</p>
+<hr />
+<h3>CLÁUSULA QUARTA – DOS DEVERES E RESPONSABILIDADES (ÔNUS DA PARCEIRA)</h3>
+<p>4.1. Constituem ônus e obrigações expressas da <strong>PARCEIRA COMERCIAL</strong>:<br />
+* <strong>Qualidade e Clareza dos Requisitos:</strong> Entregar a documentação preliminar de requisitos de forma legível, estruturada e aderente ao problema real do cliente, documentando escopo de telas, usuários previstos e regras centrais do negócio;<br />
+* <strong>Vedação a Promessas Fora de Tabela:</strong> A <strong>PARCEIRA COMERCIAL</strong> não possui poderes de representação legal ou alçada comercial para prometer descontos abaixo da tabela oficial da TRD, conceder prazos inexequíveis de entrega técnica ou assumir garantias além dos 30 dias contratuais sem autorização prévia e por escrito do Sócio Administrador da TRD;<br />
+* <strong>Alinhamento Institucional:</strong> Zelar pela reputação, arquétipo de excelência e marca da TRD Consultoria perante os clientes contatados;<br />
+* <strong>Previsão de Desligamento de Contratos com Vícios:</strong> Caso fique constatado que a PARCEIRA omitiu dados de má-fé ou prometeu funcionalidades deliberadamente fora do escopo homologado gerando atrito grave com o cliente, a comissão do respectivo projeto poderá ser retida até a resolução do impasse operacional.</p>
+<hr />
+<h3>CLÁUSULA QUINTA – DA AUTONOMIA E TOTAL AUSÊNCIA DE VÍNCULO EMPREGATÍCIO</h3>
+<p>5.1. As PARTES declaram, para todos os efeitos legais, que a presente parceria possui natureza estritamente comercial, civil e eventual de intermediação de negócios (Artigos 722 a 729 do Código Civil Brasileiro).<br />
+5.2. <strong>Inexistência de Vínculo CLT:</strong> Não há e não haverá qualquer relação de subordinação hierárquica, habitualidade mandatória, exclusividade ou controle de jornada de trabalho entre a <strong>TRD CONSULTORIA</strong> e a <strong>PARCEIRA COMERCIAL</strong>. A PARCEIRA atua com total independência operacional, estabelecendo seus próprios horários e estratégias de prospecção, podendo exercer livremente outras atividades profissionais concomitantes.<br />
+5.3. A <strong>PARCEIRA COMERCIAL</strong> é responsável exclusiva pela gestão e recolhimento de suas obrigações fiscais e previdenciárias decorrentes dos valores percebidos (emissão de NFS-e ou recibo correspondente).</p>
+<hr />
+<h3>CLÁUSULA SEXTA – DA CONFIDENCIALIDADE, PROTEÇÃO DE DADOS (LGPD) E NÃO-ALICIAMENTO</h3>
+<p>6.1. A <strong>PARCEIRA COMERCIAL</strong> compromete-se a manter sob sigilo absoluto todas as informações técnicas, metodologias de desenvolvimento, prompts, códigos-fonte, estratégias de precificação interna e dados cadastrais de clientes aos quais tiver acesso em virtude desta parceria, respeitando integralmente a Lei Geral de Proteção de Dados (Lei nº 13.709/2018).<br />
+6.2. <strong>Propriedade Intelectual da TRD:</strong> Os templates de sistemas, boilerplates, frameworks e arquiteturas de software desenvolvidos pela TRD constituem propriedade industrial e intelectual exclusiva da <strong>TRD CONSULTORIA</strong>.<br />
+6.3. É expressamente vedado à <strong>PARCEIRA COMERCIAL</strong> aliciar clientes trazidos para a TRD no intuito de repassar suas demandas de engenharia de software para terceiros ou concorrentes durante a vigência desta parceria e pelo período de 12 (doze) meses após seu encerramento.</p>
+<hr />
+<h3>CLÁUSULA SÉTIMA – DA VIGÊNCIA E RESCISÃO</h3>
+<p>7.1. O presente instrumento é celebrado por prazo indeterminado, podendo ser rescindido por qualquer das PARTES, a qualquer tempo, mediante aviso prévio por escrito (inclusive por e-mail ou WhatsApp oficial) com antecedência mínima de <strong>15 (quinze) dias</strong>.<br />
+7.2. A rescisão não prejudicará o direito da <strong>PARCEIRA COMERCIAL</strong> ao recebimento das comissões pendentes relativas aos contratos de criação e sustentação regularmente fechados e vigentes durante a sua atuação.</p>
+<hr />
+<h3>CLÁUSULA OITAVA – DO FORO</h3>
+<p>8.1. Para dirimir quaisquer controvérsias decorrentes deste Contrato, as PARTES elegem o <strong>Foro da Circunscrição Judiciária de Brasília - Distrito Federal</strong>, com renúncia expressa a qualquer outro.</p>
+<p>E, por estarem assim justas e acordadas, as PARTES assinam o presente Contrato digitalmente.</p>
+<p>Brasília - DF, [DD] de [Mês] de 2026.</p>
+<hr />
+<p><strong>Pela TRD CONSULTORIA:</strong>  </p>
+<hr />
+<p><strong>THIAGO ROCHA DUARTE</strong><br />
+Sócio Administrador &amp; Arquiteto Chefe<br />
+THIAGO ROCHA DUARTE - CONSULTORIA E SERVICOS DE TI LTDA<br />
+CNPJ: 43.065.207/0001-57</p>
+<hr />
+<p><strong>Pela PARCEIRA COMERCIAL:</strong>  </p>
+<hr />
+<p><strong>[NOME DA PARCEIRA COMERCIAL]</strong><br />
+CPF: [000.000.000-00]<br />
+E-mail / Contato: [e-mail da parceira]</p>
+</main>
+
+<footer class="trd-footer">
+    <span>TRD Consultoria e Serviços de TI LTDA — Boutique de Engenharia de Software &amp; Missão Crítica</span>
+    <span>Brasília - DF · Brasil · Documento Oficial</span>
+</footer>
+
+</body>
+</html>

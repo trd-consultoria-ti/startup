@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>Guia do Colaborador — TRD Consultoria</title>
+<style>
+@page {
+    size: A4;
+    margin: 18mm 16mm 18mm 16mm;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-size: 10pt;
+    line-height: 1.55;
+    color: #1e293b;
+    background: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+
+/* CABEÇALHO INSTITUCIONAL TIMBRADO */
+.trd-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #080d1a;
+    padding-bottom: 12px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.trd-header::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background: #0ea5e9;
+}
+
+.trd-header-left {
+    flex-shrink: 0;
+}
+
+.trd-header-right {
+    text-align: right;
+    font-size: 7.5pt;
+    color: #475569;
+    line-height: 1.4;
+}
+
+.trd-header-right strong {
+    font-size: 8.5pt;
+    color: #080d1a;
+    display: block;
+    margin-bottom: 2px;
+}
+
+/* CONTEÚDO PRINCIPAL */
+.trd-content h1 {
+    font-size: 16pt;
+    color: #080d1a;
+    letter-spacing: -0.02em;
+    margin-top: 10px;
+    margin-bottom: 14px;
+    line-height: 1.3;
+}
+
+.trd-content h2 {
+    font-size: 13pt;
+    color: #080d1a;
+    border-bottom: 1px solid #e2e8f0;
+    padding-bottom: 4px;
+    margin-top: 24px;
+    margin-bottom: 10px;
+    letter-spacing: -0.01em;
+}
+
+.trd-content h3 {
+    font-size: 11pt;
+    color: #0284c7;
+    margin-top: 18px;
+    margin-bottom: 8px;
+}
+
+.trd-content h4 {
+    font-size: 10pt;
+    color: #334155;
+    margin-top: 14px;
+    margin-bottom: 6px;
+}
+
+.trd-content p {
+    margin: 6px 0 10px 0;
+    text-align: justify;
+}
+
+.trd-content ul, .trd-content ol {
+    margin: 6px 0 12px 0;
+    padding-left: 22px;
+}
+
+.trd-content li {
+    margin-bottom: 4px;
+}
+
+.trd-content hr {
+    border: 0;
+    border-top: 1px solid #cbd5e1;
+    margin: 20px 0;
+}
+
+.trd-content blockquote {
+    border-left: 4px solid #0ea5e9;
+    background: #f8fafc;
+    padding: 8px 14px;
+    margin: 12px 0;
+    color: #334155;
+    font-style: italic;
+    border-radius: 0 4px 4px 0;
+}
+
+/* TABELAS CORPORATIVAS */
+.trd-content table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 14px 0;
+    font-size: 8.5pt;
+    page-break-inside: avoid;
+}
+
+.trd-content th {
+    background: #080d1a;
+    color: #ffffff;
+    font-weight: 600;
+    padding: 7px 10px;
+    text-align: left;
+    border: 1px solid #080d1a;
+    letter-spacing: 0.02em;
+}
+
+.trd-content td {
+    padding: 6px 10px;
+    border: 1px solid #e2e8f0;
+    color: #334155;
+}
+
+.trd-content tr:nth-child(even) td {
+    background: #f8fafc;
+}
+
+/* BLOCOS DE CÓDIGO E PRE */
+.trd-content pre {
+    background: #0f172a;
+    color: #f8fafc;
+    padding: 10px 14px;
+    border-radius: 6px;
+    font-size: 8pt;
+    line-height: 1.45;
+    overflow-x: auto;
+    page-break-inside: avoid;
+}
+
+.trd-content code {
+    font-family: ui-monospace, Consolas, Monaco, monospace;
+}
+
+.trd-content p code {
+    background: #f1f5f9;
+    color: #0f172a;
+    padding: 1px 4px;
+    border-radius: 3px;
+    font-size: 9pt;
+}
+
+/* EVITAR QUEBRAS INDEVIDAS */
+table, pre, blockquote, .card {
+    page-break-inside: avoid;
+}
+
+h1, h2, h3, h4 {
+    page-break-after: avoid;
+}
+
+/* RODAPÉ CORPORATIVO */
+.trd-footer {
+    margin-top: 30px;
+    border-top: 1px solid #e2e8f0;
+    padding-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 7pt;
+    color: #64748b;
+}
+</style>
+</head>
+<body>
+
+<header class="trd-header">
+    <div class="trd-header-left">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 220" style="max-width: 190px; height: auto;">
+  <!-- TRD Consultoria e Serviços de TI - Versão Oficial Fundo Claro -->
+  <g transform="translate(45, 25)">
+    <!-- Símbolo Cubo Isométrico Oficial -->
+    <g id="keystone-symbol">
+      <polygon points="85,8 162,52 85,96 8,52" fill="#080D1A"/>
+      <polygon points="8,63 76,102 76,168 8,129" fill="#080D1A"/>
+      <polygon points="94,102 162,63 162,129 94,168" fill="#080D1A"/>
+    </g>
+
+    <!-- Bloco Tipográfico Oficial -->
+    <g id="typography" transform="translate(220, 0)">
+      <!-- Linha 1: TRD -->
+      <text x="0" y="100" 
+            font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" 
+            font-size="105" 
+            font-weight="900" 
+            letter-spacing="5" 
+            fill="#080D1A">TRD</text>
+
+      <!-- Linha 2: CONSULTORIA & SERVIÇOS DE TI -->
+      <text x="2" y="152" 
+            font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" 
+            font-size="22" 
+            font-weight="600" 
+            letter-spacing="10.5" 
+            fill="#080D1A">CONSULTORIA &amp; SERVIÇOS DE TI</text>
+    </g>
+  </g>
+</svg>
+    </div>
+    <div class="trd-header-right">
+        <strong>THIAGO ROCHA DUARTE - CONSULTORIA E SERVICOS DE TI LTDA</strong>
+        CNPJ: 43.065.207/0001-57 · Simples Nacional · Ativa desde 10/08/2021<br>
+        Sede: Brasília - DF, Brasil · contato@trdconsultoria.com.br<br>
+        https://trd-consultoria-ti.github.io/startup/
+    </div>
+</header>
+
+<main class="trd-content">
+<h1>GUIA DO COLABORADOR: CAPTURA DE CLIENTES &amp; ELICITAÇÃO DE REQUISITOS COM CLAUDE</h1>
+<h3>Programa de Parceria Comercial &amp; Negócios — TRD Consultoria e Serviços de TI LTDA</h3>
+<p><em>Documento Operacional de Alinhamento para Parceiros de Negócios (Victoria Gundin / Novos Colaboradores)</em></p>
+<hr />
+<h2>🎯 1. Bem-vinda(o) à TRD Consultoria: O Modelo de Parceria</h2>
+<p>Como Parceira Comercial e de Requisitos da <strong>TRD Consultoria</strong>, você é a ponte estratégica entre as necessidades reais das empresas e a nossa engenharia de software sênior.</p>
+<p>Seu trabalho é composto por três etapas simples e de alto impacto:<br />
+1. <strong>Identificar e abordar</strong> donos de empresas que sofrem com o caos de planilhas desatualizadas ou mensalidades caras de ferramentas prontas;<br />
+2. <strong>Conduzir uma conversa diagnóstica</strong> de 20 a 30 minutos para entender como a operação do cliente funciona;<br />
+3. <strong>Utilizar o Claude (Anthropic)</strong> para gerar o <strong>Documento Preliminar de Requisitos (PRD)</strong> estruturado e entregar nos padrões da TRD para o Thiago Rocha Duarte validar e precificar.</p>
+<hr />
+<h2>💰 2. Política Oficial de Remuneração: Ônus e Bônus</h2>
+<p>Para garantir transparência e alinhamento de longo prazo, a relação rege-se pelo princípio de <strong>ônus e bônus claros</strong>:</p>
+<h3>🎁 Os Bônus (Sua Remuneração por Sucesso):</h3>
+<ul>
+<li><strong>15% sobre a Criação do Sistema:</strong></li>
+<li><strong>Sistema Starter (R$ 9.800):</strong> Você recebe <strong>R$ 1.470,00</strong> por contrato fechado;</li>
+<li><strong>Hub de Gestão Pro (R$ 16.500):</strong> Você recebe <strong>R$ 2.475,00</strong> por contrato fechado.</li>
+<li><strong>10% Recorrente durante 6 Meses (Plano Continuidade):</strong></li>
+<li>Quando o cliente migrar para o plano de sustentação de R$ 1.800/mês, você recebe <strong>R$ 180,00 por mês durante os primeiros 6 meses</strong> (Total: <strong>R$ 1.080,00</strong> adicionais por cliente ativo).</li>
+<li><em>Exemplo real:</em> Ao trazer 2 clientes Starter no mês, você ganha <strong>R$ 2.940,00 à vista</strong> + <strong>R$ 360,00/mês de renda recorrente</strong>.</li>
+<li><strong>15% sobre Mini-Discovery Avulso:</strong> Caso o cliente pague o Discovery de R$ 950 a R$ 1.500, você recebe sua comissão proporcional.</li>
+</ul>
+<h3>⚖️ Os Ônus (Suas Responsabilidades Indispensáveis):</h3>
+<ol>
+<li><strong>Regra do Fluxo Casado (Segurança Financeira):</strong> A comissão é liberada estritamente quando o cliente paga a TRD. Se o cliente pagar faturado em 50% de entrada + 50% na entrega, sua comissão é paga 50% na entrada e 50% na entrega. Não há adiantamento sem liquidação financeira.</li>
+<li><strong>Portão Técnico &amp; Zero Alçada Comercial:</strong> O parceiro tem alçada <strong>exclusiva de Diagnóstico de Dores</strong>. É expressamente vedado prometer telas específicas, integrações complexas ou prazos abaixo do cronograma oficial na primeira conversa. O cliente deve ser informado com elegância: <em>"Eu mapeio as regras do seu negócio e o nosso Arquiteto Chefe (Thiago) valida a arquitetura e emite a proposta técnica final"</em>.</li>
+<li><strong>Tabela de Preços e Prazos Travados:</strong> É expressamente vedado prometer descontos abaixo da tabela oficial ou prazos irreais sem autorização prévia por escrito do Thiago. (Preços oficiais: Starter R$ 9.800 em 2-3 semanas; Pro R$ 16.500 em 4 semanas).</li>
+<li><strong>Qualidade da Documentação:</strong> A comissão é vinculada à entrega de uma documentação de requisitos clara e compreensível, gerada com o apoio do Claude.</li>
+<li><strong>Alinhamento Institucional &amp; Sigilo:</strong> Preservar a reputação e sigilo sobre dados de clientes e tecnologias da TRD. Proibido prometer suporte técnico 24/7 por áudio de WhatsApp pessoal (o atendimento oficial da TRD é via canal corporativo em dias úteis das 09h às 18h).</li>
+</ol>
+<hr />
+<h2>🗣️ 3. Como Abordar e Iniciar a Conversa com o Cliente</h2>
+<h3>Perfil Ideal de Cliente (PMEs):</h3>
+<p>Empresas com 5 a 50 funcionários: distribuidoras locais, prestadores de serviços B2B, pequenas indústrias, clínicas, escritórios de engenharia/arquitetura ou comércio.</p>
+<h3>Roteiro de Abordagem Rápida (WhatsApp ou Conversa Direta):</h3>
+<blockquote>
+<p><em>"Oi, [Nome do Decisor], tudo bem?</em><br />
+<em>Tenho conversado com muitos empresários aqui da região e a maioria me relata a mesma dor de cabeça: a operação foi crescendo e hoje fica refém de várias planilhas no Excel e pedidos soltos no WhatsApp, ou então pagando mensalidades caras por usuário em sistemas prontos que não atendem as regras da empresa.</em><br />
+<em>Eu faço parceria com a TRD, uma consultoria de engenharia de software sênior de Brasília, e nós desenvolvemos sistemas sob medida (como CRM de vendas e Hub de Gestão de Ordens de Serviço/Financeiro) desenhados exatamente para a sua empresa, entregues em 3 a 4 semanas e parcelados em até 12x no cartão corporativo.</em><br />
+<em>Podemos bater um papo rápido de 20 minutos nesta semana para eu mapear como funciona a sua rotina e desenharmos um escopo sem compromisso?"</em></p>
+</blockquote>
+<hr />
+<h2>📝 4. Roteiro da Entrevista de Diagnóstico (O que perguntar ao cliente)</h2>
+<p>Durante a conversa com o cliente, anote as respostas para estas 6 perguntas básicas:<br />
+1. <strong>Qual é o negócio da empresa e quem são os clientes dela?</strong><br />
+2. <strong>O que hoje é feito em planilha ou no papel que mais toma tempo ou gera erros?</strong> (Ex: controle de pedidos, ordens de serviço, cobranças, estoque).<br />
+3. <strong>Quem na equipe vai usar o sistema no dia a dia?</strong> (Ex: 1 administrador/dono, 2 vendedores externos e 1 atendente).<br />
+4. <strong>Qual é o passo a passo do fluxo ideal?</strong> (Ex: Cliente entra em contato ➔ Vendedor cria proposta no sistema ➔ Cliente aprova ➔ Vira Ordem de Serviço ➔ Financeiro emite cobrança).<br />
+5. <strong>Precisa de alguma integração especial?</strong> (Ex: enviar mensagem automática no WhatsApp, emitir boleto/Pix ou exportar relatórios).<br />
+6. <strong>Qual o prazo de urgência dele para ter isso rodando?</strong></p>
+<hr />
+<h3>🚨 4.1. Checklist de "Bandeiras Vermelhas" (Filtro Anti-Prejuízo):</h3>
+<p>Se o cliente mencionar algum dos itens abaixo durante a entrevista, <strong>NÃO prometa o pacote Starter de R$ 9.800 nem entrega em 2 a 3 semanas</strong>. Classifique o caso como <strong>Projeto Personalizado via Mini-Discovery de R$ 1.500</strong> ou <strong>Sprints de R$ 8.000</strong>:</p>
+<ul>
+<li>🚩 <strong>Bandeira 1: Clones de Aplicativos B2C:</strong> <em>"Quero um app igual ao iFood, Uber ou Mercado Livre para o meu nicho"</em>. Softwares de marketplace com split de pagamentos e geolocalização em tempo real demandam arquitetura de alta complexidade.</li>
+<li>🚩 <strong>Bandeira 2: Sistemas Offline sem Conexão:</strong> <em>"Preciso que funcione no tablet num galpão ou fazenda sem internet nenhuma e sincronize depois"</em>. Demanda sincronização de banco de dados distribuído e resolução de conflitos offline.</li>
+<li>🚩 <strong>Bandeira 3: Integrações com Sistemas Legados sem API Aberta:</strong> <em>"Tem que integrar direto com meu sistema Clipper/Delphi de 1995 ou Totvs sem documentação"</em>. Integração sem API REST documentada exige engenharia reversa.</li>
+<li>🚩 <strong>Bandeira 4: Emissão Fiscal Direta SEFAZ Complexa:</strong> <em>"Tem que emitir NF-e/NFC-e diretamente com a SEFAZ em múltiplos estados e calcular substituição tributária"</em>. No Starter/Pro, usamos mensageria fiscal via APIs parceiras (ex: FocusNFe / PlugNotas) ou módulo adicional de faturamento.</li>
+<li>🚩 <strong>Bandeira 5: Cliente "Urgente Demais" ou Desestruturado:</strong> <em>"Preciso para sexta-feira e ainda não sei bem quais campos vou querer"</em>. Se o cliente não tem o fluxo desenhado, ele precisa obrigatoriamente do <strong>Mini-Discovery</strong> primeiro.</li>
+</ul>
+<hr />
+<h2>🤖 5. Como Usar o Claude para Gerar a Documentação de Requisitos da TRD</h2>
+<p>Após a conversa, abra o <strong>Claude</strong> (claude.ai) e use o <strong>Mega-Prompt Oficial da TRD</strong> abaixo. Basta preencher as anotações brutas que você coletou:</p>
+<h3>📋 Mega-Prompt para Colar no Claude:</h3>
+<pre><code class="language-markdown">Você é uma Analista Sênior de Requisitos e Product Owner da TRD Consultoria e Serviços de TI LTDA.
+Sua missão é transformar as anotações brutas da reunião que fiz com um potencial cliente em uma ESPECIFICAÇÃO DE REQUISITOS (PRD) de alta qualidade para o Arquiteto Chefe (Thiago Rocha Duarte) validar e desenvolver.
+
+DIRETRIZES DA TRD:
+1. O escopo do MVP deve ser estritamente enxuto e focado no fluxo essencial (no máximo 3 módulos no Starter e 4 no Pro). Qualquer funcionalidade acessória, desejo secundário ou integração avançada que o cliente citou DEVE ser obrigatoriamente segregada para o item 7: &quot;Itens que devem ficar para a Fase 2 (Pós-Go-Live no Plano Continuidade)&quot;.
+2. Stack padrão da TRD: Frontend em React/Next.js, Backend em Java ou Node/Python, Banco PostgreSQL.
+3. Classificar o projeto na modalidade adequada:
+   - Sistema Starter (R$ 9.800 / 2 a 3 semanas): CRM enxuto ou Painel Operacional (até 3 módulos core).
+   - Hub de Gestão Pro (R$ 16.500 / 4 semanas): Operação completa com OS, Finanças ou Estoque (até 4 módulos core).
+   - Projeto Personalizado (Mini-Discovery R$ 1.500 ou Sprints R$ 8.000): Quando houver bandeiras vermelhas ou escopo aberto.
+
+AQUI ESTÃO AS ANOTAÇÕES BRUTAS DA MINHA REUNIÃO:
+[ COLE AQUI SUAS ANOTAÇÕES DA CONVERSA COM O CLIENTE ]
+
+POR FAVOR, GERE A DOCUMENTAÇÃO ESTRUTURADA COM OS SEGUINTES TÓPICOS:
+1. Dados do Cliente (Nome da Empresa, Ramo e Decisor);
+2. Problema Atual / Dor Operacional que o sistema vai resolver;
+3. Modalidade Recomendada TRD (Starter ou Pro) e Justificativa;
+4. Escopo dos Módulos do MVP (Módulo 1: Acessos/Cadastros, Módulo 2: Motor Operacional, Módulo 3: Relatórios/Financeiro);
+5. Níveis de Usuário e Permissões (Quem acessa o quê);
+6. Regras de Negócio Importantes;
+7. Itens que devem ficar para a Fase 2 (Pós-Go-Live no Plano de Sustentação).
+</code></pre>
+<hr />
+<h2>🚀 6. Passagem de Bastão para o Thiago</h2>
+<p>Assim que o Claude gerar a documentação:<br />
+1. Dê uma leitura rápida para confirmar se reflete a conversa com o cliente;<br />
+2. Envie o documento gerado para o Thiago via WhatsApp ou e-mail;<br />
+3. O Thiago validará a viabilidade técnica e emitirá a <strong>Proposta Comercial Executiva Oficial da TRD</strong> personalizada com os dados do cliente;<br />
+4. Você e o Thiago apresentam a proposta juntos ao cliente para fechar o contrato!</p>
+<hr />
+<p><em>TRD Consultoria e Serviços de TI LTDA — Engenharia de Software Sênior &amp; Missão Crítica.</em></p>
+</main>
+
+<footer class="trd-footer">
+    <span>TRD Consultoria e Serviços de TI LTDA — Boutique de Engenharia de Software &amp; Missão Crítica</span>
+    <span>Brasília - DF · Brasil · Documento Oficial</span>
+</footer>
+
+</body>
+</html>

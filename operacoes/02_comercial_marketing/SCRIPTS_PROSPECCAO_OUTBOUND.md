@@ -112,7 +112,7 @@ Scripts validados para abordagem direta via WhatsApp, LinkedIn e plataformas de 
 > 
 > Um abraço,  
 > **Thiago Duarte** | TRD Consultoria e Serviços de TI LTDA  
-> WhatsApp: +55 (61) 99207-8335
+> WhatsApp: +55 (61) 99952-6374
 
 ---
 

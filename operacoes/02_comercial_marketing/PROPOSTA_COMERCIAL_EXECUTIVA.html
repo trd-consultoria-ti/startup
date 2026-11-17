@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>Proposta Comercial Executiva — TRD</title>
+<style>
+@page {
+    size: A4;
+    margin: 18mm 16mm 18mm 16mm;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-size: 10pt;
+    line-height: 1.55;
+    color: #1e293b;
+    background: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+
+/* CABEÇALHO INSTITUCIONAL TIMBRADO */
+.trd-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #080d1a;
+    padding-bottom: 12px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.trd-header::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background: #0ea5e9;
+}
+
+.trd-header-left {
+    flex-shrink: 0;
+}
+
+.trd-header-right {
+    text-align: right;
+    font-size: 7.5pt;
+    color: #475569;
+    line-height: 1.4;
+}
+
+.trd-header-right strong {
+    font-size: 8.5pt;
+    color: #080d1a;
+    display: block;
+    margin-bottom: 2px;
+}
+
+/* CONTEÚDO PRINCIPAL */
+.trd-content h1 {
+    font-size: 16pt;
+    color: #080d1a;
+    letter-spacing: -0.02em;
+    margin-top: 10px;
+    margin-bottom: 14px;
+    line-height: 1.3;
+}
+
+.trd-content h2 {
+    font-size: 13pt;
+    color: #080d1a;
+    border-bottom: 1px solid #e2e8f0;
+    padding-bottom: 4px;
+    margin-top: 24px;
+    margin-bottom: 10px;
+    letter-spacing: -0.01em;
+}
+
+.trd-content h3 {
+    font-size: 11pt;
+    color: #0284c7;
+    margin-top: 18px;
+    margin-bottom: 8px;
+}
+
+.trd-content h4 {
+    font-size: 10pt;
+    color: #334155;
+    margin-top: 14px;
+    margin-bottom: 6px;
+}
+
+.trd-content p {
+    margin: 6px 0 10px 0;
+    text-align: justify;
+}
+
+.trd-content ul, .trd-content ol {
+    margin: 6px 0 12px 0;
+    padding-left: 22px;
+}
+
+.trd-content li {
+    margin-bottom: 4px;
+}
+
+.trd-content hr {
+    border: 0;
+    border-top: 1px solid #cbd5e1;
+    margin: 20px 0;
+}
+
+.trd-content blockquote {
+    border-left: 4px solid #0ea5e9;
+    background: #f8fafc;
+    padding: 8px 14px;
+    margin: 12px 0;
+    color: #334155;
+    font-style: italic;
+    border-radius: 0 4px 4px 0;
+}
+
+/* TABELAS CORPORATIVAS */
+.trd-content table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 14px 0;
+    font-size: 8.5pt;
+    page-break-inside: avoid;
+}
+
+.trd-content th {
+    background: #080d1a;
+    color: #ffffff;
+    font-weight: 600;
+    padding: 7px 10px;
+    text-align: left;
+    border: 1px solid #080d1a;
+    letter-spacing: 0.02em;
+}
+
+.trd-content td {
+    padding: 6px 10px;
+    border: 1px solid #e2e8f0;
+    color: #334155;
+}
+
+.trd-content tr:nth-child(even) td {
+    background: #f8fafc;
+}
+
+/* BLOCOS DE CÓDIGO E PRE */
+.trd-content pre {
+    background: #0f172a;
+    color: #f8fafc;
+    padding: 10px 14px;
+    border-radius: 6px;
+    font-size: 8pt;
+    line-height: 1.45;
+    overflow-x: auto;
+    page-break-inside: avoid;
+}
+
+.trd-content code {
+    font-family: ui-monospace, Consolas, Monaco, monospace;
+}
+
+.trd-content p code {
+    background: #f1f5f9;
+    color: #0f172a;
+    padding: 1px 4px;
+    border-radius: 3px;
+    font-size: 9pt;
+}
+
+/* EVITAR QUEBRAS INDEVIDAS */
+table, pre, blockquote, .card {
+    page-break-inside: avoid;
+}
+
+h1, h2, h3, h4 {
+    page-break-after: avoid;
+}
+
+/* RODAPÉ CORPORATIVO */
+.trd-footer {
+    margin-top: 30px;
+    border-top: 1px solid #e2e8f0;
+    padding-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 7pt;
+    color: #64748b;
+}
+</style>
+</head>
+<body>
+
+<header class="trd-header">
+    <div class="trd-header-left">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 220" style="max-width: 190px; height: auto;">
+  <!-- TRD Consultoria e Serviços de TI - Versão Oficial Fundo Claro -->
+  <g transform="translate(45, 25)">
+    <!-- Símbolo Cubo Isométrico Oficial -->
+    <g id="keystone-symbol">
+      <polygon points="85,8 162,52 85,96 8,52" fill="#080D1A"/>
+      <polygon points="8,63 76,102 76,168 8,129" fill="#080D1A"/>
+      <polygon points="94,102 162,63 162,129 94,168" fill="#080D1A"/>
+    </g>
+
+    <!-- Bloco Tipográfico Oficial -->
+    <g id="typography" transform="translate(220, 0)">
+      <!-- Linha 1: TRD -->
+      <text x="0" y="100" 
+            font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" 
+            font-size="105" 
+            font-weight="900" 
+            letter-spacing="5" 
+            fill="#080D1A">TRD</text>
+
+      <!-- Linha 2: CONSULTORIA & SERVIÇOS DE TI -->
+      <text x="2" y="152" 
+            font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" 
+            font-size="22" 
+            font-weight="600" 
+            letter-spacing="10.5" 
+            fill="#080D1A">CONSULTORIA &amp; SERVIÇOS DE TI</text>
+    </g>
+  </g>
+</svg>
+    </div>
+    <div class="trd-header-right">
+        <strong>THIAGO ROCHA DUARTE - CONSULTORIA E SERVICOS DE TI LTDA</strong>
+        CNPJ: 43.065.207/0001-57 · Simples Nacional · Ativa desde 10/08/2021<br>
+        Sede: Brasília - DF, Brasil · contato@trdconsultoria.com.br<br>
+        https://trd-consultoria-ti.github.io/startup/
+    </div>
+</header>
+
+<main class="trd-content">
+<h1>PROPOSTA COMERCIAL EXECUTIVA</h1>
+<h3>Engenharia de Software Sênior, Sistemas Sob Medida &amp; Sustentação de Missão Crítica</h3>
+<p><strong>Para:</strong> [NOME DO CLIENTE / EMPRESA]<br />
+<strong>Aos cuidados de:</strong> [Nome do Decisor - Ex: Diretor de Operações / CEO / CTO]<br />
+<strong>Data:</strong> [DD/MM/AAAA]<br />
+<strong>Validade da Proposta:</strong> 15 dias  </p>
+<hr />
+<h2>1. Sumário Executivo: Por Que a TRD?</h2>
+<p>Muitas empresas sofrem com ferramentas genéricas que não atendem seus processos, planilhas caóticas que geram perda de dados ou desenvolvedores freelancers que abandonaram o código sem sustentação. Por outro lado, contratar grandes software houses custa mais de R$ 50.000 com meses de burocracia, e manter uma equipe interna sênior ultrapassa R$ 35.000/mês em salários e encargos.</p>
+<p>A <strong>TRD Consultoria e Serviços de TI LTDA</strong> entrega a solução definitiva:<br />
+* <strong>Engenharia Sênior com Governança:</strong> Liderança técnica com histórico comprovado em sistemas governamentais e corporativos de missão crítica (Ministério da Justiça e Segurança Pública, Serasa Experian e Comissão de Valores Mobiliários), com domínio avançado de Java (Spring Boot), React / Next.js, Node.js, Python e Inteligência Artificial Aplicada.<br />
+* <strong>Sistemas Feitos Exatamente Para o Seu Negócio:</strong> Softwares desenhados sob medida para a sua operação (CRM, Hub de Gestão Operacional, Portais do Cliente), sem regras engessadas e sem cobrança abusiva de licença por funcionário.<br />
+* <strong>Propriedade Intelectual 100% Sua:</strong> O código-fonte desenvolvido é patrimônio integral da sua empresa após a quitação (sem lock-in e sem dependência forçada).<br />
+* <strong>Segurança Jurídica &amp; Continuidade:</strong> Sociedade Empresária Limitada formalizada (CNPJ: 43.065.207/0001-57), ativa desde 2021 em Brasília/DF, com emissão regular de NFS-e, contrato com teto indenizatório (<em>Damage Cap</em>), garantia de 30 dias e retaguarda contínua de suporte com SLA contratual.</p>
+<hr />
+<h2>2. Nossos Modelos de Atendimento &amp; Contratação</h2>
+<hr />
+<h3>OPÇÃO A: Criação de Sistemas Corporativos Sob Medida (CRM, Hub de Gestão &amp; Portais)</h3>
+<p>Ideal para empresas que precisam organizar sua operação em uma plataforma própria, moderna e segura, com entrega ágil em 2 a 4 semanas.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Item / Escopo</th>
+<th style="text-align: center;">SISTEMA STARTER <em>(CRM / Painel Operacional)</em></th>
+<th style="text-align: center;">HUB DE GESTÃO PRO <em>(Completo com OS e Financeiro)</em></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Público Indicado</strong></td>
+<td style="text-align: center;">PMEs que querem sair das planilhas e ter um CRM rápido</td>
+<td style="text-align: center;">Empresas com processos múltiplos de vendas, OS e estoque</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Módulos Inclusos (MVP)</strong></td>
+<td style="text-align: center;"><strong>Até 3 Módulos:</strong> Login/Permissões + Funil/Clientes + Relatórios</td>
+<td style="text-align: center;"><strong>Até 4 Módulos:</strong> Autenticação + Vendas/OS + Estoque/Finanças + WhatsApp</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Prazo de Entrega (Go-Live)</strong></td>
+<td style="text-align: center;"><strong>2 a 3 semanas</strong></td>
+<td style="text-align: center;"><strong>4 semanas</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Frontend &amp; UI</strong></td>
+<td style="text-align: center;">React / Next.js (TypeScript) + Tailwind CSS</td>
+<td style="text-align: center;">React / Next.js (TypeScript) + Tailwind CSS</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Backend &amp; Banco de Dados</strong></td>
+<td style="text-align: center;">Node.js / Python / Java + PostgreSQL</td>
+<td style="text-align: center;">Java 21 (Spring Boot 3) ou Node/Python + PostgreSQL</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Inteligência Artificial</strong></td>
+<td style="text-align: center;">Pronta para expansão</td>
+<td style="text-align: center;">Módulo de automação inteligente incluso (resumos/alertas)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Garantia Técnica Pós-Go-Live</strong></td>
+<td style="text-align: center;"><strong>30 dias de garantia inclusa</strong></td>
+<td style="text-align: center;"><strong>30 dias de garantia inclusa</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Propriedade Intelectual</strong></td>
+<td style="text-align: center;">Código 100% do cliente após quitação</td>
+<td style="text-align: center;">Código 100% do cliente após quitação</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>CONDIÇÃO FINANCEIRA</strong></td>
+<td style="text-align: center;"><strong>R$ 9.800,00 à vista no Pix</strong><br>ou <strong>10x a 12x no Cartão de Crédito</strong></td>
+<td style="text-align: center;"><strong>R$ 16.500,00 à vista no Pix</strong><br>ou <strong>10x a 12x no Cartão de Crédito</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Opção Faturada (Boleto PJ)</strong></td>
+<td style="text-align: center;">50% na assinatura (R$ 4.900) + 50% no Go-Live</td>
+<td style="text-align: center;">50% na assinatura (R$ 8.250) + 50% no Go-Live</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><em>Condição Especial de Lançamento:</em> Válida para os primeiros 3 projetos do programa de aceleração TRD em troca de case e depoimento após o Go-Live. Custos de servidores de nuvem (ex: Supabase / DigitalOcean ~R$ 60 a R$ 120/mês) são contratados diretamente no cartão da Contratante com assessoria técnica da TRD.</p>
+</blockquote>
+<h4>🛡️ Delimitação de Segurança: O Que NÃO Está Incluso no Escopo MVP Starter / Pro</h4>
+<p>Para assegurar a entrega ágil e sem estouro de orçamento no prazo de 2 a 4 semanas, os seguintes itens são expressamente segregados para a <strong>Fase 2 (Plano Continuidade)</strong> ou orçados via aditivo pontual:<br />
+1. <strong>Conciliação Bancária Multi-Bancos Automatizada:</strong> O MVP inclui baixa manual ágil ou integração Pix direta; conciliação via arquivos OFX/CNAB multi-contas compõe a Fase 2.<br />
+2. <strong>Motor Fiscal SEFAZ Direto de Alta Complexidade:</strong> Emissão fiscal com cálculo tributário estadual complexo é operada via APIs homologadas de parceiros de mensageria fiscal (FocusNFe / PlugNotas) ou como módulo adicional.<br />
+3. <strong>Integração com Legados Obscuros sem API:</strong> Sistemas que não possuam API REST pública/documentada exigem Discovery de viabilidade prévio.<br />
+4. <strong>Operação 100% Offline sem Internet:</strong> O software é uma aplicação web moderna responsiva em nuvem (requer conexão).<br />
+5. <strong>Canal de Atendimento:</strong> O suporte do projeto é centralizado no canal técnico oficial e e-mail em dias úteis das 09h às 18h (não inclui suporte técnico pessoal via áudio de WhatsApp).</p>
+<hr />
+<h3>OPÇÃO B: Plano Continuidade TRD (Exclusivo para Sistemas Criados pela TRD)</h3>
+<p>Para manter o seu novo sistema sempre no ar, atualizado e evoluindo com retaguarda técnica sênior após os 30 dias de garantia inicial:<br />
+* <strong>Banco de Horas:</strong> <strong>10 horas técnicas mensais</strong> para manutenções, ajustes de regras e melhorias contínuas.<br />
+* <strong>Roadmap de Fase 2 sem Custo Adicional:</strong> Durante a construção do MVP, qualquer ideia ou melhoria secundária levantada pelo cliente é catalogada no <strong>Backlog de Fase 2</strong>. Nos primeiros 90 dias do Plano Continuidade, essas melhorias são executadas prioritariamente dentro das horas do plano sem novo custo de projeto!<br />
+* <strong>SLA de Atendimento:</strong> Primeira resposta em até 4 horas úteis para incidentes P1 (sistema fora do ar) e até 8 horas úteis para rotina.<br />
+* <strong>Monitoramento Preventivo:</strong> Verificação periódica de integridade do banco de dados, backups e certificados SSL.<br />
+* <strong>Investimento Mensal:</strong> <strong>R$ 1.800,00 / mês</strong> (sem fidelidade abusiva — cancelamento com aviso prévio de 30 dias).<br />
+* ⚠️ <strong>Política de Atendimento Avulso (Sem Contrato Mensal):</strong> Clientes que optarem por não manter a continuidade ativa após a garantia e solicitarem manutenções ou correções futuras serão atendidos estritamente sob disponibilidade de agenda na modalidade de <strong>Hora Técnica Avulsa a R$ 350,00/hora (com franquia mínima de acionamento de 4 horas = R$ 1.400,00 e taxa de reativação de ambiente)</strong>, sem compromisso de SLA. Manter a Continuidade ativa garante custo-hora de R$ 180/h com SLA P1 garantido em contrato.</p>
+<hr />
+<h3>OPÇÃO C: Planos Recorrentes de Sustentação &amp; SLA (Para Sistemas Legados Existentes)</h3>
+<p>Para empresas que já possuem softwares legados em produção e necessitam de retaguarda sênior, estabilidade e SLA contratual rígido.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Item</th>
+<th style="text-align: center;">PLANO ESSENCIAL</th>
+<th style="text-align: center;">PLANO PROFISSIONAL <em>(Mais Escolhido)</em></th>
+<th style="text-align: center;">PLANO ENTERPRISE</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Banco de Horas Mensal</strong></td>
+<td style="text-align: center;"><strong>20 horas / mês</strong></td>
+<td style="text-align: center;"><strong>40 horas / mês</strong></td>
+<td style="text-align: center;"><strong>60 horas / mês</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>SLA (Primeira Resposta P1)</strong></td>
+<td style="text-align: center;">Até 8 horas úteis</td>
+<td style="text-align: center;"><strong>Até 4 horas úteis</strong></td>
+<td style="text-align: center;"><strong>Até 2 horas úteis</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Manutenção Corretiva &amp; Bugs</strong></td>
+<td style="text-align: center;">Incluso</td>
+<td style="text-align: center;"><strong>Incluso</strong></td>
+<td style="text-align: center;">Incluso</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Otimização de Banco de Dados SQL</strong></td>
+<td style="text-align: center;">Incluso</td>
+<td style="text-align: center;"><strong>Incluso</strong></td>
+<td style="text-align: center;">Incluso</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Monitoramento Proativo &amp; Alertas</strong></td>
+<td style="text-align: center;">Uptime Básico</td>
+<td style="text-align: center;"><strong>Alertas Avançados</strong></td>
+<td style="text-align: center;">Observabilidade 24/7</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Reunião de Alinhamento Técnico</strong></td>
+<td style="text-align: center;">Mensal</td>
+<td style="text-align: center;"><strong>Quinzenal</strong></td>
+<td style="text-align: center;">Semanal</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>INVESTIMENTO MENSAL</strong></td>
+<td style="text-align: center;"><strong>R$ 3.200,00 / mês</strong></td>
+<td style="text-align: center;"><strong>R$ 5.500,00 / mês</strong></td>
+<td style="text-align: center;"><strong>R$ 8.000,00 / mês</strong></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3>OPÇÃO D: Mini-Discovery &amp; Diagnóstico Técnico com 100% de Cashback</h3>
+<p>Para empresas que desejam desenhar todo o escopo, arquitetura e telas do sistema antes da contratação da codificação:<br />
+* <strong>Entregáveis em 3 a 5 dias úteis:</strong> Especificação técnica de requisitos, mapa de fluxo de processos, wireframes das telas principais e modelagem do banco de dados.<br />
+* <strong>Investimento:</strong> <strong>R$ 950,00 a R$ 1.500,00 (pagamento único)</strong>.<br />
+* 🎁 <strong>100% de Cashback:</strong> Na contratação do desenvolvimento do sistema com a TRD, <strong>o valor integral do Discovery é abatido como desconto</strong> na fatura de construção (o Discovery sai a custo zero).</p>
+<hr />
+<h3>OPÇÃO E: Troubleshooting Cirúrgico &amp; Intervenção Sob Demanda (Sprint 10h)</h3>
+<p>Para resolução imediata de emergências em produção sem contratação mensal prévia (tuning de queries lentas de banco de dados, falhas impeditivas ou adequação urgente à LGPD):<br />
+* <strong>Prazo de Início:</strong> Atuação em até 24h a 48h.<br />
+* <strong>Investimento:</strong> <strong>R$ 1.800,00 (pagamento único)</strong> por sprint de 10 horas técnicas.<br />
+* <em>Bônus de Conversão:</em> 50% do valor (R$ 900,00) vira crédito na primeira mensalidade caso o cliente contrate um plano de sustentação em até 30 dias.</p>
+<hr />
+<h2>3. Formas de Pagamento &amp; Condições Oficiais</h2>
+<p>Para máxima comodidade e previsibilidade do seu caixa:<br />
+1. <strong>À Vista no Pix:</strong> Condição bonificada de lançamento com emissão imediata de NFS-e;<br />
+2. <strong>Boleto Bancário Faturado PJ:</strong> Modelo 50/50 (50% de sinal na assinatura + 50% no Go-Live);<br />
+3. <strong>Cartão de Crédito Corporativo em até 12x:</strong> Parcelamento seguro via link de pagamento sem travar o capital de giro da sua empresa.</p>
+<hr />
+<h2>4. Próximos Passos para Início Imediato</h2>
+<ol>
+<li><strong>Aprovação da Proposta &amp; Modalidade Escolhida:</strong> Formalização digital via WhatsApp ou e-mail;</li>
+<li><strong>Assinatura Eletrônica:</strong> Envio do Contrato e NDA via plataforma digital (ZapSign / ClickSign) com validade jurídica (Lei 14.063/20);</li>
+<li><strong>Sessão de Kick-off (Dia 1):</strong> Alinhamento executivo dos fluxos e início da esteira de engenharia da TRD.</li>
+</ol>
+<p>Estamos prontos para transformar a operação da sua empresa com tecnologia de ponta.</p>
+<hr />
+<p><strong>THIAGO ROCHA DUARTE - CONSULTORIA E SERVICOS DE TI LTDA</strong> (TRD Consultoria)<br />
+<strong>CNPJ:</strong> 43.065.207/0001-57 | Fundação: 10/08/2021 (Ativa no Simples Nacional)<br />
+<strong>Sede:</strong> Brasília - DF, Brasil | Atendimento em todo o território nacional<br />
+<strong>Thiago Rocha Duarte</strong> — Sócio Administrador &amp; Arquiteto Chefe<br />
+<strong>E-mail:</strong> contato@trdconsultoria.com.br | <strong>WhatsApp:</strong> +55 (61) 99952-6374<br />
+<strong>Portal Oficial:</strong> <a href="https://trd-consultoria-ti.github.io/startup/">trd-consultoria-ti.github.io/startup</a></p>
+</main>
+
+<footer class="trd-footer">
+    <span>TRD Consultoria e Serviços de TI LTDA — Boutique de Engenharia de Software &amp; Missão Crítica</span>
+    <span>Brasília - DF · Brasil · Documento Oficial</span>
+</footer>
+
+</body>
+</html>
