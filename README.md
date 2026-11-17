@@ -7,7 +7,7 @@
 </p>
 
 <p align="center">
-  <a href="https://trd-consultoria-ti.github.io/startup/"><img src="https://img.shields.io/badge/Website-Online-success?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Website"></a>
+  <a href="https://trdconsultoria.com.br/"><img src="https://img.shields.io/badge/Website-trdconsultoria.com.br-success?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Website"></a>
   <a href="https://github.com/trd-consultoria-ti/startup"><img src="https://img.shields.io/badge/CNPJ-43.065.207%2F0001--57_(Ativa_desde_2021)-059669?style=for-the-badge&logo=probot&logoColor=white
   <a href="https://www.anthropic.com"><img src="https://img.shields.io/badge/Anthropic-Certified_Developer-D97706?style=for-the-badge&logo=anthropic&logoColor=white" alt="Anthropic Certified"></a>
   <a href="https://spring.io"><img src="https://img.shields.io/badge/Java_21_%2F_Spring_Boot-6DB33F?style=for-the-badge&logo=springboot&logoColor=white" alt="Java Spring"></a>" alt="Status"></a>
@@ -21,7 +21,7 @@
 
 > **O toolkit oficial de governança, esteira operacional e contratos da THIAGO ROCHA DUARTE - CONSULTORIA E SERVICOS DE TI LTDA (TRD Consultoria).**  
 > **CNPJ:** 43.065.207/0001-57 (Ativa desde 10/08/2021 — Simples Nacional) | **Sede:** Brasília/DF.  
-> 🌐 **Landing Page Oficial:** [https://trd-consultoria-ti.github.io/startup/](https://trd-consultoria-ti.github.io/startup/)  
+> 🌐 **Landing Page Oficial:** [https://trdconsultoria.com.br/](https://trdconsultoria.com.br/)  
 > 100% amparado na legislação brasileira: **Código Civil (Lei 10.406/02)**, **Lei do Software (Lei 9.609/98)**, **LGPD (Lei 13.709/18)**, **Marco Civil da Internet (Lei 12.965/14)** e **Assinatura Eletrônica (Lei 14.063/20)**.
 
 ---
