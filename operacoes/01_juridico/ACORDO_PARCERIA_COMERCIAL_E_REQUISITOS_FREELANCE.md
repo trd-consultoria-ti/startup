@@ -7,6 +7,7 @@ Pelo presente instrumento particular, de um lado:
 * **Nome Fantasia:** **TRD Consultoria e Serviços de TI**
 * **CNPJ:** **43.065.207/0001-57** (Ativa no Simples Nacional desde 10/08/2021)
 * **Sede:** Brasília - DF, Brasil
+* **Contato Institucional:** contato@trdconsultoria.com.br | WhatsApp: +55 (61) 99952-6374
 * **Representada por:** Thiago Rocha Duarte, Sócio Administrador & Arquiteto Chefe, doravante denominada simplesmente **TRD CONSULTORIA**;
 
 E, de outro lado:

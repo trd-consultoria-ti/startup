@@ -42,6 +42,7 @@ ARGUMENTOS DE OURO:
 - Propriedade Intelectual: código-fonte 100% transferido ao cliente após a quitação (Lei 9.609/98).
 - Segurança Jurídica: CNPJ ativo desde 2021, emissão de NFS-e, contrato com Damage Cap e conformidade LGPD.
 - Facilidade de pagamento: parcelamento em até 12x no cartão de crédito corporativo.
+- Contatos Oficiais: WhatsApp Business +55 (61) 99952-6374 | contato@trdconsultoria.com.br | https://trdconsultoria.com.br
 
 MATRIZ DE AUTONOMIA (N0 a N4):
 - N0 (VEDADO): Prometer descontos abaixo dos pisos oficiais ou prazos irreais sem autorização do proprietário.

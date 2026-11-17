@@ -211,10 +211,10 @@ flowchart TD
 ```
 
 ### 4.1. Domínio Corporativo & Identidade Digital
-* Registro do domínio principal no `Registro.br` com proteção de privacidade DNS e redundância Cloudflare.
-* Implantação do **Google Workspace Business Starter** com caixas de correio institucionais:
-  * `thiago@[dominio].com.br` (Direção / Comercial / Institucional)
-  * `contato@[dominio].com.br` / `suporte@[dominio].com.br` (Caixas compartilhadas de atendimento)
+* Registro do domínio principal oficial `trdconsultoria.com.br` no `Registro.br` com proteção de privacidade DNS e redundância Cloudflare.
+* Implantação de e-mails corporativos institucionais sob o domínio próprio:
+  * `thiago@trdconsultoria.com.br` (Direção / Comercial / Institucional)
+  * `contato@trdconsultoria.com.br` / `suporte@trdconsultoria.com.br` (Caixas compartilhadas de atendimento)
 * Configuração estrita de registros de autenticação de e-mail: **SPF, DKIM e DMARC** para garantir entregabilidade em campanhas de prospecção fria e blindagem contra phishing.
 * Autenticação de Dois Fatores (2FA) mandatória em todas as contas com chaves de segurança (TOTP / Google Authenticator).
 
@@ -233,7 +233,7 @@ Criação da organização corporativa no GitHub com padrões corporativos de de
 ### 4.3. Central de Suporte, SLA e Gestão de Incidentes
 Integração do fluxo de atendimento ao cliente com a [MATRIZ_SEVERIDADE_E_SLA.md](operacoes/05_administracao/MATRIZ_SEVERIDADE_E_SLA.md):
 * **Ferramenta de Ticketing:** Implantação do Jira Service Management ou Linear estruturado com 4 filas de severidade (P1 a P4).
-* **Canal Executivo de WhatsApp Corporativo:** Número centralizado da empresa com atendimento supervisionado por Thiago para recepção imediata de demandas emergenciais de clientes.
+* **Canal Executivo de WhatsApp Corporativo:** +55 (61) 99952-6374 (número centralizado oficial da empresa com atendimento supervisionado por Thiago para recepção imediata de demandas emergenciais e comerciais de clientes).
 * **Acordo de Nível de Serviço (SLA Contratual):**
 
 | Severidade | Definição | Primeira Resposta | Início da Atuação Técnica | Meta de Resolução / Workaround |

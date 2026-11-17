@@ -4,7 +4,7 @@
 **THIAGO ROCHA DUARTE - CONSULTORIA E SERVICOS DE TI LTDA** (TRD Consultoria)  
 CNPJ: 43.065.207/0001-57 | Fundação: 10/08/2021 | Simples Nacional  
 Sede Operacional: Brasília - DF, Brasil  
-Contato Institucional: contato@trdconsultoria.com.br  
+Contato Institucional: contato@trdconsultoria.com.br | WhatsApp: +55 (61) 99952-6374 | https://trdconsultoria.com.br  
 
 ---
 

@@ -15,6 +15,7 @@ E, de outro lado:
 * **Nome Fantasia:** **TRD Consultoria e Serviços de TI**
 * **CNPJ:** **43.065.207/0001-57** (Início de Atividade: 10/08/2021)
 * **Sede:** Brasília - DF, Brasil
+* **Contato Institucional:** contato@trdconsultoria.com.br | WhatsApp: +55 (61) 99952-6374
 * **Representada por:** Thiago Rocha Duarte, brasileiro, engenheiro de software, inscrito no CPF sob o nº [000.000.000-00 - Qualificado na Assinatura], na qualidade de Sócio Administrador, doravante denominada simplesmente **CONTRATADA**;
 
 Ambas doravante denominadas conjuntamente como **PARTES** e individualmente como **PARTE**.

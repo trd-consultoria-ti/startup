@@ -54,4 +54,4 @@
 
 > 🎯 **Precisa de Apoio Técnico para Eliminar Esses Riscos?**  
 > A **TRD Consultoria e Serviços de TI LTDA** realiza a **Auditoria de Arquitetura & Diagnóstico Técnico (Discovery)** em até 5 dias úteis, entregando um laudo executivo completo com plano de remediação.  
-> Contato: `contato@trdconsultoria.com.br` | Brasília - DF
+> Contato: `contato@trdconsultoria.com.br` | WhatsApp: **+55 (61) 99952-6374** | Brasília - DF
