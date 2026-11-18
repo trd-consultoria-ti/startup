@@ -19,6 +19,7 @@ operacoes/
 ├── 02_comercial_marketing/
 │   ├── PLANO_EXPANSAO_NACIONAL_PME.md          # Estratégia mestre de vendas para PMEs no Brasil (Preços, Polos e Scripts)
 │   ├── AUDITORIA_CETICA_PLANO_EXPANSAO_NACIONAL_PME.md # Stress-test e 5 blindagens inegociáveis para PMEs
+│   ├── PARECER_TECNICO_ARQUITETURA_ENTREGA_SOLO.md     # Validação de viabilidade técnica solo (20 dias, Boilerplate 80/20)
 │   ├── ANEXO_I_FICHA_TECNICA_STARTER_9800.md   # Ficha técnica imutável do MVP Starter (Anti-Scope Creep)
 │   ├── PROTOCOLO_PROSPECCAO_NACIONAL_ANTIBAN.md # Protocolo de permission marketing de 40s e chip secundário
 │   ├── PLANO_ESTRATEGICO_MARKETING_DISTRIBUICAO_B2B.md # Distribuição de canais B2B, Google Ads, LinkedIn e Budget
