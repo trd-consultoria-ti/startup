@@ -664,7 +664,7 @@ h3 { font-size: 1.25rem; }
 
 /* ---------- Barra de Confiança (Marquee Contínuo Estilo Kimi.ai / Linear) ---------- */
 .trustbar {
-  padding-block: 2rem 2.25rem;
+  padding-block: 1.75rem 2rem;
   border-block: 1px solid var(--border);
   background: var(--trustbar-bg);
   backdrop-filter: blur(8px);
@@ -676,14 +676,16 @@ h3 { font-size: 1.25rem; }
   width: 100%;
   overflow: hidden;
   position: relative;
+  padding-block: 1rem;
   mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
   -webkit-mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
 }
 .trustbar__track {
   display: flex;
-  align-items: stretch;
+  align-items: center;
   gap: 1.15rem;
   width: max-content;
+  padding-block: .25rem;
   animation: trustbar-scroll 36s linear infinite;
   will-change: transform;
 }
@@ -714,10 +716,11 @@ h3 { font-size: 1.25rem; }
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: .5rem;
-  padding: .85rem 1.15rem .65rem;
+  gap: .55rem;
+  padding: .9rem 1.15rem .85rem;
   min-width: 145px;
   max-width: 175px;
+  box-sizing: border-box;
   border-radius: 14px;
   background: #FFFFFF;
   border: 1px solid rgba(226, 232, 240, 0.95);

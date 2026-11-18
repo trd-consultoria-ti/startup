@@ -1,0 +1,83 @@
+[
+  {
+    "name": "iPhone_5_320",
+    "width": 320,
+    "has_overflow_closed": false,
+    "has_overflow_open": false,
+    "links_horizontal_presented": false,
+    "burger_visible": true,
+    "drawer_works": true
+  },
+  {
+    "name": "Android_360",
+    "width": 360,
+    "has_overflow_closed": false,
+    "has_overflow_open": false,
+    "links_horizontal_presented": false,
+    "burger_visible": true,
+    "drawer_works": true
+  },
+  {
+    "name": "iPhone_SE_375",
+    "width": 375,
+    "has_overflow_closed": false,
+    "has_overflow_open": false,
+    "links_horizontal_presented": false,
+    "burger_visible": true,
+    "drawer_works": true
+  },
+  {
+    "name": "iPhone_14_390",
+    "width": 390,
+    "has_overflow_closed": false,
+    "has_overflow_open": false,
+    "links_horizontal_presented": false,
+    "burger_visible": true,
+    "drawer_works": true
+  },
+  {
+    "name": "Android_412",
+    "width": 412,
+    "has_overflow_closed": false,
+    "has_overflow_open": false,
+    "links_horizontal_presented": false,
+    "burger_visible": true,
+    "drawer_works": true
+  },
+  {
+    "name": "iPhone_Max_428",
+    "width": 428,
+    "has_overflow_closed": false,
+    "has_overflow_open": false,
+    "links_horizontal_presented": false,
+    "burger_visible": true,
+    "drawer_works": true
+  },
+  {
+    "name": "iPad_Mini_768",
+    "width": 768,
+    "has_overflow_closed": false,
+    "has_overflow_open": false,
+    "links_horizontal_presented": false,
+    "burger_visible": true,
+    "drawer_works": true
+  },
+  {
+    "name": "iPad_Air_820",
+    "width": 820,
+    "has_overflow_closed": false,
+    "has_overflow_open": false,
+    "links_horizontal_presented": false,
+    "burger_visible": true,
+    "drawer_works": true
+  },
+  {
+    "name": "iPad_Pro_1024",
+    "width": 1024,
+    "has_overflow_closed": false,
+    "has_overflow_open": false,
+    "links_horizontal_presented": false,
+    "burger_visible": true,
+    "drawer_works": true
+  }
+]

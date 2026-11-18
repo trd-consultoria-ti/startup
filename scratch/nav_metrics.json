@@ -1,0 +1,476 @@
+{
+  "320px": {
+    "real_stacked": {
+      "viewportWidth": 320,
+      "containerPaddingX": 32,
+      "availableWidth": 288,
+      "brand": {
+        "width": 174.78,
+        "height": 44,
+        "display": "flex",
+        "visible": true
+      },
+      "svg": {
+        "width": 35,
+        "height": 40,
+        "display": "block",
+        "visible": true
+      },
+      "word": {
+        "width": 127.78,
+        "height": 31.89,
+        "display": "flex",
+        "visible": true
+      },
+      "wordB": {
+        "width": 127.78,
+        "height": 22,
+        "display": "block",
+        "visible": true
+      },
+      "wordSpan": {
+        "width": 127.78,
+        "height": 9.89,
+        "display": "block",
+        "visible": true
+      },
+      "actions": {
+        "width": 100,
+        "height": 44,
+        "display": "flex",
+        "visible": true
+      },
+      "themeBtn": {
+        "width": 44,
+        "height": 44,
+        "display": "flex",
+        "visible": true
+      },
+      "ctaBtn": {
+        "width": 0,
+        "height": 0,
+        "display": "none",
+        "visible": false
+      },
+      "burgerBtn": {
+        "width": 44,
+        "height": 44,
+        "display": "flex",
+        "visible": true
+      },
+      "links": {
+        "width": 0,
+        "height": 0,
+        "display": "none",
+        "visible": false
+      },
+      "totalRequired": 274.78,
+      "gapRemaining": 13.22,
+      "overflowsHeader": false
+    },
+    "simulated_unstacked": {
+      "unstackedBrandWidth": 222.81,
+      "actionsWidth": 100,
+      "unstackedTotalRequired": 322.81,
+      "availableWidth": 288,
+      "unstackedRemaining": -34.81,
+      "collides": true,
+      "deficit": 34.81
+    }
+  },
+  "360px": {
+    "real_stacked": {
+      "viewportWidth": 360,
+      "containerPaddingX": 32,
+      "availableWidth": 328,
+      "brand": {
+        "width": 174.78,
+        "height": 44,
+        "display": "flex",
+        "visible": true
+      },
+      "svg": {
+        "width": 35,
+        "height": 40,
+        "display": "block",
+        "visible": true
+      },
+      "word": {
+        "width": 127.78,
+        "height": 31.89,
+        "display": "flex",
+        "visible": true
+      },
+      "wordB": {
+        "width": 127.78,
+        "height": 22,
+        "display": "block",
+        "visible": true
+      },
+      "wordSpan": {
+        "width": 127.78,
+        "height": 9.89,
+        "display": "block",
+        "visible": true
+      },
+      "actions": {
+        "width": 100,
+        "height": 44,
+        "display": "flex",
+        "visible": true
+      },
+      "themeBtn": {
+        "width": 44,
+        "height": 44,
+        "display": "flex",
+        "visible": true
+      },
+      "ctaBtn": {
+        "width": 0,
+        "height": 0,
+        "display": "none",
+        "visible": false
+      },
+      "burgerBtn": {
+        "width": 44,
+        "height": 44,
+        "display": "flex",
+        "visible": true
+      },
+      "links": {
+        "width": 0,
+        "height": 0,
+        "display": "none",
+        "visible": false
+      },
+      "totalRequired": 274.78,
+      "gapRemaining": 53.22,
+      "overflowsHeader": false
+    },
+    "simulated_unstacked": {
+      "unstackedBrandWidth": 222.81,
+      "actionsWidth": 100,
+      "unstackedTotalRequired": 322.81,
+      "availableWidth": 328,
+      "unstackedRemaining": 5.19,
+      "collides": false,
+      "deficit": 0
+    }
+  },
+  "375px": {
+    "real_stacked": {
+      "viewportWidth": 375,
+      "containerPaddingX": 32,
+      "availableWidth": 343,
+      "brand": {
+        "width": 174.78,
+        "height": 44,
+        "display": "flex",
+        "visible": true
+      },
+      "svg": {
+        "width": 35,
+        "height": 40,
+        "display": "block",
+        "visible": true
+      },
+      "word": {
+        "width": 127.78,
+        "height": 31.89,
+        "display": "flex",
+        "visible": true
+      },
+      "wordB": {
+        "width": 127.78,
+        "height": 22,
+        "display": "block",
+        "visible": true
+      },
+      "wordSpan": {
+        "width": 127.78,
+        "height": 9.89,
+        "display": "block",
+        "visible": true
+      },
+      "actions": {
+        "width": 100,
+        "height": 44,
+        "display": "flex",
+        "visible": true
+      },
+      "themeBtn": {
+        "width": 44,
+        "height": 44,
+        "display": "flex",
+        "visible": true
+      },
+      "ctaBtn": {
+        "width": 0,
+        "height": 0,
+        "display": "none",
+        "visible": false
+      },
+      "burgerBtn": {
+        "width": 44,
+        "height": 44,
+        "display": "flex",
+        "visible": true
+      },
+      "links": {
+        "width": 0,
+        "height": 0,
+        "display": "none",
+        "visible": false
+      },
+      "totalRequired": 274.78,
+      "gapRemaining": 68.22,
+      "overflowsHeader": false
+    },
+    "simulated_unstacked": {
+      "unstackedBrandWidth": 222.81,
+      "actionsWidth": 100,
+      "unstackedTotalRequired": 322.81,
+      "availableWidth": 343,
+      "unstackedRemaining": 20.19,
+      "collides": false,
+      "deficit": 0
+    }
+  },
+  "640px": {
+    "real_stacked": {
+      "viewportWidth": 640,
+      "containerPaddingX": 48,
+      "availableWidth": 592,
+      "brand": {
+        "width": 174.78,
+        "height": 44,
+        "display": "flex",
+        "visible": true
+      },
+      "svg": {
+        "width": 35,
+        "height": 40,
+        "display": "block",
+        "visible": true
+      },
+      "word": {
+        "width": 127.78,
+        "height": 31.89,
+        "display": "flex",
+        "visible": true
+      },
+      "wordB": {
+        "width": 127.78,
+        "height": 22,
+        "display": "block",
+        "visible": true
+      },
+      "wordSpan": {
+        "width": 127.78,
+        "height": 9.89,
+        "display": "block",
+        "visible": true
+      },
+      "actions": {
+        "width": 287.23,
+        "height": 44,
+        "display": "flex",
+        "visible": true
+      },
+      "themeBtn": {
+        "width": 44,
+        "height": 44,
+        "display": "flex",
+        "visible": true
+      },
+      "ctaBtn": {
+        "width": 175.23,
+        "height": 44,
+        "display": "flex",
+        "visible": true
+      },
+      "burgerBtn": {
+        "width": 44,
+        "height": 44,
+        "display": "flex",
+        "visible": true
+      },
+      "links": {
+        "width": 0,
+        "height": 0,
+        "display": "none",
+        "visible": false
+      },
+      "totalRequired": 462.01,
+      "gapRemaining": 129.99,
+      "overflowsHeader": false
+    },
+    "simulated_unstacked": {
+      "unstackedBrandWidth": 222.81,
+      "actionsWidth": 287.23,
+      "unstackedTotalRequired": 510.04,
+      "availableWidth": 592,
+      "unstackedRemaining": 81.96,
+      "collides": false,
+      "deficit": 0
+    }
+  },
+  "768px": {
+    "real_stacked": {
+      "viewportWidth": 768,
+      "containerPaddingX": 48,
+      "availableWidth": 720,
+      "brand": {
+        "width": 174.78,
+        "height": 44,
+        "display": "flex",
+        "visible": true
+      },
+      "svg": {
+        "width": 35,
+        "height": 40,
+        "display": "block",
+        "visible": true
+      },
+      "word": {
+        "width": 127.78,
+        "height": 31.89,
+        "display": "flex",
+        "visible": true
+      },
+      "wordB": {
+        "width": 127.78,
+        "height": 22,
+        "display": "block",
+        "visible": true
+      },
+      "wordSpan": {
+        "width": 127.78,
+        "height": 9.89,
+        "display": "block",
+        "visible": true
+      },
+      "actions": {
+        "width": 287.23,
+        "height": 44,
+        "display": "flex",
+        "visible": true
+      },
+      "themeBtn": {
+        "width": 44,
+        "height": 44,
+        "display": "flex",
+        "visible": true
+      },
+      "ctaBtn": {
+        "width": 175.23,
+        "height": 44,
+        "display": "flex",
+        "visible": true
+      },
+      "burgerBtn": {
+        "width": 44,
+        "height": 44,
+        "display": "flex",
+        "visible": true
+      },
+      "links": {
+        "width": 0,
+        "height": 0,
+        "display": "none",
+        "visible": false
+      },
+      "totalRequired": 462.01,
+      "gapRemaining": 257.99,
+      "overflowsHeader": false
+    },
+    "simulated_unstacked": {
+      "unstackedBrandWidth": 222.81,
+      "actionsWidth": 287.23,
+      "unstackedTotalRequired": 510.04,
+      "availableWidth": 720,
+      "unstackedRemaining": 209.96,
+      "collides": false,
+      "deficit": 0
+    }
+  },
+  "1024px": {
+    "real_stacked": {
+      "viewportWidth": 1024,
+      "containerPaddingX": 48,
+      "availableWidth": 976,
+      "brand": {
+        "width": 174.78,
+        "height": 44,
+        "display": "flex",
+        "visible": true
+      },
+      "svg": {
+        "width": 35,
+        "height": 40,
+        "display": "block",
+        "visible": true
+      },
+      "word": {
+        "width": 127.78,
+        "height": 31.89,
+        "display": "flex",
+        "visible": true
+      },
+      "wordB": {
+        "width": 127.78,
+        "height": 22,
+        "display": "block",
+        "visible": true
+      },
+      "wordSpan": {
+        "width": 127.78,
+        "height": 9.89,
+        "display": "block",
+        "visible": true
+      },
+      "actions": {
+        "width": 161.78,
+        "height": 78.98,
+        "display": "flex",
+        "visible": true
+      },
+      "themeBtn": {
+        "width": 44,
+        "height": 44,
+        "display": "flex",
+        "visible": true
+      },
+      "ctaBtn": {
+        "width": 105.78,
+        "height": 78.98,
+        "display": "flex",
+        "visible": true
+      },
+      "burgerBtn": {
+        "width": 0,
+        "height": 0,
+        "display": "none",
+        "visible": false
+      },
+      "links": {
+        "width": 607.44,
+        "height": 69.28,
+        "display": "flex",
+        "visible": true
+      },
+      "totalRequired": 336.56,
+      "gapRemaining": 639.44,
+      "overflowsHeader": false
+    },
+    "simulated_unstacked": {
+      "unstackedBrandWidth": 222.81,
+      "actionsWidth": 150.98,
+      "unstackedTotalRequired": 373.79,
+      "availableWidth": 976,
+      "unstackedRemaining": 602.21,
+      "collides": false,
+      "deficit": 0
+    }
+  }
+}

@@ -1,0 +1,314 @@
+[
+  {
+    "viewport": "mobile_360",
+    "width": 360,
+    "has_overflow": false,
+    "scroll_width": 360,
+    "burger_visible": true,
+    "links_visible": false,
+    "links": [],
+    "cta_data": null,
+    "screenshot": "scratch/screenshots/header_mobile_360.png"
+  },
+  {
+    "viewport": "mobile_414",
+    "width": 414,
+    "has_overflow": false,
+    "scroll_width": 414,
+    "burger_visible": true,
+    "links_visible": false,
+    "links": [],
+    "cta_data": null,
+    "screenshot": "scratch/screenshots/header_mobile_414.png"
+  },
+  {
+    "viewport": "tablet_768",
+    "width": 768,
+    "has_overflow": false,
+    "scroll_width": 768,
+    "burger_visible": true,
+    "links_visible": false,
+    "links": [],
+    "cta_data": {
+      "text": "OR\u00c7AR MEU SISTEMA",
+      "width": 175.234375,
+      "height": 44
+    },
+    "screenshot": "scratch/screenshots/header_tablet_768.png"
+  },
+  {
+    "viewport": "laptop_1024",
+    "width": 1024,
+    "has_overflow": false,
+    "scroll_width": 1024,
+    "burger_visible": true,
+    "links_visible": false,
+    "links": [],
+    "cta_data": {
+      "text": "OR\u00c7AR MEU SISTEMA",
+      "width": 175.234375,
+      "height": 44
+    },
+    "screenshot": "scratch/screenshots/header_laptop_1024.png"
+  },
+  {
+    "viewport": "laptop_1100",
+    "width": 1100,
+    "has_overflow": false,
+    "scroll_width": 1100,
+    "burger_visible": true,
+    "links_visible": false,
+    "links": [],
+    "cta_data": {
+      "text": "OR\u00c7AR MEU SISTEMA",
+      "width": 175.234375,
+      "height": 44
+    },
+    "screenshot": "scratch/screenshots/header_laptop_1100.png"
+  },
+  {
+    "viewport": "laptop_1199",
+    "width": 1199,
+    "has_overflow": false,
+    "scroll_width": 1199,
+    "burger_visible": true,
+    "links_visible": false,
+    "links": [],
+    "cta_data": {
+      "text": "OR\u00c7AR MEU SISTEMA",
+      "width": 175.234375,
+      "height": 44
+    },
+    "screenshot": "scratch/screenshots/header_laptop_1199.png"
+  },
+  {
+    "viewport": "laptop_1200",
+    "width": 1200,
+    "has_overflow": false,
+    "scroll_width": 1200,
+    "burger_visible": false,
+    "links_visible": true,
+    "links": [
+      {
+        "text": "Sistemas Sob Medida",
+        "width": 152.296875,
+        "height": 44
+      },
+      {
+        "text": "Diagn\u00f3stico",
+        "width": 87.515625,
+        "height": 44
+      },
+      {
+        "text": "Experi\u00eancia",
+        "width": 86.390625,
+        "height": 44
+      },
+      {
+        "text": "Planos & Pre\u00e7os",
+        "width": 115.921875,
+        "height": 44
+      },
+      {
+        "text": "Equipe & Governan\u00e7a",
+        "width": 151.75,
+        "height": 44
+      },
+      {
+        "text": "Contato",
+        "width": 61.015625,
+        "height": 44
+      }
+    ],
+    "cta_data": {
+      "text": "OR\u00c7AR MEU SISTEMA",
+      "width": 175.234375,
+      "height": 44
+    },
+    "screenshot": "scratch/screenshots/header_laptop_1200.png"
+  },
+  {
+    "viewport": "laptop_1280",
+    "width": 1280,
+    "has_overflow": false,
+    "scroll_width": 1280,
+    "burger_visible": false,
+    "links_visible": true,
+    "links": [
+      {
+        "text": "Sistemas Sob Medida",
+        "width": 152.296875,
+        "height": 44
+      },
+      {
+        "text": "Diagn\u00f3stico",
+        "width": 87.515625,
+        "height": 44
+      },
+      {
+        "text": "Experi\u00eancia",
+        "width": 86.390625,
+        "height": 44
+      },
+      {
+        "text": "Planos & Pre\u00e7os",
+        "width": 115.921875,
+        "height": 44
+      },
+      {
+        "text": "Equipe & Governan\u00e7a",
+        "width": 151.75,
+        "height": 44
+      },
+      {
+        "text": "Contato",
+        "width": 61.015625,
+        "height": 44
+      }
+    ],
+    "cta_data": {
+      "text": "OR\u00c7AR MEU SISTEMA",
+      "width": 175.234375,
+      "height": 44
+    },
+    "screenshot": "scratch/screenshots/header_laptop_1280.png"
+  },
+  {
+    "viewport": "laptop_1366",
+    "width": 1366,
+    "has_overflow": false,
+    "scroll_width": 1366,
+    "burger_visible": false,
+    "links_visible": true,
+    "links": [
+      {
+        "text": "Sistemas Sob Medida",
+        "width": 152.296875,
+        "height": 44
+      },
+      {
+        "text": "Diagn\u00f3stico",
+        "width": 87.515625,
+        "height": 44
+      },
+      {
+        "text": "Experi\u00eancia",
+        "width": 86.390625,
+        "height": 44
+      },
+      {
+        "text": "Planos & Pre\u00e7os",
+        "width": 115.921875,
+        "height": 44
+      },
+      {
+        "text": "Equipe & Governan\u00e7a",
+        "width": 151.75,
+        "height": 44
+      },
+      {
+        "text": "Contato",
+        "width": 61.015625,
+        "height": 44
+      }
+    ],
+    "cta_data": {
+      "text": "OR\u00c7AR MEU SISTEMA",
+      "width": 175.234375,
+      "height": 44
+    },
+    "screenshot": "scratch/screenshots/header_laptop_1366.png"
+  },
+  {
+    "viewport": "desktop_1440",
+    "width": 1440,
+    "has_overflow": false,
+    "scroll_width": 1440,
+    "burger_visible": false,
+    "links_visible": true,
+    "links": [
+      {
+        "text": "Sistemas Sob Medida",
+        "width": 152.296875,
+        "height": 44
+      },
+      {
+        "text": "Diagn\u00f3stico",
+        "width": 87.515625,
+        "height": 44
+      },
+      {
+        "text": "Experi\u00eancia",
+        "width": 86.390625,
+        "height": 44
+      },
+      {
+        "text": "Planos & Pre\u00e7os",
+        "width": 115.921875,
+        "height": 44
+      },
+      {
+        "text": "Equipe & Governan\u00e7a",
+        "width": 151.75,
+        "height": 44
+      },
+      {
+        "text": "Contato",
+        "width": 61.015625,
+        "height": 44
+      }
+    ],
+    "cta_data": {
+      "text": "OR\u00c7AR MEU SISTEMA",
+      "width": 175.234375,
+      "height": 44
+    },
+    "screenshot": "scratch/screenshots/header_desktop_1440.png"
+  },
+  {
+    "viewport": "desktop_1920",
+    "width": 1920,
+    "has_overflow": false,
+    "scroll_width": 1920,
+    "burger_visible": false,
+    "links_visible": true,
+    "links": [
+      {
+        "text": "Sistemas Sob Medida",
+        "width": 152.296875,
+        "height": 44
+      },
+      {
+        "text": "Diagn\u00f3stico",
+        "width": 87.515625,
+        "height": 44
+      },
+      {
+        "text": "Experi\u00eancia",
+        "width": 86.390625,
+        "height": 44
+      },
+      {
+        "text": "Planos & Pre\u00e7os",
+        "width": 115.921875,
+        "height": 44
+      },
+      {
+        "text": "Equipe & Governan\u00e7a",
+        "width": 151.75,
+        "height": 44
+      },
+      {
+        "text": "Contato",
+        "width": 61.015625,
+        "height": 44
+      }
+    ],
+    "cta_data": {
+      "text": "OR\u00c7AR MEU SISTEMA",
+      "width": 175.234375,
+      "height": 44
+    },
+    "screenshot": "scratch/screenshots/header_desktop_1920.png"
+  }
+]
