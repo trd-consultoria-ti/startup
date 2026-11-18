@@ -1408,39 +1408,139 @@
       updateProgress();
     })();
 
-    // --- 5. ScrollSpy Nativo de Alta Performance (IntersectionObserver) ---
-    (function initScrollSpy() {
-      const navLinks = document.querySelectorAll('.nav__links a[href^="#"], .nav__mobile a[href^="#"]');
-      const sections = [];
-      navLinks.forEach(function(link) {
-        const id = link.getAttribute('href');
-        if (id && id.startsWith('#') && id.length > 1) {
-          const el = document.querySelector(id);
-          if (el && !sections.includes(el)) sections.push(el);
+    // --- 5. Gerenciador de Navegação & ScrollSpy de Alta Precisão ---
+    (function initNavigationSpy() {
+      const allNavLinks = Array.from(document.querySelectorAll('.nav__links a[href^="#"], .nav__mobile a[href^="#"]'));
+      const targetMap = [];
+      let isClickScrolling = false;
+      let clickTargetHref = null;
+      let scrollEndTimer = null;
+
+      // Mapear seções existentes
+      allNavLinks.forEach(function(link) {
+        const href = link.getAttribute('href');
+        if (href && href.startsWith('#') && href.length > 1) {
+          const targetEl = document.querySelector(href);
+          if (targetEl && !targetMap.some(function(t) { return t.id === href; })) {
+            targetMap.push({ id: href, el: targetEl });
+          }
         }
       });
 
-      if (!sections.length || !('IntersectionObserver' in window)) return;
-
-      const observer = new IntersectionObserver(function(entries) {
-        entries.forEach(function(entry) {
-          if (entry.isIntersecting) {
-            const id = '#' + entry.target.id;
-            navLinks.forEach(function(link) {
-              if (link.getAttribute('href') === id) {
-                link.classList.add('is-active');
-              } else {
-                link.classList.remove('is-active');
-              }
-            });
+      function setActiveLink(activeHref) {
+        allNavLinks.forEach(function(link) {
+          const isTarget = link.getAttribute('href') === activeHref;
+          if (isTarget) {
+            link.classList.add('is-active');
+            link.setAttribute('aria-current', 'page');
+          } else {
+            link.classList.remove('is-active');
+            link.removeAttribute('aria-current');
           }
         });
-      }, {
-        rootMargin: '-20% 0px -65% 0px',
-        threshold: 0
+      }
+
+      function updateActiveOnScroll() {
+        if (isClickScrolling) return;
+
+        const scrollY = window.scrollY || window.pageYOffset;
+        const windowHeight = window.innerHeight;
+        const documentHeight = document.documentElement.scrollHeight;
+
+        // Se o usuário está no topo da página (Hero), remove seleção
+        if (scrollY < 200) {
+          setActiveLink(null);
+          return;
+        }
+
+        // Se o usuário rolou até o fim da página (Footer / Contato), ativa Contato
+        if (windowHeight + scrollY >= documentHeight - 90) {
+          const lastTarget = targetMap[targetMap.length - 1];
+          if (lastTarget) {
+            setActiveLink(lastTarget.id);
+            return;
+          }
+        }
+
+        // Determina qual seção está na zona ativa de leitura (offset do header fixo)
+        const headerOffset = 130;
+        let currentActive = null;
+
+        for (let i = 0; i < targetMap.length; i++) {
+          const rect = targetMap[i].el.getBoundingClientRect();
+          if (rect.top <= headerOffset) {
+            currentActive = targetMap[i].id;
+          }
+        }
+
+        if (currentActive) {
+          setActiveLink(currentActive);
+        }
+      }
+
+      // 1. Resposta Imediata ao Clique do Usuário
+      allNavLinks.forEach(function(link) {
+        link.addEventListener('click', function() {
+          const href = link.getAttribute('href');
+          if (href && href.startsWith('#')) {
+            const targetEl = document.querySelector(href);
+            if (targetEl) {
+              // Aplica o visual ativo instantaneamente
+              isClickScrolling = true;
+              clickTargetHref = href;
+              setActiveLink(href);
+
+              clearTimeout(scrollEndTimer);
+              scrollEndTimer = setTimeout(function() {
+                isClickScrolling = false;
+                clickTargetHref = null;
+                updateActiveOnScroll();
+              }, 1800);
+
+              // Se o menu mobile estiver aberto, fecha suavemente
+              const navMobile = document.getElementById('nav-mobile');
+              const burgerBtn = document.getElementById('nav-toggle-btn');
+              if (navMobile && navMobile.classList.contains('is-open')) {
+                navMobile.classList.remove('is-open');
+                if (burgerBtn) {
+                  burgerBtn.setAttribute('aria-expanded', 'false');
+                  const iconMenu = burgerBtn.querySelector('.nav__icon-menu');
+                  const iconClose = burgerBtn.querySelector('.nav__icon-close');
+                  if (iconMenu) iconMenu.style.display = 'block';
+                  if (iconClose) iconClose.style.display = 'none';
+                }
+              }
+            }
+          }
+        });
       });
 
-      sections.forEach(function(s) { observer.observe(s); });
+      // 2. ScrollSpy Contínuo Preciso (Baseado em Posição de Leitura e Fim de Página)
+      window.addEventListener('scroll', function() {
+        if (isClickScrolling) {
+          setActiveLink(clickTargetHref);
+          clearTimeout(scrollEndTimer);
+          scrollEndTimer = setTimeout(function() {
+            isClickScrolling = false;
+            clickTargetHref = null;
+            updateActiveOnScroll();
+          }, 250);
+          return;
+        }
+
+        updateActiveOnScroll();
+      }, { passive: true });
+
+      if ('onscrollend' in window) {
+        window.addEventListener('scrollend', function() {
+          isClickScrolling = false;
+          clickTargetHref = null;
+          updateActiveOnScroll();
+        }, { passive: true });
+      }
+
+      // Verificação inicial
+      updateActiveOnScroll();
     })();
 
     // --- 6. Floating Executive Quick-Connect Dock (CRO WhatsApp Thiago) ---
