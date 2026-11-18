@@ -9,6 +9,8 @@ Este diretório contém a esteira operacional completa, os contratos, os scripts
 ```
 operacoes/
 ├── 01_juridico/
+│   ├── CONTRATO_DESENVOLVIMENTO_SOFTWARE_SOB_MEDIDA.md # Contrato com custódia Staging, SPOC e cláusula anti-chargeback
+│   ├── TERMO_HOMOLOGACAO_E_ENTREGA_DEFINITIVA.md       # Ateste formal Gov.br com renúncia expressa a contestação/chargeback
 │   ├── CONTRATO_SUSTENTACAO_E_SLA.md (.docx)   # Minuta jurídica com Damage Cap e SLA blindado
 │   ├── ACORDO_CONFIDENCIALIDADE_NDA.md (.docx) # Acordo de sigilo e proteção de código/dados
 │   ├── ACORDO_DE_SOCIOS.md (.docx)             # Minuta contingencial para admissão futura de sócio (Vesting de 4 anos)
@@ -16,6 +18,9 @@ operacoes/
 │   └── CONTRATO_PRESTACAO_SERVICOS_PARCEIRO_SOBREAVISO.md # Contrato PJ de engenheiro de sobreaviso (Backup Técnico)
 ├── 02_comercial_marketing/
 │   ├── PLANO_EXPANSAO_NACIONAL_PME.md          # Estratégia mestre de vendas para PMEs no Brasil (Preços, Polos e Scripts)
+│   ├── AUDITORIA_CETICA_PLANO_EXPANSAO_NACIONAL_PME.md # Stress-test e 5 blindagens inegociáveis para PMEs
+│   ├── ANEXO_I_FICHA_TECNICA_STARTER_9800.md   # Ficha técnica imutável do MVP Starter (Anti-Scope Creep)
+│   ├── PROTOCOLO_PROSPECCAO_NACIONAL_ANTIBAN.md # Protocolo de permission marketing de 40s e chip secundário
 │   ├── PLANO_ESTRATEGICO_MARKETING_DISTRIBUICAO_B2B.md # Distribuição de canais B2B, Google Ads, LinkedIn e Budget
 │   ├── AUDITORIA_CETICA_PLANOS_MARKETING_E_PUBLICIDADE.md # Stress-test de riscos, blindagem operacional e travas de SLA
 │   ├── PROPOSTA_COMERCIAL_EXECUTIVA.md (.docx) # Proposta oficial com pacotes de R$ 3,8k a R$ 8,5k

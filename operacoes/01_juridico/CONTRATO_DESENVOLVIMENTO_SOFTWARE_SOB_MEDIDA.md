@@ -39,7 +39,8 @@ Têm entre si, justo e contratado, o presente Contrato, amparado na legislação
 * **Fase 4 — Deploy em Produção (Go-Live) & Treinamento:** Publicação definitiva da aplicação, configuração de domínio/SSL, migração de dados iniciais e sessão técnica de treinamento da equipe da **CONTRATANTE**.
 
 2.2. **Aceite e Homologação:** A **CONTRATANTE** terá o prazo de **5 (cinco) dias úteis**, contados a partir da notificação formal de entrega pela **CONTRATADA**, para realizar os testes de homologação e apontar, em documento único consolidado, eventuais inconsistências em relação ao escopo contratado.  
-2.3. Transcorrido o prazo estipulado no item 2.2 sem manifestação por escrito da **CONTRATANTE**, ou verificada a utilização operacional do sistema em ambiente de produção com clientes ou usuários reais, considerar-se-á o sistema **tácita e plenamente aceito e homologado para todos os fins de direito**, autorizando a emissão da cobrança final.
+2.3. Transcorrido o prazo estipulado no item 2.2 sem manifestação por escrito da **CONTRATANTE**, ou verificada a utilização operacional do sistema em ambiente de produção com clientes ou usuários reais, considerar-se-á o sistema **tácita e plenamente aceito e homologado para todos os fins de direito**, autorizando a emissão da cobrança final.  
+2.4. **Custódia Técnica e Bloqueio de Deploy (Staging TRD Gate):** O desenvolvimento e os testes de homologação ocorrerão estritamente em ambiente de teste provisionado sob custódia da **CONTRATADA**. Fica expressamente estipulado que a transferência do código-fonte para o servidor final da **CONTRATANTE**, a entrega de credenciais mestre de produção e a liberação de chaves criptográficas ficam estritamente condicionadas à liquidação financeira e compensação bancária integral da Parcela Final prevista na Cláusula Terceira ou da confirmação de pagamento via cartão de crédito.
 
 ---
 
@@ -53,7 +54,8 @@ Têm entre si, justo e contratado, o presente Contrato, amparado na legislação
 * **Opção 3 — Cartão de Crédito Corporativo:** Pagamento parcelado em até 12 (doze) vezes via link de transação segura processado por adquirente credenciada (Asaas / InfinitePay / Stripe / Mercado Pago), sendo os encargos operacionais de parcelamento regulados no ANEXO I.
 
 3.3. **Emissão de Nota Fiscal:** A **CONTRATADA** emitirá as competentes Notas Fiscais de Serviços Eletrônicas (NFS-e) referentes a cada pagamento realizado, em conformidade com o enquadramento fiscal no Simples Nacional.  
-3.4. **Mora e Inadimplemento:** O atraso no pagamento de qualquer parcela sujeitará a **CONTRATANTE** ao pagamento de multa moratória de 2% (dois por cento), juros de mora de 1% (um por cento) ao mês e correção monetária pelo IPCA/IBGE pro rata die, ensejando a suspensão imediata dos trabalhos ou do acesso aos ambientes de desenvolvimento após 5 (cinco) dias úteis de inadimplência.
+3.4. **Mora e Inadimplemento:** O atraso no pagamento de qualquer parcela sujeitará a **CONTRATANTE** ao pagamento de multa moratória de 2% (dois por cento), juros de mora de 1% (um por cento) ao mês e correção monetária pelo IPCA/IBGE pro rata die, ensejando a suspensão imediata dos trabalhos ou do acesso aos ambientes de desenvolvimento após 5 (cinco) dias úteis de inadimplência.  
+3.5. **Cláusula Anti-Chargeback & Renúncia a Contestação:** Caso a **CONTRATANTE** opte pelo pagamento mediante cartão de crédito (à vista ou parcelado), fica expressamente pactuado que a aprovação da homologação ou a assinatura do competente **Termo de Homologação e Entrega Definitiva** constitui ateste formal e irrevogável de recebimento do serviço prestado em sua plenitude, renunciando a **CONTRATANTE** expressamente a qualquer pedido de estorno, cancelamento unilateral ou contestação de compra (*chargeback*) perante a instituição emissora do cartão ou operadora adquirente, respondendo civilmente por perdas, danos e custas de cobrança caso venha a pleitear estorno indevido.
 
 ---
 
@@ -71,6 +73,7 @@ Têm entre si, justo e contratado, o presente Contrato, amparado na legislação
 * Solicitações de novas funcionalidades, telas ou alterações de regras de negócio aprovadas;
 * Falhas causadas por mau uso, exclusão indevida de dados por operadores da **CONTRATANTE**, alterações no código realizadas por terceiros ou indisponibilidade de serviços de terceiros/nuvem;
 * Atualizações de sistemas operacionais ou navegadores supervenientes que imponham incompatibilidade de bibliotecas de terceiros.
+5.4. **Interlocutor Único (SPOC) e Canal Exclusivo de Atendimento:** Para viabilizar a eficiência e a celeridade técnica, a **CONTRATANTE** designará formalmente no ANEXO I um **único interlocutor técnico/operacional (Single Point of Contact - SPOC)** com poderes para validar fluxos, homologar telas e centralizar dúvidas da equipe. Fica expressamente vedado o atendimento direto individual a colaboradores não autorizados. Todos os chamados técnicos durante o desenvolvimento e a garantia serão abertos **exclusivamente por texto e imagens/prints legíveis**, sendo sumariamente desconsideradas mensagens de áudio para fins de contagem de prazo ou abertura de ocorrência.
 
 ---
 
@@ -106,7 +109,8 @@ Têm entre si, justo e contratado, o presente Contrato, amparado na legislação
 
 ### CLÁUSULA DÉCIMA – DA VALIDADE JURÍDICA DAS ASSINATURAS ELETRÔNICAS E FORO
 10.1. As Partes reconhecem a plena validade jurídica, integridade e eficácia executiva do presente instrumento assinado eletronicamente por meio de certificados digitais ICP-Brasil ou plataformas de assinatura eletrônica avançada (ex: ZapSign, ClickSign ou Gov.br), nos termos do Art. 10 da Medida Provisória nº 2.200-2/2001 e da **Lei Federal nº 14.063/2020**.  
-10.2. Para dirimir quaisquer litígios oriundos deste Contrato que não possam ser solucionados consensualmente entre as Partes, fica eleito o **Foro da Circunscrição Judiciária Especial de Brasília - Distrito Federal**, com renúncia expressa a qualquer outro, por mais privilegiado que seja.
+10.2. Para dirimir quaisquer litígios oriundos deste Contrato que não possam ser solucionados consensualmente entre as Partes, fica eleito o **Foro da Circunscrição Judiciária Especial de Brasília - Distrito Federal**, com renúncia expressa a qualquer outro, por mais privilegiado que seja.  
+10.3. **Eficácia de Título Executivo Extrajudicial:** As Partes atribuem ao presente instrumento a força e eficácia de título executivo extrajudicial, nos exatos termos do **Art. 784, inciso III, do Código de Processo Civil (Lei Federal nº 13.105/2015)**.
 
 E, por estarem assim justas e acordadas, as Partes assinam o presente Contrato eletronicamente na presença de 2 (duas) testemunhas.
 
