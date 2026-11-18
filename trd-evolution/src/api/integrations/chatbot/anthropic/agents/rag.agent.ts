@@ -1,6 +1,8 @@
 import { AgentContext, AgentResult, RAG_CONFIG } from './agent-types';
 import { BaseAgent } from './base.agent';
 import OpenAI from 'openai';
+import * as fs from 'fs';
+import * as path from 'path';
 
 export interface RagChunkResult {
   content: string;
@@ -11,6 +13,7 @@ export interface RagChunkResult {
 export class RagAgent extends BaseAgent {
   private openai: OpenAI | null = null;
   private prisma: any = null;
+  private vaultChunks: any[] = [];
 
   constructor(prismaRepository?: any) {
     super({
@@ -19,6 +22,7 @@ export class RagAgent extends BaseAgent {
       capabilities: ['knowledge-retrieval', 'semantic-search', 'document-qa', 'context-injection'],
     });
     this.prisma = prismaRepository;
+    this.loadVault();
 
     const apiKey = process.env.OPENAI_API_KEY || process.env.RAG_OPENAI_API_KEY;
     if (apiKey) {
@@ -28,10 +32,24 @@ export class RagAgent extends BaseAgent {
     }
   }
 
+  private loadVault(): void {
+    try {
+      const vaultPath = path.resolve(__dirname, 'trd-knowledge-vault.json');
+      if (fs.existsSync(vaultPath)) {
+        const raw = fs.readFileSync(vaultPath, 'utf8');
+        const data = JSON.parse(raw);
+        this.vaultChunks = Array.isArray(data.chunks) ? data.chunks : [];
+        this.logger.log(`[RagAgent] Loaded ${this.vaultChunks.length} TRD knowledge vault chunks into memory`);
+      }
+    } catch (err: any) {
+      this.logger.warn(`[RagAgent] Could not load TRD knowledge vault: ${err.message}`);
+    }
+  }
+
   canHandle(context: AgentContext): boolean {
-    if (!this.prisma?.ragChunk) return false;
     const content = this.cleanContent(context.content).toLowerCase().trim();
-    return content.length > 5;
+    if (content.length <= 5) return false;
+    return !!this.prisma?.ragChunk || this.vaultChunks.length > 0;
   }
 
   async execute(context: AgentContext): Promise<AgentResult> {
@@ -42,7 +60,7 @@ export class RagAgent extends BaseAgent {
       const query = this.cleanContent(context.content);
       const botId = context.bot?.id || '';
 
-      if (!botId) {
+      if (!botId && this.vaultChunks.length === 0) {
         return this.success('', undefined, { processingTime: Date.now() - startTime, ragContext: '' });
       }
 
@@ -115,14 +133,56 @@ export class RagAgent extends BaseAgent {
   }
 
   private async retrieveRelevant(query: string, botId: string): Promise<RagChunkResult[]> {
-    if (!this.prisma?.ragChunk) return [];
+    if (this.prisma?.ragChunk && botId) {
+      const queryEmbedding = await this.generateEmbedding(query);
+      if (queryEmbedding) {
+        const results = await this.vectorSearch(queryEmbedding, botId);
+        if (results.length > 0) return results;
+      }
 
-    const queryEmbedding = await this.generateEmbedding(query);
-    if (queryEmbedding) {
-      return await this.vectorSearch(queryEmbedding, botId);
+      const textResults = await this.textSearch(query, botId);
+      if (textResults.length > 0) return textResults;
     }
 
-    return await this.textSearch(query, botId);
+    return this.searchVault(query);
+  }
+
+  private searchVault(query: string): RagChunkResult[] {
+    if (this.vaultChunks.length === 0) return [];
+
+    const stopWords = new Set([
+      'o', 'a', 'os', 'as', 'de', 'do', 'da', 'dos', 'das', 'e', 'é', 'ou', 'um', 'uma',
+      'que', 'sobre', 'para', 'com', 'em', 'no', 'na', 'nos', 'nas', 'se', 'voce', 'você',
+      'vc', 'sao', 'são', 'eh', 'tem', 'têm', 'ser', 'qual', 'quais', 'como', 'quando',
+      'onde', 'por', 'sabe', 'sabes', 'gostaria', 'quero', 'quanto'
+    ]);
+    const queryWords = query
+      .toLowerCase()
+      .split(/\s+/)
+      .map((w) => w.replace(/[^\wà-ú]/gi, '').trim())
+      .filter((w) => w.length > 2 && !stopWords.has(w));
+
+    if (queryWords.length === 0) return [];
+
+    const scored = this.vaultChunks
+      .map((c) => {
+        const lowerText = `${c.documentTitle} ${c.section} ${c.content} ${(c.keywords || []).join(' ')}`.toLowerCase();
+        let matches = 0;
+        for (const w of queryWords) {
+          if (lowerText.includes(w)) matches++;
+        }
+        const similarity = matches > 0 ? matches / queryWords.length : 0;
+        return {
+          content: c.content,
+          documentTitle: `${c.documentTitle} - ${c.section}`,
+          similarity,
+        };
+      })
+      .filter((r) => r.similarity > 0)
+      .sort((a, b) => b.similarity - a.similarity)
+      .slice(0, RAG_CONFIG.topK);
+
+    return scored;
   }
 
   private async vectorSearch(queryEmbedding: number[], botId: string): Promise<RagChunkResult[]> {
@@ -247,10 +307,19 @@ export class RagAgent extends BaseAgent {
     let totalChars = 0;
 
     for (const chunk of chunks) {
-      const entry = `[${chunk.documentTitle}] ${chunk.content}`;
-      if (totalChars + entry.length > RAG_CONFIG.maxContextChars) break;
-      lines.push(entry);
-      totalChars += entry.length;
+      let content = chunk.content;
+      const title = `[${chunk.documentTitle}] `;
+      const fullEntryLen = title.length + content.length;
+
+      if (totalChars + fullEntryLen > RAG_CONFIG.maxContextChars) {
+        const remaining = RAG_CONFIG.maxContextChars - totalChars - title.length;
+        if (remaining > 150) {
+          lines.push(title + content.substring(0, remaining) + '...');
+        }
+        break;
+      }
+      lines.push(title + content);
+      totalChars += fullEntryLen;
     }
 
     lines.push('--- FIM DO CONTEXTO ---');

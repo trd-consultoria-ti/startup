@@ -135,6 +135,35 @@ export class CoordinatorAgent {
       }
     }
 
+    // Phase 0.5: TRD Console Lead Direct Handler — instant executive response
+    if (intent === 'trd_console_lead' || this.isTrdConsoleBriefing(processedContent)) {
+      this.logger.log(`[Coordinator] Phase 0.5 → TRD Console Lead detected! Generating instant executive response.`);
+      agentsInvolved.push('text');
+      const executiveResponse = this.generateTrdConsoleResponse(processedContent, context.pushName);
+
+      await this.updateConversationHistory(
+        conversationHistory,
+        processedContent,
+        executiveResponse,
+        context.remoteJid,
+        botId,
+      );
+
+      return this.buildSuccessResult(
+        executiveResponse,
+        claudeTextSessionId,
+        claudeVisionSessionId,
+        conversationHistory,
+        'text',
+        '',
+        startTime,
+        agentsInvolved,
+        { isTrdConsoleLead: true, intent: 'trd_console_lead' },
+        ragContext,
+        'trd_console_lead',
+      );
+    }
+
     // Phase 1: Pre-processing agents (audio, document) — transform media into text
     const audioAgent = this.agents.get('audio');
     if (audioAgent && audioAgent.canHandle(context)) {
@@ -514,5 +543,57 @@ export class CoordinatorAgent {
 
   getIntentAgent(): IntentAgent {
     return this.intentAgent;
+  }
+
+  isTrdConsoleBriefing(content: string): boolean {
+    if (!content) return false;
+    return (
+      content.includes('TRD CONSULTORIA - ESPECIFICAÇÃO DE ENGENHARIA') ||
+      content.includes('TRD-ENG-') ||
+      (content.includes('ESPECIFICAÇÃO DE ENGENHARIA') && content.includes('TRD'))
+    );
+  }
+
+  generateTrdConsoleResponse(content: string, pushName?: string): string {
+    const modalidadeMatch = content.match(/\*Modalidade:\*\s*([^\n\r]+)/i);
+    const escopoMatch = content.match(/\*Escopo:\*\s*([^\n\r]+)/i);
+    const infraMatch = content.match(/\*Infraestrutura:\*\s*([^\n\r]+)/i);
+    const condicaoMatch = content.match(/\*Condição:\*\s*([^\n\r]+)/i);
+    const solicitanteMatch = content.match(/\*Solicitante:\*\s*([^\n\r]+)/i);
+    const refMatch = content.match(/\*Referência:\*\s*([^\n\r]+)/i);
+    const prazoMatch = content.match(/\*Prazo \/ SLA:\*\s*([^\n\r]+)/i);
+
+    const solicitante = solicitanteMatch ? solicitanteMatch[1].trim() : (pushName || 'Prezado(a) Parceiro(a)');
+    const modalidade = modalidadeMatch ? modalidadeMatch[1].trim() : 'Starter MVP Sob Medida';
+    const escopo = escopoMatch ? escopoMatch[1].trim() : 'Sistema Web / Painel de Controle Operacional';
+    const infra = infraMatch ? infraMatch[1].trim() : 'Docker, PostgreSQL, Nginx e Backups Automatizados';
+    const condicao = condicaoMatch ? condicaoMatch[1].trim() : '50% Entrada (Gov.br) + 50% Homologação Staging';
+    const prazo = prazoMatch ? prazoMatch[1].trim() : 'SLA Comercial: Resposta em até 4h úteis';
+    const refId = refMatch ? refMatch[1].trim() : 'TRD-ENG-OFICIAL';
+
+    return [
+      `Olá, *${solicitante}*! Aqui é a assistente de engenharia da *TRD Consultoria de TI* (atendimento executivo do Thiago Duarte).`,
+      '',
+      `Recebemos com sucesso a sua especificação técnica gerada pelo nosso Console de Engenharia (*Ref: ${refId}*).`,
+      '',
+      '📋 *Parâmetros Técnicos Registrados:*',
+      `• *Modalidade:* ${modalidade}`,
+      `• *Escopo Definido:* ${escopo}`,
+      `• *Infraestrutura:* ${infra}`,
+      `• *Prazo / Governança:* ${prazo}`,
+      `• *Condição Comercial:* ${condicao}`,
+      '• *Garantia & Segurança:* 30 dias de sustentação assistida inclusa + Contrato Digital Gov.br com validade executiva (Art. 784, III CPC).',
+      '',
+      '🎯 *Próximo Passo:*',
+      'Para congelarmos o escopo, validarmos o cronograma de entrega e alinharmos qualquer particularidade da sua regra de negócio, o próximo passo é uma **reunião executiva de alinhamento técnico (20 min via Google Meet)** diretamente com o Thiago Duarte (Fundador & Arquiteto Principal).',
+      '',
+      'Atendemos nacionalmente em horário comercial (*Segunda a Sexta, das 8h às 18h*).',
+      '',
+      '👉 *Qual destes horários fica melhor para você amanhã (ou nos próximos dias)?*',
+      '• Opção 1: Manhã (10:00 às 10:30)',
+      '• Opção 2: Tarde (14:30 às 15:00 ou 16:30 às 17:00)',
+      '',
+      'Se preferir outro dia ou horário, basta nos responder aqui mesmo que reservamos na agenda!'
+    ].join('\n');
   }
 }

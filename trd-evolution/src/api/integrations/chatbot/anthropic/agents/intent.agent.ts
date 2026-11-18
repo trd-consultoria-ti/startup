@@ -2,7 +2,7 @@ import { AgentContext, AgentResult, INTENT_CONFIG, TEXT_MODEL_CHAIN } from './ag
 import { BaseAgent } from './base.agent';
 import { claudeCLI } from './claude-cli';
 
-export type IntentLabel = 'reminder' | 'search' | 'question' | 'conversation' | 'image' | 'audio' | 'document' | 'unknown';
+export type IntentLabel = 'reminder' | 'search' | 'question' | 'conversation' | 'image' | 'audio' | 'document' | 'trd_console_lead' | 'unknown';
 
 export interface IntentResult {
   label: IntentLabel;
@@ -37,6 +37,10 @@ const INTENT_MAP: Record<string, IntentLabel> = {
   documento: 'document',
   pdf: 'document',
   arquivo: 'document',
+  trd: 'trd_console_lead',
+  console: 'trd_console_lead',
+  especificacao: 'trd_console_lead',
+  briefing: 'trd_console_lead',
 };
 
 export class IntentAgent extends BaseAgent {
@@ -92,6 +96,15 @@ export class IntentAgent extends BaseAgent {
 
   async classify(content: string): Promise<IntentLabel> {
     const lower = content.toLowerCase().trim();
+
+    if (
+      content.includes('TRD CONSULTORIA - ESPECIFICAÇÃO DE ENGENHARIA') ||
+      content.includes('TRD-ENG-') ||
+      (content.includes('ESPECIFICAÇÃO DE ENGENHARIA') && content.includes('TRD')) ||
+      (lower.includes('trd consultoria') && (lower.includes('modalidade') || lower.includes('escopo')))
+    ) {
+      return 'trd_console_lead';
+    }
 
     if (content.includes('imageMessage')) return 'image';
     if (content.includes('audioMessage')) return 'audio';
@@ -153,6 +166,14 @@ Responda APENAS a palavra da categoria.`;
   }
 
   private heuristicClassify(lower: string): IntentLabel {
+    if (
+      lower.includes('trd consultoria') ||
+      lower.includes('trd-eng-') ||
+      lower.includes('especificação de engenharia') ||
+      lower.includes('especificacao de engenharia')
+    ) {
+      return 'trd_console_lead';
+    }
     if (['lembre', 'lembra', 'lembrar', 'lembrete', 'lembrança', 'avise', 'avisa', 'avisar', 'aviso', 'agenda', 'agendar', 'alarme', 'alerta', 'alertar'].some((k) => lower.includes(k))) {
       return 'reminder';
     }
