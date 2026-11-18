@@ -1874,7 +1874,7 @@
           governance: governance,
           slaResponse: slaResponse,
           billing: billing,
-          infraList: infraItems.length > 0 ? infraItems.join(' · ') : 'Padrão Base'
+          infraList: infraItems.length > 0 ? infraItems.join(' | ') : 'Padrão Base'
         };
       }
 
@@ -1936,17 +1936,17 @@
           : (data.clientName || data.clientCompany || null);
 
         const lines = [
-          '*TRD CONSULTORIA — ESPECIFICAÇÃO DE ENGENHARIA*',
+          '*TRD CONSULTORIA - ESPECIFICAÇÃO DE ENGENHARIA*',
           '----------------------------------------',
-          '• *Modalidade:* ' + scope.modalidadeLabel,
-          '• *Escopo:* ' + scope.escalaLabel,
-          '• *Infraestrutura:* ' + scope.infraList,
-          '• *Governança:* ' + scope.governance,
-          '• *Prazo / SLA:* ' + scope.slaResponse,
-          '• *Condição:* ' + scope.billing,
-          clientDesc ? '• *Solicitante:* ' + clientDesc : null,
+          '*Modalidade:* ' + scope.modalidadeLabel,
+          '*Escopo:* ' + scope.escalaLabel,
+          '*Infraestrutura:* ' + scope.infraList,
+          '*Governança:* ' + scope.governance,
+          '*Prazo / SLA:* ' + scope.slaResponse,
+          '*Condição:* ' + scope.billing,
+          clientDesc ? '*Solicitante:* ' + clientDesc : null,
           '----------------------------------------',
-          '• *Referência:* ' + refId,
+          '*Referência:* ' + refId,
           '----------------------------------------',
           'Olá Thiago, configurei este escopo no site da TRD e gostaria de um alinhamento técnico.'
         ].filter(Boolean);
