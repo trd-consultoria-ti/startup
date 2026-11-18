@@ -128,6 +128,9 @@
         <a class="btn btn--primary" href="https://wa.me/5561999526374?text=Ol%C3%A1,%20gostaria%20de%20um%20or%C3%A7amento%20para%20cria%C3%A7%C3%A3o%20de%20sistema%20sob%20medida%20com%20a%20TRD" target="_blank" rel="noopener">Orçar meu sistema</a>
       </div>
     </nav>
+    <div class="nav__progress" aria-hidden="true">
+      <div class="nav__progress-bar" id="nav-progress-bar"></div>
+    </div>
   </header>
 
   <main id="main">
@@ -170,7 +173,7 @@
           <span>INEP · ENADE</span>
         </div>
         <div class="trustbar__badge trustbar__badge--mjsp">
-          <span class="trustbar__logo-chip"><img src="assets/logo-mjsp.svg" alt="Ministério da Justiça (MJSP)" class="trustbar__img" width="20" height="20" loading="lazy"></span>
+          <span class="trustbar__logo-chip"><img src="assets/logo-mjsp.svg" alt="Ministério da Justiça (MJSP)" class="trustbar__img" width="22" height="22" loading="lazy"></span>
           <span>Ministério da Justiça (MJSP)</span>
         </div>
         <div class="trustbar__badge trustbar__badge--serasa">
@@ -208,7 +211,7 @@
           <span>INEP · ENADE</span>
         </div>
         <div class="trustbar__badge trustbar__badge--mjsp" aria-hidden="true">
-          <span class="trustbar__logo-chip"><img src="assets/logo-mjsp.svg" alt="" class="trustbar__img" width="20" height="20" loading="lazy"></span>
+          <span class="trustbar__logo-chip"><img src="assets/logo-mjsp.svg" alt="" class="trustbar__img" width="22" height="22" loading="lazy"></span>
           <span>Ministério da Justiça (MJSP)</span>
         </div>
         <div class="trustbar__badge trustbar__badge--serasa" aria-hidden="true">
@@ -669,7 +672,7 @@
               Index Cond: (status = 'PENDENTE' AND data_criacao &gt;= '2024-01-01')
             </span>
             <span class="code-line code-line--success">
-              Planning Time: 0.18 ms | <strong style="color:var(--success)">Execution Time: 14 ms</strong> (<strong style="color:var(--accent)">Redução de 99,7% de I/O</strong> · Zero locks · Transações instantâneas)
+              Planning Time: 0.18 ms | <strong style="color:var(--success)">Execution Time: 14 ms</strong> (<strong style="color:var(--accent)">Redução de 99,7% de I/O</strong> · Zero locks · Transações instantâneas)<span class="terminal__cursor" aria-hidden="true"></span>
             </span>
           </span>
         </code></pre>
@@ -751,8 +754,17 @@
         </p>
       </div>
 
+      <!-- FILTRO DE SEGMENTAÇÃO DE PLANOS (CRO) -->
+      <div class="plans-filter-wrap">
+        <div class="plans-filter" role="tablist" aria-label="Filtrar modelos de contratação">
+          <button type="button" class="plans-filter__btn is-active" data-filter="all" role="tab" aria-selected="true">Ver Todos os Planos</button>
+          <button type="button" class="plans-filter__btn" data-filter="criacao" role="tab" aria-selected="false">Criação de Sistemas Sob Medida</button>
+          <button type="button" class="plans-filter__btn" data-filter="sustentacao" role="tab" aria-selected="false">Sustentação &amp; SLA Contratual</button>
+        </div>
+      </div>
+
       <!-- BLOCO: CRIAÇÃO DE SISTEMAS SOB MEDIDA -->
-      <div style="margin-bottom:4rem;">
+      <div id="bloco-criacao" style="margin-bottom:4rem;">
         <div style="text-align:center; margin-bottom:2rem;">
           <span class="badge"><i aria-hidden="true"></i>Condições Especiais de Lançamento</span>
           <h3 style="font-size:1.6rem; margin-top:.5rem;">Criação de Sistemas Sob Medida (CRM, Hub de Gestão &amp; Portais)</h3>
@@ -779,7 +791,7 @@
             <a class="btn btn--primary" style="margin-top:2rem;" href="https://wa.me/5561999526374?text=Ol%C3%A1,%20gostaria%20de%20or%C3%A7ar%20o%20Sistema%20Starter%20(CRM%20Sob%20Medida)%20com%20a%20TRD" target="_blank" rel="noopener">Orçar Sistema Starter</a>
           </article>
 
-          <article class="card card--featured">
+          <article class="card card--featured card--beam">
             <span class="card__badge">Mais Completo</span>
             <span class="card__tag" style="margin-bottom:.5rem;">Operação Total</span>
             <h3>Hub de Gestão Pro / Mini-ERP</h3>
@@ -833,11 +845,12 @@
       </div>
 
       <!-- BLOCO: SUSTENTAÇÃO & EVOLUÇÃO CONTÍNUA (SISTEMAS EXISTENTES) -->
-      <div style="text-align:center; margin-bottom:2rem; border-top:1px solid var(--border); padding-top:3rem;">
-        <span class="badge"><i aria-hidden="true"></i>Sistemas Existentes &amp; Legados</span>
-        <h3 style="font-size:1.6rem; margin-top:.5rem;">Sustentação Contínua &amp; Resgate com SLA</h3>
-        <p class="small muted" style="margin-top:.25rem;">Para empresas que já possuem software em produção e precisam de retaguarda sênior com SLA contratual.</p>
-      </div>
+      <div id="bloco-sustentacao">
+        <div style="text-align:center; margin-bottom:2rem; border-top:1px solid var(--border); padding-top:3rem;">
+          <span class="badge"><i aria-hidden="true"></i>Sistemas Existentes &amp; Legados</span>
+          <h3 style="font-size:1.6rem; margin-top:.5rem;">Sustentação Contínua &amp; Resgate com SLA</h3>
+          <p class="small muted" style="margin-top:.25rem;">Para empresas que já possuem software em produção e precisam de retaguarda sênior com SLA contratual.</p>
+        </div>
 
 
       <div class="discovery" style="margin-bottom:3rem; border-color: var(--danger);">
@@ -881,7 +894,7 @@
           <a class="btn btn--ghost" style="margin-top:2rem;" href="https://wa.me/5561999526374?text=Ol%C3%A1,%20tenho%20interesse%20no%20Plano%20Essencial" target="_blank" rel="noopener">Contratar Essencial</a>
         </article>
 
-        <article class="card card--featured">
+        <article class="card card--featured card--beam">
           <span class="card__badge">Mais escolhido</span>
           <h3>Plano Profissional</h3>
           <p class="small muted" style="margin-top:.25rem;">Operações críticas com evolução contínua e resposta ágil.</p>
@@ -965,6 +978,7 @@
           </table>
         </div>
       </div>
+      </div><!-- /#bloco-sustentacao -->
     </div>
   </section>
 
@@ -1112,6 +1126,27 @@
       <div>© 2026 TRD Consultoria · <a href="privacidade.html">Privacidade &amp; LGPD</a></div>
     </div>
   </footer>
+
+  <!-- Floating Executive Quick-Connect Dock (CRO WhatsApp Thiago) -->
+  <aside class="exec-dock" id="exec-dock" aria-label="Canal VIP com Thiago Duarte" role="complementary">
+    <a href="https://wa.me/5561999526374?text=Ol%C3%A1%20Thiago,%20estou%20no%20site%20da%20TRD%20e%20gostaria%20de%20um%20alinhamento%20t%C3%A9cnico%20direto." target="_blank" rel="noopener" class="exec-dock__link" aria-label="Falar diretamente com Thiago Duarte no WhatsApp">
+      <div class="exec-dock__avatar-wrap">
+        <img src="assets/thiago-duarte.jpg" alt="Thiago Duarte" class="exec-dock__avatar" width="38" height="38" loading="lazy">
+        <span class="exec-dock__status" aria-hidden="true"></span>
+      </div>
+      <div class="exec-dock__text">
+        <span class="exec-dock__title">Thiago Duarte</span>
+        <span class="exec-dock__sub">Alinhamento Técnico Direto</span>
+      </div>
+      <div class="exec-dock__btn-cta" aria-hidden="true">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        <span>WhatsApp</span>
+      </div>
+    </a>
+    <button type="button" class="exec-dock__close" id="exec-dock-close" aria-label="Ocultar atalho do WhatsApp" title="Fechar atalho">
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+    </button>
+  </aside>
 
   <script>
     // --- 1. Gerenciador de Tema (Dark / Light) com Persistência & Atalho Alt+T ---
@@ -1277,6 +1312,153 @@
         btn.href = 'https://wa.me/5561999526374?text=' + msg;
       }
     }
+
+    // --- 4. Barra de Progresso de Leitura Executiva (60FPS GPU ScaleX) ---
+    (function initReadingProgress() {
+      const progressBar = document.getElementById('nav-progress-bar');
+      if (!progressBar) return;
+
+      let ticking = false;
+      function updateProgress() {
+        const scrollTop = window.scrollY || document.documentElement.scrollTop;
+        const docHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        const progress = docHeight > 0 ? Math.min(Math.max(scrollTop / docHeight, 0), 1) : 0;
+        progressBar.style.transform = 'scaleX(' + progress + ')';
+        ticking = false;
+      }
+
+      window.addEventListener('scroll', function() {
+        if (!ticking) {
+          window.requestAnimationFrame(updateProgress);
+          ticking = true;
+        }
+      }, { passive: true });
+      updateProgress();
+    })();
+
+    // --- 5. ScrollSpy Nativo de Alta Performance (IntersectionObserver) ---
+    (function initScrollSpy() {
+      const navLinks = document.querySelectorAll('.nav__links a[href^="#"], .nav__mobile a[href^="#"]');
+      const sections = [];
+      navLinks.forEach(function(link) {
+        const id = link.getAttribute('href');
+        if (id && id.startsWith('#') && id.length > 1) {
+          const el = document.querySelector(id);
+          if (el && !sections.includes(el)) sections.push(el);
+        }
+      });
+
+      if (!sections.length || !('IntersectionObserver' in window)) return;
+
+      const observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            const id = '#' + entry.target.id;
+            navLinks.forEach(function(link) {
+              if (link.getAttribute('href') === id) {
+                link.classList.add('is-active');
+              } else {
+                link.classList.remove('is-active');
+              }
+            });
+          }
+        });
+      }, {
+        rootMargin: '-20% 0px -65% 0px',
+        threshold: 0
+      });
+
+      sections.forEach(function(s) { observer.observe(s); });
+    })();
+
+    // --- 6. Floating Executive Quick-Connect Dock (CRO WhatsApp Thiago) ---
+    (function initExecDock() {
+      const dock = document.getElementById('exec-dock');
+      const closeBtn = document.getElementById('exec-dock-close');
+      if (!dock) return;
+
+      let dismissed = false;
+      if (closeBtn) {
+        closeBtn.addEventListener('click', function(e) {
+          e.preventDefault();
+          e.stopPropagation();
+          dock.classList.remove('is-visible');
+          dock.classList.add('is-dismissed');
+          dismissed = true;
+        });
+      }
+
+      let ticking = false;
+      function checkDockVisibility() {
+        if (dismissed) return;
+        const scrollTop = window.scrollY || document.documentElement.scrollTop;
+        const docHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        const scrollPct = docHeight > 0 ? (scrollTop / docHeight) : 0;
+        
+        // Surge suavemente após 20% da página percorrida
+        if (scrollPct > 0.20) {
+          dock.classList.add('is-visible');
+        } else {
+          dock.classList.remove('is-visible');
+        }
+        ticking = false;
+      }
+
+      window.addEventListener('scroll', function() {
+        if (!ticking) {
+          window.requestAnimationFrame(checkDockVisibility);
+          ticking = true;
+        }
+      }, { passive: true });
+      checkDockVisibility();
+    })();
+
+    // --- 7. Spotlight Card Hover Effect (Desktop com Mouse Real) ---
+    (function initSpotlight() {
+      if (!window.matchMedia('(hover: hover) and (pointer: fine)').matches) return;
+      const targets = document.querySelectorAll('.card, .discovery');
+
+      targets.forEach(function(el) {
+        el.addEventListener('mousemove', function(e) {
+          const rect = el.getBoundingClientRect();
+          const x = e.clientX - rect.left;
+          const y = e.clientY - rect.top;
+          el.style.setProperty('--mouse-x', x + 'px');
+          el.style.setProperty('--mouse-y', y + 'px');
+        }, { passive: true });
+      });
+    })();
+
+    // --- 8. Filtro Segmentado de Planos (CRO) ---
+    (function initPricingFilter() {
+      const buttons = document.querySelectorAll('.plans-filter__btn');
+      const blockCriacao = document.getElementById('bloco-criacao');
+      const blockSustentacao = document.getElementById('bloco-sustentacao');
+      if (!buttons.length || !blockCriacao || !blockSustentacao) return;
+
+      buttons.forEach(function(btn) {
+        btn.addEventListener('click', function() {
+          buttons.forEach(function(b) {
+            b.classList.remove('is-active');
+            b.setAttribute('aria-selected', 'false');
+          });
+          btn.classList.add('is-active');
+          btn.setAttribute('aria-selected', 'true');
+
+          const filter = btn.getAttribute('data-filter');
+          if (filter === 'criacao') {
+            blockCriacao.style.display = 'block';
+            blockSustentacao.style.display = 'none';
+          } else if (filter === 'sustentacao') {
+            blockCriacao.style.display = 'none';
+            blockSustentacao.style.display = 'block';
+          } else {
+            blockCriacao.style.display = 'block';
+            blockSustentacao.style.display = 'block';
+          }
+        });
+      });
+    })();
 
     document.addEventListener('DOMContentLoaded', function() {
       document.querySelectorAll('.quiz-check').forEach(function(input) {
