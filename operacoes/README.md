@@ -15,12 +15,16 @@ operacoes/
 │   ├── TERMO_PARCERIA_E_COMISSAO_INDICACAO.md  # Contrato de canal de agências/white-label (comissão 10-15%)
 │   └── CONTRATO_PRESTACAO_SERVICOS_PARCEIRO_SOBREAVISO.md # Contrato PJ de engenheiro de sobreaviso (Backup Técnico)
 ├── 02_comercial_marketing/
+│   ├── PLANO_EXPANSAO_NACIONAL_PME.md          # Estratégia mestre de vendas para PMEs no Brasil (Preços, Polos e Scripts)
+│   ├── PLANO_ESTRATEGICO_MARKETING_DISTRIBUICAO_B2B.md # Distribuição de canais B2B, Google Ads, LinkedIn e Budget
+│   ├── AUDITORIA_CETICA_PLANOS_MARKETING_E_PUBLICIDADE.md # Stress-test de riscos, blindagem operacional e travas de SLA
 │   ├── PROPOSTA_COMERCIAL_EXECUTIVA.md (.docx) # Proposta oficial com pacotes de R$ 3,8k a R$ 8,5k
 │   ├── ONE_PAGER_INSTITUCIONAL_TRD.md (.docx)  # Folheto executivo de 1 página para envio no WhatsApp/LinkedIn
 │   ├── CHECKLIST_DIAGNOSTICO_SAUDE_SISTEMA.md  # Lead magnet técnico: 15 pontos de risco para diretores de TI
 │   ├── CASES_DE_SUCESSO_E_AUTORIDADE.md        # 3 estudos de caso estruturais (SQL, Legado Java e LGPD)
 │   └── SCRIPTS_PROSPECCAO_OUTBOUND.md          # Scripts de WhatsApp, LinkedIn e abordagem de agências
 ├── 03_social_media/
+│   ├── PLANO_PUBLICIDADE_E_CAMPANHAS_REDES_SOCIAIS.md # 4 conceitos de campanhas, carrossel e roteiro de vídeo
 │   └── PLAYBOOK_LINKEDIN_AUTORIDADE.md         # Estratégia editorial e templates de posts técnicos
 ├── 04_rh/
 │   └── AVALIACAO_TECNICA_DEV.md                # Desafio prático para estagiários/suporte (Java/Angular/SQL)
