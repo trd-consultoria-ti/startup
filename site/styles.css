@@ -493,24 +493,423 @@ h3 { font-size: 1.25rem; }
   background: var(--accent);
 }
 
-/* ---------- Barra de Confiança ---------- */
+/* ---------- Barra de Confiança (Marquee Contínuo Estilo Kimi.ai / Linear) ---------- */
 .trustbar {
-  padding-block: 2.5rem;
+  padding-block: 2rem 2.25rem;
   border-block: 1px solid var(--border);
   background: var(--trustbar-bg);
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  overflow: hidden;
+  position: relative;
 }
-.trustbar__inner {
+.trustbar__marquee {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
+}
+.trustbar__track {
   display: flex;
-  flex-wrap: wrap;
+  align-items: center;
+  gap: 1.25rem;
+  width: max-content;
+  animation: trustbar-scroll 36s linear infinite;
+  will-change: transform;
+}
+.trustbar__track:hover {
+  animation-play-state: paused;
+}
+@keyframes trustbar-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .trustbar__track {
+    animation: none;
+  }
+  .trustbar__marquee {
+    overflow-x: auto;
+    mask-image: none;
+    -webkit-mask-image: none;
+  }
+}
+
+.trustbar__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: .55rem;
+  padding: .45rem .95rem;
+  border-radius: var(--radius-btn);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  color: var(--text-2);
+  font-size: .8125rem;
+  font-weight: 600;
+  letter-spacing: .02em;
+  transition: all .2s ease;
+  white-space: nowrap;
+  user-select: none;
+  flex-shrink: 0;
+}
+.trustbar__badge:hover {
+  border-color: var(--accent);
+  color: var(--text);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 14px -2px rgba(0, 0, 0, 0.25);
+}
+.trustbar__badge svg {
+  width: 15px;
+  height: 15px;
+  color: var(--accent);
+  flex-shrink: 0;
+}
+.trustbar__img {
+  height: 20px;
+  width: auto;
+  max-width: 26px;
+  object-fit: contain;
+  flex-shrink: 0;
+  display: block;
+}
+.trustbar__img--svg {
+  height: 18px;
+}
+.trustbar__img--round {
+  border-radius: 50%;
+  aspect-ratio: 1 / 1;
+}
+
+.trustbar__logo-chip {
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 1.5rem 3rem;
-  font-size: .9375rem;
+  width: 26px;
+  height: 26px;
+  border-radius: 6px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.98) 0%, rgba(241, 245, 249, 0.92) 100%);
+  padding: 2px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.22), 0 0 0 1px rgba(255, 255, 255, 0.15);
+  flex-shrink: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.trustbar__logo-chip img,
+.trustbar__logo-chip svg {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+/* ---------- Base Refinada dos Chips de Logo nos Cards (Themed Satin Plate) ---------- */
+.card__logo-chip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.96) 0%, rgba(241, 245, 249, 0.90) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 9px;
+  padding: 4px 10px;
+  height: 34px;
+  min-width: 44px;
+  box-shadow: 0 4px 12px -2px rgba(0, 0, 0, 0.28), 0 0 0 1px rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  flex-shrink: 0;
+  box-sizing: border-box;
+  transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+}
+.card__logo-chip img,
+.card__logo-chip svg {
+  max-width: 100%;
+  max-height: 24px;
+  object-fit: contain;
+  display: block;
+}
+
+/* Variante Quadrada: 1:1 para Animal World, MJSP e Claude */
+.card__logo-chip--square {
+  width: 36px;
+  height: 36px;
+  min-width: 36px;
+  padding: 3px;
+  border-radius: 10px;
+}
+.card__logo-chip--square img,
+.card__logo-chip--square svg {
+  width: 28px;
+  height: 28px;
+  max-height: 28px;
+}
+
+/* Variante Circular: para Brasões e Selos (Imprensa Nacional) */
+.card__logo-chip--circular {
+  border-radius: 50%;
+}
+
+/* Harmonizações Cromáticas Exclusivas (Halo Cromático & Ambient Glow) */
+.card--animalworld .card__logo-chip {
+  background: linear-gradient(135deg, #FFFFFF 0%, #F0FDFA 100%);
+  border-color: rgba(45, 212, 191, 0.45);
+  box-shadow: 0 4px 14px -2px rgba(0, 0, 0, 0.3), 0 0 14px -2px rgba(45, 212, 191, 0.3);
+}
+.card--animalworld:hover .card__logo-chip {
+  border-color: #2DD4BF;
+  box-shadow: 0 6px 18px -2px rgba(0, 0, 0, 0.35), 0 0 18px 0 rgba(45, 212, 191, 0.45);
+  transform: scale(1.05);
+}
+
+.card--alertaseg .card__logo-chip {
+  background: linear-gradient(135deg, #FFFFFF 0%, #FFFBEB 100%);
+  border-color: rgba(245, 158, 11, 0.45);
+  box-shadow: 0 4px 14px -2px rgba(0, 0, 0, 0.3), 0 0 14px -2px rgba(245, 158, 11, 0.3);
+}
+.card--alertaseg:hover .card__logo-chip {
+  border-color: #F59E0B;
+  box-shadow: 0 6px 18px -2px rgba(0, 0, 0, 0.35), 0 0 18px 0 rgba(245, 158, 11, 0.45);
+  transform: scale(1.05);
+}
+
+.trustbar__badge--animalworld .trustbar__logo-chip {
+  background: linear-gradient(135deg, #FFFFFF 0%, #F0FDFA 100%);
+  border: 1px solid rgba(45, 212, 191, 0.45);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25), 0 0 8px rgba(45, 212, 191, 0.35);
+}
+
+.trustbar__badge--alertaseg .trustbar__logo-chip {
+  background: linear-gradient(135deg, #FFFFFF 0%, #FFFBEB 100%);
+  border: 1px solid rgba(245, 158, 11, 0.45);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25), 0 0 8px rgba(245, 158, 11, 0.35);
+}
+
+
+/* ---------- Ecossistemas: Fundos Alinhados às Logos (Trustbar Badges) ---------- */
+.trustbar__badge--dou {
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.2) 0%, rgba(15, 23, 42, 0.95) 100%);
+  border-color: rgba(16, 185, 129, 0.5);
+}
+.trustbar__badge--dou:hover {
+  border-color: #10B981;
+  box-shadow: 0 4px 18px -2px rgba(16, 185, 129, 0.35);
+}
+
+.trustbar__badge--inep {
+  background: linear-gradient(135deg, rgba(37, 99, 235, 0.22) 0%, rgba(15, 23, 42, 0.95) 100%);
+  border-color: rgba(59, 130, 246, 0.5);
+}
+.trustbar__badge--inep:hover {
+  border-color: #3B82F6;
+  box-shadow: 0 4px 18px -2px rgba(59, 130, 246, 0.35);
+}
+
+.trustbar__badge--mjsp {
+  background: linear-gradient(135deg, rgba(245, 158, 11, 0.18) 0%, rgba(15, 23, 42, 0.95) 100%);
+  border-color: rgba(245, 158, 11, 0.5);
+}
+.trustbar__badge--mjsp:hover {
+  border-color: #F59E0B;
+  box-shadow: 0 4px 18px -2px rgba(245, 158, 11, 0.35);
+}
+
+.trustbar__badge--serasa {
+  background: linear-gradient(135deg, rgba(192, 38, 211, 0.2) 0%, rgba(15, 23, 42, 0.95) 100%);
+  border-color: rgba(217, 70, 239, 0.5);
+}
+.trustbar__badge--serasa:hover {
+  border-color: #D946EF;
+  box-shadow: 0 4px 18px -2px rgba(217, 70, 239, 0.35);
+}
+
+.trustbar__badge--cvm {
+  background: linear-gradient(135deg, rgba(52, 211, 153, 0.18) 0%, rgba(15, 23, 42, 0.95) 100%);
+  border-color: rgba(52, 211, 153, 0.5);
+}
+.trustbar__badge--cvm:hover {
+  border-color: #34D399;
+  box-shadow: 0 4px 18px -2px rgba(52, 211, 153, 0.35);
+}
+
+.trustbar__badge--alergs {
+  background: linear-gradient(135deg, rgba(239, 68, 68, 0.2) 0%, rgba(15, 23, 42, 0.95) 100%);
+  border-color: rgba(239, 68, 68, 0.5);
+}
+.trustbar__badge--alergs:hover {
+  border-color: #EF4444;
+  box-shadow: 0 4px 18px -2px rgba(239, 68, 68, 0.35);
+}
+
+.trustbar__badge--alertaseg {
+  background: linear-gradient(135deg, rgba(245, 158, 11, 0.2) 0%, rgba(15, 23, 42, 0.95) 100%);
+  border-color: rgba(245, 158, 11, 0.5);
+}
+.trustbar__badge--alertaseg:hover {
+  border-color: #F59E0B;
+  box-shadow: 0 4px 18px -2px rgba(245, 158, 11, 0.35);
+}
+
+.trustbar__badge--animalworld {
+  background: linear-gradient(135deg, rgba(45, 212, 191, 0.2) 0%, rgba(15, 23, 42, 0.95) 100%);
+  border-color: rgba(45, 212, 191, 0.5);
+}
+.trustbar__badge--animalworld:hover {
+  border-color: #2DD4BF;
+  box-shadow: 0 4px 18px -2px rgba(45, 212, 191, 0.35);
+}
+
+.trustbar__badge--anthropic {
+  background: linear-gradient(135deg, rgba(251, 146, 60, 0.22) 0%, rgba(15, 23, 42, 0.95) 100%);
+  border-color: rgba(251, 146, 60, 0.5);
+}
+.trustbar__badge--anthropic:hover {
+  border-color: #FB923C;
+  box-shadow: 0 4px 18px -2px rgba(251, 146, 60, 0.35);
+}
+
+/* Light theme overrides for trustbar badges */
+[data-theme="light"] .trustbar__badge--dou {
+  background: rgba(16, 185, 129, 0.09);
+  border-color: rgba(16, 185, 129, 0.35);
+  color: #064E3B;
+}
+[data-theme="light"] .trustbar__badge--inep {
+  background: rgba(37, 99, 235, 0.09);
+  border-color: rgba(37, 99, 235, 0.35);
+  color: #1E3A8A;
+}
+[data-theme="light"] .trustbar__badge--mjsp {
+  background: rgba(245, 158, 11, 0.09);
+  border-color: rgba(245, 158, 11, 0.35);
+  color: #78350F;
+}
+[data-theme="light"] .trustbar__badge--serasa {
+  background: rgba(192, 38, 211, 0.09);
+  border-color: rgba(192, 38, 211, 0.35);
+  color: #701A75;
+}
+[data-theme="light"] .trustbar__badge--cvm {
+  background: rgba(52, 211, 153, 0.09);
+  border-color: rgba(52, 211, 153, 0.35);
+  color: #064E3B;
+}
+[data-theme="light"] .trustbar__badge--alergs {
+  background: rgba(239, 68, 68, 0.09);
+  border-color: rgba(239, 68, 68, 0.35);
+  color: #7F1D1D;
+}
+[data-theme="light"] .trustbar__badge--alertaseg {
+  background: rgba(245, 158, 11, 0.09);
+  border-color: rgba(245, 158, 11, 0.35);
+  color: #78350F;
+}
+[data-theme="light"] .trustbar__badge--animalworld {
+  background: rgba(45, 212, 191, 0.09);
+  border-color: rgba(45, 212, 191, 0.35);
+  color: #134E4A;
+}
+[data-theme="light"] .trustbar__badge--anthropic {
+  background: rgba(251, 146, 60, 0.09);
+  border-color: rgba(251, 146, 60, 0.35);
+  color: #7C2D12;
+}
+
+/* ---------- Cards de Cases com Fundo e Top-Border Alinhados ---------- */
+.card--dou {
+  border-top: 3px solid #10B981;
+  background: radial-gradient(circle at top right, rgba(16, 185, 129, 0.1), transparent 70%), var(--surface);
+}
+.card--inep {
+  border-top: 3px solid #3B82F6;
+  background: radial-gradient(circle at top right, rgba(59, 130, 246, 0.1), transparent 70%), var(--surface);
+}
+.card--mjsp {
+  border-top: 3px solid #F59E0B;
+  background: radial-gradient(circle at top right, rgba(245, 158, 11, 0.1), transparent 70%), var(--surface);
+}
+.card--serasa {
+  border-top: 3px solid #D946EF;
+  background: radial-gradient(circle at top right, rgba(217, 70, 239, 0.1), transparent 70%), var(--surface);
+}
+.card--cvm {
+  border-top: 3px solid #34D399;
+  background: radial-gradient(circle at top right, rgba(52, 211, 153, 0.1), transparent 70%), var(--surface);
+}
+.card--alergs {
+  border-top: 3px solid #EF4444;
+  background: radial-gradient(circle at top right, rgba(239, 68, 68, 0.1), transparent 70%), var(--surface);
+}
+.card--alertaseg {
+  border-top: 3px solid #F59E0B;
+  background: radial-gradient(circle at top right, rgba(245, 158, 11, 0.1), transparent 70%), var(--surface);
+}
+.card--animalworld {
+  border-top: 3px solid #2DD4BF;
+  background: radial-gradient(circle at top right, rgba(45, 212, 191, 0.1), transparent 70%), var(--surface);
+}
+.card--anthropic {
+  border-top: 3px solid #FB923C;
+  background: radial-gradient(circle at top right, rgba(251, 146, 60, 0.1), transparent 70%), var(--surface);
+}
+.card__header-flex {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: .75rem;
+  margin-bottom: .5rem;
+}
+.card__brand-logo {
+  height: 26px;
+  width: auto;
+  max-width: 85px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+.card__brand-logo--round {
+  border-radius: 50%;
+  aspect-ratio: 1 / 1;
+}
+[data-theme="light"] .card__brand-logo--alertaseg {
+  filter: invert(0.9) brightness(0.2);
+}
+.card__preview-link {
+  display: block;
+  position: relative;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  margin-bottom: 1rem;
+  border: 1px solid var(--border);
+  background: var(--bg);
+}
+.card__preview-thumb {
+  display: block;
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  transition: transform .25s ease, filter .25s ease;
+}
+.card__preview-link:hover .card__preview-thumb {
+  transform: scale(1.03);
+}
+.card__preview-overlay {
+  position: absolute;
+  bottom: .5rem;
+  right: .5rem;
+  background: rgba(11, 19, 43, 0.85);
+  backdrop-filter: blur(4px);
+  color: #fff;
+  font-size: .7rem;
   font-weight: 600;
-  color: var(--text-3);
-  letter-spacing: .02em;
+  padding: .2rem .5rem;
+  border-radius: var(--radius-btn);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  display: inline-flex;
+  align-items: center;
+  gap: .3rem;
 }
 
 /* ---------- Cards & Grid ---------- */
@@ -949,6 +1348,121 @@ h3 { font-size: 1.25rem; }
   transition: width .3s ease, background-color .3s ease;
 }
 
+/* ---------- Card Executivo do Fundador ---------- */
+.founder-card {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+  background: var(--surface);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-card);
+  padding: 2rem;
+  box-shadow: var(--shadow-card);
+  position: relative;
+  overflow: hidden;
+}
+@media (min-width: 768px) {
+  .founder-card {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+}
+.founder-card__media {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .75rem;
+  flex-shrink: 0;
+}
+.founder-card__photo {
+  width: 160px;
+  height: 160px;
+  border-radius: 16px;
+  object-fit: cover;
+  border: 2px solid var(--border-strong);
+  box-shadow: 0 8px 24px -4px rgba(0, 0, 0, 0.4);
+}
+@media (min-width: 768px) {
+  .founder-card__photo {
+    width: 180px;
+    height: 180px;
+  }
+}
+.founder-card__cert-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: .35rem;
+  padding: .25rem .65rem;
+  border-radius: 999px;
+  background: rgba(245, 158, 11, 0.1);
+  border: 1px solid rgba(245, 158, 11, 0.35);
+  color: var(--accent-text);
+  font-size: .6875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+}
+.founder-card__cert-badge svg {
+  color: var(--accent);
+}
+.founder-card__content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: .75rem;
+}
+.founder-card p {
+  text-wrap: pretty;
+  word-break: normal;
+  overflow-wrap: normal;
+}
+.founder-card__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.founder-card__role {
+  color: var(--accent);
+  font-size: .875rem;
+  font-weight: 600;
+  letter-spacing: .02em;
+}
+.founder-card__linkedin {
+  display: inline-flex;
+  align-items: center;
+  gap: .4rem;
+  padding: .4rem .8rem;
+  font-size: .75rem;
+}
+.founder-card__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+  margin-top: .5rem;
+}
+.badge-tech {
+  display: inline-flex;
+  align-items: center;
+  padding: .25rem .6rem;
+  border-radius: 4px;
+  background: var(--surface-alt);
+  border: 1px solid var(--border);
+  color: var(--text-2);
+  font-size: .75rem;
+  font-weight: 500;
+}
+.founder-card__footer {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: .75rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border-hairline);
+}
+
 /* ---------- Discovery Box ---------- */
 .discovery {
   display: flex;
@@ -986,4 +1500,26 @@ h3 { font-size: 1.25rem; }
 }
 .footer a:hover, .legal a:hover, .callout a:hover {
   color: var(--accent-text);
+}
+
+/* ---------- Responsividade Defensiva dos Chips de Logo ---------- */
+@media (max-width: 480px) {
+  .card__logo-chip {
+    height: 30px;
+    min-width: 38px;
+    padding: 2px 7px;
+  }
+  .card__logo-chip--square {
+    width: 32px;
+    height: 32px;
+    min-width: 32px;
+    padding: 2px;
+    border-radius: 8px;
+  }
+  .card__logo-chip--square img,
+  .card__logo-chip--square svg {
+    width: 24px;
+    height: 24px;
+    max-height: 24px;
+  }
 }
