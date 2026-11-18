@@ -1,0 +1,32 @@
+{
+  "name": "auditing-bdd-tests-skill",
+  "version": "0.1.1",
+  "description": "BDD (Gherkin) + Playwright test solution audit skill: scoring rubric + Markdown/HTML report format",
+  "keywords": [
+    "bdd",
+    "gherkin",
+    "playwright",
+    "claude-code",
+    "codex",
+    "skill",
+    "testing",
+    "quality"
+  ],
+  "type": "module",
+  "scripts": {
+    "smoke": "node skills/auditing-bdd-tests/scripts/smoke-render-html.mjs"
+  },
+  "bin": {
+    "auditing-bdd-tests-skill": "./bin/cli.js"
+  },
+  "files": [
+    "bin",
+    "skills",
+    ".claude-plugin",
+    "README.md",
+    "CHANGELOG.md"
+  ],
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

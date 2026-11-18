@@ -1,0 +1,49 @@
+services:
+  redis:
+    container_name: evolution_redis
+    image: redis:latest
+    restart: always
+    command: >
+      redis-server --port 6379 --appendonly yes
+    ports:
+      - "6379:6379"
+    volumes:
+      - evolution_redis:/data
+
+  evolution-postgres:
+    container_name: evolution_postgres
+    image: postgres:15
+    restart: always
+    env_file:
+      - .env
+    command:
+      - postgres
+      - -c
+      - max_connections=1000
+      - -c
+      - listen_addresses=*
+    environment:
+      - POSTGRES_DB=${POSTGRES_DATABASE}
+      - POSTGRES_USER=${POSTGRES_USERNAME}
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  whisper:
+    container_name: evolution_whisper
+    image: ghcr.io/ggml-org/whisper.cpp:main
+    restart: always
+    entrypoint: ["/app/build/bin/whisper-server"]
+    command: ["--host", "0.0.0.0", "--port", "9000", "-m", "/models/ggml-base.bin", "-l", "pt"]
+    ports:
+      - "9000:9000"
+    volumes:
+      - evolution_whisper_models:/models
+
+volumes:
+  evolution_redis:
+  postgres_data:
+  evolution_whisper_models:
+    external: true

@@ -1,0 +1,13 @@
+{
+  "name": "auditing-bdd-tests",
+  "description": "Analyzes BDD (Gherkin) + Playwright test solutions: aspect scoring (0/5/10), ASCII dashboard, issues by severity, and Markdown + HTML report formats for AI-agent executability and flake resistance.",
+  "version": "0.1.0",
+  "keywords": [
+    "bdd",
+    "gherkin",
+    "playwright",
+    "testing",
+    "quality",
+    "evaluation"
+  ]
+}

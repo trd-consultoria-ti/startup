@@ -1,0 +1,568 @@
+#!/usr/bin/env bash
+set -uo pipefail
+
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+WAITER="$SCRIPT_DIR/wait-for-ready.sh"
+TEST_ROOT=$(mktemp -d "${TMPDIR:-/tmp}/wait-for-ready-test.XXXXXX")
+TEST_SHELL_PID="${BASHPID:-$$}"
+PIDS=()
+PASSED=0
+FAILED=0
+CASE_ERROR=""
+
+track_pid() {
+  PIDS+=("$1")
+}
+
+stop_pid() {
+  local pid="$1"
+  kill "$pid" 2>/dev/null || true
+  wait "$pid" 2>/dev/null || true
+}
+
+cleanup() {
+  local pid
+  [ "${BASHPID:-$$}" = "$TEST_SHELL_PID" ] || return 0
+  for pid in "${PIDS[@]}"; do
+    kill "$pid" 2>/dev/null || true
+  done
+  for pid in "${PIDS[@]}"; do
+    wait "$pid" 2>/dev/null || true
+  done
+  rm -rf "$TEST_ROOT"
+}
+trap cleanup EXIT INT TERM
+
+new_handoff() {
+  local name="$1" handoff="$TEST_ROOT/$name.md"
+  printf '%s\n' '---' 'status: dispatched' '---' > "$handoff"
+  printf '%s\n' "$handoff"
+}
+
+start_sleep_builder() {
+  sleep 999 &
+  BUILDER_PID=$!
+  track_pid "$BUILDER_PID"
+}
+
+start_busy_builder() {
+  ( while :; do :; done ) &
+  BUILDER_PID=$!
+  track_pid "$BUILDER_PID"
+}
+
+start_noisy_sidecar_builder() {
+  local sidecar="$TEST_ROOT/SkyComputerUseClient"
+  printf '%s\n' '#!/bin/sh' 'while :; do :; done' > "$sidecar"
+  chmod +x "$sidecar"
+  (
+    sleep 999 &
+    idle_child=$!
+    "$sidecar" &
+    sidecar_child=$!
+    trap 'kill "$idle_child" "$sidecar_child" 2>/dev/null || true; wait "$idle_child" "$sidecar_child" 2>/dev/null || true' EXIT
+    trap 'exit 0' TERM INT
+    wait "$idle_child"
+  ) &
+  BUILDER_PID=$!
+  track_pid "$BUILDER_PID"
+}
+
+start_light_work_builder() {
+  (
+    trap 'exit 0' TERM INT
+    while :; do
+      i=0
+      while [ "$i" -lt 20000 ]; do
+        i=$(( i + 1 ))
+      done
+      sleep 1
+    done
+  ) &
+  BUILDER_PID=$!
+  track_pid "$BUILDER_PID"
+}
+
+run_waiter_capped() {
+  local output="$1" cap="$2" waiter_pid watchdog_pid watchdog_flag rc
+  shift 2
+  env -u TMUX "$@" > "$output" 2>&1 &
+  waiter_pid=$!
+  track_pid "$waiter_pid"
+  watchdog_flag="$TEST_ROOT/watchdog.$waiter_pid"
+  (
+    sleeper=""
+    trap '[ -n "$sleeper" ] && kill "$sleeper" 2>/dev/null; exit 0' TERM INT
+    sleep "$cap" &
+    sleeper=$!
+    wait "$sleeper"
+    : > "$watchdog_flag"
+    kill "$waiter_pid" 2>/dev/null || true
+  ) &
+  watchdog_pid=$!
+  track_pid "$watchdog_pid"
+
+  wait "$waiter_pid"
+  rc=$?
+  kill "$watchdog_pid" 2>/dev/null || true
+  wait "$watchdog_pid" 2>/dev/null || true
+  [ ! -f "$watchdog_flag" ] || return 124
+  return "$rc"
+}
+
+fail_case() {
+  CASE_ERROR="$1"
+  return 1
+}
+
+case_ready() {
+  local handoff output updater rc
+  handoff=$(new_handoff ready)
+  output="$TEST_ROOT/ready.out"
+  start_sleep_builder
+  printf '%s\n' "$BUILDER_PID" > "$handoff.builder"
+  (
+    sleep 2
+    printf '%s\n' '---' 'status: results-ready' '---' > "$handoff"
+  ) &
+  updater=$!
+  track_pid "$updater"
+
+  run_waiter_capped "$output" 10 \
+    WFR_GRACE=3 WFR_POLL=1 \
+    "$WAITER" "$handoff" builder 20 15
+  rc=$?
+  stop_pid "$BUILDER_PID"
+  [ "$rc" -eq 0 ] || { fail_case "exit=$rc expected=0"; return 1; }
+  grep -q '^WAITER: ready$' "$output" ||
+    fail_case "missing WAITER: ready"
+}
+
+case_dead_pid() {
+  local handoff output dead_pid rc
+  handoff=$(new_handoff dead-pid)
+  output="$TEST_ROOT/dead-pid.out"
+  ( : ) &
+  dead_pid=$!
+  wait "$dead_pid" 2>/dev/null || true
+  printf '%s\n' "$dead_pid" > "$handoff.builder"
+
+  run_waiter_capped "$output" 5 \
+    WFR_GRACE=3 WFR_POLL=1 \
+    "$WAITER" "$handoff" builder 20 15
+  rc=$?
+  [ "$rc" -eq 3 ] || { fail_case "exit=$rc expected=3"; return 1; }
+  grep -q 'WAITER: builder-exited-without-ready' "$output" ||
+    fail_case "missing builder-exited-without-ready"
+}
+
+case_never_started() {
+  local handoff output rc
+  handoff=$(new_handoff never-started)
+  output="$TEST_ROOT/never-started.out"
+
+  run_waiter_capped "$output" 10 \
+    WFR_GRACE=5 WFR_POLL=1 \
+    "$WAITER" "$handoff" builder 20 15
+  rc=$?
+  [ "$rc" -eq 3 ] || { fail_case "exit=$rc expected=3"; return 1; }
+  grep -q 'WAITER: never-started after 5s' "$output" ||
+    fail_case "missing never-started"
+}
+
+case_idle() {
+  local handoff output started elapsed rc
+  handoff=$(new_handoff idle)
+  output="$TEST_ROOT/idle.out"
+  start_sleep_builder
+  printf '%s\n' "$BUILDER_PID" > "$handoff.builder"
+  started=$(date +%s)
+
+  run_waiter_capped "$output" 20 \
+    WFR_GRACE=3 WFR_POLL=1 WFR_IDLE_CPU_CENTIS=200 \
+    "$WAITER" "$handoff" builder 30 8
+  rc=$?
+  elapsed=$(( $(date +%s) - started ))
+  stop_pid "$BUILDER_PID"
+  [ "$rc" -eq 5 ] || { fail_case "exit=$rc expected=5"; return 1; }
+  [ "$elapsed" -le 20 ] ||
+    { fail_case "elapsed=${elapsed}s expected<=20s"; return 1; }
+  grep -q 'WAITER: builder-idle' "$output" ||
+    fail_case "missing builder-idle"
+}
+
+case_busy_not_idle() {
+  local handoff output updater rc
+  handoff=$(new_handoff busy-not-idle)
+  output="$TEST_ROOT/busy-not-idle.out"
+  start_busy_builder
+  printf '%s\n' "$BUILDER_PID" > "$handoff.builder"
+  (
+    sleep 11
+    printf '%s\n' '---' 'status: results-ready' '---' > "$handoff"
+  ) &
+  updater=$!
+  track_pid "$updater"
+
+  run_waiter_capped "$output" 18 \
+    WFR_GRACE=3 WFR_POLL=1 WFR_IDLE_CPU_CENTIS=200 \
+    "$WAITER" "$handoff" builder 25 8
+  rc=$?
+  stop_pid "$BUILDER_PID"
+  [ "$rc" -eq 0 ] || { fail_case "exit=$rc expected=0"; return 1; }
+  ! grep -q 'WAITER: builder-idle' "$output" ||
+    { fail_case "busy builder reported idle"; return 1; }
+  grep -q '^WAITER: ready$' "$output" ||
+    fail_case "missing WAITER: ready"
+}
+
+case_handoff_deleted() {
+  local handoff output deleter rc
+  handoff=$(new_handoff handoff-deleted)
+  output="$TEST_ROOT/handoff-deleted.out"
+  start_sleep_builder
+  printf '%s\n' "$BUILDER_PID" > "$handoff.builder"
+  (
+    sleep 2
+    rm -f "$handoff"
+  ) &
+  deleter=$!
+  track_pid "$deleter"
+
+  run_waiter_capped "$output" 10 \
+    WFR_GRACE=3 WFR_POLL=1 \
+    "$WAITER" "$handoff" builder 20 15
+  rc=$?
+  stop_pid "$BUILDER_PID"
+  [ "$rc" -eq 3 ] || { fail_case "exit=$rc expected=3"; return 1; }
+  grep -q 'WAITER: handoff-deleted' "$output" ||
+    fail_case "missing handoff-deleted"
+}
+
+case_idle_with_noisy_sidecar() {
+  local handoff output started elapsed rc
+  handoff=$(new_handoff idle-with-noisy-sidecar)
+  output="$TEST_ROOT/idle-with-noisy-sidecar.out"
+  start_noisy_sidecar_builder
+  printf '%s\n' "$BUILDER_PID" > "$handoff.builder"
+  started=$(date +%s)
+
+  run_waiter_capped "$output" 12 \
+    WFR_GRACE=3 WFR_POLL=1 WFR_IDLE_CPU_CENTIS=200 \
+    "$WAITER" "$handoff" builder 30 8
+  rc=$?
+  elapsed=$(( $(date +%s) - started ))
+  stop_pid "$BUILDER_PID"
+  [ "$rc" -eq 5 ] || { fail_case "exit=$rc expected=5"; return 1; }
+  [ "$elapsed" -le 20 ] ||
+    { fail_case "elapsed=${elapsed}s expected<=20s"; return 1; }
+  grep -q 'WAITER: builder-idle' "$output" ||
+    fail_case "missing builder-idle"
+}
+
+case_production_ratio() {
+  local handoff output updater rc
+
+  handoff=$(new_handoff production-ratio-idle)
+  output="$TEST_ROOT/production-ratio-idle.out"
+  start_sleep_builder
+  printf '%s\n' "$BUILDER_PID" > "$handoff.builder"
+  run_waiter_capped "$output" 12 \
+    WFR_GRACE=3 WFR_POLL=1 WFR_IDLE_CPU_CENTIS=3 \
+    "$WAITER" "$handoff" builder 20 8
+  rc=$?
+  stop_pid "$BUILDER_PID"
+  [ "$rc" -eq 5 ] ||
+    { fail_case "idle sub-case exit=$rc expected=5"; return 1; }
+  grep -q 'WAITER: builder-idle' "$output" ||
+    { fail_case "idle sub-case missing builder-idle"; return 1; }
+
+  handoff=$(new_handoff production-ratio-working)
+  output="$TEST_ROOT/production-ratio-working.out"
+  start_light_work_builder
+  printf '%s\n' "$BUILDER_PID" > "$handoff.builder"
+  (
+    sleep 9
+    printf '%s\n' '---' 'status: results-ready' '---' > "$handoff"
+  ) &
+  updater=$!
+  track_pid "$updater"
+
+  run_waiter_capped "$output" 15 \
+    WFR_GRACE=3 WFR_POLL=1 WFR_IDLE_CPU_CENTIS=3 \
+    "$WAITER" "$handoff" builder 20 8
+  rc=$?
+  stop_pid "$BUILDER_PID"
+  [ "$rc" -eq 0 ] ||
+    { fail_case "working sub-case exit=$rc expected=0"; return 1; }
+  ! grep -q 'WAITER: builder-idle' "$output" ||
+    { fail_case "working sub-case reported idle"; return 1; }
+  grep -q '^WAITER: ready$' "$output" ||
+    fail_case "working sub-case missing WAITER: ready"
+}
+
+case_blocked() {
+  local handoff output updater rc
+  handoff=$(new_handoff blocked)
+  output="$TEST_ROOT/blocked.out"
+  start_sleep_builder
+  printf '%s\n' "$BUILDER_PID" > "$handoff.builder"
+  (
+    sleep 2
+    printf '%s\n' '---' 'status: blocked' '---' > "$handoff"
+  ) &
+  updater=$!
+  track_pid "$updater"
+
+  run_waiter_capped "$output" 10 \
+    WFR_GRACE=3 WFR_POLL=1 \
+    "$WAITER" "$handoff" builder 20 15
+  rc=$?
+  stop_pid "$BUILDER_PID"
+  [ "$rc" -eq 6 ] || { fail_case "exit=$rc expected=6"; return 1; }
+  grep -q 'WAITER: builder-blocked' "$output" ||
+    fail_case "missing builder-blocked"
+}
+
+case_turn_ended() {
+  local handoff output toucher rc
+  handoff=$(new_handoff turn-ended)
+  output="$TEST_ROOT/turn-ended.out"
+  start_sleep_builder
+  printf '%s\n' "$BUILDER_PID" > "$handoff.builder"
+  (
+    sleep 2
+    touch "$handoff.turn-ended"
+  ) &
+  toucher=$!
+  track_pid "$toucher"
+
+  run_waiter_capped "$output" 12 \
+    WFR_GRACE=3 WFR_POLL=1 WFR_TURN_SETTLE=2 \
+    "$WAITER" "$handoff" builder 20 15
+  rc=$?
+  stop_pid "$BUILDER_PID"
+  [ "$rc" -eq 6 ] || { fail_case "exit=$rc expected=6"; return 1; }
+  grep -q 'WAITER: builder-awaiting-input' "$output" ||
+    fail_case "missing builder-awaiting-input"
+}
+
+case_turn_ended_subturn_churn() {
+  # THE REGRESSION: the notify hook fires on every agent turn, so a builder
+  # running its gates touches the marker over and over while plainly still
+  # working. Each touch used to wake the architect for nothing. A marker
+  # accompanied by ongoing activity is a sub-turn, not a stop — the bridge must
+  # sit through all of it and only report when the builder really reports.
+  local handoff output logdir writer toucher updater rc
+  handoff=$(new_handoff turn-churn)
+  output="$TEST_ROOT/turn-churn.out"
+  logdir="$TEST_ROOT/turn-churn-logs"
+  mkdir -p "$logdir"
+  printf '%s\n' "$logdir" > "$handoff.activity"
+  start_sleep_builder
+  printf '%s\n' "$BUILDER_PID" > "$handoff.builder"
+  (
+    trap 'exit 0' TERM INT
+    while :; do echo tick >> "$logdir/rollout.jsonl"; sleep 1; done
+  ) &
+  writer=$!
+  track_pid "$writer"
+  (
+    trap 'exit 0' TERM INT
+    while :; do sleep 2; touch "$handoff.turn-ended"; done
+  ) &
+  toucher=$!
+  track_pid "$toucher"
+  (
+    sleep 12
+    printf '%s\n' '---' 'status: results-ready' '---' > "$handoff"
+  ) &
+  updater=$!
+  track_pid "$updater"
+
+  run_waiter_capped "$output" 20 \
+    WFR_GRACE=3 WFR_POLL=1 WFR_TURN_SETTLE=4 WFR_IDLE_CPU_CENTIS=200 \
+    "$WAITER" "$handoff" builder 30 25
+  rc=$?
+  stop_pid "$toucher"
+  stop_pid "$writer"
+  stop_pid "$BUILDER_PID"
+  [ "$rc" -eq 0 ] || { fail_case "exit=$rc expected=0"; return 1; }
+  ! grep -q 'WAITER: builder-awaiting-input' "$output" ||
+    { fail_case "sub-turn churn reported as awaiting-input"; return 1; }
+  grep -q '^WAITER: ready$' "$output" ||
+    fail_case "missing WAITER: ready"
+}
+
+case_stale_turn_marker_consumed() {
+  # A marker left over from an already-handled wake must be ignored at bridge
+  # start, not reported as a fresh awaiting-input event. A short settle window
+  # keeps this honest: it proves the marker was baselined, not merely waited out.
+  local handoff output updater rc
+  handoff=$(new_handoff stale-turn-marker)
+  output="$TEST_ROOT/stale-turn-marker.out"
+  start_sleep_builder
+  printf '%s\n' "$BUILDER_PID" > "$handoff.builder"
+  touch "$handoff.turn-ended"
+  (
+    sleep 3
+    printf '%s\n' '---' 'status: results-ready' '---' > "$handoff"
+  ) &
+  updater=$!
+  track_pid "$updater"
+
+  run_waiter_capped "$output" 10 \
+    WFR_GRACE=3 WFR_POLL=1 WFR_TURN_SETTLE=1 \
+    "$WAITER" "$handoff" builder 20 15
+  rc=$?
+  stop_pid "$BUILDER_PID"
+  [ "$rc" -eq 0 ] || { fail_case "exit=$rc expected=0"; return 1; }
+  ! grep -q 'WAITER: builder-awaiting-input' "$output" ||
+    { fail_case "stale marker reported as awaiting-input"; return 1; }
+  grep -q '^WAITER: ready$' "$output" ||
+    fail_case "missing WAITER: ready"
+}
+
+case_turn_marker_survives_bridge_start() {
+  # The old bridge DELETED the marker at start. That raced with the architect's
+  # own cleanup and with dispatch.sh: a turn-end landing in the window was
+  # erased and its wake never delivered. Baselining must leave the file alone.
+  local handoff output rc
+  handoff=$(new_handoff turn-marker-survives)
+  output="$TEST_ROOT/turn-marker-survives.out"
+  start_sleep_builder
+  printf '%s\n' "$BUILDER_PID" > "$handoff.builder"
+  touch "$handoff.turn-ended"
+
+  run_waiter_capped "$output" 6 \
+    WFR_GRACE=3 WFR_POLL=1 WFR_TURN_SETTLE=1 \
+    "$WAITER" "$handoff" builder 20 15
+  rc=$?
+  stop_pid "$BUILDER_PID"
+  [ "$rc" -eq 124 ] || { fail_case "exit=$rc expected=124 (should still be waiting)"; return 1; }
+  [ -f "$handoff.turn-ended" ] ||
+    fail_case "bridge deleted the turn-ended marker instead of baselining it"
+}
+
+case_turn_ended_ready_wins() {
+  # The builder's last act is `handoff.mjs ready`, then its turn ends and the
+  # notify hook touches the marker. Both signals present -> ready wins.
+  local handoff output updater rc
+  handoff=$(new_handoff turn-ended-ready)
+  output="$TEST_ROOT/turn-ended-ready.out"
+  start_sleep_builder
+  printf '%s\n' "$BUILDER_PID" > "$handoff.builder"
+  (
+    sleep 2
+    printf '%s\n' '---' 'status: results-ready' '---' > "$handoff"
+    touch "$handoff.turn-ended"
+  ) &
+  updater=$!
+  track_pid "$updater"
+
+  run_waiter_capped "$output" 10 \
+    WFR_GRACE=3 WFR_POLL=1 \
+    "$WAITER" "$handoff" builder 20 15
+  rc=$?
+  stop_pid "$BUILDER_PID"
+  [ "$rc" -eq 0 ] || { fail_case "exit=$rc expected=0"; return 1; }
+  grep -q '^WAITER: ready$' "$output" ||
+    fail_case "missing WAITER: ready"
+}
+
+case_activity_fresh_not_idle() {
+  # A builder whose process burns no CPU (I/O-bound: streaming an LLM call)
+  # still appends to its harness session log. With an activity sidecar
+  # pointing at that dir, fresh writes must reset the idle timer even though
+  # the CPU heuristic alone would have tripped.
+  local handoff output logdir writer updater rc
+  handoff=$(new_handoff activity-fresh)
+  output="$TEST_ROOT/activity-fresh.out"
+  logdir="$TEST_ROOT/activity-fresh-logs"
+  mkdir -p "$logdir"
+  printf '%s\n' "$logdir" > "$handoff.activity"
+  start_sleep_builder
+  printf '%s\n' "$BUILDER_PID" > "$handoff.builder"
+  (
+    trap 'exit 0' TERM INT
+    while :; do
+      echo tick >> "$logdir/rollout.jsonl"
+      sleep 2
+    done
+  ) &
+  writer=$!
+  track_pid "$writer"
+  (
+    sleep 12
+    printf '%s\n' '---' 'status: results-ready' '---' > "$handoff"
+  ) &
+  updater=$!
+  track_pid "$updater"
+
+  run_waiter_capped "$output" 20 \
+    WFR_GRACE=3 WFR_POLL=1 WFR_IDLE_CPU_CENTIS=200 \
+    "$WAITER" "$handoff" builder 30 8
+  rc=$?
+  stop_pid "$writer"
+  stop_pid "$BUILDER_PID"
+  [ "$rc" -eq 0 ] || { fail_case "exit=$rc expected=0"; return 1; }
+  ! grep -q 'WAITER: builder-idle' "$output" ||
+    { fail_case "fresh activity reported idle"; return 1; }
+  grep -q '^WAITER: ready$' "$output" ||
+    fail_case "missing WAITER: ready"
+}
+
+case_activity_stale_idle() {
+  # Sidecar present but the session log is frozen and the process is quiet:
+  # idle must still fire.
+  local handoff output logdir rc
+  handoff=$(new_handoff activity-stale)
+  output="$TEST_ROOT/activity-stale.out"
+  logdir="$TEST_ROOT/activity-stale-logs"
+  mkdir -p "$logdir"
+  echo tick > "$logdir/rollout.jsonl"
+  printf '%s\n' "$logdir" > "$handoff.activity"
+  start_sleep_builder
+  printf '%s\n' "$BUILDER_PID" > "$handoff.builder"
+
+  run_waiter_capped "$output" 20 \
+    WFR_GRACE=3 WFR_POLL=1 WFR_IDLE_CPU_CENTIS=200 \
+    "$WAITER" "$handoff" builder 30 8
+  rc=$?
+  stop_pid "$BUILDER_PID"
+  [ "$rc" -eq 5 ] || { fail_case "exit=$rc expected=5"; return 1; }
+  grep -q 'WAITER: builder-idle' "$output" ||
+    fail_case "missing builder-idle"
+}
+
+run_case() {
+  local name="$1" function_name="$2"
+  CASE_ERROR=""
+  if "$function_name"; then
+    echo "ok $name"
+    PASSED=$(( PASSED + 1 ))
+  else
+    echo "not ok $name - $CASE_ERROR"
+    FAILED=$(( FAILED + 1 ))
+  fi
+}
+
+run_case ready case_ready
+run_case dead-pid case_dead_pid
+run_case never-started case_never_started
+run_case idle case_idle
+run_case busy-not-idle case_busy_not_idle
+run_case handoff-deleted case_handoff_deleted
+run_case idle-with-noisy-sidecar case_idle_with_noisy_sidecar
+run_case production-ratio case_production_ratio
+run_case blocked case_blocked
+run_case turn-ended case_turn_ended
+run_case turn-ended-subturn-churn case_turn_ended_subturn_churn
+run_case turn-marker-survives-bridge-start case_turn_marker_survives_bridge_start
+run_case stale-turn-marker-consumed case_stale_turn_marker_consumed
+run_case turn-ended-ready-wins case_turn_ended_ready_wins
+run_case activity-fresh-not-idle case_activity_fresh_not_idle
+run_case activity-stale-idle case_activity_stale_idle
+
+echo "TESTS: $PASSED passed, $FAILED failed"
+[ "$FAILED" -eq 0 ]

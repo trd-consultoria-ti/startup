@@ -17,3 +17,14 @@ $RECYCLE.BIN/
 *.swp
 ~$*.doc*
 ~$*
+
+# TRD Evolution
+trd-evolution/node_modules/
+trd-evolution/dist/
+trd-evolution/instances/
+trd-evolution/.env
+trd-evolution/.env.local
+trd-evolution/*.log
+trd-evolution/test-output*.txt
+trd-evolution/bing-sample.html
+

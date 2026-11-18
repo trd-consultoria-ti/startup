@@ -1,0 +1,372 @@
+#!/usr/bin/env bash
+# Bridge builder completion -> a single harness wake-up for the /complete loop.
+# The builder ends its run with `handoff.mjs ready`, flipping the offload handoff to
+# status: results-ready. This script blocks OUTSIDE Claude's context until that
+# happens (or the builder dies without reporting, or a backstop timeout fires), then
+# exits with a final `WAITER:` line. Run it BACKGROUNDED from Claude
+# (Bash run_in_background); the harness re-invokes the session when it exits, so
+# the Claude side never polls and burns no tokens while waiting.
+#
+# CLI contracts:
+#   wait-for-ready.sh <handoff_path> [tmux_window] [timeout_seconds] [idle_seconds]
+#   wait-for-ready.sh --reap
+#   tmux_window is accepted and ignored for caller compatibility.
+#   Defaults: timeout 7200s, idle 600s, WFR_GRACE=90s, WFR_POLL=5s,
+#   WFR_IDLE_CPU_CENTIS=200, WFR_TURN_SETTLE=45s. Marker path is always
+#   "$HANDOFF.builder". WFR_CPU_EXCLUDE defaults to
+#   SkyComputerUseClient|node_repl|mcp-context-a8c.
+#
+# Exit codes: 0 ready/reap · 2 usage · 3 builder unavailable/handoff deleted ·
+#   4 timeout · 5 builder idle · 6 builder needs the architect (blocked or
+#   awaiting input).
+#
+# Deterministic wake signals (both exit 6 — arbitrate, don't guess):
+#   status: blocked        — the builder flipped the handoff via `handoff.mjs blocked`
+#                            before stopping on a mid-slice blocker.
+#   "$HANDOFF.turn-ended"  — touched by the harness's own turn-end hook (codex
+#                            notify / claude Stop hook, wired by dispatch.sh):
+#                            the builder stopped and is waiting for input.
+#
+#                            The hook fires on EVERY agent turn, including the
+#                            short sub-turns a builder ends while running its
+#                            gates — so a bare marker means "a turn ended", not
+#                            "the builder stopped". Taken literally it produced
+#                            ~16 false wakes per 2 genuine reports, and the
+#                            architect learned to `rm` the marker by hand to get
+#                            work done. So a fresh marker only opens a CANDIDATE
+#                            stop, confirmed after WFR_TURN_SETTLE seconds of no
+#                            CPU growth and no activity-sidecar writes. Any sign
+#                            of life inside that window retires the candidate as
+#                            the sub-turn it was.
+#
+#                            A marker already present at bridge START is stale
+#                            (its wake was delivered by the previous bridge
+#                            exit) and is ignored via an mtime baseline rather
+#                            than deleted — deleting it raced with dispatch.sh
+#                            and with the architect, silently eating real wakes.
+#                            `results-ready` always wins over a marker.
+#
+# WAITER output contracts:
+#   WAITER: ready
+#   WAITER: never-started after <n>s (status=<status>)
+#   WAITER: builder-exited-without-ready (status=<status>)
+#   WAITER: handoff-deleted (status=<status>)
+#   WAITER: timeout after <n>s (status=<status>)
+#   WAITER: builder-idle after <n>s (pid=<pid> cpu=<sec>s status=<status>)
+#   WAITER: builder-blocked (status=blocked)
+#   WAITER: builder-awaiting-input (status=<status>)
+#   WAITER: reaped pid=<pid> handoff=<path>
+#   WAITER: usage: wait-for-ready.sh <handoff_path> [tmux_window] [timeout_seconds] [idle_seconds]
+set -uo pipefail
+
+usage() {
+  echo "WAITER: usage: wait-for-ready.sh <handoff_path> [tmux_window] [timeout_seconds] [idle_seconds]"
+}
+
+waiter_handoff_from_command() {
+  local command="$1" first second
+  local -a argv=()
+  read -r -a argv <<< "$command"
+  [ "${#argv[@]}" -gt 0 ] || return 1
+  first="${argv[0]##*/}"
+  second="${argv[1]:-}"
+  case "$first" in
+    wait-for-ready.sh)
+      [ "${#argv[@]}" -gt 1 ] && printf '%s\n' "${argv[1]}"
+      ;;
+    bash|sh|zsh)
+      [ "${second##*/}" = "wait-for-ready.sh" ] &&
+        [ "${#argv[@]}" -gt 2 ] &&
+        printf '%s\n' "${argv[2]}"
+      ;;
+  esac
+}
+
+reap_stale_waiters() {
+  local candidate_pid command handoff marker_pid stale
+  while read -r candidate_pid command; do
+    [ -n "${candidate_pid:-}" ] || continue
+    [ "$candidate_pid" != "$$" ] || continue
+    handoff=$(waiter_handoff_from_command "$command")
+    [ -n "${handoff:-}" ] || continue
+    [ "${handoff#--}" = "$handoff" ] || continue
+
+    stale=false
+    if [ ! -f "$handoff" ]; then
+      stale=true
+    elif [ -f "$handoff.builder" ]; then
+      marker_pid=$(cat "$handoff.builder" 2>/dev/null || true)
+      case "$marker_pid" in
+        ''|*[!0-9]*) stale=true ;;
+        *) kill -0 "$marker_pid" 2>/dev/null || stale=true ;;
+      esac
+    fi
+
+    if $stale && kill "$candidate_pid" 2>/dev/null; then
+      echo "WAITER: reaped pid=$candidate_pid handoff=$handoff"
+    fi
+  done < <(ps -axo pid=,command= 2>/dev/null)
+}
+
+if [ "${1:-}" = "--reap" ]; then
+  reap_stale_waiters
+  exit 0
+fi
+
+HANDOFF="${1:-}"
+[ -n "$HANDOFF" ] || { usage; exit 2; }
+# Positional argument 2 remains accepted for caller compatibility.
+: "${2:-builder}"
+TIMEOUT="${3:-7200}"
+IDLE_SECONDS=${4:-600}
+GRACE="${WFR_GRACE:-90}"
+POLL="${WFR_POLL:-5}"
+IDLE_CPU_CENTIS="${WFR_IDLE_CPU_CENTIS:-200}"
+TURN_SETTLE="${WFR_TURN_SETTLE:-45}"
+MARKER="$HANDOFF.builder"
+TURN_MARKER="$HANDOFF.turn-ended"
+
+# Epoch mtime, portable across BSD (macOS) and GNU stat. Fails when absent.
+mtime() {
+  [ -e "$1" ] || return 1
+  stat -f %m "$1" 2>/dev/null || stat -c %Y "$1" 2>/dev/null
+}
+
+# A marker present before we start is stale: its wake was already delivered by
+# the previous bridge exit and handled by the architect before this relaunch.
+# Baseline its mtime instead of deleting it — the delete raced with dispatch.sh
+# and with the architect's own cleanup, and a turn-end landing in that window
+# vanished with no trace.
+turn_baseline=$(mtime "$TURN_MARKER" 2>/dev/null || echo 0)
+turn_candidate=""
+turn_candidate_at=0
+turn_candidate_cpu=0
+
+# Optional activity sidecar (written by dispatch.sh): directories, one per line,
+# whose file activity proves the builder is alive — typically the harness's own
+# session-log dir, which grows whenever the builder streams model output. Any
+# write there resets the idle timer exactly like a CPU burst, so I/O-bound work
+# that burns no CPU (the false-idle case) no longer trips the detector, while a
+# builder whose log is frozen still does.
+ACTIVITY_FILE="$HANDOFF.activity"
+ACTIVITY_STAMP=""
+if [ -f "$ACTIVITY_FILE" ]; then
+  ACTIVITY_STAMP=$(mktemp -t wfr-stamp.XXXXXX)
+  trap 'rm -f "$ACTIVITY_STAMP"' EXIT
+fi
+
+# True when any listed dir holds an entry modified after the stamp.
+activity_seen() {
+  local dir
+  [ -n "$ACTIVITY_STAMP" ] || return 1
+  while IFS= read -r dir; do
+    [ -n "$dir" ] && [ -e "$dir" ] || continue
+    if [ -n "$(find "$dir" -newer "$ACTIVITY_STAMP" -print -quit 2>/dev/null)" ]; then
+      return 0
+    fi
+  done < "$ACTIVITY_FILE"
+  return 1
+}
+
+status() {
+  [ -f "$HANDOFF" ] || return 0
+  grep -m1 '^status:' "$HANDOFF" 2>/dev/null |
+    sed 's/^status:[[:space:]]*//;s/[[:space:]]*$//' || true
+}
+
+status_label() {
+  local value
+  value=$(status)
+  printf '%s\n' "${value:-none}"
+}
+
+builder_alive() {
+  local pid
+  [ -f "$MARKER" ] || return 1
+  pid=$(cat "$MARKER" 2>/dev/null || true)
+  case "$pid" in
+    ''|*[!0-9]*) return 1 ;;
+  esac
+  kill -0 "$pid" 2>/dev/null || return 1
+  printf '%s\n' "$pid"
+}
+
+cpu_centis() {
+  local root_pid="$1" exclude="${WFR_CPU_EXCLUDE:-SkyComputerUseClient|node_repl|mcp-context-a8c}"
+  ps -ww -axo pid=,ppid=,time=,command= 2>/dev/null |
+    awk -v root="$root_pid" -v exclude="$exclude" '
+      {
+        pid[NR] = $1
+        ppid[NR] = $2
+        cpu[NR] = $3
+        command[NR] = ""
+        for (field = 4; field <= NF; field++) {
+          command[NR] = command[NR] (field == 4 ? "" : " ") $field
+        }
+        if ($1 == root) selected[$1] = 1
+      }
+      END {
+        changed = 1
+        while (changed) {
+          changed = 0
+          for (i = 1; i <= NR; i++) {
+            if (selected[pid[i]] || excluded[pid[i]]) continue
+            if (excluded[ppid[i]]) {
+              excluded[pid[i]] = 1
+              changed = 1
+            } else if (selected[ppid[i]]) {
+              if (command[i] ~ exclude) {
+                excluded[pid[i]] = 1
+              } else {
+                selected[pid[i]] = 1
+              }
+              changed = 1
+            }
+          }
+        }
+        total = 0
+        for (i = 1; i <= NR; i++) {
+          if (!selected[pid[i]]) continue
+          fields = split(cpu[i], part, ":")
+          if (fields == 2) {
+            seconds = (part[1] * 60) + part[2]
+          } else if (fields == 3) {
+            seconds = (part[1] * 3600) + (part[2] * 60) + part[3]
+          } else {
+            seconds = part[1]
+          }
+          total += seconds
+        }
+        printf "%.0f\n", total * 100
+      }
+    '
+}
+
+cpu_seconds() {
+  awk -v centis="$1" 'BEGIN { printf "%.2f", centis / 100 }'
+}
+
+started_at=$(date +%s)
+deadline=$(( started_at + TIMEOUT ))
+saw_marker=false
+[ -f "$MARKER" ] && saw_marker=true
+idle_pid=""
+idle_started=0
+idle_cpu_base=0
+
+check() {
+  # turn_baseline / turn_candidate* are deliberately NOT local: they carry the
+  # settle evaluation across polls, like idle_started does.
+  local now current_status pid cpu delta tm
+  now=$(date +%s)
+
+  if [ ! -f "$HANDOFF" ]; then
+    echo "WAITER: handoff-deleted (status=none)"
+    exit 3
+  fi
+
+  # A real report always wins, whatever the markers say.
+  current_status=$(status)
+  if [ "$current_status" = "results-ready" ]; then
+    echo "WAITER: ready"
+    exit 0
+  fi
+
+  if [ "$current_status" = "blocked" ]; then
+    echo "WAITER: builder-blocked (status=blocked)"
+    exit 6
+  fi
+
+  [ -f "$MARKER" ] && saw_marker=true
+  if ! $saw_marker; then
+    if [ $(( now - started_at )) -ge "$GRACE" ]; then
+      echo "WAITER: never-started after $(( now - started_at ))s (status=${current_status:-none})"
+      exit 3
+    fi
+    if [ "$now" -ge "$deadline" ]; then
+      echo "WAITER: timeout after ${TIMEOUT}s (status=$(status_label))"
+      exit 4
+    fi
+    return
+  fi
+
+  # Liveness is resolved BEFORE the turn marker: a builder that already exited
+  # must report `builder-exited-without-ready` immediately, not sit through a
+  # settle window and then mislabel itself as awaiting input.
+  if ! pid=$(builder_alive); then
+    current_status=$(status)
+    if [ "$current_status" = "results-ready" ]; then
+      echo "WAITER: ready"
+      exit 0
+    fi
+    echo "WAITER: builder-exited-without-ready (status=${current_status:-none})"
+    exit 3
+  fi
+
+  cpu=$(cpu_centis "$pid")
+  cpu="${cpu:-0}"
+
+  # Turn-end candidate. A fresh marker opens a candidate stop; any CPU growth or
+  # activity-sidecar write inside WFR_TURN_SETTLE retires it as a sub-turn.
+  if tm=$(mtime "$TURN_MARKER") && [ "${tm:-0}" -gt "${turn_baseline:-0}" ]; then
+    if [ "$tm" != "$turn_candidate" ]; then
+      turn_candidate="$tm"
+      turn_candidate_at="$now"
+      turn_candidate_cpu="$cpu"
+    fi
+    if activity_seen; then
+      turn_baseline="$tm"; turn_candidate=""
+    elif [ $(( cpu - turn_candidate_cpu )) -gt "$IDLE_CPU_CENTIS" ]; then
+      turn_baseline="$tm"; turn_candidate=""
+    elif [ $(( now - turn_candidate_at )) -ge "$TURN_SETTLE" ]; then
+      echo "WAITER: builder-awaiting-input (status=${current_status:-none})"
+      exit 6
+    fi
+  fi
+
+  if [ "$idle_pid" != "$pid" ]; then
+    idle_pid="$pid"
+    idle_started="$now"
+    idle_cpu_base="$cpu"
+  elif activity_seen; then
+    touch "$ACTIVITY_STAMP"
+    idle_started="$now"
+    idle_cpu_base="$cpu"
+  else
+    delta=$(( cpu - idle_cpu_base ))
+    if [ "$delta" -gt "$IDLE_CPU_CENTIS" ]; then
+      idle_started="$now"
+      idle_cpu_base="$cpu"
+    elif [ $(( now - idle_started )) -ge "$IDLE_SECONDS" ]; then
+      echo "WAITER: builder-idle after $(( now - idle_started ))s (pid=$pid cpu=$(cpu_seconds "$cpu")s status=${current_status:-none})"
+      exit 5
+    fi
+  fi
+
+  if [ "$now" -ge "$deadline" ]; then
+    echo "WAITER: timeout after ${TIMEOUT}s (status=$(status_label))"
+    exit 4
+  fi
+}
+
+# Pick a timeout wrapper so the fast-path fswatch can't block past a re-check.
+TIMEOUT_CMD=""
+if command -v timeout >/dev/null 2>&1; then TIMEOUT_CMD=timeout
+elif command -v gtimeout >/dev/null 2>&1; then TIMEOUT_CMD=gtimeout; fi
+
+check  # in case results are already in before we ever block
+
+if command -v fswatch >/dev/null 2>&1 && [ -n "$TIMEOUT_CMD" ]; then
+  # Event-driven fast path: wake on a filesystem event, bounded by POLL so the
+  # liveness/timeout backstops still fire during silence.
+  while true; do
+    "$TIMEOUT_CMD" "$POLL" fswatch -1 "$HANDOFF" >/dev/null 2>&1 || true
+    check
+  done
+else
+  # Portable fallback: a detached sleep-poll. Still zero cost to the Claude side.
+  while true; do
+    sleep "$POLL"
+    check
+  done
+fi
