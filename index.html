@@ -154,15 +154,87 @@
   </section>
 
   <!-- 2. BARRA DE CONFIANÇA -->
-  <section class="trustbar">
+  <section class="trustbar" aria-label="Aplicações corporativas e ecossistemas homologados">
     <div class="container">
-      <p class="small muted" style="text-align:center; margin-bottom: 1rem;">Aplicações corporativas e ecossistemas de missão crítica suportados pela governança técnica da TRD:</p>
-      <div class="trustbar__inner">
-        <span>Ministério da Justiça · CNPD</span>
-        <span>Serasa Experian · eConsig</span>
-        <span>CVM</span>
-        <span>ALERGS</span>
-        <span>Anthropic Academy</span>
+      <p class="small muted" style="text-align:center; margin-bottom: 1.25rem;">Aplicações corporativas e ecossistemas de missão crítica suportados pela governança técnica da TRD:</p>
+    </div>
+    <div class="trustbar__marquee">
+      <div class="trustbar__track">
+        <!-- Track Set 1 -->
+        <div class="trustbar__badge trustbar__badge--dou">
+          <span class="trustbar__logo-chip"><img src="assets/logo-imprensa-nacional.png" alt="Imprensa Nacional DOU" class="trustbar__img" width="20" height="20" loading="lazy"></span>
+          <span>Imprensa Nacional (DOU)</span>
+        </div>
+        <div class="trustbar__badge trustbar__badge--inep">
+          <span class="trustbar__logo-chip"><img src="assets/logo-inep.svg" alt="INEP ENADE" class="trustbar__img" width="22" height="14" loading="lazy"></span>
+          <span>INEP · ENADE</span>
+        </div>
+        <div class="trustbar__badge trustbar__badge--mjsp">
+          <span class="trustbar__logo-chip"><img src="assets/logo-mjsp.svg" alt="Ministério da Justiça (MJSP)" class="trustbar__img" width="20" height="20" loading="lazy"></span>
+          <span>Ministério da Justiça (MJSP)</span>
+        </div>
+        <div class="trustbar__badge trustbar__badge--serasa">
+          <span class="trustbar__logo-chip"><img src="assets/logo-serasa.svg" alt="Serasa Experian" class="trustbar__img" width="22" height="14" loading="lazy"></span>
+          <span>Serasa Experian · eConsig</span>
+        </div>
+        <div class="trustbar__badge trustbar__badge--cvm">
+          <span class="trustbar__logo-chip"><img src="assets/logo-cvm.png" alt="Comissão de Valores Mobiliários (CVM)" class="trustbar__img" width="24" height="13" loading="lazy"></span>
+          <span>CVM · Mercado de Capitais</span>
+        </div>
+        <div class="trustbar__badge trustbar__badge--alergs">
+          <span class="trustbar__logo-chip"><img src="assets/logo-alergs.png" alt="ALERGS" class="trustbar__img" width="22" height="12" loading="lazy"></span>
+          <span>ALERGS · Poder Legislativo</span>
+        </div>
+        <div class="trustbar__badge trustbar__badge--alertaseg">
+          <span class="trustbar__logo-chip"><img src="assets/logo-alertaseg-dark.png" alt="AlertaSeg SST" class="trustbar__img" width="22" height="13" loading="lazy"></span>
+          <span>AlertaSeg · Gestão SST</span>
+        </div>
+        <div class="trustbar__badge trustbar__badge--animalworld">
+          <span class="trustbar__logo-chip"><img src="assets/logo-animal-world.png" alt="Animal World Pet ERP" class="trustbar__img" width="20" height="20" loading="lazy"></span>
+          <span>Animal World · Hub Pet (sysPet2)</span>
+        </div>
+        <div class="trustbar__badge trustbar__badge--anthropic">
+          <span class="trustbar__logo-chip"><img src="assets/logo-claude.svg" alt="Anthropic Academy Certified" class="trustbar__img" width="18" height="18" loading="lazy"></span>
+          <span>Anthropic Academy Certified</span>
+        </div>
+
+        <!-- Track Set 2 (Duplicado para loop infinito fluído estilo Kimi/Linear) -->
+        <div class="trustbar__badge trustbar__badge--dou" aria-hidden="true">
+          <span class="trustbar__logo-chip"><img src="assets/logo-imprensa-nacional.png" alt="" class="trustbar__img" width="20" height="20" loading="lazy"></span>
+          <span>Imprensa Nacional (DOU)</span>
+        </div>
+        <div class="trustbar__badge trustbar__badge--inep" aria-hidden="true">
+          <span class="trustbar__logo-chip"><img src="assets/logo-inep.svg" alt="" class="trustbar__img" width="22" height="14" loading="lazy"></span>
+          <span>INEP · ENADE</span>
+        </div>
+        <div class="trustbar__badge trustbar__badge--mjsp" aria-hidden="true">
+          <span class="trustbar__logo-chip"><img src="assets/logo-mjsp.svg" alt="" class="trustbar__img" width="20" height="20" loading="lazy"></span>
+          <span>Ministério da Justiça (MJSP)</span>
+        </div>
+        <div class="trustbar__badge trustbar__badge--serasa" aria-hidden="true">
+          <span class="trustbar__logo-chip"><img src="assets/logo-serasa.svg" alt="" class="trustbar__img" width="22" height="14" loading="lazy"></span>
+          <span>Serasa Experian · eConsig</span>
+        </div>
+        <div class="trustbar__badge trustbar__badge--cvm" aria-hidden="true">
+          <span class="trustbar__logo-chip"><img src="assets/logo-cvm.png" alt="" class="trustbar__img" width="24" height="13" loading="lazy"></span>
+          <span>CVM · Mercado de Capitais</span>
+        </div>
+        <div class="trustbar__badge trustbar__badge--alergs" aria-hidden="true">
+          <span class="trustbar__logo-chip"><img src="assets/logo-alergs.png" alt="" class="trustbar__img" width="22" height="12" loading="lazy"></span>
+          <span>ALERGS · Poder Legislativo</span>
+        </div>
+        <div class="trustbar__badge trustbar__badge--alertaseg" aria-hidden="true">
+          <span class="trustbar__logo-chip"><img src="assets/logo-alertaseg-dark.png" alt="" class="trustbar__img" width="22" height="13" loading="lazy"></span>
+          <span>AlertaSeg · Gestão SST</span>
+        </div>
+        <div class="trustbar__badge trustbar__badge--animalworld" aria-hidden="true">
+          <span class="trustbar__logo-chip"><img src="assets/logo-animal-world.png" alt="" class="trustbar__img" width="20" height="20" loading="lazy"></span>
+          <span>Animal World · Hub Pet (sysPet2)</span>
+        </div>
+        <div class="trustbar__badge trustbar__badge--anthropic" aria-hidden="true">
+          <span class="trustbar__logo-chip"><img src="assets/logo-claude.svg" alt="" class="trustbar__img" width="18" height="18" loading="lazy"></span>
+          <span>Anthropic Academy Certified</span>
+        </div>
       </div>
     </div>
   </section>
@@ -232,6 +304,61 @@
         <div class="card card--featured">
           <h4 style="font-size:1.1rem; color:var(--accent); margin-bottom:.5rem;">3. Até 12x no Cartão de Crédito</h4>
           <p class="small muted">Parcele o investimento no cartão corporativo sem comprometer o fluxo de caixa ou pague faturado no boleto (50% de entrada + 50% na entrega).</p>
+        </div>
+      </div>
+
+      <!-- SHOWCASE DE SISTEMAS REAIS SOB MEDIDA ENTREGUES -->
+      <div style="margin-top:3.5rem; padding-top:2.5rem; border-top:1px solid var(--border);">
+        <div style="text-align:center; margin-bottom:2rem;">
+          <span class="badge"><i aria-hidden="true"></i>Entregas Reais &amp; Homologadas</span>
+          <h3 style="font-size:1.6rem; margin-top:.5rem;">Cases de Softwares Sob Medida em Produção</h3>
+          <p class="small muted" style="margin-top:.25rem; max-width:44rem; margin-inline:auto;">Projetados, desenvolvidos e entregues pela TRD com arquitetura escalável e código 100% de propriedade do cliente.</p>
+        </div>
+
+        <div class="grid grid--2">
+          <!-- CARD ALERTASEG -->
+          <article class="card card--alertaseg">
+            <div class="card__header-flex">
+              <div>
+                <span class="card__tag">SaaS / Plataforma Ocupacional</span>
+                <h3 style="margin-top:.25rem;">AlertaSeg — Gestão SST &amp; Normas Regulamentadoras</h3>
+              </div>
+              <span class="card__logo-chip"><img src="assets/logo-alertaseg-dark.png" alt="Logotipo AlertaSeg" class="card__brand-logo" loading="lazy"></span>
+            </div>
+            <p class="small muted" style="margin-bottom:.75rem;">Plataforma completa de Saúde e Segurança do Trabalho (SST) desenvolvida do zero para controle de passivos trabalhistas.</p>
+            <ul class="list list--dash" style="font-size:.85rem; margin-bottom:1rem;">
+              <li><strong>Controle de NRs:</strong> Gestão de conformidade para NR-01, NR-06 (EPIs), NR-10 e NR-35</li>
+              <li><strong>Absenteísmo &amp; Atestados:</strong> Controle de faltas médicas e históricos com evidências documentais</li>
+              <li><strong>Alertas Preditivos:</strong> Notificação antecipada de vencimento de exames periódicos (PCMSO)</li>
+              <li><strong>Validação Pública por QR Code:</strong> Certificados de treinamento emitidos com chave criptográfica</li>
+            </ul>
+            <dl class="card__specs">
+              <div class="specrow"><dt>Stack</dt><dd>Python · Django · PostgreSQL · Docker</dd></div>
+              <div class="specrow"><dt>Entrega</dt><dd>Sistema Sob Medida 100% Proprietário</dd></div>
+            </dl>
+          </article>
+
+          <!-- CARD ANIMAL WORLD -->
+          <article class="card card--animalworld">
+            <div class="card__header-flex">
+              <div>
+                <span class="card__tag">Hub de Gestão / Mini-ERP</span>
+                <h3 style="margin-top:.25rem;">Animal World — Hub Operacional Pet (sysPet2)</h3>
+              </div>
+              <span class="card__logo-chip card__logo-chip--square"><img src="assets/logo-animal-world.png" alt="Logotipo Animal World" class="card__brand-logo" width="28" height="28" loading="lazy"></span>
+            </div>
+            <p class="small muted" style="margin-bottom:.75rem;">Hub de operação diária para pet shops e clínicas com frente de caixa e esteira de serviços em tempo real.</p>
+            <ul class="list list--dash" style="font-size:.85rem; margin-bottom:1rem;">
+              <li><strong>Fila Inteligente do Dia:</strong> Banho &amp; tosa com estimativa dinâmica de saída e porte automático por peso</li>
+              <li><strong>Táxi Dog por Região:</strong> Roteirização integrada para motoristas com status de corrida</li>
+              <li><strong>Frente de Caixa (PDV):</strong> Emissão instantânea em impressoras térmicas de cupom de 80mm</li>
+              <li><strong>Mensageria WhatsApp:</strong> Disparos automáticos avisando tutores sobre a conclusão dos serviços</li>
+            </ul>
+            <dl class="card__specs">
+              <div class="specrow"><dt>Stack</dt><dd>Angular 18 · TypeScript · Node.js · ESC/POS</dd></div>
+              <div class="specrow"><dt>Status</dt><dd>Em produção / Homologado</dd></div>
+            </dl>
+          </article>
         </div>
       </div>
 
@@ -339,9 +466,49 @@
       </div>
       <div class="grid grid--3">
 
-        <article class="card">
-          <span class="card__tag">Governo Federal</span>
-          <h3>Ministério da Justiça (CNPD)</h3>
+        <!-- CASE 1: IMPRENSA NACIONAL (DOU) -->
+        <article class="card card--dou">
+          <div class="card__header-flex">
+            <div>
+              <span class="card__tag">Governo Federal · Presidência</span>
+              <h3 style="margin-top:.25rem;">Imprensa Nacional (DOU)</h3>
+            </div>
+            <span class="card__logo-chip card__logo-chip--square card__logo-chip--circular"><img src="assets/logo-imprensa-nacional.png" alt="Logotipo Imprensa Nacional" class="card__brand-logo card__brand-logo--round" width="28" height="28" loading="lazy"></span>
+          </div>
+          <p class="small muted" style="margin:.35rem 0 .75rem;">Diário Oficial da União · Missão Crítica Federal &amp; Publicação Oficial</p>
+          <p class="small">Sustentação e governança técnica na esteira de editoração, indexação e publicação dos atos oficiais dos Três Poderes da República. Alta disponibilidade, integridade documental ICP-Brasil e processamento para milhões de consultas públicas diárias.</p>
+          <dl class="card__specs">
+            <div class="specrow"><dt>Stack</dt><dd>Java · Spring Boot · PostgreSQL</dd></div>
+            <div class="specrow"><dt>Padrão</dt><dd>ICP-Brasil · Missão Crítica Federal</dd></div>
+          </dl>
+        </article>
+
+        <!-- CASE 2: INEP (ENADE) -->
+        <article class="card card--inep">
+          <div class="card__header-flex">
+            <div>
+              <span class="card__tag">Educação &amp; Alta Escala</span>
+              <h3 style="margin-top:.25rem;">INEP · ENADE</h3>
+            </div>
+            <span class="card__logo-chip"><img src="assets/logo-inep.svg" alt="Logotipo INEP" class="card__brand-logo" loading="lazy"></span>
+          </div>
+          <p class="small muted" style="margin:.35rem 0 .75rem;">Avaliações Nacionais do MEC · Escala Continental &amp; Big Data</p>
+          <p class="small">Engenharia de software e retaguarda técnica para sistemas de avaliação em escala continental (ENADE e exames nacionais do MEC). Processamento massivo de inscrições, concorrência extrema de acessos simultâneos e consolidação estatística sob auditoria rígida.</p>
+          <dl class="card__specs">
+            <div class="specrow"><dt>Stack</dt><dd>Java · Spring Boot · Angular</dd></div>
+            <div class="specrow"><dt>Escopo</dt><dd>Milhões de Inscrições · MEC</dd></div>
+          </dl>
+        </article>
+
+        <!-- CASE 3: MINISTÉRIO DA JUSTIÇA -->
+        <article class="card card--mjsp">
+          <div class="card__header-flex">
+            <div>
+              <span class="card__tag">Governo Federal</span>
+              <h3 style="margin-top:.25rem;">Ministério da Justiça (CNPD)</h3>
+            </div>
+            <span class="card__logo-chip card__logo-chip--square"><img src="assets/logo-mjsp.svg" alt="Logotipo MJSP" class="card__brand-logo" width="28" height="28" loading="lazy"></span>
+          </div>
           <p class="small muted" style="margin:.35rem 0 .75rem;">Plataforma Nacional · Segurança Pública &amp; Dados Sensíveis</p>
           <p class="small">Plataforma nacional do Cadastro Nacional de Pessoas Desaparecidas. Integrações seguras com SINESP e DENATRAN via OAuth2 e certificados SSL, processamento assíncrono em larga escala e trilha de auditoria imutável (Hibernate Envers) em conformidade com a LGPD.</p>
           <dl class="card__specs">
@@ -350,9 +517,15 @@
           </dl>
         </article>
 
-        <article class="card">
-          <span class="card__tag">Bureau de crédito</span>
-          <h3>Serasa Experian (eConsig)</h3>
+        <!-- CASE 4: SERASA EXPERIAN -->
+        <article class="card card--serasa">
+          <div class="card__header-flex">
+            <div>
+              <span class="card__tag">Bureau de Crédito</span>
+              <h3 style="margin-top:.25rem;">Serasa Experian (eConsig)</h3>
+            </div>
+            <span class="card__logo-chip"><img src="assets/logo-serasa.svg" alt="Logotipo Serasa Experian" class="card__brand-logo" loading="lazy"></span>
+          </div>
           <p class="small muted" style="margin:.35rem 0 .75rem;">Esteira Transacional Crítica · Alta Concorrência &amp; Microsserviços</p>
           <p class="small">Backend de alta concorrência para a esteira de crédito consignado. Microsserviços Java 17 com APIs REST, refatoração de queries e eliminação de deadlocks em horários de pico, cobertura de testes com JUnit 5 e Mockito.</p>
           <dl class="card__specs">
@@ -361,9 +534,15 @@
           </dl>
         </article>
 
-        <article class="card">
-          <span class="card__tag">Mercado de capitais</span>
-          <h3>Comissão de Valores Mobiliários</h3>
+        <!-- CASE 5: CVM -->
+        <article class="card card--cvm">
+          <div class="card__header-flex">
+            <div>
+              <span class="card__tag">Mercado de Capitais</span>
+              <h3 style="margin-top:.25rem;">Comissão de Valores Mobiliários</h3>
+            </div>
+            <span class="card__logo-chip"><img src="assets/logo-cvm.png" alt="Logotipo CVM" class="card__brand-logo" loading="lazy"></span>
+          </div>
           <p class="small muted" style="margin:.35rem 0 .75rem;">Sistemas Regulatórios · Mercado de Capitais &amp; APIs</p>
           <p class="small">Modernização fullstack de sistemas regulatórios: APIs REST documentadas com Swagger/OpenAPI, biblioteca de componentes reutilizáveis em Angular Material e correção de débitos técnicos em bases relacionais.</p>
           <dl class="card__specs">
@@ -372,9 +551,49 @@
           </dl>
         </article>
 
-        <article class="card">
-          <span class="card__tag">Setor público</span>
-          <h3>ALERGS — Assembleia Legislativa RS</h3>
+        <!-- CASE 6: ALERTASEG -->
+        <article class="card card--alertaseg">
+          <div class="card__header-flex">
+            <div>
+              <span class="card__tag">Sistema Sob Medida</span>
+              <h3 style="margin-top:.25rem;">AlertaSeg — Gestão SST</h3>
+            </div>
+            <span class="card__logo-chip"><img src="assets/logo-alertaseg-dark.png" alt="Logotipo AlertaSeg" class="card__brand-logo" loading="lazy"></span>
+          </div>
+          <p class="small muted" style="margin:.35rem 0 .75rem;">SaaS Ocupacional · NRs, PCMSO, Absenteísmo &amp; QR Code</p>
+          <p class="small">Sistema corporativo sob medida desenvolvido do zero pela TRD para segurança e medicina do trabalho. Gestão de NRs (NR-01, NR-06, NR-35), controle de absenteísmo médico, alertas de exames periódicos e emissão de certificados com QR Code criptográfico.</p>
+          <dl class="card__specs">
+            <div class="specrow"><dt>Stack</dt><dd>Python · Django · PostgreSQL</dd></div>
+            <div class="specrow"><dt>Diferencial</dt><dd>QR Code Criptográfico · NRs</dd></div>
+          </dl>
+        </article>
+
+        <!-- CASE 7: ANIMAL WORLD -->
+        <article class="card card--animalworld">
+          <div class="card__header-flex">
+            <div>
+              <span class="card__tag">Sistema Sob Medida</span>
+              <h3 style="margin-top:.25rem;">Animal World (sysPet2)</h3>
+            </div>
+            <span class="card__logo-chip card__logo-chip--square"><img src="assets/logo-animal-world.png" alt="Logotipo Animal World" class="card__brand-logo" width="28" height="28" loading="lazy"></span>
+          </div>
+          <p class="small muted" style="margin:.35rem 0 .75rem;">Mini-ERP &amp; PDV · Fila Dinâmica, Táxi Dog, Cupom &amp; WhatsApp</p>
+          <p class="small">Hub operacional e mini-ERP desenvolvido sob medida para pet centers. Fila do dia de banho &amp; tosa com cálculo automático de porte por peso, logística de Táxi Dog por região com rotas para motoristas, avisos no WhatsApp e PDV térmico de 80mm.</p>
+          <dl class="card__specs">
+            <div class="specrow"><dt>Stack</dt><dd>Angular 18 · TypeScript · Node.js</dd></div>
+            <div class="specrow"><dt>Hardware</dt><dd>Impressora Térmica 80mm ESC/POS</dd></div>
+          </dl>
+        </article>
+
+        <!-- CASE 8: ALERGS -->
+        <article class="card card--alergs">
+          <div class="card__header-flex">
+            <div>
+              <span class="card__tag">Setor Público</span>
+              <h3 style="margin-top:.25rem;">ALERGS — Assembleia RS</h3>
+            </div>
+            <span class="card__logo-chip"><img src="assets/logo-alergs.png" alt="Logotipo ALERGS" class="card__brand-logo" loading="lazy"></span>
+          </div>
           <p class="small muted" style="margin:.35rem 0 .75rem;">Sistemas Legislativos Estaduais · Suporte N3 &amp; Modernização</p>
           <p class="small">Evolução e sustentação de sistemas legislativos estaduais: interfaces corporativas em Angular, otimização de consultas SQL e suporte N3 a aplicações de alta relevância pública.</p>
           <dl class="card__specs">
@@ -383,10 +602,16 @@
           </dl>
         </article>
 
-        <article class="card">
-          <span class="card__tag">IA Generativa</span>
-          <h3>LLM Router — projeto próprio TRD</h3>
-          <p class="small muted" style="margin:.35rem 0 .75rem;">2025 – 2026 · Projeto proprietário</p>
+        <!-- CASE 9: LLM ROUTER -->
+        <article class="card card--anthropic">
+          <div class="card__header-flex">
+            <div>
+              <span class="card__tag">IA Generativa</span>
+              <h3 style="margin-top:.25rem;">LLM Router — Projeto Próprio</h3>
+            </div>
+            <span class="card__logo-chip card__logo-chip--square"><img src="assets/logo-claude.svg" alt="Logotipo Claude / Anthropic" class="card__brand-logo" width="26" height="26" loading="lazy"></span>
+          </div>
+          <p class="small muted" style="margin:.35rem 0 .75rem;">2025 – 2026 · Projeto Proprietário TRD</p>
           <p class="small">AI Gateway corporativo que roteia prompts entre modelos (Claude, Ollama local, Kimi) por custo e latência, com padrão OpenAI-compatible, pipelines de agentes em cadeia e integração a mensageria. Prova viva de que a TRD constrói — e não apenas fala — IA aplicada.</p>
           <dl class="card__specs">
             <div class="specrow"><dt>Stack</dt><dd>Java 21 · Spring Boot 3 · Spring AI</dd></div>
@@ -750,6 +975,44 @@
         <p class="eyebrow">Corpo Técnico &amp; Governança</p>
         <h2>Quem sustenta a sua operação crítica?</h2>
         <p class="lead" style="margin-top:1rem; max-width:44rem; margin-inline:auto;">A TRD Consultoria opera com um corpo técnico multidisciplinar de alta senioridade, governança rigorosa de código e esteiras automatizadas — assegurando estabilidade, conformidade e prontidão operacional para a sua empresa.</p>
+      </div>
+
+      <!-- CARD EXECUTIVO: SÓCIO-DIRETOR & PRINCIPAL ARCHITECT -->
+      <div class="founder-card" style="margin-bottom:2.5rem;">
+        <div class="founder-card__media">
+          <img src="assets/thiago-duarte.jpg" alt="Thiago Rocha Duarte — Sócio-Diretor e Principal Systems Architect da TRD Consultoria" class="founder-card__photo" width="180" height="180" loading="lazy">
+          <div class="founder-card__cert-badge">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <span>Anthropic Certified</span>
+          </div>
+        </div>
+        <div class="founder-card__content">
+          <div class="founder-card__header">
+            <div>
+              <span class="card__tag" style="margin-bottom:.5rem;">Liderança Técnica &amp; Fundador</span>
+              <h3 style="font-size:1.5rem; margin-bottom:.25rem;">Thiago Rocha Duarte</h3>
+              <p class="founder-card__role">Sócio-Diretor &amp; Principal Systems Architect</p>
+            </div>
+            <a href="https://www.linkedin.com/in/thiagorduarte/" target="_blank" rel="noopener" class="btn btn--ghost btn--sm founder-card__linkedin" aria-label="Perfil de Thiago Duarte no LinkedIn">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 8.76a1.63 1.63 0 1 0 0-3.26 1.63 1.63 0 0 0 0 3.26m1.4 9.74v-8.37H5.06v8.37z"/></svg>
+              <span>LinkedIn</span>
+            </a>
+          </div>
+          <p class="small" style="margin-top:.5rem; color:var(--text-2); line-height:1.65;">
+            Engenheiro de software e arquiteto de sistemas especializado em ambientes regulados, alta disponibilidade e esteiras de alta volumetria. Histórico comprovado de entregas críticas na <strong>Imprensa Nacional (DOU)</strong>, <strong>INEP (ENADE)</strong>, <strong>Ministério da Justiça (CNPD)</strong>, <strong>Serasa Experian (eConsig)</strong>, <strong>CVM</strong> e <strong>ALERGS</strong> — além da arquitetura e desenvolvimento de plataformas proprietárias como <strong>AlertaSeg (SST)</strong> e <strong>Animal World (sysPet2)</strong>.
+          </p>
+          <div class="founder-card__tags">
+            <span class="badge-tech">Java 17/21 &amp; Spring Boot</span>
+            <span class="badge-tech">Angular &amp; TypeScript</span>
+            <span class="badge-tech">PostgreSQL &amp; DBA Tuning</span>
+            <span class="badge-tech">Claude API (Anthropic Academy)</span>
+            <span class="badge-tech">LGPD &amp; Arquitetura Segura</span>
+          </div>
+          <div class="founder-card__footer">
+            <a class="btn btn--primary btn--sm" href="https://wa.me/5561999526374?text=Ol%C3%A1%20Thiago,%20gostaria%20de%20conversar%20sobre%20um%20projeto%20com%20a%20TRD" target="_blank" rel="noopener">Falar com Thiago no WhatsApp</a>
+            <span class="small muted">Atendimento executivo direto sem intermediários</span>
+          </div>
+        </div>
       </div>
 
       <div class="card" style="margin-bottom:2rem;">
