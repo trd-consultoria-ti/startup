@@ -17,6 +17,12 @@ Este diretório contém a integração completa da TRD com a plataforma **OpenBo
 
 ---
 
+## 🚀 Arquitetura da Esteira Autônoma End-to-End
+Acesse o blueprint completo de automação em:  
+👉 **[ARQUITETURA_ESTEIRA_AUTOMATIZADA_OPENBOT.md](ARQUITETURA_ESTEIRA_AUTOMATIZADA_OPENBOT.md)** (Os 5 Motores Autônomos de Prospecção, Fechamento Gov.br, DevOps e Go-Live).
+
+---
+
 ## ⚡ Como Adicionar os Robôs no OpenBot (Passo a Passo)
 
 Para cada um dos 6 robôs no OpenBot (menu lateral → **Novo Agente**):
