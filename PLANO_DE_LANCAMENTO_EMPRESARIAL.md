@@ -213,7 +213,7 @@ flowchart TD
 ### 4.1. Domínio Corporativo & Identidade Digital
 * Registro do domínio principal oficial `trdconsultoria.com.br` no `Registro.br` com proteção de privacidade DNS e redundância Cloudflare.
 * Implantação de e-mails corporativos institucionais sob o domínio próprio:
-  * `thiago@trdconsultoria.com.br` (Direção / Comercial / Institucional)
+  * `thiago.duarte@trdconsultoria.com.br` (Direção / Comercial / Institucional)
   * `contato@trdconsultoria.com.br` / `suporte@trdconsultoria.com.br` (Caixas compartilhadas de atendimento)
 * Configuração estrita de registros de autenticação de e-mail: **SPF, DKIM e DMARC** para garantir entregabilidade em campanhas de prospecção fria e blindagem contra phishing.
 * Autenticação de Dois Fatores (2FA) mandatória em todas as contas com chaves de segurança (TOTP / Google Authenticator).
