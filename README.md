@@ -22,6 +22,8 @@
 > **O toolkit oficial de governança, esteira operacional e contratos da THIAGO ROCHA DUARTE - CONSULTORIA E SERVICOS DE TI LTDA (TRD Consultoria).**  
 > **CNPJ:** 43.065.207/0001-57 (Ativa desde 10/08/2021 — Simples Nacional) | **Sede:** Brasília/DF.  
 > 🌐 **Landing Page Oficial:** [https://trdconsultoria.com.br/](https://trdconsultoria.com.br/)  
+> ✉️ **E-mails Corporativos:** `contato@trdconsultoria.com.br` | `thiago.duarte@trdconsultoria.com.br`  
+> 📱 **WhatsApp Oficial:** +55 (61) 99952-6374  
 > 100% amparado na legislação brasileira: **Código Civil (Lei 10.406/02)**, **Lei do Software (Lei 9.609/98)**, **LGPD (Lei 13.709/18)**, **Marco Civil da Internet (Lei 12.965/14)** e **Assinatura Eletrônica (Lei 14.063/20)**.
 
 ---

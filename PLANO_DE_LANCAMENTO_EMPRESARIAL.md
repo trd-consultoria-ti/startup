@@ -211,12 +211,14 @@ flowchart TD
 ```
 
 ### 4.1. Domínio Corporativo & Identidade Digital
-* Registro do domínio principal oficial `trdconsultoria.com.br` no `Registro.br` com proteção de privacidade DNS e redundância Cloudflare.
-* Implantação de e-mails corporativos institucionais sob o domínio próprio:
-  * `thiago.duarte@trdconsultoria.com.br` (Direção / Comercial / Institucional)
-  * `contato@trdconsultoria.com.br` / `suporte@trdconsultoria.com.br` (Caixas compartilhadas de atendimento)
-* Configuração estrita de registros de autenticação de e-mail: **SPF, DKIM e DMARC** para garantir entregabilidade em campanhas de prospecção fria e blindagem contra phishing.
-* Autenticação de Dois Fatores (2FA) mandatória em todas as contas com chaves de segurança (TOTP / Google Authenticator).
+* Registro do domínio principal oficial `trdconsultoria.com.br` no `Registro.br` com proteção de integridade DNS e certificação SSL/HTTPS ativa.
+* Implantação de caixas corporativas de alta disponibilidade no **Zoho Mail**:
+  * `thiago.duarte@trdconsultoria.com.br` (Direção Executiva, Comercial e Arquitetura Sênior)
+  * `contato@trdconsultoria.com.br` (Canal Comercial e Captação de Orçamentos do Site)
+  * `trdconsultoria@trdconsultoria.com.br` (Conta Mestre de Administração e Infraestrutura)
+* Configuração e homologação de registros de autenticação de e-mail: **MX, SPF e DKIM** para garantir 100% de entregabilidade e proteção anti-spam.
+* Detalhamento completo e políticas documentadas em: [GUIA_INFRAESTRUTURA_EMAILS_CORPORATIVOS.md](operacoes/05_administracao/GUIA_INFRAESTRUTURA_EMAILS_CORPORATIVOS.md).
+* Autenticação de Dois Fatores (2FA) mandatória em todas as contas. Credenciais mantidas em cofre seguro, sem versionamento de senhas em repositório.
 
 ### 4.2. Governança de Código e GitHub Organization
 Criação da organização corporativa no GitHub com padrões corporativos de desenvolvimento:
