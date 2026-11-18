@@ -716,10 +716,13 @@ h3 { font-size: 1.25rem; }
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: .55rem;
-  padding: .9rem 1.15rem .85rem;
-  min-width: 145px;
-  max-width: 175px;
+  gap: .45rem;
+  width: 172px;
+  height: 114px;
+  flex: 0 0 172px;
+  min-width: 172px;
+  max-width: 172px;
+  padding: .85rem .75rem .75rem;
   box-sizing: border-box;
   border-radius: 14px;
   background: #FFFFFF;
@@ -766,7 +769,7 @@ h3 { font-size: 1.25rem; }
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 48px;
+  height: 46px;
   width: 100%;
   padding: 0;
   background: transparent;
@@ -829,11 +832,58 @@ h3 { font-size: 1.25rem; }
   font-size: .6875rem;
   font-weight: 600;
   color: #64748B;
-  line-height: 1.2;
+  line-height: 1.25;
   letter-spacing: .015em;
   text-align: center;
-  display: block;
-  max-width: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 30px;
+  width: 100%;
+  max-width: 100%;
+}
+
+/* Uniformidade Responsiva dos Cards (<= 640px) */
+@media (max-width: 640px) {
+  .trustbar__badge {
+    width: 148px;
+    height: 104px;
+    flex: 0 0 148px;
+    min-width: 148px;
+    max-width: 148px;
+    padding: .75rem .5rem .65rem;
+    border-radius: 12px;
+    gap: .35rem;
+  }
+  .trustbar__logo-chip {
+    height: 42px;
+  }
+  .trustbar__badge--dou .trustbar__img,
+  .trustbar__badge--mjsp .trustbar__img,
+  .trustbar__badge--animalworld .trustbar__img {
+    height: 38px;
+    width: 38px;
+    max-width: 38px;
+    max-height: 38px;
+  }
+  .trustbar__badge--serasa .trustbar__img {
+    height: 26px;
+    max-height: 26px;
+    max-width: 85px;
+  }
+  .trustbar__badge--cvm .trustbar__img,
+  .trustbar__badge--inep .trustbar__img,
+  .trustbar__badge--alergs .trustbar__img,
+  .trustbar__badge--alertaseg .trustbar__img {
+    height: 24px;
+    max-height: 24px;
+    max-width: 70px;
+  }
+  .trustbar__badge > span:last-child {
+    font-size: .625rem;
+    height: 26px;
+    line-height: 1.2;
+  }
 }
 
 /* ---------- Base Refinada dos Chips de Logo nos Cards (Themed Satin Plate) ---------- */
