@@ -174,7 +174,14 @@ Responda APENAS a palavra da categoria.`;
     ) {
       return 'trd_console_lead';
     }
-    if (['lembre', 'lembra', 'lembrar', 'lembrete', 'lembrança', 'avise', 'avisa', 'avisar', 'aviso', 'agenda', 'agendar', 'alarme', 'alerta', 'alertar'].some((k) => lower.includes(k))) {
+    if (
+      !lower.includes('reuni') &&
+      !lower.includes('meet') &&
+      !lower.includes('call') &&
+      !lower.includes('marcar') &&
+      !lower.includes('alinhamento') &&
+      ['me lembre', 'me lembra', 'lembrar de', 'lembrete', 'lembrança', 'me avise', 'me avisa', 'alarme'].some((k) => lower.includes(k))
+    ) {
       return 'reminder';
     }
     const searchKeywords = ['buscar', 'busque', 'pesquisar', 'pesquise', 'procurar', 'procure', 'busca ', 'google ', 'youtube '];
@@ -185,7 +192,7 @@ Responda APENAS a palavra da categoria.`;
     }
     if (
       this.looksLikeQuestion(lower) ||
-      ['o que é', 'quem é', 'como funciona', 'qual o', 'qual a', 'quais as', 'quais os', 'quais foram', 'quando', 'onde', 'resumo', 'resumir', 'resuma', 'analise', 'analisa', 'quanto', 'custa', 'custo', 'valor', 'preço', 'preco', 'orçamento', 'orcamento', 'pagamento', 'condições', 'condicoes', 'desenvolver', 'desenvolvimento', 'sistema', 'software', 'aplicativo', 'garantia', 'suporte', 'contrato'].some((k) => lower.includes(k))
+      ['o que é', 'quem é', 'como funciona', 'qual o', 'qual a', 'quais as', 'quais os', 'quais foram', 'quando', 'onde', 'resumo', 'resumir', 'resuma', 'analise', 'analisa', 'quanto', 'custa', 'custo', 'valor', 'preço', 'preco', 'orçamento', 'orcamento', 'pagamento', 'condições', 'condicoes', 'desenvolver', 'desenvolvimento', 'sistema', 'software', 'aplicativo', 'garantia', 'suporte', 'contrato', 'marcar', 'agendar', 'reunião', 'reuniao', 'horário', 'horario', 'amanhã', 'amanha', 'meet', 'call', 'combinado', 'fechado'].some((k) => lower.includes(k))
     ) {
       return 'question';
     }

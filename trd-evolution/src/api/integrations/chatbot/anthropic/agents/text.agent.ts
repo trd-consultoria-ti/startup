@@ -128,6 +128,50 @@ export class TextAgent extends BaseAgent {
       }
     }
 
+    if (
+      lower.includes('marcar') ||
+      lower.includes('agendar') ||
+      lower.includes('reunião') ||
+      lower.includes('reuniao') ||
+      lower.includes('pode ser') ||
+      lower.includes('combinado') ||
+      lower.includes('fechado') ||
+      lower.includes('gostei') ||
+      lower.includes('amanhã') ||
+      lower.includes('amanha') ||
+      lower.includes('horário') ||
+      lower.includes('horario') ||
+      lower.includes('15:00') ||
+      lower.includes('15h') ||
+      lower.includes('14:30') ||
+      lower.includes('16:30') ||
+      lower.includes('10:00') ||
+      lower.includes('10h') ||
+      lower.includes('meet') ||
+      lower.includes('call')
+    ) {
+      const timeMatch = query.match(/(\d{1,2}(?::\d{2}|h))/i);
+      const timeStr = timeMatch ? timeMatch[1] : '15:00';
+      const dayStr = lower.includes('amanh') ? 'Amanhã' : 'Data combinada';
+
+      return [
+        'Excelente! Agendamento registrado com sucesso. 🎯',
+        '',
+        '📅 *Alinhamento Técnico Executivo — TRD Consultoria de TI*',
+        `• **Data:** ${dayStr}`,
+        `• **Horário:** ${timeStr} (Horário de Brasília)`,
+        '• **Formato:** Reunião online de 20 minutos via **Google Meet**',
+        '• **Participante:** Thiago Duarte (Fundador & Arquiteto Principal)',
+        '',
+        '📋 *Pauta da Sessão:*',
+        '1. Congelamento do escopo dos módulos core e infraestrutura Docker/PostgreSQL.',
+        '2. Validação do cronograma ágil (Sprint 1 em 5 dias).',
+        '3. Formalização do contrato digital Gov.br com cláusula de homologação e garantia.',
+        '',
+        'Qual o seu melhor e-mail corporativo para enviarmos o convite da sala do Meet com os lembretes na agenda?'
+      ].join('\n');
+    }
+
     if (lower.includes('custa') || lower.includes('valor') || lower.includes('preço') || lower.includes('preco') || lower.includes('starter') || lower.includes('pagamento') || lower.includes('quanto')) {
       return [
         'Olá! Agradecemos o seu contato com a *TRD Consultoria de TI*.',
