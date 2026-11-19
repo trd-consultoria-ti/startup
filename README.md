@@ -122,6 +122,7 @@ Para agilizar fechamentos comerciais, assinaturas digitais (Gov.br / ZapSign / C
 - 📋 **Questionário de Requisitos Homologado:** [`QUESTIONARIO_REQUISITOS_SISTEMAS_SOB_MEDIDA.pdf`](operacoes/02_comercial_marketing/QUESTIONARIO_REQUISITOS_SISTEMAS_SOB_MEDIDA.pdf)
 - 🤝 **Acordo de Quotistas — Minuta para Futura Admissão (Vesting):** [`ACORDO_DE_SOCIOS.docx`](operacoes/01_juridico/ACORDO_DE_SOCIOS.docx)
 - 💰 **Planejamento Tributário & Financeiro:** [`PLANEJAMENTO_TRIBUTARIO_E_FINANCEIRO.docx`](operacoes/05_administracao/PLANEJAMENTO_TRIBUTARIO_E_FINANCEIRO.docx)
+- 🤖 **Matriz Tática de Fallback em 8 Níveis (OpenBot):** [`MATRIZ_TATICA_FALLBACK_8_NIVEIS.md`](operacoes/openbot_integracao/MATRIZ_TATICA_FALLBACK_8_NIVEIS.md) · [`MATRIZ_TATICA_FALLBACK_8_NIVEIS.pdf`](operacoes/openbot_integracao/MATRIZ_TATICA_FALLBACK_8_NIVEIS.pdf)
 
 ---
 
