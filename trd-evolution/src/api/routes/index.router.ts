@@ -214,6 +214,8 @@ router.get('/assets/*', (req, res) => {
   }
 });
 
+let cachedCoordinator: any = null;
+
 router
   .use((req, res, next) => telemetry.collectTelemetry(req, res, next))
 
@@ -245,13 +247,15 @@ router
         return res.status(400).json({ error: 'Field "content" is required.' });
       }
 
-      const { CoordinatorAgent } = await import('@api/integrations/chatbot/anthropic/agents/coordinator.agent');
-      const { PrismaRepository } = await import('@api/repository/repository.service');
-      const repo = new PrismaRepository(configService);
-      const coordinator = new CoordinatorAgent(configService, repo);
+      if (!cachedCoordinator) {
+        const { CoordinatorAgent } = await import('@api/integrations/chatbot/anthropic/agents/coordinator.agent');
+        const { PrismaRepository } = await import('@api/repository/repository.service');
+        const repo = new PrismaRepository(configService);
+        cachedCoordinator = new CoordinatorAgent(configService, repo);
+      }
 
       const startTime = Date.now();
-      const result = await coordinator.route({
+      const result = await cachedCoordinator.route({
         instance: { name: 'trd-whatsapp-principal' },
         remoteJid: remoteJid || '5561999999999@s.whatsapp.com',
         bot: { id: 'trd-bot-main' },

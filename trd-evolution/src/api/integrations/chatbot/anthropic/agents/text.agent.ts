@@ -78,7 +78,10 @@ export class TextAgent extends BaseAgent {
       }
 
       if (!result) {
-        return this.failure(`All text models failed. Last: ${lastError?.message}`, {
+        this.logger.log('[TextAgent] Models unavailable, synthesizing answer directly from TRD knowledge');
+        const ragFallback = this.generateRagDirectAnswer(context.content, context.webContext || '');
+        return this.success(ragFallback, undefined, {
+          model: 'trd-rag-fallback',
           processingTime: Date.now() - startTime,
         });
       }
@@ -92,5 +95,103 @@ export class TextAgent extends BaseAgent {
         processingTime: Date.now() - startTime,
       });
     }
+  }
+
+  private generateRagDirectAnswer(query: string, ragContext: string): string {
+    const cleanContext = ragContext
+      .replace('--- CONTEXTO DA BASE DE CONHECIMENTO ---', '')
+      .replace('--- FIM DO CONTEXTO ---', '')
+      .trim();
+
+    const lower = (query || '').toLowerCase();
+
+    if (
+      lower.includes('boa noite') ||
+      lower.includes('bom dia') ||
+      lower.includes('boa tarde') ||
+      lower.includes('olá') ||
+      lower.includes('ola') ||
+      lower.includes('tudo bem') ||
+      lower.includes('opa')
+    ) {
+      if (!lower.includes('custa') && !lower.includes('valor') && !lower.includes('preço') && !lower.includes('preco') && !lower.includes('quanto') && !lower.includes('sistema')) {
+        return [
+          'Olá! Seja bem-vindo à *TRD Consultoria de TI* (atendimento executivo do Thiago Duarte).',
+          '',
+          'Como podemos apoiar a sua empresa hoje?',
+          '• 💻 **Desenvolvimento Sob Medida** (Sistemas web, APIs, integrações e MVPs entregues em 2 a 3 semanas)',
+          '• ☁️ **Infraestrutura & DevOps** (Docker, PostgreSQL, CI/CD e esteiras de automação)',
+          '• 🛡️ **Segurança & Sustentação** (Auditoria, contratos digitais Gov.br e suporte assistido)',
+          '',
+          'Se você já tem uma demanda em mente ou gostaria de tirar dúvidas sobre escopo e valores, basta nos falar por aqui!'
+        ].join('\n');
+      }
+    }
+
+    if (lower.includes('custa') || lower.includes('valor') || lower.includes('preço') || lower.includes('preco') || lower.includes('starter') || lower.includes('pagamento') || lower.includes('quanto')) {
+      return [
+        'Olá! Agradecemos o seu contato com a *TRD Consultoria de TI*.',
+        '',
+        '💼 *Valores e Condições de Desenvolvimento Sob Medida:*',
+        '• **Plano Starter MVP:** **R$ 9.800 à vista** (ou 50% de entrada na assinatura do contrato digital Gov.br + 50% na homologação do sistema em ambiente de Staging).',
+        '• **Escopo Incluso:** Até 4 telas/fluxos operacionais chave, infraestrutura Docker isolada, banco PostgreSQL e 30 dias de sustentação assistida inclusa.',
+        '• **Governança:** Código-fonte 100% de propriedade do cliente, sem taxas ocultas.',
+        '',
+        '🎯 Para estruturarmos o escopo exato do seu projeto, convidamos você para uma **reunião técnica de 20 minutos via Google Meet** diretamente com o Thiago Duarte (Fundador & Arquiteto Principal).',
+        '',
+        'Qual o melhor dia e horário comercial (Seg a Sex, 8h às 18h) para você?'
+      ].join('\n');
+    }
+
+    if (lower.includes('garantia') || lower.includes('suporte') || lower.includes('após') || lower.includes('pos')) {
+      return [
+        'Olá! Sobre a garantia e sustentação da *TRD Consultoria de TI*:',
+        '',
+        '🛡️ **Garantia Inclusa no Projeto:**',
+        '• O desenvolvimento sob medida inclui **30 dias de sustentação assistida** após a homologação para correção de qualquer desvio de escopo ou bug sem custos adicionais.',
+        '• **Continuidade Operacional:** Após os 30 dias, oferecemos o plano mensal de continuidade preventiva a partir de R$ 1.800/mês para evolução contínua, monitoramento e backups.',
+        '',
+        'Nosso atendimento é realizado estritamente em horário comercial (*Segunda a Sexta, das 8h às 18h*).'
+      ].join('\n');
+    }
+
+    if (lower.includes('contrato') || lower.includes('código') || lower.includes('codigo') || lower.includes('segurança')) {
+      return [
+        'Olá! A governança e blindagem jurídica da *TRD Consultoria de TI* funciona da seguinte forma:',
+        '',
+        '📄 **Contrato Digital & Propriedade:**',
+        '• O contrato é formalizado digitalmente via **Gov.br**, possuindo força de título executivo extrajudicial (Art. 784, III do CPC).',
+        '• **Propriedade Intelectual:** O código-fonte é **100% de propriedade do cliente**, entregue em repositório seguro com Docker, sem nenhuma dependência contratual ou fidelidade.',
+        '• **Ambiente de Homologação (Staging):** O cliente só aprova a entrega final após testar as telas no ar.'
+      ].join('\n');
+    }
+
+    if (lower.includes('24h') || lower.includes('plantão') || lower.includes('plantao') || lower.includes('madrugada') || lower.includes('domingo')) {
+      return [
+        'Olá! Informamos que o atendimento técnico e comercial da *TRD Consultoria de TI* opera estritamente em **horário comercial (Segunda a Sexta, das 8h às 18h)**.',
+        '',
+        'Não operamos em regime de plantão 24/7 noturno ou finais de semana. Em contrapartida, todos os nossos sistemas são arquitetados com contêineres Docker isolados, reinicialização automática e backups redundantes para garantir estabilidade contínua sem interrupções operacionais.'
+      ].join('\n');
+    }
+
+    if (cleanContext) {
+      return [
+        'Olá! Aqui é o atendimento executivo da *TRD Consultoria de TI*.',
+        '',
+        cleanContext.substring(0, 800),
+        '',
+        'Para agendarmos uma reunião de alinhamento técnico (20 min via Google Meet) com o Thiago Duarte, basta nos informar o melhor horário comercial (Seg a Sex, 8h às 18h)!'
+      ].join('\n');
+    }
+
+    return [
+      'Olá! Aqui é o atendimento executivo da *TRD Consultoria de TI* (Thiago Duarte).',
+      '',
+      'Desenvolvemos sistemas empresariais sob medida, APIs de alto desempenho e infraestruturas robustas em contêineres Docker.',
+      '',
+      'Para entendermos sua necessidade e formatarmos uma proposta técnica, podemos agendar uma reunião de 20 minutos via Google Meet em horário comercial (Seg a Sex, 8h às 18h).',
+      '',
+      'Qual seria a sua necessidade principal no momento?'
+    ].join('\n');
   }
 }

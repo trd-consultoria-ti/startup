@@ -235,7 +235,7 @@ export class CoordinatorAgent {
     // Phase 2.5: RAG — retrieve relevant knowledge base chunks
     const ragAgent = this.agents.get('rag');
     const ragContextCtx = { ...context, content: processedContent };
-    const shouldRag = intent ? intent === 'question' : true;
+    const shouldRag = !isDocumentContent && (intent ? (intent === 'question' || intent === 'conversation' || intent === 'trd_console_lead') : true);
     if (ragAgent && shouldRag && ragAgent.canHandle(ragContextCtx)) {
       agentsInvolved.push('rag');
       this.logger.log(`[Coordinator] Phase 2.5 → RagAgent`);

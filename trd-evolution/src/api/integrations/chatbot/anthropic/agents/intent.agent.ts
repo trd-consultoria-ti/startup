@@ -183,7 +183,10 @@ Responda APENAS a palavra da categoria.`;
     if (startsWithSearchVerb || (isShortMessage && searchKeywords.some((k) => lower.includes(k)))) {
       return 'search';
     }
-    if (['o que é', 'quem é', 'como funciona', 'qual o', 'qual a', 'quais as', 'quais os', 'quais foram', 'quando', 'onde', 'resumo', 'resumir', 'resuma', 'analise', 'analisa'].some((k) => lower.includes(k))) {
+    if (
+      this.looksLikeQuestion(lower) ||
+      ['o que é', 'quem é', 'como funciona', 'qual o', 'qual a', 'quais as', 'quais os', 'quais foram', 'quando', 'onde', 'resumo', 'resumir', 'resuma', 'analise', 'analisa', 'quanto', 'custa', 'custo', 'valor', 'preço', 'preco', 'orçamento', 'orcamento', 'pagamento', 'condições', 'condicoes', 'desenvolver', 'desenvolvimento', 'sistema', 'software', 'aplicativo', 'garantia', 'suporte', 'contrato'].some((k) => lower.includes(k))
+    ) {
       return 'question';
     }
     return 'conversation';
