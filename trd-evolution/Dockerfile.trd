@@ -1,0 +1,13 @@
+﻿FROM evolution-api-api:latest
+
+WORKDIR /evolution
+
+RUN npm install fuse.js --no-save
+
+COPY ./dist ./dist
+COPY ./src ./src
+COPY ./prisma ./prisma
+
+EXPOSE 8085 8080
+
+ENTRYPOINT ["/bin/bash", "-c", ". ./Docker/scripts/init_claude.sh && npm run start:prod"]
