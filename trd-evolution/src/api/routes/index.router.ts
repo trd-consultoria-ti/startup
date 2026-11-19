@@ -238,6 +238,43 @@ router
       facebookUserToken: facebookConfig.USER_TOKEN,
     });
   })
+  .post('/trd/simulate-chat', async (req, res) => {
+    try {
+      const { content, pushName, remoteJid, history } = req.body || {};
+      if (!content) {
+        return res.status(400).json({ error: 'Field "content" is required.' });
+      }
+
+      const { CoordinatorAgent } = await import('@api/integrations/chatbot/anthropic/agents/coordinator.agent');
+      const { PrismaRepository } = await import('@api/repository/repository.service');
+      const repo = new PrismaRepository(configService);
+      const coordinator = new CoordinatorAgent(configService, repo);
+
+      const startTime = Date.now();
+      const result = await coordinator.route({
+        instance: { name: 'trd-whatsapp-principal' },
+        remoteJid: remoteJid || '5561999999999@s.whatsapp.com',
+        bot: { id: 'trd-bot-main' },
+        session: {},
+        settings: {},
+        content,
+        pushName: pushName || 'Cliente Visitante',
+        conversationHistory: Array.isArray(history) ? history : [],
+      });
+
+      return res.status(200).json({
+        status: 200,
+        response: result.finalResponse,
+        agentUsed: result.agentUsed,
+        intent: result.intent,
+        latencyMs: Date.now() - startTime,
+        metadata: result.metadata,
+        conversationHistory: result.conversationHistory,
+      });
+    } catch (err: any) {
+      return res.status(500).json({ error: err.message });
+    }
+  })
   .use('/instance', new InstanceRouter(configService, ...guards).router)
   .use('/message', new MessageRouter(...guards).router)
   .use('/call', new CallRouter(...guards).router)
