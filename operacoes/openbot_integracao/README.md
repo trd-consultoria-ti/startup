@@ -17,9 +17,10 @@ Este diretório contém a integração completa da TRD com a plataforma **OpenBo
 
 ---
 
-## 🚀 Arquitetura da Esteira Autônoma End-to-End
-Acesse o blueprint completo de automação em:  
-👉 **[ARQUITETURA_ESTEIRA_AUTOMATIZADA_OPENBOT.md](ARQUITETURA_ESTEIRA_AUTOMATIZADA_OPENBOT.md)** (Os 5 Motores Autônomos de Prospecção, Fechamento Gov.br, DevOps e Go-Live).
+## 🚀 Arquitetura da Esteira Autônoma & Matriz de Fallback em 8 Níveis
+Acesse os blueprints oficiais de engenharia e contingência:  
+👉 **[ARQUITETURA_ESTEIRA_AUTOMATIZADA_OPENBOT.md](ARQUITETURA_ESTEIRA_AUTOMATIZADA_OPENBOT.md)** (Os 5 Motores Autônomos de Prospecção, Fechamento Gov.br, DevOps e Go-Live).  
+👉 **[MATRIZ_TATICA_FALLBACK_8_NIVEIS.md](MATRIZ_TATICA_FALLBACK_8_NIVEIS.md)** · [Versão em PDF Diagramado](MATRIZ_TATICA_FALLBACK_8_NIVEIS.pdf) (Matriz Tática de Fallback em 8 Níveis para os 16 agentes OpenBot — Custo R$ 0,00 e Tolerância Zero a Ressalvas).
 
 ---
 
