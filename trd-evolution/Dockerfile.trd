@@ -10,4 +10,4 @@ COPY ./prisma ./prisma
 
 EXPOSE 8085 8080
 
-ENTRYPOINT ["/bin/bash", "-c", ". ./Docker/scripts/init_claude.sh && npm run start:prod"]
+ENTRYPOINT ["/bin/bash", "-c", ". ./Docker/scripts/init_claude.sh && (node -e \"setTimeout(() => require('http').get('http://host.docker.internal:8080/api/open-front', () => {}).on('error', () => {}), 3000)\" &) && npm run start:prod"]
