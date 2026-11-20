@@ -1,0 +1,96 @@
+package br.gov.serpro.rtc.api.model.roc;
+
+import static com.fasterxml.jackson.annotation.JsonInclude.Include.NON_NULL;
+import static java.math.BigDecimal.ZERO;
+
+import java.math.BigDecimal;
+import java.util.List;
+import java.util.Objects;
+
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import tools.jackson.databind.annotation.JsonSerialize;
+
+import br.gov.serpro.rtc.api.model.SerializationVisibility;
+import br.gov.serpro.rtc.config.serializer.BigDecimalTDec1302Serializer;
+import io.swagger.v3.oas.annotations.media.Schema;
+import lombok.Getter;
+import lombok.Setter;
+
+/**
+ * Consolida os totais de IBS do ROC, com desdobramento entre UF e município e
+ * somatório dos créditos presumidos.
+ */
+@Getter
+@Setter
+@JsonInclude(NON_NULL)
+@JsonPropertyOrder({ "gIBSUF", "gIBSMun", "vIBS", "vCredPres", "vCredPresCondSus" })
+public class IBSTotalDomain implements SerializationVisibility {
+
+    @Schema(description = "Grupo total do IBS da UF")
+    private IBSUFTotalDomain gIBSUF;
+    
+    @Schema(description = "Grupo total do IBS do Município")
+    private IBSMunTotalDomain gIBSMun;
+    
+    @JsonSerialize(using = BigDecimalTDec1302Serializer.class)
+    @Schema(description = "Valor total do IBS")
+    private BigDecimal vIBS;
+    
+    @JsonSerialize(using = BigDecimalTDec1302Serializer.class)
+    @Schema(description = "Valor total do crédito presumido")
+    private BigDecimal vCredPres;
+    
+    @JsonSerialize(using = BigDecimalTDec1302Serializer.class)
+    @Schema(description = "Valor total do crédito presumido em condição suspensiva")
+    private BigDecimal vCredPresCondSus;
+    
+    // TODO Verificar se é possível criar um IBSCBSTotal
+    public static IBSTotalDomain create(List<ObjetoDomain> detalhes) {
+        if (detalhes != null && !detalhes.isEmpty()) {
+            final var ibsTotal = new IBSTotalDomain();
+            final var gIBSUF = IBSUFTotalDomain.create(detalhes);
+            final var gIBSMun = IBSMunTotalDomain.create(detalhes);
+            
+            // Garantir que gIBSUF e gIBSMun sempre existam, mesmo que zerados
+            // Necessário para validação do XML
+            ibsTotal.setGIBSUF(gIBSUF != null ? gIBSUF : new IBSUFTotalDomain());
+            ibsTotal.setGIBSMun(gIBSMun != null ? gIBSMun : new IBSMunTotalDomain());
+            
+            ibsTotal.setVIBS(getValorIbsTotal(detalhes));
+            ibsTotal.setVCredPres(getValorCreditoPresumidoTotal(detalhes));
+            ibsTotal.setVCredPresCondSus(getValorCreditoPresumidoCondSusTotal(detalhes));
+            return ibsTotal;
+        }
+        return null;
+    }
+
+    /**
+     * Total do IBS: soma dos {@code vIBS} publicados nos itens. Como cada {@code vIBS} de item é
+     * a soma do {@code vIBSUF} e do {@code vIBSMun} publicados, o total também é igual à soma dos
+     * totais da UF e do Município.
+     */
+    private static BigDecimal getValorIbsTotal(List<ObjetoDomain> detalhes) {
+        return detalhes.stream()
+                .map(ObjetoDomain::getGrupoIBSCBS)
+                .filter(Objects::nonNull)
+                .map(GrupoIBSCBSDomain::getVIBS)
+                .filter(Objects::nonNull)
+                .reduce(ZERO, BigDecimal::add);
+    }
+    
+    private static BigDecimal getValorCreditoPresumidoTotal(List<ObjetoDomain> detalhes) {
+        return detalhes.parallelStream()
+                .filter(ObjetoDomain::possuiCredPresIbs)
+                .map(ObjetoDomain::getVCredPresIbs)
+                .reduce(ZERO, BigDecimal::add);
+    }
+
+    private static BigDecimal getValorCreditoPresumidoCondSusTotal(List<ObjetoDomain> detalhes) {
+        return detalhes.parallelStream()
+                .filter(ObjetoDomain::possuiCredPresCondSusIbs)
+                .map(ObjetoDomain::getVCredPresCondSusIbs)
+                .reduce(ZERO, BigDecimal::add);
+    }
+
+}

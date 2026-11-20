@@ -1,0 +1,24 @@
+{
+  "id": "arred-rg03",
+  "versao": "0.0.1",
+  "dhFatoGerador": "2026-10-20T10:00:00-03:00",
+  "municipio": 3550308,
+  "uf": "SP",
+  "tpDoc": 55,
+  "itens": [
+    {
+      "numero": 1,
+      "cst": "000",
+      "cClassTrib": "000001",
+      "baseCalculo": 14.0,
+      "ncm": "84713012"
+    },
+    {
+      "numero": 2,
+      "cst": "000",
+      "cClassTrib": "000001",
+      "baseCalculo": 14.0,
+      "ncm": "84713012"
+    }
+  ]
+}

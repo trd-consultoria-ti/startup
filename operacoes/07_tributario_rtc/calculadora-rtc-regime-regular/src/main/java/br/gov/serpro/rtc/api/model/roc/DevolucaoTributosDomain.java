@@ -1,0 +1,42 @@
+package br.gov.serpro.rtc.api.model.roc;
+
+import static com.fasterxml.jackson.annotation.JsonInclude.Include.NON_NULL;
+import static java.math.BigDecimal.ZERO;
+
+import java.math.BigDecimal;
+
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import tools.jackson.databind.annotation.JsonSerialize;
+
+import br.gov.serpro.rtc.api.model.SerializationVisibility;
+import br.gov.serpro.rtc.config.serializer.BigDecimalTDec0302_04Serializer;
+import br.gov.serpro.rtc.config.serializer.BigDecimalTDec1302Serializer;
+import io.swagger.v3.oas.annotations.media.Schema;
+import lombok.Builder;
+import lombok.extern.jackson.Jacksonized;
+import lombok.Getter;
+import lombok.Setter;
+
+/**
+ * Representa o valor de devolução de tributos vinculado à apuração do item.
+ */
+@Getter
+@Setter
+@Builder
+@Jacksonized
+@JsonInclude(NON_NULL)
+@JsonPropertyOrder({ "pDevTrib", "vDevTrib" })
+public class DevolucaoTributosDomain implements SerializationVisibility {
+	
+    @JsonSerialize(using = BigDecimalTDec0302_04Serializer.class)
+    @Schema(description = "Percentual do tributo devolvido")
+    @Builder.Default
+	private BigDecimal pDevTrib = ZERO;
+
+    @JsonSerialize(using = BigDecimalTDec1302Serializer.class)
+    @Schema(description = "Valor do tributo devolvido")
+    @Builder.Default
+    private BigDecimal vDevTrib = ZERO;
+
+}

@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpeTMProc versao="1.00" xmlns="http://www.portalfiscal.inf.br/bpe" ipTransmissor="192.0.2.1" nPortaCon="29285" dhConexao="2026-02-22T12:07:18-03:00" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<BPeTM xmlns="http://www.portalfiscal.inf.br/bpe">
+		<infBPe Id="BPe23260211111111000111630010000099001765592872" versao="1.00">
+			<ide>
+				<cUF>23</cUF>
+				<tpAmb>2</tpAmb>
+				<mod>63</mod>
+				<serie>1</serie>
+				<nBP>9900</nBP>
+				<cBP>76559287</cBP>
+				<cDV>2</cDV>
+				<modal>1</modal>
+				<dhEmi>2026-02-22T12:07:16-03:00</dhEmi>
+				<dCompet>2025-01-19</dCompet>
+				<tpEmis>1</tpEmis>
+				<verProc>1.0.0.0</verProc>
+				<tpBPe>4</tpBPe>
+				<CFOP>5357</CFOP>
+			</ide>
+			<emit>
+				<CNPJ>11111111000111</CNPJ>
+				<IE>111111111</IE>
+				<xNome>EMPRESA EMITENTE EXEMPLO LTDA</xNome>
+				<xFant>EMITENTE EXEMPLO</xFant>
+				<IM>111111</IM>
+				<CNAE>1234567</CNAE>
+				<CRT>3</CRT>
+				<enderEmit>
+					<xLgr>RUA EXEMPLO</xLgr>
+					<nro>100</nro>
+					<xBairro>CENTRO</xBairro>
+					<cMun>2307650</cMun>
+					<xMun>MARACANAU</xMun>
+					<CEP>00000000</CEP>
+					<UF>CE</UF>
+					<fone>1100000000</fone>
+					<email>contato@exemplo.com.br</email>
+				</enderEmit>
+				<TAR>21</TAR>
+			</emit>
+			<detBPeTM idEqpCont="1">
+				<UFIniViagem>CE</UFIniViagem>
+				<UFFimViagem>CE</UFFimViagem>
+				<placa>XYZ1234</placa>
+				<prefixo>123</prefixo>
+				<det nViagem="1">
+					<cMunIni>2307650</cMunIni>
+					<cMunFim>2307650</cMunFim>
+					<nContInicio>1</nContInicio>
+					<nContFim>10</nContFim>
+					<qPass>10</qPass>
+					<vBP>100.00</vBP>
+					<imp>
+						<ICMS>
+							<ICMS00>
+								<CST>00</CST>
+								<vBC>100.00</vBC>
+								<pICMS>18.00</pICMS>
+								<vICMS>18.00</vICMS>
+							</ICMS00>
+						</ICMS>
+						<IBSCBS>
+							<CST>400</CST>
+							<cClassTrib>400001</cClassTrib>
+							<gIBSCBS>
+								<vBC>100.00</vBC>
+								<gIBSUF>
+									<pIBSUF>0.1000</pIBSUF>
+									<vIBSUF>0.10</vIBSUF>
+								</gIBSUF>
+								<gIBSMun>
+									<pIBSMun>0.0000</pIBSMun>
+									<vIBSMun>0.00</vIBSMun>
+								</gIBSMun>
+								<vIBS>0.10</vIBS>
+								<gCBS>
+									<pCBS>0.9000</pCBS>
+									<vCBS>900</vCBS>
+								</gCBS>
+							</gIBSCBS>
+						</IBSCBS>
+					</imp>
+					<Comp>
+						<xNome>IDOSOS</xNome>
+						<qComp>00001</qComp>
+					</Comp>
+					<Comp>
+						<xNome>VT</xNome>
+						<qComp>00009</qComp>
+					</Comp>
+				</det>
+			</detBPeTM>
+			<total>
+				<qPass>10</qPass>
+				<vBP>100.00</vBP>
+				<ICMSTot>
+					<vBC>100.00</vBC>
+					<vICMS>18.00</vICMS>
+				</ICMSTot>
+				<IBSCBSTot>
+					<vBCIBSCBS>100.00</vBCIBSCBS>
+					<gIBS>
+						<gIBSUF>
+							<vDif>0.00</vDif>
+							<vDevTrib>0.00</vDevTrib>
+							<vIBSUF>0.10</vIBSUF>
+						</gIBSUF>
+						<gIBSMun>
+							<vDif>0.00</vDif>
+							<vDevTrib>0.00</vDevTrib>
+							<vIBSMun>0.00</vIBSMun>
+						</gIBSMun>
+						<vIBS>0.10</vIBS>
+						<!--<vCredPres>0.00</vCredPres>
+						<vCredPresCondSus>0.00</vCredPresCondSus>-->
+					</gIBS>
+					<gCBS>
+						<vDif>0.00</vDif>
+						<vDevTrib>0.00</vDevTrib>
+						<vCBS>900</vCBS>
+						<!--<vCredPres>0.00</vCredPres>
+						<vCredPresCondSus>0.00</vCredPresCondSus>-->
+					</gCBS>
+				</IBSCBSTot>
+				<vTotDFe>100.00</vTotDFe>
+			</total>
+			<infAdic>
+				<infCpl>Informacoes Complementares</infCpl>
+			</infAdic>
+		</infBPe>
+		<Signature xmlns="http://www.w3.org/2000/09/xmldsig#">
+			<SignedInfo>
+				<CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/>
+				<SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/>
+				<Reference URI="#BPe23250811111111000111630010000099001765592872">
+					<Transforms>
+						<Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/>
+						<Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/>
+					</Transforms>
+					<DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+					<DigestValue>xNwbs/yt/bpwOy3Q4zZpLcql5Nw=</DigestValue>
+				</Reference>
+			</SignedInfo>
+			<SignatureValue>AAAA</SignatureValue>
+			<KeyInfo>
+				<X509Data>
+					<X509Certificate>AAAA</X509Certificate>
+				</X509Data>
+			</KeyInfo>
+		</Signature>
+	</BPeTM>
+	<protBPe versao="1.00" xmlns="http://www.portalfiscal.inf.br/bpe">
+		<infProt Id="BPe323250000000826">
+			<tpAmb>2</tpAmb>
+			<verAplic>RS20250808131714</verAplic>
+			<chBPe>23250811111111000111630010000099001765592872</chBPe>
+			<dhRecbto>2026-02-22T12:07:18-03:00</dhRecbto>
+			<nProt>323260000000826</nProt>
+			<digVal>xNwbs/yt/bpwOy3Q4zZpLcql5Nw=</digVal>
+			<cStat>100</cStat>
+			<xMotivo>Autorizado o uso do BP-e</xMotivo>
+		</infProt>
+	</protBPe>
+</bpeTMProc>

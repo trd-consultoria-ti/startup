@@ -1,0 +1,48 @@
+/*
+* Versão de Homologação/Testes
+*/
+package br.gov.serpro.rtc.testesintegracao.dadosabertos;
+
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.webmvc.test.autoconfigure.AutoConfigureMockMvc;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.http.MediaType;
+import org.springframework.test.context.ActiveProfiles;
+import org.springframework.test.context.TestPropertySource;
+import org.springframework.test.web.servlet.MockMvc;
+
+@SpringBootTest
+@AutoConfigureMockMvc
+@TestPropertySource(locations = "classpath:application-testes.yml")
+@ActiveProfiles("testes")
+class Teste_dadosabertos_7_consultarNbs {
+
+    @Autowired
+    private MockMvc mockMvc;
+
+    @Test
+    void teste_controller_consultarNbs() throws Exception {
+        mockMvc.perform(get("/calculadora/dados-abertos/nbs")
+                .param("data", "2027-01-01")
+                .param("nbs", "114052200")
+                .contentType(MediaType.APPLICATION_JSON))
+                .andExpect(status().is2xxSuccessful())
+                .andExpect(jsonPath("$.tributadoPeloImpostoSeletivo").value(false));
+    }
+
+    @Test
+    void teste_controller_consultarNbs_inexistente() throws Exception {
+        mockMvc.perform(get("/calculadora/dados-abertos/nbs")
+                .param("data", "2027-01-01")
+                .param("nbs", "999999999")
+                .contentType(MediaType.APPLICATION_JSON))
+                .andExpect(status().isNotFound())
+                .andExpect(jsonPath("$.detail").value("NBS de código 999999999 não encontrada para a data 2027-01-01"));
+    }
+
+}

@@ -1,0 +1,125 @@
+name: Publish JaCoCo Report
+
+on:
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:  # Allow manual trigger
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  pull-requests: write  # Post comments on PR
+  contents: read        # Read repository
+
+jobs:
+  build:
+    name: Build and Publish Coverage
+    runs-on: ubuntu-latest
+
+    steps:
+      # ============================================================
+      # 1. Checkout Repository
+      # ============================================================
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # Full history for coverage delta comparison
+
+      # ============================================================
+      # 2. Setup Java 25 (LTS)
+      # ============================================================
+      - name: Set up JDK 25
+        uses: actions/setup-java@v4
+        with:
+          java-version: '25'
+          distribution: 'temurin'
+          cache: maven
+          cache-dependency-path: pom.xml
+
+      # ============================================================
+      # 3. Generate SQLite Database via Flyway Migrations
+      # ============================================================
+      - name: Generate Database from Migrations
+        run: |
+          echo "📦 Generating SQLite database (pro) via Flyway..."
+          mkdir -p ./calculadora/db
+          mvn flyway:migrate \
+            -Dflyway.configFiles=./flyway/flyway-pro.conf \
+            --batch-mode \
+            --errors
+          echo "✅ Database created:"
+          ls -lah ./calculadora/db/calculadora-pro.db
+
+      # ============================================================
+      # 4. Build and Run Tests with JaCoCo Coverage
+      # ============================================================
+      - name: Build and Generate Coverage Report
+        run: |
+          echo "🔨 Building project with Maven..."
+          mvn --batch-mode --errors -ntp clean org.jacoco:jacoco-maven-plugin:prepare-agent verify
+
+      # ============================================================
+      # 5. Verify JaCoCo Report Generated
+      # ============================================================
+      - name: Verify Coverage Report
+        run: |
+          echo "📊 Checking coverage report..."
+          if [ -f target/site/jacoco/jacoco.xml ]; then
+            echo "✅ JaCoCo report found"
+            ls -lah target/site/jacoco/jacoco.xml
+          else
+            echo "❌ JaCoCo report NOT found!"
+            echo "Directory contents:"
+            ls -la target/site/ || true
+            exit 1
+          fi
+
+      # ============================================================
+      # 6. Publish Coverage to PR Comment
+      # ============================================================
+      - name: Publish JaCoCo Report
+        id: jacoco
+        uses: madrapps/jacoco-report@v1.6.1
+        with:
+          # Path to JaCoCo XML report
+          paths: ${{ github.workspace }}/target/site/jacoco/jacoco.xml
+
+          # GitHub token for authentication
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+          # Coverage Thresholds (aligned with ADR003)
+          min-coverage-overall: 80        # Overall project minimum
+          min-coverage-changed-lines: 80  # New/modified lines minimum
+
+          # Comment Customization
+          title: 📊 Calculadora de Tributos - JaCoCo Coverage Report
+          update-comment: true            # Update existing comment instead of creating new ones
+          comment-type: pr_comment        # Post as PR comment (not workflow summary)
+
+          # Pass/Fail Indicators
+          pass-emoji: ':green_apple:'     # ✅ When threshold met
+          fail-emoji: ':x:'               # ❌ When threshold not met
+
+          # Coverage Analysis
+          coverage-counter-type: LINE     # Use LINE counter (most readable)
+          show-all-modules: false         # Only show modules with changes
+          show-missing-lines: true        # Show uncovered line numbers
+          skip-if-no-changes: false       # Always post, even if no Java changes
+
+          # Error Handling
+          continue-on-error: true         # Don't fail workflow on coverage failure
+
+      # ============================================================
+      # 7. Summary Output
+      # ============================================================
+      - name: Print Coverage Summary
+        if: always()
+        run: |
+          echo "## 📊 Coverage Summary" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "| Metric | Coverage |" >> $GITHUB_STEP_SUMMARY
+          echo "|--------|----------|" >> $GITHUB_STEP_SUMMARY
+          echo "| **Overall Project** | ${{ steps.jacoco.outputs.coverage-overall }}% |" >> $GITHUB_STEP_SUMMARY
+          echo "| **Changed Lines** | ${{ steps.jacoco.outputs.coverage-changed-lines }}% |" >> $GITHUB_STEP_SUMMARY

@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cteSimpProc xmlns="http://www.portalfiscal.inf.br/cte" versao="4.00" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<CTeSimp xmlns="http://www.portalfiscal.inf.br/cte" xmlns:ns2="http://www.w3.org/2000/09/xmldsig#">
+		<infCte Id="CTe35250311111111000111570020000028931304800973" versao="4.00">
+			<ide>
+				<cUF>35</cUF>
+				<cCT>30480097</cCT>
+				<CFOP>5258</CFOP>
+				<natOp>Prestacao de servico de transporte iniciada em unidade da...</natOp>
+				<mod>57</mod>
+				<serie>2</serie>
+				<nCT>2893</nCT>
+				<dhEmi>2026-01-20T17:26:19-03:00</dhEmi>
+				<tpImp>1</tpImp>
+				<tpEmis>1</tpEmis>
+				<cDV>3</cDV>
+				<tpAmb>2</tpAmb>
+				<tpCTe>5</tpCTe>
+				<procEmi>0</procEmi>
+				<verProc>0.0.1-Snapshot</verProc>
+				<cMunEnv>3505708</cMunEnv>
+				<xMunEnv>BARUERI</xMunEnv>
+				<UFEnv>SP</UFEnv>
+				<modal>01</modal>
+				<tpServ>1</tpServ>
+				<UFIni>RJ</UFIni>
+				<UFFim>CE</UFFim>
+				<retira>1</retira>
+				<gCompraGov>
+					<tpEnteGov>1</tpEnteGov>
+					<pRedutor>10.99</pRedutor>
+					<tpOperGov>1</tpOperGov>
+				</gCompraGov>
+			</ide>
+			<compl>
+				<xCaracAd>Subcontratacao</xCaracAd>
+				<xObs>Transporte realizado por subcontratacao referente ao CTe N 2893 e Serie 2, da Transportadora 55555555000155 - CTE EMITIDO EM AMBIENTE DE HOMOLOGACAO - SEM VALOR FISCAL</xObs>
+			</compl>
+			<emit>
+				<CNPJ>11111111000111</CNPJ>
+				<IE>11111111</IE>
+				<xNome>TRANSPORTADORA EMITENTE EXEMPLO LTDA</xNome>
+				<xFant>TRANSPORTADORA EMITENTE EXEMPLO</xFant>
+				<enderEmit>
+					<xLgr>RUA EXEMPLO</xLgr>
+					<nro>100</nro>
+					<xCpl>GALPAO</xCpl>
+					<xBairro>CENTRO</xBairro>
+					<cMun>2607901</cMun>
+					<xMun>Rio de Janeiro</xMun>
+					<CEP>00000000</CEP>
+					<UF>PE</UF>
+					<fone>1100000000</fone>
+				</enderEmit>
+				<CRT>3</CRT>
+			</emit>
+			<toma>
+				<toma>3</toma>
+				<indIEToma>9</indIEToma>
+				<CNPJ>22222222000122</CNPJ>
+				<xNome>CTE EMITIDO EM AMBIENTE DE HOMOLOGACAO - SEM VALOR FISCAL</xNome>
+				<enderToma>
+					<xLgr>RUA EXEMPLO</xLgr>
+					<nro>200</nro>
+					<xBairro>CENTRO</xBairro>
+					<cMun>2607901</cMun>
+					<xMun>Itatiba</xMun>
+					<CEP>00000000</CEP>
+					<UF>PE</UF>
+					<cPais>1058</cPais>
+					<xPais>Brasil</xPais>
+				</enderToma>
+			</toma>
+			<infCarga>
+				<vCarga>34.40</vCarga>
+				<proPred>caixa</proPred>
+				<infQ>
+					<cUnid>01</cUnid>
+					<tpMed>02</tpMed>
+					<qCarga>7.2000</qCarga>
+				</infQ>
+			</infCarga>
+			<det nItem="1">
+				<cMunIni>3305109</cMunIni>
+				<xMunIni>Sao Joao De Meriti</xMunIni>
+				<cMunFim>2304400</cMunFim>
+				<xMunFim>FORTALEZA</xMunFim>
+				<vPrest>1074.19</vPrest>
+				<vRec>1074.19</vRec>
+				<infDocAnt>
+					<chCTe>35250155555555000155570250000297721297637390</chCTe>
+					<tpPrest>1</tpPrest>
+				</infDocAnt>
+				<infDocAnt>
+					<chCTe>35250155555555000155570250000297731485487097</chCTe>
+					<tpPrest>1</tpPrest>
+				</infDocAnt>
+				<infDocAnt>
+					<chCTe>35250155555555000155570250000297681077262076</chCTe>
+					<tpPrest>1</tpPrest>
+				</infDocAnt>
+				<infDocAnt>
+					<chCTe>35250155555555000155570250000297671451892358</chCTe>
+					<tpPrest>1</tpPrest>
+				</infDocAnt>
+			</det>
+			<infModal versaoModal="4.00">
+				<rodo>
+					<RNTRC>99999999</RNTRC>
+				</rodo>
+			</infModal>
+			<imp>
+				<ICMS>
+					<ICMS90>
+						<CST>90</CST>
+						<vBC>1074.19</vBC>
+						<pICMS>7.00</pICMS>
+						<vICMS>75.19</vICMS>
+						<vCred>15.04</vCred>
+					</ICMS90>
+				</ICMS>
+				<IBSCBS>
+					<CST>000</CST>
+					<cClassTrib>000001</cClassTrib>
+					<gIBSCBS>
+						<vBC>23513.53</vBC>
+						<gIBSUF>
+							<pIBSUF>21.1323</pIBSUF>
+							<gDif>
+								<pDif>1.9999</pDif>
+								<vDif>98231498.12</vDif>
+							</gDif>
+							<gDevTrib>
+								<vDevTrib>765365.44</vDevTrib>
+							</gDevTrib>
+							<gRed>
+								<pRedAliq>12.12</pRedAliq>
+								<pAliqEfet>43.12</pAliqEfet>
+							</gRed>
+							<vIBSUF>431634.11</vIBSUF>
+						</gIBSUF>
+						<gIBSMun>
+							<pIBSMun>12.2123</pIBSMun>
+							<gDif>
+								<pDif>7.10</pDif>
+								<vDif>544.10</vDif>
+							</gDif>
+							<gDevTrib>
+								<vDevTrib>12.10</vDevTrib>
+							</gDevTrib>
+							<gRed>
+								<pRedAliq>1.10</pRedAliq>
+								<pAliqEfet>1.20</pAliqEfet>
+							</gRed>
+							<vIBSMun>554678.21</vIBSMun>
+						</gIBSMun>
+						<vIBS>986312.32</vIBS>
+						<gCBS>
+							<pCBS>21.20</pCBS>
+							<gDif>
+								<pDif>6.60</pDif>
+								<vDif>56565.50</vDif>
+							</gDif>
+							<gDevTrib>
+								<vDevTrib>44356221.10</vDevTrib>
+							</gDevTrib>
+							<gRed>
+								<pRedAliq>1.20</pRedAliq>
+								<pAliqEfet>1.50</pAliqEfet>
+							</gRed>
+							<vCBS>356</vCBS>
+						</gCBS>
+						<gTribRegular>
+							<CSTReg>200</CSTReg>
+							<cClassTribReg>123459</cClassTribReg>
+							<pAliqEfetRegIBSUF>0.90</pAliqEfetRegIBSUF>
+							<vTribRegIBSUF>256.12</vTribRegIBSUF>
+							<pAliqEfetRegIBSMun>0.80</pAliqEfetRegIBSMun>
+							<vTribRegIBSMun>256.13</vTribRegIBSMun>
+							<pAliqEfetRegCBS>0.70</pAliqEfetRegCBS>
+							<vTribRegCBS>256.14</vTribRegCBS>
+						</gTribRegular>
+					</gIBSCBS>
+				</IBSCBS>
+			</imp>
+			<total>
+				<vTPrest>1074.19</vTPrest>
+				<vTRec>1074.19</vTRec>
+				<vTotDFe>1070.20</vTotDFe>
+			</total>
+			<infRespTec>
+				<CNPJ>44444444000144</CNPJ>
+				<xContato>RESPONSAVEL TECNICO EXEMPLO</xContato>
+				<email>suporte@exemplo.com.br</email>
+				<fone>1100000000</fone>
+			</infRespTec>
+		</infCte>
+		<infCTeSupl>
+			<qrCodCTe>https://homologacao.nfe.fazenda.sp.gov.br/CTeConsulta/qrCode?chCTe=35250311111111000111570020000028931304800973&amp;tpAmb=2</qrCodCTe>
+		</infCTeSupl>
+		<Signature xmlns="http://www.w3.org/2000/09/xmldsig#">
+			<SignedInfo>
+				<CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/>
+				<SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/>
+				<Reference URI="#CTe35250311111111000111570020000028931304800973">
+					<Transforms>
+						<Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/>
+						<Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/>
+					</Transforms>
+					<DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+					<DigestValue>Ah6Eo2RnbKyj2xCR5GP6ENTxDNg=</DigestValue>
+				</Reference>
+			</SignedInfo>
+			<SignatureValue>AAAA</SignatureValue>
+			<KeyInfo>
+				<X509Data>
+					<X509Certificate>AAAA</X509Certificate>
+				</X509Data>
+			</KeyInfo>
+		</Signature>
+	</CTeSimp>
+	<protCTe versao="4.00">
+		<infProt>
+			<tpAmb>2</tpAmb>
+			<verAplic>SP-CTe-2024-12-26-1</verAplic>
+			<chCTe>35250311111111000111570020000028931304800973</chCTe>
+			<dhRecbto>2025-03-06T17:26:19-03:00</dhRecbto>
+			<nProt>135250001295583</nProt>
+			<digVal>Ah6Eo2RnbKyj2xCR5GP6ENTxDNg=</digVal>
+			<cStat>100</cStat>
+			<xMotivo>Autorizado o uso do CT-e</xMotivo>
+		</infProt>
+	</protCTe>
+</cteSimpProc>

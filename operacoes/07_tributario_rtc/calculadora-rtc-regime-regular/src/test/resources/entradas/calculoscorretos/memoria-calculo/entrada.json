@@ -1,0 +1,35 @@
+{
+  "id": "6194602ea71cbf9431c236de4409d920",
+  "versao": "0.0.1",
+  "dhFatoGerador": "2027-01-01T09:50:05-03:00",
+  "municipio": 1200013,
+  "uf": "AC",
+  "itens": [
+    {
+      "numero": 1,
+      "cst": "000",
+      "cClassTrib": "000001",
+      "baseCalculo": 200,
+      "quantidade": 1,
+      "unidade": "UN",
+      "aliquotasNominais": {
+        "cbs": 8.4,
+        "ibsEstadual": 0.05,
+        "ibsMunicipal": 0.05
+      }
+    },
+    {
+      "numero": 2,
+      "cst": "410",
+      "cClassTrib": "410001",
+      "baseCalculo": 200,
+      "quantidade": 1,
+      "unidade": "UN",
+      "aliquotasNominais": {
+        "cbs": 8.4,
+        "ibsEstadual": 0.05,
+        "ibsMunicipal": 0.05
+      }
+    }
+  ]
+}

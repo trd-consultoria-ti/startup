@@ -1,0 +1,104 @@
+basePath: /
+definitions:
+  controller.ErroResponse:
+    properties:
+      content: {}
+      mensagem:
+        example: Mensagem informativa
+        type: string
+      sucesso:
+        example: false
+        type: boolean
+    type: object
+  controller.HealthStatus:
+    properties:
+      status:
+        description: |-
+          Status é "ok" quando o serviço está de pé/pronto e "unavailable" durante
+          o graceful shutdown (aguardando as requisições em andamento).
+        example: ok
+        type: string
+    type: object
+info:
+  contact: {}
+  description: API para geração DANFSe
+  title: DANFSe
+  version: "1.0"
+paths:
+  /api/danfse:
+    post:
+      consumes:
+      - application/xml
+      description: Gera um DANFSe em PDF a partir do XML bruto da NFS-e nacional.
+        Envie o conteúdo completo do XML com Content-Type application/xml.
+      parameters:
+      - default: "0"
+        description: 'Situação da nota: 0=Válida, 1=Substituída, 2=Cancelada'
+        enum:
+        - "0"
+        - "1"
+        - "2"
+        in: query
+        name: stc
+        type: string
+      - default: true
+        description: Exibir canhoto (recibo) no PDF. Ausente ou true habilita; false
+          oculta.
+        in: query
+        name: canhoto
+        type: boolean
+      - description: XML completo da NFS-e nacional (elemento raiz NFSe). Envie o
+          XML bruto com Content-Type application/xml.
+        in: body
+        name: xml
+        required: true
+        schema:
+          type: string
+      produces:
+      - application/pdf
+      responses:
+        "200":
+          description: DANFSe em PDF
+          schema:
+            type: file
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/controller.ErroResponse'
+      summary: Gerar DANFSe em PDF com base no xml da nota.
+      tags:
+      - DANFSe
+  /health/live:
+    get:
+      description: Responde 200 com {"status":"ok"} enquanto o processo estiver de
+        pé, sem checar dependências externas nem gerar PDF.
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Serviço de pé.
+          schema:
+            $ref: '#/definitions/controller.HealthStatus'
+      summary: Consulta o liveness do serviço.
+      tags:
+      - Health
+  /health/ready:
+    get:
+      description: Responde 200 com {"status":"ok"} enquanto o serviço estiver pronto
+        para receber tráfego e 503 com {"status":"unavailable"} durante o graceful
+        shutdown.
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Serviço pronto para receber tráfego.
+          schema:
+            $ref: '#/definitions/controller.HealthStatus'
+        "503":
+          description: Serviço em graceful shutdown (não pronto).
+          schema:
+            $ref: '#/definitions/controller.HealthStatus'
+      summary: Consulta o readiness do serviço.
+      tags:
+      - Health
+swagger: "2.0"
