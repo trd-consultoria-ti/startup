@@ -98,6 +98,7 @@ A identidade visual da TRD foi concebida sob o arquétipo da **Soberania, Rigor 
     │   └── PLANEJAMENTO_TRIBUTARIO_E_FINANCEIRO.md (.docx) # Manual CFO: Simples Nacional a 6% via Fator R
     ├── 06_identidade_visual/
     │   ├── MANUAL_DE_IDENTIDADE_VISUAL_TRD.md      # Manual de Marca, Pantone, Rich Black e WCAG AAA
+    │   ├── CURATORIA_FRONTEND_DESIGN_SYSTEM_COOPERATIVO.md # Design System fiduciário B2B, Spartan/Angular 19 e Dual-Theme
     │   ├── tokens.json / tokens.css                # Design tokens oficiais W3C e variáveis CSS
     │   ├── tailwind.config.js                      # Configuração oficial para Tailwind CSS
     │   ├── LogoTRD.tsx                             # Componente oficial React / Next.js
