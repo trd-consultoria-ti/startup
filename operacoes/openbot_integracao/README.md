@@ -23,7 +23,8 @@ Acesse os blueprints oficiais de engenharia, contingência e comunicação inter
 👉 **[MATRIZ_TATICA_FALLBACK_8_NIVEIS.md](MATRIZ_TATICA_FALLBACK_8_NIVEIS.md)** · [Versão em PDF Diagramado](MATRIZ_TATICA_FALLBACK_8_NIVEIS.pdf) (Matriz Tática de Fallback em 8 Níveis para os 16 agentes OpenBot — Custo R$ 0,00 e Tolerância Zero a Ressalvas).  
 👉 **[PROTOCOLO_CANONICO_MENSAGERIA.md](PROTOCOLO_CANONICO_MENSAGERIA.md)** (Protocolo Canônico de Mensageria em 5 Blocos — Token-Optimized Dispatch com Densidade Semântica Máxima).  
 👉 **[MATRIZ_PERSONAS_SKILLS_AGENTES.md](MATRIZ_PERSONAS_SKILLS_AGENTES.md)** (Mapeamento Oficial de Personas, Metadados e Distribuição de Skills dos 16 Agentes Especialistas).  
-👉 **[TEMPLATE_NOVO_AGENTE.md](TEMPLATE_NOVO_AGENTE.md)** (Template Canônico Obrigatório para Criação e Onboarding de Novos Agentes no Padrão de 8 Níveis).
+👉 **[TEMPLATE_NOVO_AGENTE.md](TEMPLATE_NOVO_AGENTE.md)** (Template Canônico Obrigatório para Criação e Onboarding de Novos Agentes no Padrão de 8 Níveis).  
+👉 **[skills/](skills/README.md)** (Arsenal Oficial de Skills Especializadas dos 16 Agentes — 5 Pilares de Engenharia, SRE, FinOps e Governança com Carregamento Progressivo).
 
 ---
 
