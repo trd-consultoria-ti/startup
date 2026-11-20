@@ -154,8 +154,22 @@ C:\Users\Thiago Duarte\Desktop\logo TRD\
 ├── 04_templates_corporativos/
 │   ├── assinatura_email.html        # Assinatura de e-mail executiva em HTML
 │   └── papel_timbrado_template.md   # Modelo de timbrado para propostas comerciais
+├── CURATORIA_FRONTEND_DESIGN_SYSTEM_COOPERATIVO.md # Norma técnica de frontend fiduciário B2B
 └── MANUAL_DE_IDENTIDADE_VISUAL_TRD.md # Este documento de governança
 ```
+
+---
+
+## 7. DOCUMENTOS NORMATIVOS COMPLEMENTARES & ENGENHARIA DE FRONTEND
+
+Para a implementação arquitetural e operacional das diretrizes de interface em aplicações web corporativas (Angular 19, Tailwind CSS e Spartan UI), consulte o documento normativo canônico:
+
+- 📘 **[Curadoria de Arquitetura Frontend & Design System Cooperativo B2B](CURATORIA_FRONTEND_DESIGN_SYSTEM_COOPERATIVO.md)**:
+  * **Manifesto Fiduciário & Princípio Zero-Noise:** Estética cooperativa institucional inspirada em Sicredi, Sicoob, Unicred e Bloomberg Terminal.
+  * **Ficha Técnica Canônica de Tokens CSS Dual-Theme:** Especificação de variáveis para o Modo Claro ("Solidez da Terra") e Modo Escuro ("Elegância Noturna Corporativa" sem preto puro `#000000`).
+  * **Benchmarks Open-Source Homologados:** Diretrizes de integração com *Spartan UI*, *Spartan Admin*, *Tremor*, *Shadcn Fintech* e *TailAdmin*.
+  * **Arquitetura Angular 19:** Componentes Standalone, detecção OnPush, reatividade por Signals e estrita notação `tabular-nums`.
+  * **Protocolo de Auditoria e Vetos do Cético:** Regras inegociáveis anti-ruído visual, anti-cores de startup genéricas e anti-bordas infantis.
 
 ---
 
