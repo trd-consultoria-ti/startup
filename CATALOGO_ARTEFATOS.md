@@ -42,6 +42,7 @@ Para facilitar a leitura executiva, utilize as trilhas abaixo calibradas por obj
 5. **[Cases de Sucesso & Autoridade](operacoes/02_comercial_marketing/CASES_DE_SUCESSO_E_AUTORIDADE.md)**: Casos fiduciários reais de otimização SQL, modernização Java e conformidade LGPD.
 6. **[Questionário de Requisitos de Software](operacoes/02_comercial_marketing/QUESTIONARIO_REQUISITOS_SISTEMAS_SOB_MEDIDA.md)** ([`.pdf`](operacoes/02_comercial_marketing/QUESTIONARIO_REQUISITOS_SISTEMAS_SOB_MEDIDA.pdf)): Formulário técnico de elicitação.
 7. **[Guia de Elicitação com Claude](operacoes/02_comercial_marketing/GUIA_COLABORADOR_CAPTURA_E_REQUISITOS_CLAUDE.md)** ([`.pdf`](operacoes/02_comercial_marketing/GUIA_COLABORADOR_CAPTURA_E_REQUISITOS_CLAUDE.pdf)): Condução de reuniões de discovery assistidas por IA.
+8. **[Oferta Comercial & Implementação RTC (Motores RFB)](operacoes/07_tributario_rtc/MODELO_OPORTUNIDADE_SERVICO_RTC_CLIENTES.md)**: Playbook de vendas B2B e implementação da Reforma Tributária (IBS/CBS/Split Payment) com pacotes de Diagnóstico (R$ 4,8k a R$ 6,8k), Turnkey Starter (R$ 9,8k a R$ 18,5k) e Sustentação Mensal (R$ 2,8k a R$ 5,5k/mês).
 
 ---
 
@@ -74,10 +75,11 @@ Para facilitar a leitura executiva, utilize as trilhas abaixo calibradas por obj
 ### 🏛️ Trilha 4: Engenharia Tributária & Motores RTC (Receita Federal)
 *Para contadores, auditores fiscais e integradores da Reforma Tributária do Consumo.*
 
-1. **[README Oficial dos Módulos RTC](operacoes/07_tributario_rtc/README.md)**: Alinhamento estratégico da EC 132/2023 e LC 214/2025 com o negócio da TRD.
-2. **[Calculadora RTC — Simples Nacional](operacoes/07_tributario_rtc/calculadora-rtc-simples-nacional/)**: API REST oficial da RFB em Java 21 / Spring Boot 3 para cálculo de CBS e IBS no Simples.
-3. **[Calculadora RTC — Regime Regular](operacoes/07_tributario_rtc/calculadora-rtc-regime-regular/)**: API REST oficial da RFB em Java 21 / Spring Boot 3 para apuração de IBS/CBS no Lucro Presumido e Real.
-4. **[Calculadora RTC — Gerador DANFSe Nacional](operacoes/07_tributario_rtc/calculadora-rtc-gerador-danfse/)**: Microserviço oficial em Go para geração em milissegundos do PDF do DANFSe a partir do XML da NFS-e.
+1. **[Oferta Comercial & Playbook de Implementação RTC](operacoes/07_tributario_rtc/MODELO_OPORTUNIDADE_SERVICO_RTC_CLIENTES.md)**: Proposta de valor executiva, pacotes de adequação B2B (Diagnóstico, Turnkey e Sustentação) e arquitetura de integração.
+2. **[README Oficial dos Módulos RTC](operacoes/07_tributario_rtc/README.md)**: Alinhamento estratégico da EC 132/2023 e LC 214/2025 com o negócio da TRD.
+3. **[Calculadora RTC — Simples Nacional](operacoes/07_tributario_rtc/calculadora-rtc-simples-nacional/)**: API REST oficial da RFB em Java 21 / Spring Boot 3 para cálculo de CBS e IBS no Simples.
+4. **[Calculadora RTC — Regime Regular](operacoes/07_tributario_rtc/calculadora-rtc-regime-regular/)**: API REST oficial da RFB em Java 21 / Spring Boot 3 para apuração de IBS/CBS no Lucro Presumido e Real.
+5. **[Calculadora RTC — Gerador DANFSe Nacional](operacoes/07_tributario_rtc/calculadora-rtc-gerador-danfse/)**: Microserviço oficial em Go para geração em milissegundos do PDF do DANFSe a partir do XML da NFS-e.
 
 ---
 
@@ -197,6 +199,7 @@ startup/
     │
     ├── 07_tributario_rtc/                         # [Frente 7] Motores Oficiais Reforma Tributária
     │   ├── README.md                              # Vinculação estratégica dos motores com a TRD
+    │   ├── MODELO_OPORTUNIDADE_SERVICO_RTC_CLIENTES.md # Oferta comercial e playbook de implementação B2B
     │   ├── calculadora-rtc-simples-nacional/      # API REST da RFB para CBS/IBS no Simples
     │   ├── calculadora-rtc-regime-regular/        # API REST da RFB para Regime Regular
     │   └── calculadora-rtc-gerador-danfse/        # Microserviço em Go para DANFSe PDF
