@@ -123,6 +123,9 @@ Para agilizar fechamentos comerciais, assinaturas digitais (Gov.br / ZapSign / C
 - 🤝 **Acordo de Quotistas — Minuta para Futura Admissão (Vesting):** [`ACORDO_DE_SOCIOS.docx`](operacoes/01_juridico/ACORDO_DE_SOCIOS.docx)
 - 💰 **Planejamento Tributário & Financeiro:** [`PLANEJAMENTO_TRIBUTARIO_E_FINANCEIRO.docx`](operacoes/05_administracao/PLANEJAMENTO_TRIBUTARIO_E_FINANCEIRO.docx)
 - 🤖 **Matriz Tática de Fallback em 8 Níveis (OpenBot):** [`MATRIZ_TATICA_FALLBACK_8_NIVEIS.md`](operacoes/openbot_integracao/MATRIZ_TATICA_FALLBACK_8_NIVEIS.md) · [`MATRIZ_TATICA_FALLBACK_8_NIVEIS.pdf`](operacoes/openbot_integracao/MATRIZ_TATICA_FALLBACK_8_NIVEIS.pdf)
+- 📨 **Protocolo Canônico de Mensageria (Token-Optimized Dispatch):** [`PROTOCOLO_CANONICO_MENSAGERIA.md`](operacoes/openbot_integracao/PROTOCOLO_CANONICO_MENSAGERIA.md)
+- 👥 **Matriz de Personas & Skills Especializadas (16 Agentes):** [`MATRIZ_PERSONAS_SKILLS_AGENTES.md`](operacoes/openbot_integracao/MATRIZ_PERSONAS_SKILLS_AGENTES.md)
+- 🛠️ **Template Canônico para Novos Agentes OpenBot:** [`TEMPLATE_NOVO_AGENTE.md`](operacoes/openbot_integracao/TEMPLATE_NOVO_AGENTE.md)
 
 ---
 

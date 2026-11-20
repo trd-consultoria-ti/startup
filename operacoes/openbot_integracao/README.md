@@ -17,10 +17,13 @@ Este diretório contém a integração completa da TRD com a plataforma **OpenBo
 
 ---
 
-## 🚀 Arquitetura da Esteira Autônoma & Matriz de Fallback em 8 Níveis
-Acesse os blueprints oficiais de engenharia e contingência:  
+## 🚀 Blueprint de Governança, Fallback e Mensageria
+Acesse os blueprints oficiais de engenharia, contingência e comunicação inter-agentes:  
 👉 **[ARQUITETURA_ESTEIRA_AUTOMATIZADA_OPENBOT.md](ARQUITETURA_ESTEIRA_AUTOMATIZADA_OPENBOT.md)** (Os 5 Motores Autônomos de Prospecção, Fechamento Gov.br, DevOps e Go-Live).  
-👉 **[MATRIZ_TATICA_FALLBACK_8_NIVEIS.md](MATRIZ_TATICA_FALLBACK_8_NIVEIS.md)** · [Versão em PDF Diagramado](MATRIZ_TATICA_FALLBACK_8_NIVEIS.pdf) (Matriz Tática de Fallback em 8 Níveis para os 16 agentes OpenBot — Custo R$ 0,00 e Tolerância Zero a Ressalvas).
+👉 **[MATRIZ_TATICA_FALLBACK_8_NIVEIS.md](MATRIZ_TATICA_FALLBACK_8_NIVEIS.md)** · [Versão em PDF Diagramado](MATRIZ_TATICA_FALLBACK_8_NIVEIS.pdf) (Matriz Tática de Fallback em 8 Níveis para os 16 agentes OpenBot — Custo R$ 0,00 e Tolerância Zero a Ressalvas).  
+👉 **[PROTOCOLO_CANONICO_MENSAGERIA.md](PROTOCOLO_CANONICO_MENSAGERIA.md)** (Protocolo Canônico de Mensageria em 5 Blocos — Token-Optimized Dispatch com Densidade Semântica Máxima).  
+👉 **[MATRIZ_PERSONAS_SKILLS_AGENTES.md](MATRIZ_PERSONAS_SKILLS_AGENTES.md)** (Mapeamento Oficial de Personas, Metadados e Distribuição de Skills dos 16 Agentes Especialistas).  
+👉 **[TEMPLATE_NOVO_AGENTE.md](TEMPLATE_NOVO_AGENTE.md)** (Template Canônico Obrigatório para Criação e Onboarding de Novos Agentes no Padrão de 8 Níveis).
 
 ---
 
