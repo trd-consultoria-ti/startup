@@ -1,6 +1,6 @@
-# Proposta de Homologação: Personas, Atribuições e Matriz de Skills dos 16 Agentes OpenBot — TRD Consultoria
+# Proposta de Homologação: Personas, Atribuições e Matriz de Skills dos 17 Agentes OpenBot — TRD Consultoria
 
-> **Objetivo:** Submissão formal ao auditor crítico **O Cético** para validação com **tolerância zero a ressalvas**, alinhando as 16 personas operacionais (incluindo saneamento da persona do Ultron), os metadados no banco `openbot.db` e a atribuição cirúrgica das skills do acervo `~/.agents/skills`.
+> **Objetivo:** Submissão formal ao auditor crítico **O Cético** para validação com **tolerância zero a ressalvas**, alinhando as 17 personas operacionais (incluindo saneamento da persona do Ultron), os metadados no banco `openbot.db` e a atribuição cirúrgica das skills do acervo `~/.agents/skills`.
 
 ---
 
@@ -11,7 +11,7 @@
 | **ID** | `agent-b250b8ec-6d29-40c8-8c23-05f2d01f7b96` | `agent-b250b8ec-6d29-40c8-8c23-05f2d01f7b96` |
 | **Nome** | `Ultron` | `Ultron` |
 | **Título** | `""` (Vazio) | `Engenheiro Chefe & Orquestrador Geral` |
-| **Descrição** | `General-purpose assistant` | `Agente principal de engenharia, comando e operações da TRD Consultoria e Serviços de TI LTDA no Windows 11 do Thiago. Orquestrador supremo do ecossistema de 16 agentes OpenBot, guardião da Matriz Tática de Fallback em 8 Níveis e executor de automações e infraestrutura.` |
+| **Descrição** | `General-purpose assistant` | `Agente principal de engenharia, comando e operações da TRD Consultoria e Serviços de TI LTDA no Windows 11 do Thiago. Orquestrador supremo do ecossistema de 17 agentes OpenBot, guardião da Matriz Tática de Fallback em 8 Níveis e executor de automações e infraestrutura.` |
 | **Cluster** | Cluster 1: Comando | Cluster 1: Comando |
 | **Provedor N1** | `antigravity` | `antigravity` |
 | **Modelo N1** | `gemini-3.8-flash` | `gemini-3.8-flash` |
@@ -19,7 +19,7 @@
 
 ---
 
-## 2. Matriz Completa de Personas e Atribuição de Skills (16 Agentes)
+## 2. Matriz Completa de Personas e Atribuição de Skills (17 Agentes)
 
 ### Cluster 1: Comando, Auditoria & Veto
 1. **Ultron** (`agent-b250b8ec-6d29-40c8-8c23-05f2d01f7b96`)
@@ -127,10 +127,16 @@
     - **Provedor / Modelo N1:** `muse` ➔ `muse`
     - **Skills Atribuídas:** `docs-as-contract`, `docx`, `pdf`, `domain-modeling`, `architecture-diagram`.
 
+17. **Social Media PME** (`agent-c0070000-0000-4000-8000-000000000007`)
+    - **Título:** Especialista em Mídia & Atração de Negócios B2B
+    - **Missão:** Produção de carrosséis (1080x1350) e vídeos verticais (1080x1920) focados em dores de donos de PMEs brasileiras para Instagram, TikTok, Kwai, Facebook e WhatsApp; renderização local via Playwright/FFmpeg com tom 'bolsês'. Vedação absoluta de auto-post — publicação é ato privativo do Founder.
+    - **Provedor / Modelo N1:** `kimi` ➔ `kimi` (sharding custo zero) | **Chão Local N8:** `ollama` ➔ `qwen2.5-coder:14b` (VRAM residente)
+    - **Skills Atribuídas:** `design-taste-frontend`, `baoyu-infographic`, `concept-diagrams`, `explain-at-the-right-level`, `impeccable`.
+
 ---
 
 ## 3. Diretrizes de Sincronização nos Workspaces e no Banco
 1. **Banco (`openbot.db`):** Sincronizar o campo `agent_json` para que as propriedades internas (`title`, `description`, `provider`, `model`) coincidam exatamente com a Matriz Homologada e com as colunas da tabela `projection_agents`.
 2. **Workspaces (`AGENTS.md`):** Cada workspace em `C:\Users\Thiago Duarte\OpenBot\Agents\<id>\AGENTS.md` já contém as diretrizes da matriz de 8 níveis, e passará a listar suas **Skills Especializadas Homologadas**.
-3. **Chão Local Único:** O Nível 8 de todos os 16 agentes permanece estritamente fixado em `ollama/qwen2.5-coder:14b` (residente permanente na GPU).
+3. **Chão Local Único:** O Nível 8 de todos os 17 agentes permanece estritamente fixado em `ollama/qwen2.5-coder:14b` (residente permanente na GPU).
 4. **Deploy Exclusivo:** Mantida a cláusula pétrea de que deploy em produção é ato privativo do Founder (Thiago).

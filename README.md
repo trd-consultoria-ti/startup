@@ -8,9 +8,10 @@
 
 <p align="center">
   <a href="https://trdconsultoria.com.br/"><img src="https://img.shields.io/badge/Website-trdconsultoria.com.br-success?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Website"></a>
-  <a href="https://github.com/trd-consultoria-ti/startup"><img src="https://img.shields.io/badge/CNPJ-43.065.207%2F0001--57_(Ativa_desde_2021)-059669?style=for-the-badge&logo=probot&logoColor=white
+  <a href="https://github.com/trd-consultoria-ti/startup"><img src="https://img.shields.io/badge/CNPJ-43.065.207%2F0001--57_(Ativa_desde_2021)-059669?style=for-the-badge&logo=probot&logoColor=white" alt="CNPJ"></a>
   <a href="https://www.anthropic.com"><img src="https://img.shields.io/badge/Anthropic-Certified_Developer-D97706?style=for-the-badge&logo=anthropic&logoColor=white" alt="Anthropic Certified"></a>
-  <a href="https://spring.io"><img src="https://img.shields.io/badge/Java_21_%2F_Spring_Boot-6DB33F?style=for-the-badge&logo=springboot&logoColor=white" alt="Java Spring"></a>" alt="Status"></a>
+  <a href="https://spring.io"><img src="https://img.shields.io/badge/Java_21_%2F_Spring_Boot-6DB33F?style=for-the-badge&logo=springboot&logoColor=white" alt="Java Spring"></a>
+  <a href="operacoes/openbot_integracao/README.md"><img src="https://img.shields.io/badge/OpenBot-Squad_17_Agentes-6366F1?style=for-the-badge&logo=probot&logoColor=white" alt="OpenBot Squad"></a>
   <a href="operacoes/01_juridico/ACORDO_DE_SOCIOS.md"><img src="https://img.shields.io/badge/Governan%C3%A7a-LTDA_Unipessoal-0EA5E9?style=for-the-badge" alt="Governança"></a>
   <a href="operacoes/05_administracao/PLANEJAMENTO_TRIBUTARIO_E_FINANCEIRO.md"><img src="https://img.shields.io/badge/Regime-Simples_Nacional_(LC_123)-1D4ED8?style=for-the-badge" alt="Regime Tributário"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/Licen%C3%A7a-Dual_(Propriet%C3%A1ria_%2F_MIT)-1E293B?style=for-the-badge" alt="Licença"></a>
@@ -102,10 +103,19 @@ A identidade visual da TRD foi concebida sob o arquétipo da **Soberania, Rigor 
     │   ├── LogoTRD.tsx                             # Componente oficial React / Next.js
     │   ├── assinatura_email.html                   # Assinatura executiva de e-mail corporativo
     │   └── papel_timbrado_template.md              # Template de timbrado para propostas comerciais
-    └── openbot_integracao/                         # Squad de 16 agentes especialistas autônomos (OpenBot)
+    └── openbot_integracao/                         # Squad de 17 agentes especialistas autônomos (OpenBot)
         ├── README.md                               # Arquitetura de orquestração multiagente e matrizes
+        ├── BLUEPRINT_MAQUINA_EMPRESARIAL_TRD.md      # Arquitetura dos 5 motores e contratos JSON
+        ├── ARQUITETURA_MAQUINA_ESTADOS_VETO.md       # Máquina de estados de veto, LCV e circuit breaker N=2
+        ├── ESPECIFICACAO_SOCIAL_MEDIA_BRASIL.md      # Engenharia de mídia multicanal mobile para PMEs
+        ├── PARECER_CETICO_HEADCOUNT_AGENTES.md       # Parecer crítico de headcount e racionalização
+        ├── ARQUITETURA_ESTEIRA_AUTOMATIZADA_OPENBOT.md # Arquitetura da esteira automatizada de agentes
+        ├── MATRIZ_TATICA_FALLBACK_8_NIVEIS.md (.pdf) # Matriz tática de fallback de LLMs em 8 níveis
+        ├── MATRIZ_PERSONAS_SKILLS_AGENTES.md         # Matriz de personas e skills dos agentes
+        ├── PROTOCOLO_CANONICO_MENSAGERIA.md          # Protocolo canônico de mensageria token-optimized
+        ├── TEMPLATE_NOVO_AGENTE.md                   # Template canônico para novos agentes OpenBot
         ├── agentes/                                # Prompts operacionais e regras de cada agente
-        └── skills/                                 # Arsenal de 74 skills especializadas dos 16 agentes
+        └── skills/                                 # Arsenal de 72 skills especializadas dos 17 agentes
 ```
 
 ---
@@ -125,9 +135,9 @@ Para agilizar fechamentos comerciais, assinaturas digitais (Gov.br / ZapSign / C
 - 💰 **Planejamento Tributário & Financeiro:** [`PLANEJAMENTO_TRIBUTARIO_E_FINANCEIRO.docx`](operacoes/05_administracao/PLANEJAMENTO_TRIBUTARIO_E_FINANCEIRO.docx)
 - 🤖 **Matriz Tática de Fallback em 8 Níveis (OpenBot):** [`MATRIZ_TATICA_FALLBACK_8_NIVEIS.md`](operacoes/openbot_integracao/MATRIZ_TATICA_FALLBACK_8_NIVEIS.md) · [`MATRIZ_TATICA_FALLBACK_8_NIVEIS.pdf`](operacoes/openbot_integracao/MATRIZ_TATICA_FALLBACK_8_NIVEIS.pdf)
 - 📨 **Protocolo Canônico de Mensageria (Token-Optimized Dispatch):** [`PROTOCOLO_CANONICO_MENSAGERIA.md`](operacoes/openbot_integracao/PROTOCOLO_CANONICO_MENSAGERIA.md)
-- 👥 **Matriz de Personas & Skills Especializadas (16 Agentes):** [`MATRIZ_PERSONAS_SKILLS_AGENTES.md`](operacoes/openbot_integracao/MATRIZ_PERSONAS_SKILLS_AGENTES.md)
+- 👥 **Matriz de Personas & Skills Especializadas (17 Agentes):** [`MATRIZ_PERSONAS_SKILLS_AGENTES.md`](operacoes/openbot_integracao/MATRIZ_PERSONAS_SKILLS_AGENTES.md)
 - 🛠️ **Template Canônico para Novos Agentes OpenBot:** [`TEMPLATE_NOVO_AGENTE.md`](operacoes/openbot_integracao/TEMPLATE_NOVO_AGENTE.md)
-- 🧠 **Arsenal de Skills Especializadas dos 16 Agentes (Agent Skills):** [`operacoes/openbot_integracao/skills/`](operacoes/openbot_integracao/skills/README.md)
+- 🧠 **Arsenal de Skills Especializadas dos 17 Agentes (Agent Skills):** [`operacoes/openbot_integracao/skills/`](operacoes/openbot_integracao/skills/README.md)
 - 🏛️ **Blueprint da Máquina Empresarial TRD (5 Motores):** [`BLUEPRINT_MAQUINA_EMPRESARIAL_TRD.md`](operacoes/openbot_integracao/BLUEPRINT_MAQUINA_EMPRESARIAL_TRD.md)
 - 🚦 **Máquina de Estados de Veto & Circuit Breaker N=2:** [`ARQUITETURA_MAQUINA_ESTADOS_VETO.md`](operacoes/openbot_integracao/ARQUITETURA_MAQUINA_ESTADOS_VETO.md)
 - 📱 **Manual de Engenharia de Mídia & Social Media PME:** [`ESPECIFICACAO_SOCIAL_MEDIA_BRASIL.md`](operacoes/openbot_integracao/ESPECIFICACAO_SOCIAL_MEDIA_BRASIL.md)
