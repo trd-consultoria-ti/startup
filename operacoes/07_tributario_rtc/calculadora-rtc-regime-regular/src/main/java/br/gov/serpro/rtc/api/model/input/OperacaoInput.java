@@ -1,0 +1,88 @@
+/*
+ * Versão de Homologação/Testes
+ */
+package br.gov.serpro.rtc.api.model.input;
+
+import java.time.LocalDate;
+import java.time.OffsetDateTime;
+import java.util.List;
+
+import br.gov.serpro.rtc.api.model.SerializationVisibility;
+import br.gov.serpro.rtc.api.model.input.calculadora.enumeration.TipoEnteGovernamental;
+import br.gov.serpro.rtc.domain.service.exception.DataFatoGeradorNaoInformadaException;
+import io.swagger.v3.oas.annotations.media.Schema;
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.Max;
+import jakarta.validation.constraints.Min;
+import jakarta.validation.constraints.NotEmpty;
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Size;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+/**
+ * Entrada principal dos endpoints de cálculo de operações.
+ *
+ * Reúne a identificação do ROC, o fato gerador, a localização da operação, os
+ * dados de compra governamental e a lista de itens a processar.
+ */
+@Getter
+@Setter
+@NoArgsConstructor
+public final class OperacaoInput implements SerializationVisibility {
+    @NotNull
+    @Schema(name = "id", description = "Identificador do ROC", example = "6194602ea71cbf9431c236de4409d920")
+    private String id;
+
+    @NotNull
+    @Schema(name = "versao", description = "Versão do ROC", example = "0.0.1")
+    private String versao;
+    
+    @Schema(name = "dhFatoGerador", description = "Data e hora do fato gerador no formato UTC", example = "2026-01-01T09:50:05-03:00")
+    private OffsetDateTime dhFatoGerador;
+
+    /**
+     * @deprecated Este campo está obsoleto e será removido em breve. Use {@code dhFatoGerador} para informar a data e hora do fato gerador.
+     */
+    @Deprecated(forRemoval = true)
+    @Schema(name = "dataHoraEmissao", deprecated = true, description = "<u><<<<b>ATENÇÃO</b>>>><p>ESTE CAMPO SERÁ REMOVIDO EM FUTURO PRÓXIMO</p><p>Informar <b>dhFatoGerador</b></u></p><p>Data e hora de emissão do documento no formato UTC</p>", example = "2026-01-01T09:50:05-03:00")
+    private OffsetDateTime dataHoraEmissao;
+
+    @NotNull
+    @Min(0)
+    @Max(9999999)
+    @Schema(name = "municipio", description = "Código do Município (tabela IBGE)", example = "4314902")
+    private Long municipio;
+
+    @Size(min = 2, max = 2)
+    @Schema(name = "uf", description = "Sigla da UF", example = "RS")
+    private String uf;
+
+    @Min(1)
+    @Max(999)
+    @Schema(name = "tpDoc", description = "Tipo do documento fiscal eletrônico que origina a operação (código numérico do modelo, ex.: 55 = NF-e, 65 = NFC-e). Opcional: quando informado, o tipo deve existir e estar vigente na data do fato gerador, a classificação tributária dos itens deve possuir vínculo com o tipo de documento e a exigência de NCM/NBS passa a ser dirigida pela nomenclatura aplicável ao documento", example = "55")
+    private Integer tpDoc;
+    
+    @Valid
+    @Schema(name = "gCompraGov", description = "Grupo de Compra Governamental")
+    private CompraGovernamentalInput gCompraGov;
+
+    @Valid
+    @NotEmpty
+    @Schema(name = "itens", description = "Itens da Operação")
+    private List<ItemOperacaoInput> itens;
+    
+    public TipoEnteGovernamental getTpEnteGov() {
+        return gCompraGov == null ? null : gCompraGov.getTpEnteGov();
+    }
+    
+    public LocalDate getFatoGeradorAplicavel() {
+        if (dhFatoGerador != null) {
+            return dhFatoGerador.toLocalDate();
+        } else if (dataHoraEmissao != null) {
+            return dataHoraEmissao.toLocalDate();
+        }
+        throw new DataFatoGeradorNaoInformadaException();
+    }
+}

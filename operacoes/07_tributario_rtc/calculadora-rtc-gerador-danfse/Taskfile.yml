@@ -1,0 +1,82 @@
+version: '3'
+
+vars:
+  BIN_DIR: bin
+  APP_NAME: danfse-service
+  IMAGE_NAME: danfse-service
+
+dotenv:
+  - ".env"
+
+tasks:
+  default:
+    desc: Lista as tarefas disponíveis
+    cmd: task --list
+    silent: true
+
+  run:
+    desc: Inicia o servidor (variáveis de ambiente e .env opcional)
+    cmd: go run ./cmd/danfse
+
+  test:
+    desc: Roda todos os testes com race detector
+    cmd: go test -race -count=1 ./...
+
+  coverage:
+    desc: Roda os testes e gera relatórios de cobertura por função e HTML
+    cmds:
+      - go test -race -count=1 -coverprofile=coverage.out ./...
+      - go tool cover -func=coverage.out
+      - go tool cover -html=coverage.out -o coverage.html
+
+  check:
+    desc: Formata e analisa o projeto
+    cmds:
+      - go fmt ./...
+      - go vet ./...
+
+  build:
+    desc: Compila o binário para a plataforma atual
+    cmds:
+      - mkdir -p {{.BIN_DIR}}
+      - go build -ldflags="-s -w" -o {{.BIN_DIR}}/{{.APP_NAME}} ./cmd/danfse
+
+  build-wasm:
+    desc: Compila artefatos WASM e copia wasm_exec.js para bin/
+    cmds:
+      - mkdir -p {{.BIN_DIR}}
+      - GOOS=js GOARCH=wasm CGO_ENABLED=0 go build -ldflags="-s -w" -o {{.BIN_DIR}}/danfse.wasm ./cmd/danfse-wasm
+      - |
+        set -eu;
+        GOROOT=$(go env GOROOT);
+        if [ -f "$GOROOT/lib/wasm/wasm_exec.js" ]; then
+          cp "$GOROOT/lib/wasm/wasm_exec.js" {{.BIN_DIR}}/wasm_exec.js;
+        elif [ -f "$GOROOT/misc/wasm/wasm_exec.js" ]; then
+          cp "$GOROOT/misc/wasm/wasm_exec.js" {{.BIN_DIR}}/wasm_exec.js;
+        else
+          echo "ERROR: wasm_exec.js not found in GOROOT ($GOROOT)"; exit 1;
+        fi
+      - |
+        set -eu;
+        if ! test -s {{.BIN_DIR}}/danfse.wasm; then
+          echo "ERROR: bin/danfse.wasm is missing or empty"; exit 1;
+        fi;
+        if ! test -s {{.BIN_DIR}}/wasm_exec.js; then
+          echo "ERROR: bin/wasm_exec.js is missing or empty"; exit 1;
+        fi;
+        WASM_SIZE=$(wc -c < {{.BIN_DIR}}/danfse.wasm);
+        JS_SIZE=$(wc -c < {{.BIN_DIR}}/wasm_exec.js);
+        echo "WASM build OK: {{.BIN_DIR}}/danfse.wasm ($WASM_SIZE bytes), {{.BIN_DIR}}/wasm_exec.js ($JS_SIZE bytes)"
+
+  generate-localidades:
+    desc: Regenera internal/domain/localidade/localidades_generated.go a partir do catálogo JSON
+    cmds:
+      - go run ./cmd/gen-localidades -input cmd/gen-localidades/data/localidades.json -output internal/domain/localidade/localidades_generated.go
+
+  swagger:
+    desc: Regenera documentação Swagger em api/swagger/
+    cmd: swag init -g cmd/danfse/main.go -o api/swagger
+
+  docker:
+    desc: Build da imagem Docker
+    cmd: docker build -t {{.IMAGE_NAME}} .

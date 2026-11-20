@@ -1,0 +1,43 @@
+package br.gov.serpro.rtc.api.model.roc;
+
+import static com.fasterxml.jackson.annotation.JsonInclude.Include.NON_NULL;
+import static java.math.BigDecimal.ZERO;
+
+import java.math.BigDecimal;
+
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import tools.jackson.databind.annotation.JsonSerialize;
+
+import br.gov.serpro.rtc.api.model.SerializationVisibility;
+import br.gov.serpro.rtc.config.serializer.BigDecimalTDec0302_04Serializer;
+import br.gov.serpro.rtc.config.serializer.BigDecimalTDec1302Serializer;
+import io.swagger.v3.oas.annotations.media.Schema;
+import lombok.Builder;
+import lombok.extern.jackson.Jacksonized;
+import lombok.Getter;
+import lombok.Setter;
+
+/**
+ * Representa o diferimento aplicado ao tributo, com percentual e valor
+ * diferido.
+ */
+@Getter
+@Setter
+@Builder
+@Jacksonized
+@JsonInclude(NON_NULL)
+@JsonPropertyOrder({ "pDif", "vDif" })
+public class DiferimentoDomain implements SerializationVisibility {
+
+    @JsonSerialize(using = BigDecimalTDec0302_04Serializer.class)
+    @Schema(description = "Percentual do Diferimento")
+    @Builder.Default
+    private BigDecimal pDif = ZERO;
+    
+    @JsonSerialize(using = BigDecimalTDec1302Serializer.class)
+    @Schema(description = "Valor do Diferimento")
+    @Builder.Default
+    private BigDecimal vDif = ZERO;
+
+}

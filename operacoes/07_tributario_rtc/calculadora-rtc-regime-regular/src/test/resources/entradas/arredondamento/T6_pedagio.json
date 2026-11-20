@@ -1,0 +1,28 @@
+{
+  "dataHoraEmissao": "2026-10-20T10:00:00-03:00",
+  "codigoMunicipioOrigem": 3550308,
+  "ufMunicipioOrigem": "SP",
+  "cst": "000",
+  "cClassTrib": "000001",
+  "baseCalculo": 200.0,
+  "trechos": [
+    {
+      "numero": 1,
+      "municipio": 3550308,
+      "uf": "SP",
+      "extensao": 10
+    },
+    {
+      "numero": 2,
+      "municipio": 3509502,
+      "uf": "SP",
+      "extensao": 13
+    },
+    {
+      "numero": 3,
+      "municipio": 3304557,
+      "uf": "RJ",
+      "extensao": 10
+    }
+  ]
+}

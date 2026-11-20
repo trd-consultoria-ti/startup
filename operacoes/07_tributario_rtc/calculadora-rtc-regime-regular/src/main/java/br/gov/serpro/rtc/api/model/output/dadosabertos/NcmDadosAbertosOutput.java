@@ -1,0 +1,62 @@
+/*
+ * Versão de Homologação/Testes
+ */
+package br.gov.serpro.rtc.api.model.output.dadosabertos;
+
+import java.math.BigDecimal;
+
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+import br.gov.serpro.rtc.api.model.SerializationVisibility;
+import io.swagger.v3.oas.annotations.media.Schema;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.Setter;
+
+/**
+ * Saída da API de dados abertos que apresenta o detalhamento tributário
+ * completo de um código NCM. Expõe a hierarquia da classificação de mercadorias
+ * e os dados tributários associados para consulta pública das regras aplicáveis
+ * aos produtos.
+ */
+@Getter
+@Setter
+@Builder
+@JsonInclude(Include.NON_NULL)
+public class NcmDadosAbertosOutput implements SerializationVisibility {
+
+    @Schema(name = "tributadoPeloImpostoSeletivo", description = "Tributado pelo Imposto Seletivo", example = "")
+    private final boolean tributadoPeloImpostoSeletivo;
+
+    @Schema(name = "temAliquotaAdValorem", description = "Indica se a NCM possui alíquota ad valorem do Imposto Seletivo, mesmo que o valor ainda não tenha sido definido em lei", example = "")
+    private final boolean temAliquotaAdValorem;
+
+    @Schema(name = "temAliquotaAdRem", description = "Indica se a NCM possui alíquota ad rem do Imposto Seletivo, mesmo que o valor ainda não tenha sido definido em lei", example = "")
+    private final boolean temAliquotaAdRem;
+
+    @Schema(name = "aliquotaAdValorem", description = "Alíquota ad valorem do Imposto Seletivo", example = "")
+    private final BigDecimal aliquotaAdValorem;
+
+    @Schema(name = "aliquotaAdRem", description = "Alíquota ad rem do Imposto Seletivo", example = "")
+    private final BigDecimal aliquotaAdRem;
+
+    @Schema(name = "capitulo", description = "Capítulo da NCM", example = "")
+    private final String capitulo;
+
+    @Schema(name = "posicao", description = "Posição da NCM", example = "")
+    private final String posicao;
+
+    @Schema(name = "subposicao", description = "Subposição da NCM", example = "")
+    private final String subposicao;
+
+    @Schema(name = "item", description = "Item da NCM", example = "")
+    private final String item;
+
+    @Schema(name = "subitem", description = "Subitem da NCM", example = "")
+    private final String subitem;
+
+    @Schema(name = "unidade", description = "Unidade da NCM", example = "")
+    private final String unidade;
+
+}

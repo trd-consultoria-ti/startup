@@ -1,0 +1,35 @@
+{
+  "id": "zz20260000000000001119544",
+  "versao": "0.0.1",
+  "dataHoraEmissao": "2026-11-12T03:00:00Z",
+  "municipio": 4313409,
+  "uf": "RS",
+  "itens": [
+    {
+      "numero": 1,
+      "ncm": "95030010",
+      "cst": "000",
+      "baseCalculo": 2315.79,
+      "quantidade": 1,
+      "unidade": "UN",
+      "tributacaoRegular": {
+        "cst": "000",
+        "cClassTrib": "000000"
+      },
+      "cClassTrib": "000001"
+    },
+    {
+      "numero": 2,
+      "ncm": "95030010",
+      "cst": "000",
+      "baseCalculo": 690.52,
+      "quantidade": 1,
+      "unidade": "UN",
+      "tributacaoRegular": {
+        "cst": "000",
+        "cClassTrib": "000000"
+      },
+      "cClassTrib": "000001"
+    }
+  ]
+}

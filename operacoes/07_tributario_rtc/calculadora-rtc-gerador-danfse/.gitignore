@@ -1,0 +1,16 @@
+# Environment
+.env
+
+# Build artifacts
+bin/
+wasm_exec.js
+/danfse
+coverage.out
+coverage.html
+.mirror-manifest
+
+# OS / editor
+.DS_Store
+Thumbs.db
+*.swp
+*~

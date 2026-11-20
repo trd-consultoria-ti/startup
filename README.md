@@ -98,12 +98,18 @@ A identidade visual da TRD foi concebida sob o arquétipo da **Soberania, Rigor 
     │   └── PLANEJAMENTO_TRIBUTARIO_E_FINANCEIRO.md (.docx) # Manual CFO: Simples Nacional a 6% via Fator R
     ├── 06_identidade_visual/
     │   ├── MANUAL_DE_IDENTIDADE_VISUAL_TRD.md      # Manual de Marca, Pantone, Rich Black e WCAG AAA
+    │   ├── PADRAO_VISUAL_SPARTAN_SISTEMAS_TRD.md   # [NOVO] Padrão Visual Oficial Spartan UI para todos os sistemas TRD
     │   ├── CURATORIA_FRONTEND_DESIGN_SYSTEM_COOPERATIVO.md # Design System fiduciário B2B, Spartan/Angular 19 e Dual-Theme
     │   ├── tokens.json / tokens.css                # Design tokens oficiais W3C e variáveis CSS
     │   ├── tailwind.config.js                      # Configuração oficial para Tailwind CSS
     │   ├── LogoTRD.tsx                             # Componente oficial React / Next.js
     │   ├── assinatura_email.html                   # Assinatura executiva de e-mail corporativo
     │   └── papel_timbrado_template.md              # Template de timbrado para propostas comerciais
+    ├── 07_tributario_rtc/                          # [NOVO] Motores Oficiais da Reforma Tributária do Consumo (Receita Federal)
+    │   ├── README.md                               # Matriz estratégica de vinculação com Fator R e FinOps da TRD
+    │   ├── calculadora-rtc-simples-nacional/       # API REST oficial da RFB para CBS/IBS no Simples Nacional (LC 214/2025)
+    │   ├── calculadora-rtc-regime-regular/         # API REST oficial da RFB para Regime Regular (Lucro Presumido e Real)
+    │   └── calculadora-rtc-gerador-danfse/         # Microserviço em Go da RFB para geração de DANFSe PDF a partir do XML
     └── openbot_integracao/                         # Squad de 17 agentes especialistas autônomos (OpenBot)
         ├── README.md                               # Arquitetura de orquestração multiagente e matrizes
         ├── BLUEPRINT_MAQUINA_EMPRESARIAL_TRD.md      # Arquitetura dos 5 motores e contratos JSON

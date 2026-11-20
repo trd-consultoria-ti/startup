@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpeProc versao="1.00" ipTransmissor="192.0.2.1" nPortaCon="17588" dhConexao="2025-09-09T20:07:22-03:00" xmlns="http://www.portalfiscal.inf.br/bpe" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<BPe xmlns="http://www.portalfiscal.inf.br/bpe">
+		<infBPe Id="BPe35250911111111000111630240000006691214111502" versao="1.00">
+			<ide>
+				<cUF>35</cUF>
+				<tpAmb>2</tpAmb>
+				<mod>63</mod>
+				<serie>24</serie>
+				<nBP>669</nBP>
+				<cBP>21411150</cBP>
+				<cDV>2</cDV>
+				<modal>1</modal>
+				<dhEmi>2026-03-29T20:07:09-03:00</dhEmi>
+				<tpEmis>1</tpEmis>
+				<verProc>100</verProc>
+				<tpBPe>0</tpBPe>
+				<indPres>3</indPres>
+				<UFIni>SP</UFIni>
+				<cMunIni>3534401</cMunIni>
+				<UFFim>PR</UFFim>
+				<cMunFim>4106902</cMunFim>
+				<gCompraGov>
+					<tpEnteGov>1</tpEnteGov>
+					<pRedutor>1.50</pRedutor>
+					<tpOperGov>1</tpOperGov>
+				</gCompraGov>
+			</ide>
+			<emit>
+				<CNPJ>11111111000111</CNPJ>
+				<IE>111111111111</IE>
+				<xNome>EMPRESA EMITENTE EXEMPLO LTDA</xNome>
+				<xFant>EMPRESA EMITENTE EXEMPLO</xFant>
+				<IM>ISENTO</IM>
+				<CNAE>1234567</CNAE>
+				<CRT>3</CRT>
+				<enderEmit>
+					<xLgr>RUA EXEMPLO</xLgr>
+					<nro>100</nro>
+					<xCpl>SALA 1</xCpl>
+					<xBairro>CENTRO</xBairro>
+					<cMun>3550308</cMun>
+					<xMun>SAO PAULO</xMun>
+					<CEP>00000000</CEP>
+					<UF>SP</UF>
+					<fone>1100000000</fone>
+				</enderEmit>
+				<TAR>12345</TAR>
+			</emit>
+			<comp>
+				<xNome>COMPRADOR EXEMPLO</xNome>
+				<CPF>22222222222</CPF>
+				<enderComp>
+					<xLgr>RUA EXEMPLO</xLgr>
+					<nro>200</nro>
+					<xCpl>SALA 2</xCpl>
+					<xBairro>CENTRO</xBairro>
+					<cMun>4314902</cMun>
+					<xMun>Porto Alegre</xMun>
+					<CEP>00000000</CEP>
+					<UF>RS</UF>
+					<cPais>1058</cPais>
+					<xPais>BRASIL</xPais>
+					<fone>1100000000</fone>
+					<email>comprador@exemplo.com.br</email>
+				</enderComp>
+			</comp>
+			<infPassagem>
+				<cLocOrig>3534401</cLocOrig>
+				<xLocOrig>OSASCO</xLocOrig>
+				<cLocDest>4106902</cLocDest>
+				<xLocDest>CURITIBA</xLocDest>
+				<dhEmb>2026-03-29T20:20:00-03:00</dhEmb>
+				<dhValidade>2026-03-29T20:07:09-03:00</dhValidade>
+				<infPassageiro>
+					<xNome>PASSAGEIRO EXEMPLO</xNome>
+					<CPF>33333333333</CPF>
+					<tpDoc>5</tpDoc>
+					<nDoc>33333333333</nDoc>
+					<dNasc>1980-01-01</dNasc>
+					<email>passageiro@exemplo.com.br</email>
+				</infPassageiro>
+			</infPassagem>
+			<infViagem>
+				<cPercurso>1</cPercurso>
+				<xPercurso>CURITIBA X SAO PAULO</xPercurso>
+				<tpViagem>00</tpViagem>
+				<tpServ>6</tpServ>
+				<tpAcomodacao>1</tpAcomodacao>
+				<tpTrecho>1</tpTrecho>
+				<dhViagem>2026-03-29T20:20:00-03:00</dhViagem>
+				<prefixo>23358</prefixo>
+				<poltrona>19</poltrona>
+			</infViagem>
+			<infValorBPe>
+				<vBP>90.00</vBP>
+				<vDesconto>0.00</vDesconto>
+				<vPgto>90.00</vPgto>
+				<vTroco>0.00</vTroco>
+				<Comp>
+					<tpComp>01</tpComp>
+					<vComp>90.00</vComp>
+				</Comp>
+			</infValorBPe>
+			<imp>
+				<ICMS>
+					<ICMS20>
+						<CST>20</CST>
+						<pRedBC>66.66</pRedBC>
+						<vBC>30.01</vBC>
+						<pICMS>0.01</pICMS>
+						<vICMS>0.00</vICMS>
+					</ICMS20>
+				</ICMS>
+				<IBSCBS>
+					<CST>400</CST>
+					<cClassTrib>400001</cClassTrib>
+					<gIBSCBS>
+						<vBC>90.00</vBC>
+						<gIBSUF>
+							<pIBSUF>0.10</pIBSUF>
+							<vIBSUF>0.09</vIBSUF>
+						</gIBSUF>
+						<gIBSMun>
+							<pIBSMun>0.00</pIBSMun>
+							<vIBSMun>0.00</vIBSMun>
+						</gIBSMun>
+						<vIBS>0.09</vIBS>
+						<gCBS>
+							<pCBS>0.90</pCBS>
+							<vCBS>35</vCBS>
+						</gCBS>
+					</gIBSCBS>
+				</IBSCBS>
+			</imp>
+			<pag>
+				<tPag>01</tPag>
+				<vPag>90.00</vPag>
+			</pag>
+			<autXML>
+				<CPF>44444444444</CPF>
+			</autXML>
+			<infAdic>
+				<infCpl>ICMS:R$ 0,00 (0,01%) OUTROS TRIB:R$ 0,00 (0,00%)</infCpl>
+			</infAdic>
+			<infRespTec>
+				<CNPJ>44444444000144</CNPJ>
+				<xContato>RESPONSAVEL TECNICO EXEMPLO</xContato>
+				<email>suporte@exemplo.com.br</email>
+				<fone>1100000000</fone>
+			</infRespTec>
+		</infBPe>
+		<infBPeSupl>
+			<qrCodBPe>https://homologacao.bpe.fazenda.sp.gov.br/BPe/qrcode?chBPe=35250911111111000111630240000006691214111502&amp;tpAmb=2</qrCodBPe>
+			<boardPassBPe>352509111111110001116302400000066912141115020000006690000000233582025090920200001000000900000000000319882663273534401000184841069020000069100000020250909-202000-00-1-000000023358</boardPassBPe>
+		</infBPeSupl>
+		<Signature xmlns="http://www.w3.org/2000/09/xmldsig#">
+			<SignedInfo>
+				<CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/>
+				<SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/>
+				<Reference URI="#BPe35250911111111000111630240000006691214111502">
+					<Transforms>
+						<Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/>
+						<Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/>
+					</Transforms>
+					<DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+					<DigestValue>Fbkd4Ouj91y7nF2YruGJbW0iZSk=</DigestValue>
+				</Reference>
+			</SignedInfo>
+			<SignatureValue>AAAA</SignatureValue>
+			<KeyInfo>
+				<X509Data>
+					<X509Certificate>AAAA</X509Certificate>
+				</X509Data>
+			</KeyInfo>
+		</Signature>
+	</BPe>
+	<protBPe versao="1.00">
+		<infProt>
+			<tpAmb>2</tpAmb>
+			<verAplic>SP-BPe-2025-09-09-1</verAplic>
+			<chBPe>35250911111111000111630240000006691214111502</chBPe>
+			<dhRecbto>2025-09-09T20:07:22-03:00</dhRecbto>
+			<nProt>135250001969424</nProt>
+			<digVal>Fbkd4Ouj91y7nF2YruGJbW0iZSk=</digVal>
+			<cStat>100</cStat>
+			<xMotivo>Autorizado o uso do BP-e.</xMotivo>
+		</infProt>
+	</protBPe>
+</bpeProc>

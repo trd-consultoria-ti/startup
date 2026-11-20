@@ -1,0 +1,160 @@
+application:
+  db:
+    filename: calculadora-pro.db
+
+spring:
+  application:
+    name: api-simples-nacional
+  config:
+    activate:
+      on-profile: testes
+  datasource:
+    url: jdbc:sqlite:file:./calculadora/db/${application.db.filename}?mode=ro&date_class=TEXT&date_string_format=yyyy-MM-dd
+    username: sa
+    password:
+    driverClassName: org.sqlite.JDBC
+  jpa:
+    database-platform: org.hibernate.community.dialect.SQLiteDialect
+    defer-datasource-initialization: true
+    open-in-view: false
+    show-sql: false
+    properties:
+      hibernate:
+        "[format_sql]": false
+  sql:
+    init:
+      mode: embedded
+  task:
+    execution:
+      pool:
+        max-size: 16
+        queue-capacity: 100
+        keep-alive: "10s"
+  devtools:
+    add-properties: false
+  jackson:
+    # Mantém no Jackson 3 os padrões do Jackson 2 (ordem das propriedades, enums, nulos em
+    # primitivos etc.), para o JSON das respostas não mudar com o Spring Boot 4.
+    use-jackson2-defaults: true
+    date-format: yyyy-MM-dd'T'HH:mm:ssXXX       # Formato de data/hora padrão (ISO 8601 com offset)
+    datatype:
+      datetime: # No Jackson 3 as opções de data e hora ficam em spring.jackson.datatype.datetime
+        write-dates-as-timestamps: false          # Escrever datas como strings ao invés de timestamps
+        adjust-dates-to-context-time-zone: false  # Ajustar datas para o timezone configurado
+    deserialization:
+      fail-on-unknown-properties: false         # Falhar se propriedade desconhecida for encontrada
+    property-naming-strategy: LOWER_CAMEL_CASE  # Estratégia de nomenclatura de propriedades
+    default-property-inclusion: NON_NULL
+  http:
+    codecs:
+      max-in-memory-size: 500KB
+
+logging:
+  level:
+    root: INFO
+    br:
+      gov:
+        serpro:
+          rtc: INFO
+
+server:
+  # Porta 0 = aleatória: os testes usam MockMvc (não abrem porta), mas se algum teste
+  # futuro subir servidor real, nunca disputa porta com os backends locais (8080/8082).
+  port: 0
+  servlet:
+    context-path: /api
+  tomcat:
+    use-relative-redirects: true
+    threads:
+      max: 250
+  compression:
+    enabled: true
+    mime-types: application/json
+    min-response-size: 1024
+
+springdoc:
+  version: '@springdoc.version@'
+  api-docs:
+    path: /api-docs
+    version: openapi-3-1
+  swagger-ui:
+    layout: BaseLayout
+    display-request-duration: true
+    groups-order: DESC
+    operationsSorter: method
+    disable-swagger-default-url: true
+    use-root-path: true
+  show-actuator: false
+  cache:
+    disabled: true
+
+cache:
+  specs:
+    - name: VersaoBaseDadosService.getUltimaVersao
+      expireAfterAccess: "P30D"
+      initialCapacity: 1
+      maximumSize: 1
+    - name: NomenclaturaService.determinarNomenclatura
+      expireAfterAccess: "P1D"
+      initialCapacity: 64
+      maximumSize: 4000
+    - name: TipoDfeClassificacaoService.buscar
+      expireAfterAccess: "P1D"
+      initialCapacity: 32
+      maximumSize: 1000
+    - name: TipoDfeClassificacaoRepository.buscar
+      expireAfterAccess: "P1D"
+      initialCapacity: 32
+      maximumSize: 1000
+    - name: NcmAplicavelService.validarNcmAplicavel
+      expireAfterAccess: "P1D"
+      initialCapacity: 128
+      maximumSize: 10000
+    - name: NbsAplicavelService.validarNbsAplicavel
+      expireAfterAccess: "P1D"
+      initialCapacity: 128
+      maximumSize: 10000
+    - name: NcmAplicavelRepository.temNcmAplicavel
+      expireAfterAccess: "P1D"
+      initialCapacity: 64
+      maximumSize: 4000
+    - name: NcmAplicavelRepository.temExcecaoNcmAplicavel
+      expireAfterAccess: "P1D"
+      initialCapacity: 64
+      maximumSize: 4000
+    - name: NcmAplicavelRepository.temNcmAplicavelSemExcecao
+      expireAfterAccess: "P1D"
+      initialCapacity: 64
+      maximumSize: 4000
+    - name: NcmAplicavelRepository.tem
+      expireAfterAccess: "P1D"
+      initialCapacity: 32
+      maximumSize: 1000
+    - name: NbsAplicavelRepository.temNbsAplicavel
+      expireAfterAccess: "P1D"
+      initialCapacity: 64
+      maximumSize: 4000
+    - name: NbsAplicavelRepository.temExcecaoNbsAplicavel
+      expireAfterAccess: "P1D"
+      initialCapacity: 64
+      maximumSize: 4000
+    - name: NbsAplicavelRepository.temNbsAplicavelSemExcecao
+      expireAfterAccess: "P1D"
+      initialCapacity: 64
+      maximumSize: 4000
+    - name: NbsAplicavelRepository.tem
+      expireAfterAccess: "P1D"
+      initialCapacity: 32
+      maximumSize: 1000
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health, prometheus
+      base-path: "/"
+      path-mapping:
+        prometheus: "metrics"
+
+versao:
+  ambiente: testes

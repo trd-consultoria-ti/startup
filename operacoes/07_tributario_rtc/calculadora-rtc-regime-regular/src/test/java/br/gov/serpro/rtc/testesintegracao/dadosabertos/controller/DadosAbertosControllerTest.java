@@ -1,0 +1,338 @@
+package br.gov.serpro.rtc.testesintegracao.dadosabertos.controller;
+
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
+
+import java.util.stream.Stream;
+
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.Arguments;
+import org.junit.jupiter.params.provider.MethodSource;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.webmvc.test.autoconfigure.AutoConfigureMockMvc;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.ActiveProfiles;
+import org.springframework.test.context.TestPropertySource;
+import org.springframework.test.web.servlet.MockMvc;
+
+@SpringBootTest
+@AutoConfigureMockMvc
+@TestPropertySource(locations = "classpath:application-testes.yml",
+        properties = "info.app.version=feature-calculo-SNAPSHOT-b7bb06d6")
+@ActiveProfiles("testes")
+class DadosAbertosControllerTest {
+
+    private static final String DATA = "2027-01-01";
+    // Alíquotas de referência/padrão só existem em lei até 2026; a partir de
+    // 2027 a consulta de alíquotas é criticada.
+    private static final String DATA_COM_ALIQUOTAS_EM_LEI = "2026-01-01";
+    private static final String NCM = "09024000";
+    private static final String NBS = "102020000";
+    private static final String SIGLA_UF = "AC";
+    private static final String CODIGO_UF = "12";
+    private static final String CODIGO_MUNICIPIO = "1200013";
+    private static final String CST = "000";
+    private static final String C_CLASS_TRIB = "000001";
+    private static final String ID_SITUACAO_TRIBUTARIA = "1";
+    private static final String SIGLA_DFE = "NFE";
+
+    @Autowired
+    private MockMvc mockMvc;
+
+    @Test
+    void consultarUfs() throws Exception {
+        mockMvc.perform(get("/calculadora/dados-abertos/ufs"))
+            .andExpect(status().isOk());
+    }
+
+    @Test
+    void consultarMunicipiosPorSiglaUf() throws Exception {
+        mockMvc.perform(get("/calculadora/dados-abertos/ufs/municipios")
+                .param("siglaUf", SIGLA_UF))
+            .andExpect(status().isOk());
+    }
+
+    @Test
+    void consultarSituacoesTributariasCbsIbs() throws Exception {
+        mockMvc.perform(get("/calculadora/dados-abertos/situacoes-tributarias/cbs-ibs")
+                .param("data", DATA))
+            .andExpect(status().isOk());
+    }
+
+    @Test
+    void consultarClassificacoesTributariasPorIdSituacaoTributaria() throws Exception {
+        mockMvc.perform(get("/calculadora/dados-abertos/classificacoes-tributarias/" + ID_SITUACAO_TRIBUTARIA)
+                .param("data", DATA))
+            .andExpect(status().isOk());
+    }
+
+    @Test
+    void listarPorCstImpostoSeletivo() throws Exception {
+        mockMvc.perform(get("/calculadora/dados-abertos/classificacoes-tributarias/imposto-seletivo/" + CST)
+                .param("data", DATA))
+            .andExpect(status().isOk());
+    }
+
+    @Test
+    void listarPorCstCbsIbs() throws Exception {
+        mockMvc.perform(get("/calculadora/dados-abertos/classificacoes-tributarias/cbs-ibs/" + CST)
+                .param("data", DATA))
+            .andExpect(status().isOk());
+    }
+
+    @Test
+    void consultarClassificacoesTributariasCbsIbs() throws Exception {
+        mockMvc.perform(get("/calculadora/dados-abertos/classificacoes-tributarias/cbs-ibs")
+                .param("data", DATA))
+            .andExpect(status().isOk());
+    }
+
+    @Test
+    void consultarClassificacoesTributariasImpostoSeletivo() throws Exception {
+        mockMvc.perform(get("/calculadora/dados-abertos/classificacoes-tributarias/imposto-seletivo")
+                .param("data", DATA))
+            .andExpect(status().isOk());
+    }
+
+    @Test
+    void listarClassificacoesTributariasPorNbs() throws Exception {
+        mockMvc.perform(get("/calculadora/dados-abertos/classificacoes-tributarias/nbs")
+                .param("nbs", NBS)
+                .param("data", DATA))
+            .andExpect(status().isOk());
+    }
+
+    @Test
+    void consultarSituacoesTributariasImpostoSeletivo() throws Exception {
+        mockMvc.perform(get("/calculadora/dados-abertos/situacoes-tributarias/imposto-seletivo")
+                .param("data", DATA))
+            .andExpect(status().isOk());
+    }
+
+    @Test
+    void consultarNcm() throws Exception {
+        mockMvc.perform(get("/calculadora/dados-abertos/ncm")
+                .param("ncm", NCM)
+                .param("data", DATA))
+            .andExpect(status().isOk());
+    }
+
+    @Test
+    void consultarNbs() throws Exception {
+        mockMvc.perform(get("/calculadora/dados-abertos/nbs")
+                .param("nbs", NBS)
+                .param("data", DATA))
+            .andExpect(status().isOk());
+    }
+
+    @Test
+    void listarNbs() throws Exception {
+        mockMvc.perform(get("/calculadora/dados-abertos/nbs/lista")
+                .param("data", DATA))
+            .andExpect(status().isOk());
+    }
+
+    @Test
+    void listarNbsAplicaveisPorClassificacao() throws Exception {
+        mockMvc.perform(get("/calculadora/dados-abertos/nbs-aplicaveis")
+                .param("cClassTrib", C_CLASS_TRIB)
+                .param("data", DATA))
+            .andExpect(status().isOk());
+    }
+
+    @Test
+    void consultarFundamentacoesLegais() throws Exception {
+        mockMvc.perform(get("/calculadora/dados-abertos/fundamentacoes-legais")
+                .param("data", DATA))
+            .andExpect(status().isOk());
+    }
+
+    @Test
+    void consultarAliquotaUniao() throws Exception {
+        mockMvc.perform(get("/calculadora/dados-abertos/aliquota-uniao")
+                .param("data", DATA_COM_ALIQUOTAS_EM_LEI))
+            .andExpect(status().isOk());
+    }
+
+    @Test
+    void consultarAliquotaUf() throws Exception {
+        mockMvc.perform(get("/calculadora/dados-abertos/aliquota-uf")
+                .param("codigoUf", CODIGO_UF)
+                .param("data", DATA_COM_ALIQUOTAS_EM_LEI))
+            .andExpect(status().isOk());
+    }
+
+    @Test
+    void consultarAliquotaMunicipio() throws Exception {
+        mockMvc.perform(get("/calculadora/dados-abertos/aliquota-municipio")
+                .param("codigoMunicipio", CODIGO_MUNICIPIO)
+                .param("data", DATA_COM_ALIQUOTAS_EM_LEI))
+            .andExpect(status().isOk());
+    }
+
+    @Test
+    void consultarAliquotaUniaoSemAliquotaDefinidaEmLei() throws Exception {
+        // A partir de 2027 as alíquotas de referência não existem em lei e não
+        // são mais divulgadas pela calculadora.
+        mockMvc.perform(get("/calculadora/dados-abertos/aliquota-uniao")
+                .param("data", DATA))
+            .andExpect(status().isNotFound());
+    }
+
+    @Test
+    void consultarAliquotaUfSemAliquotaDefinidaEmLei() throws Exception {
+        mockMvc.perform(get("/calculadora/dados-abertos/aliquota-uf")
+                .param("codigoUf", CODIGO_UF)
+                .param("data", DATA))
+            .andExpect(status().isNotFound());
+    }
+
+    @Test
+    void consultarAliquotaMunicipioSemAliquotaDefinidaEmLei() throws Exception {
+        mockMvc.perform(get("/calculadora/dados-abertos/aliquota-municipio")
+                .param("codigoMunicipio", CODIGO_MUNICIPIO)
+                .param("data", DATA))
+            .andExpect(status().isNotFound());
+    }
+
+    @Test
+    void consultarValidadeDfeClassificacaoTributaria() throws Exception {
+        mockMvc.perform(get("/calculadora/dados-abertos/classificacoes-tributarias/cbs-ibs/"
+                + SIGLA_DFE + "/" + C_CLASS_TRIB)
+                .param("data", DATA))
+            .andExpect(status().isOk());
+    }
+    
+    @ParameterizedTest(name = "cClassTrib = {0}, exigeGrupoIbsCbs = {1}")
+	@MethodSource("consultarValidadeDfeClassificacaoTributaria_exigeGrupoIbsCbs")
+    void quando_consultarValidadeDfeClassificacaoTributariaExigirGrupoIbcCbs(String cClassTrib, boolean resultado) throws Exception {
+        mockMvc.perform(get("/calculadora/dados-abertos/classificacoes-tributarias/cbs-ibs/"
+                + SIGLA_DFE + "/" + cClassTrib)
+                .param("data", DATA))
+			.andExpect(status().isOk())
+			.andExpect(jsonPath("$.exigeGrupoIbsCbs").value(resultado));
+	}
+
+    @Test
+    void consultarClassificacaoTributariaCbsIbsPorCodigoComSucesso() throws Exception {
+        mockMvc.perform(get("/calculadora/dados-abertos/classificacoes-tributarias/cbs-ibs/class-trib/" + C_CLASS_TRIB)
+                .param("data", DATA))
+            .andExpect(status().isOk());
+    }
+
+    @Test
+    void consultarClassificacaoTributariaCbsIbsPorCodigoNaoEncontrado() throws Exception {
+        mockMvc.perform(get("/calculadora/dados-abertos/classificacoes-tributarias/cbs-ibs/class-trib/999999")
+                .param("data", DATA))
+            .andExpect(status().isNotFound());
+    }
+
+    @Test
+    void consultarClassificacaoTributariaCbsIbsPorCodigoValidaEstrutura() throws Exception {
+        mockMvc.perform(get("/calculadora/dados-abertos/classificacoes-tributarias/cbs-ibs/class-trib/" + C_CLASS_TRIB)
+                            .param("data", DATA))
+            .andExpect(status().isOk());
+    }
+
+    @Test
+    void consultarClassificacaoTributariaIsPorCodigoComSucesso() throws Exception {
+        mockMvc.perform(get("/calculadora/dados-abertos/classificacoes-tributarias/is/class-trib/" + C_CLASS_TRIB)
+                .param("data", DATA))
+            .andExpect(status().isOk());
+    }
+
+    @Test
+    void consultarClassificacaoTributariaIsPorCodigoNaoEncontrado() throws Exception {
+        mockMvc.perform(get("/calculadora/dados-abertos/classificacoes-tributarias/is/class-trib/999999")
+                .param("data", DATA))
+            .andExpect(status().isNotFound());
+    }
+
+    @Test
+    void consultarCstsComClassificacoesCbsIbsPorSiglaDfe() throws Exception {
+        mockMvc.perform(get("/calculadora/dados-abertos/situacoes-tributarias/cbs-ibs")
+                .param("siglaDfe", SIGLA_DFE)
+                .param("data", DATA))
+            .andExpect(status().isOk());
+    }
+
+    @Test
+    void consultarCstsComClassificacoesIsPorSiglaDfe() throws Exception {
+        mockMvc.perform(get("/calculadora/dados-abertos/situacoes-tributarias/is")
+                .param("siglaDfe", SIGLA_DFE)
+                .param("data", DATA))
+            .andExpect(status().isOk());
+    }
+
+    @Test
+    void consultarCstsComClassificacoesIsSemSiglaDfe() throws Exception {
+        mockMvc.perform(get("/calculadora/dados-abertos/situacoes-tributarias/is")
+                .param("data", DATA))
+            .andExpect(status().isOk());
+    }
+
+    @Test
+    void consultarVersao() throws Exception {
+        mockMvc.perform(get("/calculadora/dados-abertos/versao"))
+            .andExpect(status().isOk())
+            .andExpect(jsonPath("$.versaoApp").value("SNAPSHOT-b7bb06d6"))
+            .andExpect(jsonPath("$.descricaoVersaoApp").value("feature-calculo-SNAPSHOT-b7bb06d6"));
+    }
+
+    @Test
+    void consultarRedutoresCompraGovernamental() throws Exception {
+        mockMvc.perform(get("/calculadora/dados-abertos/redutores-compra-governamental"))
+            .andExpect(status().isOk());
+    }
+
+    @Test
+    void consultarTransferenciasCBS() throws Exception {
+        mockMvc.perform(get("/calculadora/dados-abertos/transferencias-cbs"))
+            .andExpect(status().isOk());
+    }
+
+    @Test
+    void consultarTransferenciasIBS() throws Exception {
+        mockMvc.perform(get("/calculadora/dados-abertos/transferencias-ibs"))
+            .andExpect(status().isOk());
+    }
+    
+	private static Stream<Arguments> consultarValidadeDfeClassificacaoTributaria_exigeGrupoIbsCbs() {
+		return Stream.of(
+				Arguments.of("000001", true),
+				Arguments.of("010001", true),
+				Arguments.of("011001", true),
+				Arguments.of("200001", true),
+				Arguments.of("221001", true),
+				Arguments.of("222001", true),
+				Arguments.of("400001", false),
+				Arguments.of("410001", false),
+				Arguments.of("510001", true),
+				Arguments.of("515001", true),
+				Arguments.of("550001", true),
+				Arguments.of("620001", false),
+				Arguments.of("800001", false),
+				Arguments.of("810001", false),
+				Arguments.of("811001", false),
+				Arguments.of("820001", false),
+				Arguments.of("830001", true));
+	}
+
+    @Test
+    void consultarNomenclatura() throws Exception {
+        mockMvc.perform(get("/calculadora/dados-abertos/nomenclatura/"
+                + SIGLA_DFE + "/" + C_CLASS_TRIB)
+                .param("data", DATA))
+            .andExpect(status().isOk());
+    }
+
+    @Test
+    void consultarAtoresAgrupados() throws Exception {
+        mockMvc.perform(get("/calculadora/dados-abertos/ator/grupos")
+                .param("data", DATA))
+            .andExpect(status().isOk());
+    }
+
+}

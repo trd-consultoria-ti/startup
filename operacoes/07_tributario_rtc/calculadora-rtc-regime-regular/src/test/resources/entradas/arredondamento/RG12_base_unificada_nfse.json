@@ -1,0 +1,16 @@
+{
+  "anoFatoGerador": 2026,
+  "opSimpNac": "1",
+  "situacao": "locacao9903",
+  "vServ": 1000.0,
+  "vDescIncond": 0.0,
+  "vISSQN": 0.0,
+  "vPIS": 0.0,
+  "vCOFINS": 0.0,
+  "locacao": {
+    "pCopropriedade": 33.33,
+    "vTotOper": 1000.05,
+    "vDescIncondTot": 0.0,
+    "somaAjustesLocImoveis": 0.0
+  }
+}
