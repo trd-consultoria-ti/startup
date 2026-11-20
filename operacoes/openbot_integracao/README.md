@@ -24,6 +24,10 @@ Acesse os blueprints oficiais de engenharia, contingência e comunicação inter
 👉 **[PROTOCOLO_CANONICO_MENSAGERIA.md](PROTOCOLO_CANONICO_MENSAGERIA.md)** (Protocolo Canônico de Mensageria em 5 Blocos — Token-Optimized Dispatch com Densidade Semântica Máxima).  
 👉 **[MATRIZ_PERSONAS_SKILLS_AGENTES.md](MATRIZ_PERSONAS_SKILLS_AGENTES.md)** (Mapeamento Oficial de Personas, Metadados e Distribuição de Skills dos 16 Agentes Especialistas).  
 👉 **[TEMPLATE_NOVO_AGENTE.md](TEMPLATE_NOVO_AGENTE.md)** (Template Canônico Obrigatório para Criação e Onboarding de Novos Agentes no Padrão de 8 Níveis).  
+👉 **[BLUEPRINT_MAQUINA_EMPRESARIAL_TRD.md](BLUEPRINT_MAQUINA_EMPRESARIAL_TRD.md)** (A Máquina Empresarial Autônoma da TRD — Integração Holística dos 5 Motores de Negócio de Ponta a Ponta).  
+👉 **[ARQUITETURA_MAQUINA_ESTADOS_VETO.md](ARQUITETURA_MAQUINA_ESTADOS_VETO.md)** (Máquina de Estados de Veto do Cético, Laudo Canônico LCV e Circuit Breaker N=2 Stop-the-Line).  
+👉 **[ESPECIFICACAO_SOCIAL_MEDIA_BRASIL.md](ESPECIFICACAO_SOCIAL_MEDIA_BRASIL.md)** (Manual de Engenharia de Mídia e Vídeo para PMEs — Instagram, TikTok, Kwai, Facebook e WhatsApp).  
+👉 **[PARECER_CETICO_HEADCOUNT_AGENTES.md](PARECER_CETICO_HEADCOUNT_AGENTES.md)** (Auditoria Adversarial de Headcount e Otimização do Quadro de Agentes da TRD).  
 👉 **[skills/](skills/README.md)** (Arsenal Oficial de Skills Especializadas dos 16 Agentes — 5 Pilares de Engenharia, SRE, FinOps e Governança com Carregamento Progressivo).
 
 ---

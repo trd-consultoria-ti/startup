@@ -128,6 +128,10 @@ Para agilizar fechamentos comerciais, assinaturas digitais (Gov.br / ZapSign / C
 - 👥 **Matriz de Personas & Skills Especializadas (16 Agentes):** [`MATRIZ_PERSONAS_SKILLS_AGENTES.md`](operacoes/openbot_integracao/MATRIZ_PERSONAS_SKILLS_AGENTES.md)
 - 🛠️ **Template Canônico para Novos Agentes OpenBot:** [`TEMPLATE_NOVO_AGENTE.md`](operacoes/openbot_integracao/TEMPLATE_NOVO_AGENTE.md)
 - 🧠 **Arsenal de Skills Especializadas dos 16 Agentes (Agent Skills):** [`operacoes/openbot_integracao/skills/`](operacoes/openbot_integracao/skills/README.md)
+- 🏛️ **Blueprint da Máquina Empresarial TRD (5 Motores):** [`BLUEPRINT_MAQUINA_EMPRESARIAL_TRD.md`](operacoes/openbot_integracao/BLUEPRINT_MAQUINA_EMPRESARIAL_TRD.md)
+- 🚦 **Máquina de Estados de Veto & Circuit Breaker N=2:** [`ARQUITETURA_MAQUINA_ESTADOS_VETO.md`](operacoes/openbot_integracao/ARQUITETURA_MAQUINA_ESTADOS_VETO.md)
+- 📱 **Manual de Engenharia de Mídia & Social Media PME:** [`ESPECIFICACAO_SOCIAL_MEDIA_BRASIL.md`](operacoes/openbot_integracao/ESPECIFICACAO_SOCIAL_MEDIA_BRASIL.md)
+- ⚖️ **Parecer Crítico de Headcount & Otimização de Agentes:** [`PARECER_CETICO_HEADCOUNT_AGENTES.md`](operacoes/openbot_integracao/PARECER_CETICO_HEADCOUNT_AGENTES.md)
 
 ---
 
