@@ -33,6 +33,21 @@
 > ### 🏛️ Documento Central de Lançamento & Governança
 > Acesse o [**PLANO_DE_LANCAMENTO_EMPRESARIAL.md**](PLANO_DE_LANCAMENTO_EMPRESARIAL.md) ou faça o download da versão formatada para Word: [**PLANO_DE_LANCAMENTO_EMPRESARIAL.docx**](PLANO_DE_LANCAMENTO_EMPRESARIAL.docx) — O Plano Mestre oficial de governança da **TRD Consultoria e Serviços de TI LTDA** (empresa unipessoal fundada por **Thiago Rocha Duarte**), engenharia tributária (Simples Nacional / Fator R a 6%), infraestrutura tecnológica e estratégia Go-to-Market de D-60 a D+30.
 
+> [!TIP]
+> ### 🧭 Catálogo Mestre de Artefatos & Navegação por Personas
+> Para acessar o inventário analítico de 100% dos documentos e módulos do repositório com trilhas de leitura por perfil (Comercial, Jurídico, Operações, Tributário/FinOps, Frontend Spartan e IA), consulte o [**CATÁLOGO_ARTEFATOS.md**](CATALOGO_ARTEFATOS.md).
+
+---
+
+## 🗺️ Mapa de Navegação por Personas
+
+* 💼 **Comercial & Decisores C-Level:** [Proposta Comercial Executiva](operacoes/02_comercial_marketing/PROPOSTA_COMERCIAL_EXECUTIVA.md) · [One-Pager Institucional](operacoes/02_comercial_marketing/ONE_PAGER_INSTITUCIONAL_TRD.md) · [Ficha Técnica Starter R$ 9.800](operacoes/02_comercial_marketing/ANEXO_I_FICHA_TECNICA_STARTER_9800.md) · [Cases de Sucesso](operacoes/02_comercial_marketing/CASES_DE_SUCESSO_E_AUTORIDADE.md)
+* ⚖️ **Jurídico & Governança:** [Contrato de Sustentação & SLA](operacoes/01_juridico/CONTRATO_SUSTENTACAO_E_SLA.md) · [Contrato Desenvolvimento Sob Medida](operacoes/01_juridico/CONTRATO_DESENVOLVIMENTO_SOFTWARE_SOB_MEDIDA.md) · [NDA](operacoes/01_juridico/ACORDO_CONFIDENCIALIDADE_NDA.md) · [Acordo de Sócios (Vesting)](operacoes/01_juridico/ACORDO_DE_SOCIOS.md)
+* ⚙️ **Operações, FinOps & SLA:** [Matriz de Severidade & SLA P1-P4](operacoes/05_administracao/MATRIZ_SEVERIDADE_E_SLA.md) · [Runbook Onboarding 72h](operacoes/05_administracao/RUNBOOK_ONBOARDING_NOVO_CLIENTE.md) · [Plano de Continuidade & Backup](operacoes/05_administracao/PLANO_CONTINUIDADE_E_BACKUP_TECNICO.md) · [Planejamento Tributário Fator R](operacoes/05_administracao/PLANEJAMENTO_TRIBUTARIO_E_FINANCEIRO.md)
+* 🏛️ **Tributário & Motores RTC (Receita Federal):** [Visão Geral RTC](operacoes/07_tributario_rtc/README.md) · [Calculadora Simples Nacional](operacoes/07_tributario_rtc/calculadora-rtc-simples-nacional/) · [Calculadora Regime Regular](operacoes/07_tributario_rtc/calculadora-rtc-regime-regular/) · [Gerador DANFSe Go](operacoes/07_tributario_rtc/calculadora-rtc-gerador-danfse/)
+* 🎨 **Frontend, Spartan UI & Identidade Visual:** [Manual de Identidade Visual](operacoes/06_identidade_visual/MANUAL_DE_IDENTIDADE_VISUAL_TRD.md) · [Padrão Visual Spartan UI](operacoes/06_identidade_visual/PADRAO_VISUAL_SPARTAN_SISTEMAS_TRD.md) · [Curadoria Design System B2B](operacoes/06_identidade_visual/CURATORIA_FRONTEND_DESIGN_SYSTEM_COOPERATIVO.md) · [Landing Page Oficial](site/index.html)
+* 🤖 **Squad OpenBot & IA Multiagente:** [Orquestração do Squad](operacoes/openbot_integracao/README.md) · [Blueprint da Máquina Empresarial](operacoes/openbot_integracao/BLUEPRINT_MAQUINA_EMPRESARIAL_TRD.md) · [Máquina de Estados de Veto](operacoes/openbot_integracao/ARQUITETURA_MAQUINA_ESTADOS_VETO.md) · [Fallback em 8 Níveis](operacoes/openbot_integracao/MATRIZ_TATICA_FALLBACK_8_NIVEIS.md)
+
 ---
 
 ## 🎨 Identidade Visual & Design System Oficial
@@ -60,8 +75,12 @@ A identidade visual da TRD foi concebida sob o arquétipo da **Soberania, Rigor 
 ```
 .
 ├── PLANO_DE_LANCAMENTO_EMPRESARIAL.md (.docx)   # [DESTAQUE] Plano Mestre de Lançamento (D-60 a D+30)
-├── site/
-│   └── index.html                               # [NOVO] Landing Page Corporativa Oficial (Tailwind + Tokens TRD)
+├── CATALOGO_ARTEFATOS.md                        # [NOVO] Catálogo Mestre de Artefatos & Navegação por Personas
+├── site/                                        # Landing Page Corporativa Oficial (Tailwind + Tokens TRD)
+│   ├── README.md                                # Documentação da landing page e infraestrutura
+│   └── index.html                               # Código-fonte da página oficial
+├── trd-evolution/                               # Hub de integração WhatsApp e mensageria corporativa
+│   └── README.md                                # Arquitetura do motor de mensageria
 ├── assets/
 │   ├── trd-lockup.png                           # Logo oficial horizontal master
 │   ├── trd-avatar.png                           # Avatar quadrado 512x512 para redes/perfil
@@ -71,7 +90,9 @@ A identidade visual da TRD foi concebida sob o arquétipo da **Soberania, Rigor 
 │   ├── trd-mono.png                             # Versão 1-bit monocromática
 │   └── svg/                                     # Suíte completa com 10 arquivos vetoriais SVG
 └── operacoes/
+    ├── README.md                                # Visão consolidada da esteira operacional
     ├── 01_juridico/
+    │   ├── README.md                            # Guia do núcleo jurídico e legislação aplicável
     │   ├── ACORDO_PARCERIA_COMERCIAL_E_REQUISITOS_FREELANCE.md (.pdf) # [NOVO] Acordo de Parceria & Comissionamento (Victoria / SDRs)
     │   ├── CONTRATO_DESENVOLVIMENTO_SOFTWARE_SOB_MEDIDA.md (.pdf) # Contrato B2B de Criação de Sistemas (CRM, Hub de Gestão)
     │   ├── CONTRATO_SUSTENTACAO_E_SLA.md (.docx / .pdf) # Contrato B2B com Damage Cap e retenção de IP
@@ -80,6 +101,7 @@ A identidade visual da TRD foi concebida sob o arquétipo da **Soberania, Rigor 
     │   ├── TERMO_PARCERIA_E_COMISSAO_INDICACAO.md  # Contrato de canal com agências (comissão recorrente de 10-15%)
     │   └── CONTRATO_PRESTACAO_SERVICOS_PARCEIRO_SOBREAVISO.md # Contrato PJ de Engenheiro Backup de Sobreaviso
     ├── 02_comercial_marketing/
+    │   ├── README.md                            # Guia da esteira comercial e prospecção
     │   ├── GUIA_COLABORADOR_CAPTURA_E_REQUISITOS_CLAUDE.md (.pdf) # [NOVO] Guia Operacional de Captura & Elicitação com Claude
     │   ├── QUESTIONARIO_REQUISITOS_SISTEMAS_SOB_MEDIDA.md (.pdf) # Questionário Executivo de Requisitos Homologado
     │   ├── PROPOSTA_COMERCIAL_EXECUTIVA.md (.docx / .pdf) # Proposta de alto valor (Sistemas sob medida e Sustentação)
@@ -88,15 +110,19 @@ A identidade visual da TRD foi concebida sob o arquétipo da **Soberania, Rigor 
     │   ├── CASES_DE_SUCESSO_E_AUTORIDADE.md        # 3 estudos de caso estruturais (SQL, Legado Java e LGPD)
     │   └── SCRIPTS_PROSPECCAO_OUTBOUND.md          # 5 scripts de abordagem (LinkedIn, WhatsApp DF, Agências)
     ├── 03_social_media/
+    │   ├── README.md                            # Guia de estratégia editorial e autoridade
     │   └── PLAYBOOK_LINKEDIN_AUTORIDADE.md         # Framework Dev-to-Founder para atração B2B
     ├── 04_rh/
+    │   ├── README.md                            # Guia de recrutamento e avaliação técnica
     │   └── AVALIACAO_TECNICA_DEV.md                # Desafio de código real para suporte/devs (Java/Angular/SQL)
     ├── 05_administracao/
+    │   ├── README.md                            # Guia de processos administrativos e FinOps
     │   ├── MATRIZ_SEVERIDADE_E_SLA.md              # Gestão de incidentes P1 a P4 e fluxo de suporte
     │   ├── RUNBOOK_ONBOARDING_NOVO_CLIENTE.md      # Runbook de assunção de sistemas em 72h sem quebra de SLA
     │   ├── PLANO_CONTINUIDADE_E_BACKUP_TECNICO.md  # Protocolo homem-chave, cofre Bitwarden e Disaster Recovery
     │   └── PLANEJAMENTO_TRIBUTARIO_E_FINANCEIRO.md (.docx) # Manual CFO: Simples Nacional a 6% via Fator R
     ├── 06_identidade_visual/
+    │   ├── README.md                            # Guia de governança de marca e design system
     │   ├── MANUAL_DE_IDENTIDADE_VISUAL_TRD.md      # Manual de Marca, Pantone, Rich Black e WCAG AAA
     │   ├── PADRAO_VISUAL_SPARTAN_SISTEMAS_TRD.md   # [NOVO] Padrão Visual Oficial Spartan UI para todos os sistemas TRD
     │   ├── CURATORIA_FRONTEND_DESIGN_SYSTEM_COOPERATIVO.md # Design System fiduciário B2B, Spartan/Angular 19 e Dual-Theme
