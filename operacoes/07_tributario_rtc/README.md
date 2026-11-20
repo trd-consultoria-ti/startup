@@ -1,9 +1,19 @@
 # Operações 07 — Módulos Tributários da Reforma do Consumo (RTC / Receita Federal)
 
 > **TRD Consultoria e Serviços de TI LTDA**  
-> **CNPJ:** 59.437.897/0001-90  
+> **CNPJ:** 43.065.207/0001-57  
 > **Governança:** FinOps, Fator R, Planejamento Tributário & Compliance Fiscal  
 > **Base Legal:** Emenda Constitucional nº 132/2023 · Lei Complementar nº 214/2025 (RTC - IBS / CBS)
+
+---
+
+## 0. Modelo de Oportunidade Comercial & Oferta aos Clientes
+
+> 💼 **Oportunidade de Mercado & Playbook de Negócios:**  
+> A adequação à Reforma Tributária do Consumo (EC 132/2023 · LC 214/2025) representa um dos maiores vetores de geração de receita da TRD Consultoria. Estruturamos uma oferta comercial completa e playbook de implementação corporativa para empresas que necessitam adequar seus sistemas de faturamento e ERPs legados aos novos tributos (IBS / CBS / Split Payment) utilizando diretamente os motores oficiais da Receita Federal.
+> 
+> 📄 **Consulte o documento executivo da oferta:**  
+> 👉 [**MODELO_OPORTUNIDADE_SERVICO_RTC_CLIENTES.md**](MODELO_OPORTUNIDADE_SERVICO_RTC_CLIENTES.md) — Diagnóstico Fiscal (R$ 4,8k a R$ 6,8k), Implementação Turnkey Starter RTC (R$ 9,8k a R$ 18,5k) e Sustentação Regulatória com SLA (R$ 2,8k a R$ 5,5k/mês).
 
 ---
 

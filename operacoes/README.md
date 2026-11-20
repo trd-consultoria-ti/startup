@@ -73,6 +73,7 @@ operacoes/
 │
 ├── 07_tributario_rtc/                              # [Frente 7] Motores Oficiais Reforma Tributária (RFB)
 │   ├── README.md                                   # Matriz estratégica de vinculação com Fator R e FinOps
+│   ├── MODELO_OPORTUNIDADE_SERVICO_RTC_CLIENTES.md # [NOVO] Oferta comercial e playbook de implementação B2B
 │   ├── calculadora-rtc-simples-nacional/           # API REST oficial da RFB para CBS/IBS no Simples
 │   ├── calculadora-rtc-regime-regular/             # API REST oficial da RFB para Regime Regular
 │   └── calculadora-rtc-gerador-danfse/             # Microserviço em Go da RFB para DANFSe em PDF
