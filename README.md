@@ -102,9 +102,10 @@ A identidade visual da TRD foi concebida sob o arquétipo da **Soberania, Rigor 
     │   ├── LogoTRD.tsx                             # Componente oficial React / Next.js
     │   ├── assinatura_email.html                   # Assinatura executiva de e-mail corporativo
     │   └── papel_timbrado_template.md              # Template de timbrado para propostas comerciais
-    └── openbot_integracao/                         # Squad de 6 agentes especialistas autônomos (OpenBot)
-        ├── README.md                               # Arquitetura de orquestração multiagente
-        └── agentes/                                # Prompts operacionais (Comercial, Jurídico, SLA, FinOps, RH)
+    └── openbot_integracao/                         # Squad de 16 agentes especialistas autônomos (OpenBot)
+        ├── README.md                               # Arquitetura de orquestração multiagente e matrizes
+        ├── agentes/                                # Prompts operacionais e regras de cada agente
+        └── skills/                                 # Arsenal de 74 skills especializadas dos 16 agentes
 ```
 
 ---
@@ -126,6 +127,7 @@ Para agilizar fechamentos comerciais, assinaturas digitais (Gov.br / ZapSign / C
 - 📨 **Protocolo Canônico de Mensageria (Token-Optimized Dispatch):** [`PROTOCOLO_CANONICO_MENSAGERIA.md`](operacoes/openbot_integracao/PROTOCOLO_CANONICO_MENSAGERIA.md)
 - 👥 **Matriz de Personas & Skills Especializadas (16 Agentes):** [`MATRIZ_PERSONAS_SKILLS_AGENTES.md`](operacoes/openbot_integracao/MATRIZ_PERSONAS_SKILLS_AGENTES.md)
 - 🛠️ **Template Canônico para Novos Agentes OpenBot:** [`TEMPLATE_NOVO_AGENTE.md`](operacoes/openbot_integracao/TEMPLATE_NOVO_AGENTE.md)
+- 🧠 **Arsenal de Skills Especializadas dos 16 Agentes (Agent Skills):** [`operacoes/openbot_integracao/skills/`](operacoes/openbot_integracao/skills/README.md)
 
 ---
 
